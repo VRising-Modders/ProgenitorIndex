@@ -1,0 +1,44 @@
+{
+  "format": 1,
+  "package_sha256": "2ebe6ed689643c56753524064e89b8d1c29b0cd663aec6278cbcec77c2f4e0f5",
+  "size": 147267,
+  "manifest": {
+    "name": "BloodyWallet",
+    "version_number": "1.0.0",
+    "website_url": "https://github.com/oscarpedrero/BloodyWallet",
+    "description": "This framework is designed to add a virtual currency to VRising. This opens up a world of possibilities for other mods to integrate with it and serve as a bridge for other mods to use this functionality.",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.691.3",
+      "deca-VampireCommandFramework-0.9.0",
+      "Trodi-BloodyCore-2.0.0"
+    ]
+  },
+  "description": "This framework is designed to add a virtual currency to VRising. This opens up a world of possibilities for other mods to integrate with it and serve as a bridge for other mods to use this functionality.",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.691.3",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.691.3/",
+      "sha256": "04290fad8e4e619451c4f5eff3957778d3ab6a0da89bb9ba321822c9e88cf926"
+    },
+    {
+      "id": "deca-VampireCommandFramework-0.9.0",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/deca/VampireCommandFramework/0.9.0/",
+      "sha256": "d3ce9095d9772f979feb4ec792f022d213f0cdf56dc27c82de26a0f9db7cfc9f"
+    },
+    {
+      "id": "Trodi-BloodyCore-2.0.0",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/Trodi/BloodyCore/2.0.0/",
+      "sha256": "56adaaaad9022cb43e7756ebe676ecf5d7cddc544370cfbfd7a8077548f25fc7"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "0d82338b27f30f6fd08e2e16f750d05c40011ed3e06eae191a4675df0d1efbe4"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "### Bloody.Wallet\n\nThis framework is designed to add a virtual currency to VRising. This opens up a world of possibilities for other mods to integrate with it and serve as a bridge for other mods to use this functionality.\n\n## [BepInEx 1.733.2 (RC2)](https://github.com/decaprime/VRising-Modding/releases/tag/1.733.2)\n\n## Requirements\n\nEnsure the following mods are installed for seamless integration:\n\n1. [BepInEx 1.733.2 (RC2)](https://github.com/decaprime/VRising-Modding/releases/tag/1.733.2)\n2. [VampireCommandFramework](https://thunderstore.io/c/v-rising/p/deca/VampireCommandFramework/)\n3. [Bloody.Core](https://thunderstore.io/c/v-rising/p/Trodi/BloodyCore/)\n\n<details>\n<summary>Changelog</summary>\n\n`1.0.0`\n- Updated to Oakveil\n\n`0.1.2`\n- Fixed error when you make a negative money transfer it doubles the amount in the wallet\n\n`0.1.0`\n- First Release\n\n\n- \n</details>\n\n## Instructions for using it with your mod\n\nYou must include it in your `.csproj` file as a nuget package\n\n```c#\n<PackageReference Include=\"Bloody.Wallet\" Version=\"1.0.*\" />\n```\n\nYou must include it as a project dependency in your `Plugin.cs` file\n\n```c#\n[BepInDependency(\"trodi.Bloody.Wallet\")]\n```\n\nIf you want to make the use of Bloody.Wallet an optional dependency, you can do so by including it as an optional dependency in your `Plugin.cs` file\n\n```c#\n[BepInDependency(\"trodi.Bloody.Wallet\", BepInDependency.DependencyFlags.SoftDependency)]\n```\n\n## API\n\nYou have several methods available in the API that you can use, as detailed below:\n\n```c#\nusing BloodyWallet.API;\n```\n\nAdd a certain amount of tokens to a user.\n\n```c#\nbool AddTokenToUser(int _amount, string _method, Entity playerReciviedTokens, Entity userEntityExecuteFunction, out string message)\n```\n\nRemove a certain amount of tokens from a user.\n\n```c#\nbool RemoveToken(int _amount, string _method, Entity playerReciviedTokens, Entity userEntityExecuteFunction, out string message)\n```\n\nReturns the list of tokens for all users on the server, and if we specify a player's name, it will only return the tokens for that user.\n\n```c#\nbool listToken(string _playerName, out List<string> message)\n```\n\nReturns the number of tokens for a user as an integer.\n\n```c#\nbool GetTotalTokensForUser(string _playerName, out int tokens)\n```\n\nTransfers tokens from one user to another.\n\n```c#\nbool TranferTokenFromOtherUser(int _amount, string _method, Entity playerReciviedTokens, Entity fromUserSendToken, out string message)\n```\n\n## Installing on your server\n\n1. Copy `Bloody.Wallets.dll` to your `BepInEx/Plugins` directory.\n2. Launch the server once to generate the config file; configurations will be located in the `BepInEx/Config` directory.\n\n## Configuration\n\nIn the configuration file **trodi.bloody.Wallet** you have several options to configure the mod to your liking\n\n```ini\n## Settings file was created by plugin BloodyWallet v0.0.9999\n## Plugin GUID: trodi.Bloody.Wallet\n\n[General]\n\n## Name of your virtual currency\n# Setting type: String\n# Default value: BloodyTokens\nName = BloodyTokens\n\n## Enable admin commands\n# Setting type: Boolean\n# Default value: true\nadminCommand = true\n\n## Enable users commands\n# Setting type: Boolean\n# Default value: true\nusersCommand = true\n\n## PrfabGUID for exchange tokens\n# Setting type: Int32\n# Default value: -77477508\nprefabGUIDExchange = -257494203\n```\n\n## Available Commands\n\nFrom the mod options, you can enable or disable commands for admins and/or users as detailed below\n\n### Admins\n\n```ansi\n.bwa add <PlayerName> <Amount>\n```\n- Add tokens to a player\n  - Example: `.bwa add Trodi 5`\n\n```ansi\n.bwa remove <PlayerName> <Amount>\n```\n- Remove tokens from a player.\n  - Example: `.bwa remove Trodi 5`\n\n```ansi\n.bwa list <PlayerName>\n```\n- List of players with their respective tokens. If <PlayerName> is specified, it only returns that player's tokens.\n  - Examples: `.bwa list` or `.bwa list Trodi`\n\n### Players\n\n```ansi\n.bw transfer <PlayerName> <Amount>\n```\n- Transfer tokens from your wallet to another player\n  - Example: `.bw transfer Trodi 5`\n\n```ansi\n.bw me \n```\n- Show your tokens.\n  - Example: `.bw me`\n\n```ansi\n.bwa exchange <Amount>\n```\n- Exchange your tokens for a game item.\n  - Examples: `.bwa exchange 5`\n\n## Credits\n\nThe [V Rising Mod Community](https://discord.gg/vrisingmods) is the premier community for V Rising mods.\n\n[@Deca](https://github.com/decaprime), thank you for the exceptional frameworks [VampireCommandFramework](https://github.com/decaprime/VampireCommandFramework)\n\n**Special thanks to the testers and supporters of the project:**\n\n- @Vex, owner & founder of the [Vexor RPG](https://discord.gg/JpVsKVvKNR) server, a tester and great supporter who provided his server as a test platform and took care of all the graphics and documentation."
+}

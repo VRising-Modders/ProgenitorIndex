@@ -1,0 +1,30 @@
+{
+  "format": 1,
+  "package_sha256": "7530cf4dcd935acb7c2a01371a431e7f71d95b87df43a8aaa70294a713d6ff59",
+  "size": 98110,
+  "manifest": {
+    "name": "CasualSiege",
+    "version_number": "0.0.3",
+    "website_url": "https://github.com/Kaltharos/VRising-CasualSiege",
+    "description": "Offline siege protection for casual servers.",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.0.0"
+    ]
+  },
+  "description": "Offline siege protection for casual servers.",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.0.0",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.0.0/",
+      "sha256": "27fd91f2951701faf324b9dcd34cf771a7f4534e1d3a679949b9a0ae67472054"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "4c84a944120c2d966b277fb45f9a0bf626c8fe6e6bcdb1cc649bb3ea8925dc3a"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# CasualSiege\n### Server Only Mod\nProtect offline players from being sieged.\\\nWhen any of the castle owner allies is online, the siege can progress as usual,\\\nSiege will also progress as usual if the castle is already being sieged/attacked when all the castle owner & allies goes offline.\n\nBest not be used together with RPGMods Honor System.\n\n## Installation\nCopy & paste the `CasualSiege.dll` to `\\Server\\BepInEx\\plugins\\` folder.\n\n## Removal\nDelete the `CasualSiege.dll` from your plugins folder.\n\n## Wetstone Version\n1. Uncomment `<!--<DefineConstants>WETSTONE</DefineConstants>-->` in `CasualSiege.csproj`\n2. Rebuild the dll.\n\n## Config\n<details>\n<summary>Config</summary>\n\n- `Enable Mod` [default `true`]\\\nEnable/disable the mod.\n- `Factor in Ally Status` [default `true`]\\\nInclude the player allies online status before blocking siege.\n- `Max Ally Cache Age` [default `300`]\\\nMax age of the player allies cache in seconds.\\\nIf the cache age is older than specified, the cache will be renewed.\\\nDon't set this too short as allies gathering process can slightly impact your server performance.\\\nThis cache is only for allies gathering, their online/offline status is updated instantly.\n\n</details>\n\n## More Information\n<details>\n<summary>Changelog</summary>\n\n`0.0.3`\n- Fixed issue with mod only protecting the castle on first hit... :|\n\n`0.0.2`\n- Typo fix in readme & configs\n\n`0.0.1`\n- Initial Release\n\n</details>\n\n<details>\n<summary>Known Issues</summary>\n\n### General\n- No known issue.\n\n</details>"
+}

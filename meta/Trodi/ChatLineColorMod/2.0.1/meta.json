@@ -1,0 +1,37 @@
+{
+  "format": 1,
+  "package_sha256": "d016e5098b76c3d77dab92da302b93eda96c9a46116bfc71f55744a458002ddd",
+  "size": 2793720,
+  "manifest": {
+    "name": "ChatLineColorMod",
+    "version_number": "2.0.1",
+    "website_url": "https://github.com/oscarpedrero/ChatLineColorMod",
+    "description": "A client mod that adds extra functionality to the chat window.",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.668.5",
+      "deca-Bloodstone-0.1.4"
+    ]
+  },
+  "description": "A client mod that adds extra functionality to the chat window.",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.668.5",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.668.5/",
+      "sha256": "784c7a7f64ba0f1d4e9778c6558a061ab83dbacc6e0bb8ae0e3ab86698578113"
+    },
+    {
+      "id": "deca-Bloodstone-0.1.4",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/deca/Bloodstone/0.1.4/",
+      "sha256": "e57607799d1550191b274237ead53a2e6f0fb8ea5cbeb67cb24a9f1572e8432a"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "0f6809d01dbcc5bd85aa8e303be346bcc027e7535e75a46b5ede746a3e809b1c"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# ChatLineColorMod - Mod Client for V Rising ( Gloomrot update )\n\nA client mod that adds extra functionality to the chat window:\n\n- Channel name in front of the text in the input text.\n- Color of the letters of the input text of the same color as the channel where you are writing.\n- Button to clear the chat when you hover over the chat window.\n- AutoClean functionality of the chat with a configurable interval.\n- Functionality to replace text with emojis.\n\n## Configuration\n\nOnce the mod installed, a configuration file will be created in the \\BepInEx\\config client folder where you can activate or desactivate any of the mod functions.\n\n**ChatLineColorMod.cfg**\n\n```\n## Settings file was created by plugin ChatLineColorMod v1.3.5\n## Plugin GUID: ChatLineColorMod\n\n[AutoCleanChat]\n\n## Enable AutoCleanChat\n# Setting type: Boolean\n# Default value: false\nenabled = false\n\n## Time interval in seconds in which the chat is cleared\n# Setting type: Int32\n# Default value: 3600\ninterval = 3600\n\n[ButtonCleanChat]\n\n## Enabled button when you hover in the chat window\n# Setting type: Boolean\n# Default value: true\nenabled = true\n\n[ChatChannel]\n\n## Enable adds channel name in input where you are typing. This option will disable the ability to select a text or move within it.\n# Setting type: Boolean\n# Default value: true\nenabled = true\n\n[ChatColor]\n\n## Enable change the color of the chat input text as the color of the channel where you are typing\n# Setting type: Boolean\n# Default value: true\nenabled = true\n\n[Emojis]\n\n## Enable Emojis replace\n# Setting type: Boolean\n# Default value: true\nenabled = true\n\n\n```\n\n\n|SECTION|PARAM| DESCRIPTION                                                     | DEFAULT\n|----------------|-------------------------------|-----------------------------------------------------------------|-----------------------------|\n|AutoCleanChat|`enabled `            | Enable AutoCleanChat              | false\n|AutoCleanChat        |`interval`            | Time interval in seconds in which the chat is cleared | 3600\n|ButtonCleanChat|`enabled `            | Activate button when you hover in the chat window              | true\n|ChatChannel|`enabled `| Enable adds channel name in input where you are typing. This option will disable the ability to select a text or move within it.                  |true\n|ChatColor|`enabled `| Enable change the color of the chat input text as the color of the channel where you are typing                  |true\n|Emojis|`enabled `| Enable Emojis replace                               |true\n\n## Button Clear Chat\n\n Added a button to delete the chat every time you hover in the chat window.\n\n![alt text](https://github.com/oscarpedrero/ChatLineColorMod/blob/master/imgs/clearbutton.jpg?raw=true)\n\n## Channel Name\n\n Adds channel name in the chat input where you are typing.\n\n > This option will disable the ability to select a text or move within it.\n\n![alt text](https://github.com/oscarpedrero/ChatLineColorMod/blob/master/imgs/local.png?raw=true)\n\n![alt text](https://github.com/oscarpedrero/ChatLineColorMod/blob/master/imgs/global.PNG?raw=true)\n\n![alt text](https://github.com/oscarpedrero/ChatLineColorMod/blob/master/imgs/team.PNG?raw=true)\n\n![alt text](https://github.com/oscarpedrero/ChatLineColorMod/blob/master/imgs/whisp.PNG?raw=true)\n\n![alt text](https://github.com/oscarpedrero/ChatLineColorMod/blob/master/imgs/system.PNG?raw=true)\n\n## Emojis\n\nNow replace string to emoticons:\n\n|STRING|STRING|EMOJI\n|----------------|-------------------------------|-----------------------------|\n|xE|`:grin:`|😁\n|xD|`:joy:`|😂\n|:)|`:smiley:`|😃\n|:D|`:smile:`|😄\n|;D|`:sweat_smile:`|😅\n|lol|`:laughing:`|😆\n|;)|`:wink:`|😉\n|x)|`:blush:`|😊\n|:P|`:yum:`|😋\n|<3)|`:heart_eyes:`|😍\n|:*|`:kissing_heart:`|😘"
+}

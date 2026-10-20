@@ -1,0 +1,37 @@
+{
+  "format": 1,
+  "package_sha256": "85d2c9a2d08c483cba81b6997b21a96f7d153af76d5b4582ebaf84d9e5355390",
+  "size": 130882,
+  "manifest": {
+    "name": "ScarletTrash",
+    "version_number": "1.0.1",
+    "website_url": "https://github.com/markvaaz/ScarletTrash",
+    "description": "Automatically deletes items placed in containers with 'STrash' in their name after 15 seconds.",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "ScarletMods-ScarletCore-1.1.20"
+    ]
+  },
+  "description": "Automatically deletes items placed in containers with 'STrash' in their name after 15 seconds.",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.733.2/",
+      "sha256": "eabfb53d80bed427ddbd1ecf8af4dcd6e82e152809d44ab3218d0a09984f491c"
+    },
+    {
+      "id": "ScarletMods-ScarletCore-1.1.20",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/ScarletMods/ScarletCore/1.1.20/",
+      "sha256": "a4c80a6a52d5e1f9ac5daa8b11f2774226191ccdd6cd9210548d51b54eb533d2"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "54703ff68a4e129c637fac30d4157d4e40c7afe159367ef3cf999323dfc1ba07"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# ScarletTrash\n\n**ScarletTrash** is a V Rising mod that automatically deletes items placed in containers with \"STrash\" in their name.\n\n---\n\n## Support & Donations\n\n<a href=\"https://www.patreon.com/bePatron?u=30093731\" data-patreon-widget-type=\"become-patron-button\"><img height='36' style='border:0px;height:36px;' src='https://i.imgur.com/o12xEqi.png' alt='Become a Patron' /></a>  <a href='https://ko-fi.com/F2F21EWEM7' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi6.png?v=6' alt='Buy Me a Coffee at ko-fi.com' /></a>\n\n---\n\n## How It Works\n\nRename any container to include \"STrash\" as a separate word, then place unwanted items inside. The mod will wait 15 seconds before automatically and permanently deleting all items, giving you a chance to recover them if needed.\n\nWhen you rename a container to include \"STrash\", you'll receive a warning message confirming the container is now a trash bin and reminding you that items will be permanently deleted.\n\n**Notes:**\n* The name check is case-sensitive and must be a separate word for security - only \"STrash\" (exact capitalization) will work, not \"strash\", \"STRASH\", \"Strash\", \"ItemSTrash\", or \"STrashItems\".\n* The 15-second timer resets every time you add, remove, or move items within the container. Items are only deleted after 15 seconds of no inventory changes.\n\n**Warning:** Items are permanently deleted and cannot be recovered after the 15-second delay!\n\n## Installation\n\n### Requirements\n\nThis mod requires the following dependencies:\n\n* **[BepInEx](https://wiki.vrisingmods.com/user/bepinex_install.html)**\n* **[ScarletCore](https://thunderstore.io/c/v-rising/p/ScarletMods/ScarletCore/)**\n\nMake sure BepInEx is installed and loaded **before** installing ScarletTrash.\n\n### Manual Installation\n\n1. Download the latest release of **ScarletTrash**.\n\n2. Extract the contents into your `BepInEx/plugins` folder:\n\n   `<V Rising Server Directory>/BepInEx/plugins/`\n\n   Your folder should now include:\n\n   `BepInEx/plugins/ScarletTrash.dll`\n\n3. Ensure **ScarletCore** is also installed in the `plugins` folder.\n4. Start or restart your server.\n\n\n## This project is made possible by the contributions of the following individuals:\n\n- **cheesasaurus, EduardoG, Helskog, Mitch, SirSaia, Odjit** & the [V Rising Mod Community on Discord](https://vrisingmods.com/discord)\n"
+}

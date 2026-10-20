@@ -1,0 +1,30 @@
+{
+  "format": 1,
+  "package_sha256": "2703eedc27a8f0e56d4100f5c140b5ac0cef9c005198db0896a7f8d16ace473a",
+  "size": 68099,
+  "manifest": {
+    "name": "VRisingServerApiPlugin",
+    "version_number": "0.1.4",
+    "website_url": "https://github.com/hermesdj/VRisingServerApiPlugin",
+    "description": "Http Api plugin framework used to add new routes to a V Rising Server existing HTTP API",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.668.5"
+    ]
+  },
+  "description": "Http Api plugin framework used to add new routes to a V Rising Server existing HTTP API",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.668.5",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.668.5/",
+      "sha256": "784c7a7f64ba0f1d4e9778c6558a061ab83dbacc6e0bb8ae0e3ab86698578113"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "8582aca12d498a181fcd8bee1b00cee1b16e12a10a951ef67072513c36b96e15"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# VRisingServerApiPlugin\n\n<p align=\"center\">\n  <img src=\"https://github.com/hermesdj/VRisingServerApiPlugin/raw/dev/images/logo_256.png\" />\n</p>\n\nVRising Server API used to expose new HTTP Routes\n\n### Configuring the server\n\nIn the ServerHostSettings.json file of the VRising server, you have to activate the API :\n\n```json\n{\n  \"API\": {\n    \"Enabled\": true,\n    \"BindAddress\": \"*\",\n    \"BindPort\": 9090,\n    \"BasePath\": \"/\",\n    \"AccessList\": \"\",\n    \"PrometheusDelay\": 30\n  }\n}\n```\n\nThen, you have to put the DLL of this plugin in the plugins directory of the BepInEx folder on your server. In the logs,\nyou will be able to see the new routes created.\nYou can then call the routes using another program or something like Postman to query the available endpoints.\n\n### How it works\n\nYou can find two working examples on how the endpoints are exposed through the VRising Server HTTP API in the endpoints\nfolder of the project.\nI have implemented a few basic GET and POST methods for two endpoints : clans and players\n\nThe API is capable of parsing url params, query params and JSON Bodies. Only JSON bodies are supported and the\nContent-Type=application/json must be present in the header of the HTTP request.\n\nFor url params, I am using regex groups to match by name.\n\nFor the endpoint /players/:id where id is an integer that match a userIndex in the game, the endpoint is declared the\nfollowing way :\n\n```csharp\n[HttpGet(\"/(?<id>[0-9]*)\")]\npublic PlayerApiResponse GetPlayerDetails([UrlParam(\"id\")] int userIndex)\n```\n\nThe regex use a group called id that match any number, and it is mapped to the userIndex parameter of the method by\nusing the \"id\" param name.\n\nThe plugin will try to cast the url params, query params and request body to the parameter type of the method. See for\nexample the update clan name method :\n\n```csharp\n[HttpPost(@\"/(?<id>[0-9a-fA-F]{8}\\b-[0-9a-fA-F]{4}\\b-[0-9a-fA-F]{4}\\b-[0-9a-fA-F]{4}\\b-[0-9a-fA-F]{12})/updateName\")]\npublic GetClanResponse UpdateClanName([UrlParam(\"id\")] Guid clanId, [RequestBody] UpdateClanNameBody? body)\n```\n\nThe url param id is parsed as a Guid, and the RequestBody is used as the base class to deserialize the JSON of the body\nreceived. The regex used in the HttpPost definition is a regex that match an uuid.\n\n### Using the plugin as a dependency\n\nThe CommandRegistry expose a public method RegisterAll. Import the DLL of the project as a dependency to your own\nplugin,\nthen declare some API endpoints using the Attributes declarations explained above, and then call the following method to\nregister your assembly :\n\n```csharp\nCommandRegistry.RegisterAll();\n```\n\n### Thanks\n\n- Infinite thanks to [DarkAtra project on his discord bot](https://github.com/DarkAtra/v-rising-discord-bot-companion)\n  for the inspiration on how to do this\n- Thanks to deca for all his work and for the github workflows I used\n  from [VampireCommandFramework](https://github.com/decaprime/VampireCommandFramework/)"
+}

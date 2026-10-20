@@ -1,0 +1,38 @@
+{
+  "format": 1,
+  "package_sha256": "d97a89682cea730ede250f82f064b955c45a729db461607989ef33725250ca55",
+  "size": 131256,
+  "manifest": {
+    "name": "KindredSacrifice",
+    "version_number": "1.0.0",
+    "website_url": "https://github.com/odjit/KindredSacrifice",
+    "description": "Offer the living, awaken the altar.",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "deca-VampireCommandFramework-0.10.4"
+    ]
+  },
+  "description": "Offer the living, awaken the altar.",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.733.2/",
+      "sha256": "eabfb53d80bed427ddbd1ecf8af4dcd6e82e152809d44ab3218d0a09984f491c"
+    },
+    {
+      "id": "deca-VampireCommandFramework-0.10.4",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/deca/VampireCommandFramework/0.10.4/",
+      "sha256": "e554e964242db0b1cfef5824129aa6794c8a7138c9321b617d633f9aaffac19b"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "42d6f55e44624632a0db4950e68a06faba924ab06272cc3d39cee2f9f641c876"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# KindredSacrifice\n\n<p align=\"center\"><em>Offer the living, awaken the altar.</em></p>\n<p align=\"center\">\n<a href=\"https://www.youtube.com/watch?v=ENx_fQuE6OI\">\n  <img src=\"https://github.com/Odjit/KindredSacrifice/raw/main/logo.png?raw=true\" width=\"320\" alt=\"Watch the trailer\" />\n    </a>\n</p>\n\n<p align=\"center\">\n  Server-side blood sacrifice rituals for V Rising: sacrifice prisoners, build blood moon progress, and earn blood-type rewards.\n</p>\n<hr>\n\n## Features\n\n• **Ritual Sacrifice Cage** lets you place a ritual altar anywhere.  \n• **Blood Moon Progression** means sacrifices build toward a blood moon, with quality heavily rewarded.  \n• **Blood-Type Rewards** grant unique bonuses for 100% sacrifices.  \n• **Lockout Control** enforces a configurable cooldown after a blood moon.\n\n\n<p align=\"right\"><sub>Questions? Ping <b>odjit</b> on Discord.</sub></p>\n\n\n## Commands\n\n### General Commands\n\n| Command | Description |\n|---|---|\n| `.sacrifice place` | Spawn the sacrifice cage at your cursor position. Only one cage may exist at a time. (Admin Only) |\n| `.sacrifice goto` | Teleport to the sacrifice cage. Shortcut: `.sac g`  (Admin Only)|\n| `.sacrifice remove` | Remove the sacrifice cage. (Admin Only) |\n| `.sacrifice reload` | Reload the sacrifice configuration. (Admin Only) |\n| `.sacrifice status` | Show blood moon progress and lockout status. (Player Command) |\n\n\n### Settings Commands (Admin Only)\n\n| Command | Description |\n|---|---|\n| `.sacrifice settings` | Show global settings and reward summary. |\n| `.sacrifice reward <bloodType>` | Show reward details for a blood type. Shortcut: `.sac r warrior` |\n| `.sacrifice setmessages <true\\|false>` | Toggle sacrifice messages. Shortcut: `.sac sm true` |\n| `.sacrifice setaccumulation` | Toggle lower-quality blood contributing to blood moon progress. |\n| `.sacrifice setlockout <nights>` | Set blood moon lockout nights (minimum 2). Shortcut: `.sac sl 3` |\n| `.sacrifice setrewardtype <bloodType> <rewardType>` | Set reward type (None, Buff, DropItems, DropBloodMerlots). |\n| `.sacrifice setbuff <bloodType> <prefabGuid> [duration]` | Configure buff reward. Duration defaults to 3600 seconds. |\n| `.sacrifice setmerlot <bloodType> <quality\\|prisoner> <min> <max> [type\\|prisoner]` | Configure merlot drops. |\n| `.sacrifice adddrop <bloodType> <prefabGuid> [min] [max]` | Add an item drop. |\n| `.sacrifice removedrop <bloodType> <index>` | Remove an item drop by 1-based index. |\n| `.sacrifice cleardrops <bloodType>` | Clear all item drops from a blood type. |\n\n\n\n## How to use\n\n1. Spawn the sacrifice cage with `.sac place` while aiming at the ground\n2. Perform a sacrifice by bringing a dominated prisoner to the altar cage.\n3. Place the dominated prisoner in the cage\n4. The sacrifice will automatically trigger.\n\n### Blood Quality & Rewards\n\n**100% Quality**  \nImmediate blood moon and blood type based rewards.\n\n**Below 100%**  \nNo rewards. Progress only to accumulator.\n\n\n### Blood Moon Accumulator \n\nThe blood moon accumulator uses squared scaling, heavily rewarding high-quality sacrifices:\n\n| Blood Quality | Points Gained | Sacrifices |\n|---------------|--------------|-------------------|\n| 100% | 10,000 | 1 |\n| 71%  | 5,000  | 2 |\n| 50%  | 2,500  | 4 |\n| 25%  | 625    | 16 |\n| 5%   | 25     | 400 |\n\n\n\nWhen total progress reaches **10,000 points**:\n\n1. A blood moon is scheduled for the current or next night.\n2. The accumulator resets to 0.\n3. Sacrifices enter lockout for a configurable number of nights (default: 3).\n\n**During Lockout:**\n- No prisoner is able to be added to the cage\n- Use `.sac status` to check remaining lockout time\n\n\n## Configuration\n\nConfiguration file is located in `BepInEx/config/KindredSacrifice/`. \nI advise using in-game commands in order to not cause json errors.\n\n\n<details>\n<summary><strong>Configuration Examples</strong></summary>\n\n### Example 1: Different Buffs Per Blood Type\n```json\n\"BloodTypeRewards\": {\n  \"Warrior\": {\n    \"RewardType\": \"Buff\",\n    \"BuffPrefabGuid\": -1006733024,\n    \"BuffDuration\": 3600\n  },\n  \"Scholar\": {\n    \"RewardType\": \"Buff\",\n    \"BuffPrefabGuid\": -238197495,\n    \"BuffDuration\": 7200\n  },\n  \"Brute\": {\n    \"RewardType\": \"Buff\",\n    \"BuffPrefabGuid\": 1068709119,\n    \"BuffDuration\": 3600\n  }\n}\n```\n\n### Example 2: Item Drops for Corrupted Blood\n```json\n\"Corrupted\": {\n  \"RewardType\": \"DropItems\",\n  \"ItemDrops\": [\n    { \"ItemPrefabGuid\": -257494203, \"MinQuantity\": 5, \"MaxQuantity\": 10 },\n    { \"ItemPrefabGuid\": 28358550, \"MinQuantity\": 10, \"MaxQuantity\": 20 }\n  ]\n}\n```\n\n### Example 3: Prisoner-Quality Merlots for Draculin\n```json\n\"Draculin\": {\n  \"RewardType\": \"DropBloodMerlots\",\n  \"MerlotMinQuantity\": 2,\n  \"MerlotMaxQuantity\": 5,\n  \"UsePrisonerBloodType\": true,    // Use Draculin blood type\n  \"UsePrisonerQuality\": true       // Use 100% quality\n}\n```\n\n### Example 4: Fixed-Quality Warrior Merlots for Scholar\n```json\n\"Scholar\": {\n  \"RewardType\": \"DropBloodMerlots\",\n  \"MerlotMinQuantity\": 3,\n  \"MerlotMaxQuantity\": 6,\n  \"UsePrisonerBloodType\": false,\n  \"MerlotBloodType\": \"Warrior\",    // Override to Warrior blood\n  \"UsePrisonerQuality\": false,\n  \"MerlotQuality\": 100.0           // Fixed 100% quality\n}\n```\n</details>\n\n## Installation\n\n1. Install [BepInEx 6 (IL2CPP)](https://v-rising.thunderstore.io/package/BepInEx/BepInExPack_V_Rising/) on your V Rising dedicated server\n2. Install [VampireCommandFramework](https://v-rising.thunderstore.io/package/deca/VampireCommandFramework/)\n3. Copy `KindredSacrifice.dll` to `BepInEx/plugins/`\n4. Start the server: configuration files will be created in `BepInEx/config/KindredSacrifice/`\n\n## Credits\n- Special thanks to an early playtester for consulting and design feedback.\n- [V Rising Modding Community](https://vrisingmods.com) for support and ideas.\n\n## License\n\nThis project is licensed under the AGPL-3.0 license.",
+  "changelog": "`1.0.0`\n- Initial Release\n"
+}

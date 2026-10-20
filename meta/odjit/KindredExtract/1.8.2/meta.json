@@ -1,0 +1,37 @@
+{
+  "format": 1,
+  "package_sha256": "bc8ae8663a6415737b2a1dee04b159472178f165d5cf123047ad15b24cd9a8ae",
+  "size": 924397,
+  "manifest": {
+    "name": "KindredExtract",
+    "version_number": "1.8.2",
+    "website_url": "https://github.com/Odjit/KindredExtract",
+    "description": "Dumps Info",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.691.3",
+      "deca-VampireCommandFramework-0.10.4"
+    ]
+  },
+  "description": "Dumps Info",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.691.3",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.691.3/",
+      "sha256": "04290fad8e4e619451c4f5eff3957778d3ab6a0da89bb9ba321822c9e88cf926"
+    },
+    {
+      "id": "deca-VampireCommandFramework-0.10.4",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/deca/VampireCommandFramework/0.10.4/",
+      "sha256": "e554e964242db0b1cfef5824129aa6794c8a7138c9321b617d633f9aaffac19b"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "3d6bccdadeb7dafef3616b7ed1cb352d6733e4398ddfe03dd099d4ce0b0db027"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# KindredExtract for V Rising\nKindredExtract is a mod development tool.\n\nThis is NOT meant for live servers, nor is it a mod meant for regular players. \nIt is meant for developers who want to use a tool to check things around them for reference points.\nIt will print out a lot of files to your DedicatedServer directory. This action isn't great on live servers.\nKeep ranges tight, as there are a lot more things around you than you would think.\n\n\n## Commands\n\n### State Commands\n- `.state switchdump` \n  - Switches between Kindred and ProjectM entity dumping\n- `.state player (name)` \n  - Dumps the state of a player (User/Char/Team/Progression)\n  - shortcut: .s p\n- `.state slots (player name)`\n  - Outputs all slots of the player\n  - shortcut: .s s\n- `.state clan` \n  - Spits out Clan Info \n  - shortcut .s c\n- `.state inventory` \n  - retrieves inventory state\n  - shortcut: .s i\n- `.state door`\n  - retrieves door state\n  - shortcut: .s d\n- `.state ownedby (player name)` \n  - Outputs state of entities owned by the player\n  - shortcut: .s o\n- `.state entity (entityID#) (version)`\n  - spits out enitiy info of the entity specified by ID and Version\n  - shortcut: .s e\n- `.state prefab (guid)` \n  - spits out prefab info- singular if GUID specified, otherwise all prefabs to a file each with components attached within\n- `.state teams`\n  - checks all the team data\n  - shortcut: .s t\n- `.state nearby (radius)`\n  - gets nearby entities based on range. Careful there are a lot even very close to you.\n  - shortcut: .s n\n- `.state tilemodels (radius)`\n  - gets nearby tilemodel entities\n  - shortcut: .s tm\n- `.state rooms (radius)`\n  - gets nearby rooms\n  - shortcut: .s r\n- `.state castleterritory (index#)`\n  - outputs a particular or all castle territories.\n  - shortcut: .s ct\n- `.state mapzones`\n  - outputs map zones\n  - shortcut: .s mz\n- `.state worldregionpolygon`\n  - outputs all world region polygons\n  - shortcut: .s wrp\n- `.state chunkportals`\n  - outputs all chunk portals\n  - shortcut: .s cp\n- `.state buffs (radius)`\n  - outputs all buffs of nearby entities\n  - shortcut: .s b\n- `.state spawnregions`\n  - outputs all spawn regions\n  - shortcut: .s sr\n- `.state time`\n  - outputs the current server time\n- `.state SetPasteBinKeysNoLog`\n  - sets the Pastebin API, userkey, and optional folder keys (This is kind of legacy from a foray into use on lives, but pastebin has limits and the like. I'm leaving it, but its not needed)\n\n### Entity Commands\n- `.entity teleport (entityID) (version)`\n  - teleport to the specified entity\n  - shortcut: .e tp\n- `.entity despawn (entityID) (version)`\n  - despawn the specified entity\n  - shortcut: .e d\n- `.entity destroy (entityID) (Version)`\n  - Destroy the specified entity\n  - shortcut: .e del\n- `.entity topcount (topNum) (filter)`\n  - Counts the top entities in the world\n  - shortcut: .e tc\n\n### Dump Commands\n- `.dump prefabs`\n  - dumps all prefabs to a file as prefabGuids for a Prefabs.cs file\n  - shortcut: .dump p\n- `.dump types`\n  - Dumps all ECS component types to file (for usage in ComponentExtractors.tt)\n  - shortcut: .dump t\n- `.dump entityqueries`\n  - Dumps all ECS entity queries to file\n  - shortcut: .dump eq\n- `.dump prefabjsons`\n  - dumps all prefab names and IDs to JSON files, grouped by prefix\n  - shortcut: .dump pj\n- `.dump guidpos (prefab)`\n  - Dumps positions of all instances of a prefab to a CSV file\n- `.dump localization`\n  - Dumps localization data\n- `.dump prefabnames`\n  - Dumps prefab names to JSON\n- `.dump systems`\n  - Dumps ECS system update hierarchies to files (per world)\n  - shortcut: .dump s\n- `.dump archetypes`\n  - Dumps all ECS archetypes to file with entity counts and component listings\n  - shortcut: .dump a\n\n\n## Eventual To-Do/Possible features\n- I add as I require.\n\n## Installation\n<details> <summary>Steps</summary>\n\n1. Install BepInEx, which is required for modding VRising. Follow the instructions provided at [BepInEx Installation Guide](https://wiki.vrisingmods.com/user/bepinex_install.html) to set it up correctly in your VRising game directory.\n\n2. Download the plugin along with its dependencies (VCF). Ensure you select the correct versions that are compatible with your game.\n\n3. After downloading, locate the .dll files for this plugin and its dependencies. Move or copy these .dll files into the `BepInEx\\Plugins` directory within your VRising installation folder.\n\n   - **Single Player Note:**\n     - If you are playing in single player mode, you will need to install [ServerLaunchFix](https://thunderstore.io/c/v-rising/p/Mythic/ServerLaunchFix/). This is a server-side mod that is essential for making the commands work properly on the client side server. Make sure to download and place it in the same `BepInEx\\Plugins` directory.\n\n4. Launch the Game: Start VRising. If everything has been set up correctly, the plugin should now be active in the game.\n\n</details>\n\n---\n## Contributors\n\nSpecial thanks to:\n- **Nicholas Toby (cheesasaurus)** - `.dump systems` command implementation\n\n\n[V Rising Modding Discord](https://vrisingmods.com/discord)"
+}

@@ -1,0 +1,30 @@
+{
+  "format": 1,
+  "package_sha256": "03c4c3e08af02cf8f64796c590e2342a9d2c2b63a39b75d5b01866a161d0cf66",
+  "size": 23003762,
+  "manifest": {
+    "name": "VRisingPerfMod",
+    "version_number": "1.1.0",
+    "website_url": "https://github.com/PureDark/VRisingPerfMod",
+    "description": "First-ever DLSS/FSR2/XeSS mod, huge performance boost. MUST DISABLE TAA!",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.0.0"
+    ]
+  },
+  "description": "First-ever DLSS/FSR2/XeSS mod, huge performance boost. MUST DISABLE TAA!",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.0.0",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.0.0/",
+      "sha256": "27fd91f2951701faf324b9dcd34cf771a7f4534e1d3a679949b9a0ae67472054"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "c14aa8518d9f5cf468dc837f73ff05df76a33feae64a9c25ef5c76ed6175296f"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "> TL;DR - Increase your game’s performance without any noticeable loss of quality.\n  \nIn the endless pursuit of higher framerates, DLSS/FSR2 can often do miracles by using deep learning, AI upscaling in real-time to render a game at a lower resolution and “magically” upscale its resolution without any noticeable loss in quality.\n\n*The Perf Mod for V-Rising Mod is the first time DLSS/FSR2 has ever been modded into a game without any existing next-gen upscaler support (i.e., existing FSR 2.0 support, etc.).*\n\nUnlike the game’s existing FSR 1.0 support, in addition to using deep learning to upscale, DLSS/FSR2 uses real-time knowledge of the game such its depth buffer, motion vectors, etc. so that upscaling results are as reliable and accurate as possible.\n\nNow comes with FSR2 support! Non-RTX card owners can now also benefit from FSR2.\n\nNew In v1.1.0: \n- I implemented XeSS as well, for those who want to try it, it has less ghosting but blurrier output.\n- Added DLAA for CPU bound player, you can make use of the extra GPU power to use the best AA option.\n\n## How Well Does DLSS/FSR2/XeSS Work in V Rising?\n\nYour results will vary depending on whether your CPU or GPU is your game’s bottleneck. Assuming that the GPU is the bottleneck, this mod can hugely increase your performance without any noticeable loss in quality. \nThis is especially useful if you’re pushing the game to run on higher res monitors or just want to absolutely crank all the graphics to the max.\n\nAccroding to Slafs with an 6700XT, he's got following results at 4K resolution\n\n> - Native: 46 FPS\n> - Quality: 70 FPS\n> - Balanced: 82 FPS\n> - Performance: 101 FPS\n> - Ultra Performance: 115 FPS\n\n## Preview\nClick on it to see side by side comparison\n\n[![Comparison](https://imgsli.com/i/5ecf924b-f676-4515-83d8-5dcfc01a5efd.jpg)](https://imgsli.com/MTMxMzE4/)\n\n\n## Requirements\n\nDLSS requires an Nvidia RTX card. \n\nFSR2 now added, and it can work with most cards.\n\n## How To Use\n\nAfter installing just like any other mod, launch the game and load your save \n\n- `CTRL + NumPad 1/2/3` to choose DLSS/FSR2/XeSS, press again to turn it off.\n- `CTRL + ↑/↓` to cycle through upscaling profiles(from Performance to Quality). \n- `CTRL + ←/→` to adjust the sharpness value (`CTRL + Keypad0` resets sharpening to default settings).\n\nAll of above settings can be tweaked in the config file.\n\n**Important Notes**\n\n - **Keep AA (especially TAA) *disabled* when DLSS/FSR2/XeSS is enabled**.\n - If you run into any problem, feel free to open an issue at [VRisingPerfMod\n](https://github.com/PureDark/VRisingPerfMod/issues \"https://github.com/PureDark/VRisingPerfMod/issues\")\n\n## Credits\n - PureDark/暗暗十分 - Author\n - elliotttate - Testing and writing readme\n - Slafs - Testing and helping with fixing a bug related to RDNA2\n\n *IMPORTANT: If anyone wants to repost this somewhere else, be sure to mention my name, not just PureDark, but also my Chinese ID, just copy paste it.*\n\n\n## Support\n\nConsider support me on patron and motivate me to work on more games!\n\nAny support will be appreciated and you might even commision what game you want DLSS to be modded in.\n\n[My Patron Page](https://www.patreon.com/PureDark)\n\n\n## Changelog\n\n`v1.1.0`\n - Implemented XeSS and DLAA\n - Changed Hotkeys\n\n`v1.0.1`\n - Fixed crashing when switching to DLSS"
+}

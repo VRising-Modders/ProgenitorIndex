@@ -1,0 +1,38 @@
+{
+  "format": 1,
+  "package_sha256": "dd02382293e30382e4ea28b0274823715ab178d241192213f191d725f5456a1b",
+  "size": 145236,
+  "manifest": {
+    "name": "SystemsDumper",
+    "version_number": "1.2.0",
+    "website_url": "https://github.com/cheesasaurus/v-rising-mods",
+    "description": "Development tool. Dumps information about ECS Systems.",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "deca-VampireCommandFramework-0.10.4"
+    ]
+  },
+  "description": "Development tool. Dumps information about ECS Systems.",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.733.2/",
+      "sha256": "eabfb53d80bed427ddbd1ecf8af4dcd6e82e152809d44ab3218d0a09984f491c"
+    },
+    {
+      "id": "deca-VampireCommandFramework-0.10.4",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/deca/VampireCommandFramework/0.10.4/",
+      "sha256": "e554e964242db0b1cfef5824129aa6794c8a7138c9321b617d633f9aaffac19b"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "21217bce73ac785fcc91e1a3af0dfbf06fcc240e783c93782cb6a8f81259fb44"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# SystemsDumper\n\nSystemsDumper is a tool for mod developers.\n\nIt dumps information about ECS Systems. For use with both client and server applications.\n\n\n## Installation\n\n- Install [BepInEx](https://v-rising.thunderstore.io/package/BepInEx/BepInExPack_V_Rising/).\n- Install [VampireCommandFramework](https://thunderstore.io/c/v-rising/p/deca/VampireCommandFramework/).\n- Extract `SystemsDumper.dll` into `(VRising folder)/BepInEx/plugins`.\n\n\n## Chat Commands\n\nCommands work on both client and server applications. (client dumps are dumped locally, server dumps are dumped to the server). AdminAuth required.\n\n- `.DumpSystems UpdateTree`\n  - Dumps ECS system update hierarchies to files. One file per World. [Sample](https://github.com/cheesasaurus/v-rising-modding-notes/blob/main/Dumps/VRisingDedicatedServer/Systems/Server/UpdateTree.txt).\n  - shortcut `.ds ut`\n- `.DumpSystems Code`\n  - Generates code snippets for each system, per world. One file per system. [Sample](https://github.com/cheesasaurus/v-rising-modding-notes/blob/main/Dumps/VRisingDedicatedServer/Systems/Server/Code/ProjectM.CastleBuilding.CastleBuildingWorkstationsSystem.cs).\n  - shortcut `.ds c`\n\n\n## Support\n\nJoin the [modding community](https://vrisingmods.com/discord).\n\nPost an issue on the [GitHub repository](https://github.com/cheesasaurus/ProfuselyViolentProgression). ",
+  "changelog": "# 1.2.0\n- Added EntityQuery code generation for unmanaged systems.\n\n# 1.1.0\n- Added `.DumpSystems Code` (shortcut `.ds c`) command to generate code snippets for each system.\n\n# 1.0.0\n- Initial release"
+}

@@ -1,0 +1,44 @@
+{
+  "format": 1,
+  "package_sha256": "2554f567b5862847b11bc862989baf2e5b5cd53e5ad96359384ac0833760b325",
+  "size": 9752,
+  "manifest": {
+    "name": "PlayersOnline",
+    "version_number": "1.0.4",
+    "website_url": "https://github.com/Dawiss2/PlayersOnline",
+    "description": "A simple server plugin to show how many players are online in game.",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.668.5",
+      "deca-Bloodstone-0.1.4",
+      "deca-VampireCommandFramework-0.8.0"
+    ]
+  },
+  "description": "A simple server plugin to show how many players are online in game.",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.668.5",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.668.5/",
+      "sha256": "784c7a7f64ba0f1d4e9778c6558a061ab83dbacc6e0bb8ae0e3ab86698578113"
+    },
+    {
+      "id": "deca-Bloodstone-0.1.4",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/deca/Bloodstone/0.1.4/",
+      "sha256": "e57607799d1550191b274237ead53a2e6f0fb8ea5cbeb67cb24a9f1572e8432a"
+    },
+    {
+      "id": "deca-VampireCommandFramework-0.8.0",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/deca/VampireCommandFramework/0.8.0/",
+      "sha256": "549349ee21d83e33a896e8cc7bdc7f9baed604b1fede0240ef9282d1c56e62a9"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "3d1d5644b3faef713b0671cd7829636820f5d78ffe189d27e7ad25fbeb9cb939"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# A simple server side mod to show how many players are online in game.\nCommands:\n\n.online - Show how many players are online on the server.\n\nConfiguration:\n\nslots - Max player slots amount on your server.\nseconds - Time cooldown in seconds before using .online command again."
+}

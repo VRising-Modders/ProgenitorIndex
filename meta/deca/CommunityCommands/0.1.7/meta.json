@@ -1,0 +1,44 @@
+{
+  "format": 1,
+  "package_sha256": "aaee1526aadcac8df67f190d7fdce8746eb4c15e4cbdf375ab5a350d1661aa28",
+  "size": 47778,
+  "manifest": {
+    "name": "CommunityCommands",
+    "version_number": "0.1.7",
+    "website_url": "https://github.com/decaprime/CommunityCommands",
+    "description": "Commands for the community, by the community.",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.668.5",
+      "deca-VampireCommandFramework-0.8.0",
+      "deca-Bloodstone-0.1.4"
+    ]
+  },
+  "description": "Commands for the community, by the community.",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.668.5",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.668.5/",
+      "sha256": "784c7a7f64ba0f1d4e9778c6558a061ab83dbacc6e0bb8ae0e3ab86698578113"
+    },
+    {
+      "id": "deca-VampireCommandFramework-0.8.0",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/deca/VampireCommandFramework/0.8.0/",
+      "sha256": "549349ee21d83e33a896e8cc7bdc7f9baed604b1fede0240ef9282d1c56e62a9"
+    },
+    {
+      "id": "deca-Bloodstone-0.1.4",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/deca/Bloodstone/0.1.4/",
+      "sha256": "e57607799d1550191b274237ead53a2e6f0fb8ea5cbeb67cb24a9f1572e8432a"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "18df0a32bc0bdf1722cfa04ede1555f6b17674f84b0db4cba1805057127463b7"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "![](logo.png)\n# CommunityCommands for V Rising\nCommunityCommands is a server modification for V Rising that adds chat commands that are compatbible with [VampireCommandFramework](https://github.com/decaprime/VampireCommandFramework). This is a spirtual successor in the line of ChatCommands by Nopey and RPGMods by Kaltharos. This mod is not a direct fork from that line and will not contain the RPG functionalities. It's purpose is to provide a generic collection of commands for a variety of community server needs.\n\n## Commands\n- `.bloodpotion`\n- `.buff`\n- `.cd`\n- `.give`\n- `.kill`\n- `.rename`\n- `.search item`\n- `.spawnnpc`\n- `.customspawn`\n"
+}

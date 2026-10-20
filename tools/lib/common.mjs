@@ -89,13 +89,14 @@ export const entryId = (owner, name, version) => `${owner}-${name}-${version}`;
  * Downloads a URL into memory. With `cache`, files are kept under .cache/downloads by URL and
  * reused; a cached file is reused only if it still matches `expectSha` when one is given.
  */
-export async function download(url, { cache = true, expectSha = null, maxBytes = 600 * 1024 * 1024 } = {}) {
+export async function download(url, { cache = true, cacheOnly = false, expectSha = null, maxBytes = 600 * 1024 * 1024 } = {}) {
   const dir = join(CACHE, 'downloads');
   const key = join(dir, sha256(Buffer.from(url)).slice(0, 32) + '.bin');
   if (cache && existsSync(key)) {
     const buf = readFileSync(key);
     if (!expectSha || sha256(buf) === expectSha) return buf;
   }
+  if (cacheOnly) throw Object.assign(new Error(`not in the download cache: ${url}`), { final: true });
   let lastErr;
   for (let attempt = 1; attempt <= 3; attempt++) {
     try {
@@ -142,9 +143,9 @@ export async function thunderstorePackages({ maxAgeMs = 60 * 60 * 1000 } = {}) {
 }
 
 /** Map from "Owner-Name-Version" to { pkg, version } for every Thunderstore version. */
-export async function thunderstoreVersions() {
+export async function thunderstoreVersions(opts = {}) {
   const map = new Map();
-  for (const pkg of await thunderstorePackages()) {
+  for (const pkg of await thunderstorePackages(opts)) {
     for (const v of pkg.versions) map.set(v.full_name, { pkg, version: v });
   }
   return map;

@@ -1,0 +1,38 @@
+{
+  "format": 1,
+  "package_sha256": "289379c39d3bd52d46d3912ddf3c9767f0cc47b10d1a7f598775a02ec1a125bc",
+  "size": 95705,
+  "manifest": {
+    "name": "FrostDashFreezeFix",
+    "version_number": "1.1.0",
+    "website_url": "https://github.com/cheesasaurus/ProfuselyViolentProgression",
+    "description": "Patches exploitable dash jewel bugs. Example: triggering 'consume chill and inflict freeze' on non-chilled targets.",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "cheesasaurus-HookDOTS_API-1.0.0"
+    ]
+  },
+  "description": "Patches exploitable dash jewel bugs. Example: triggering 'consume chill and inflict freeze' on non-chilled targets.",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.733.2/",
+      "sha256": "eabfb53d80bed427ddbd1ecf8af4dcd6e82e152809d44ab3218d0a09984f491c"
+    },
+    {
+      "id": "cheesasaurus-HookDOTS_API-1.0.0",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/cheesasaurus/HookDOTS_API/1.0.0/",
+      "sha256": "e8384aeab17575eb6d581eff41e326df48b38bd6598b7339ebf9f30ac2829e0f"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "133800afb1f091e2d156100fe42f9df10e1a5e410cc6cd02b385669325770ad0"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# FrostDashFreezeFix\n\nPatches exploitable dash jewel bugs.\n\n### Veil of Frost\n\nThe \"consume chill and inflict freeze\" jewel could freeze targets that weren't chilled.\n\n![frost dash freeze jewel](https://github.com/cheesasaurus/ProfuselyViolentProgression/raw/main/BepInExPlugins/FrostDashFreezeFix/images/frost-dash-freeze-jewel.png)\n\n### Veil of Blood\n\nThe \"hitting an enemy affected by leech\" jewel could grant empower when hitting targets that weren't leeched.\n\n![frost dash freeze jewel](https://github.com/cheesasaurus/ProfuselyViolentProgression/raw/main/BepInExPlugins/FrostDashFreezeFix/images/blood-dash-empower-jewel.png)\n\n### Veil of Illusion\n\nThe \"hitting an enemy affected by weaken\" jewel could grant a shield when hitting targets that weren't weakened.\n\n![frost dash freeze jewel](https://github.com/cheesasaurus/ProfuselyViolentProgression/raw/main/BepInExPlugins/FrostDashFreezeFix/images/illusion-dash-shield-jewel.png)\n\n### Other dashes\n\nI'm not aware of other exploits, but FrostDashFreezeFix also does corrective checks for:\n- `AB_Vampire_VeilOfStorm_TriggerBonusEffects` with `SpellMod_Shared_Storm_ConsumeStaticIntoStun`\n- `AB_Vampire_VeilOfChaos_TriggerBonusEffects` with `SpellMod_Shared_Chaos_ConsumeIgniteAgonizingFlames_OnAttack`\n\n## Installation\n\n- Install [BepInEx](https://v-rising.thunderstore.io/package/BepInEx/BepInExPack_V_Rising/).\n- Install [HookDOTS](https://thunderstore.io/c/v-rising/p/cheesasaurus/HookDOTS_API/).\n- Extract _FrostDashFreezeFix.dll_ into _`(VRising folder)/BepInEx/plugins`_.\n\n## Support\n\nJoin the [modding community](https://vrisingmods.com/discord).\n\nPost an issue on the [GitHub repository](https://github.com/cheesasaurus/ProfuselyViolentProgression). ",
+  "changelog": "# 1.1.0\n- Added corrections for other expolitable dash jewels.\n  - veil of blood: empower\n  - veil of illusion: shield\n- Added corrective checks for other dashes, just in case:\n  - veil of chaos: agonize\n  - veil of storm: stun\n\n# 1.0.0\n- Initial release"
+}

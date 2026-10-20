@@ -1,0 +1,37 @@
+{
+  "format": 1,
+  "package_sha256": "062ef91b11a235fd5a9fd25d9a0358de289cfac7873618f8c476834c714ef9e8",
+  "size": 71319,
+  "manifest": {
+    "name": "VMods_Blood_Refill",
+    "version_number": "1.0.1",
+    "website_url": "https://github.com/WhiteFang5/VMods#blood-refill",
+    "description": "A mod that allows players to refill their blood pool.",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.0.0",
+      "molenzwiebel-Wetstone-1.1.0"
+    ]
+  },
+  "description": "A mod that allows players to refill their blood pool.",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.0.0",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.0.0/",
+      "sha256": "27fd91f2951701faf324b9dcd34cf771a7f4534e1d3a679949b9a0ae67472054"
+    },
+    {
+      "id": "molenzwiebel-Wetstone-1.1.0",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/molenzwiebel/Wetstone/1.1.0/",
+      "sha256": "60d4cf20da7d8be01cb71447e5cf2165532ed0f3d19bd6788d9fc4403a257133"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "ffddce467b7b52acfbde8fdad28f0244a395636347f9dfdd4d89b3906dab410b"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# Blood Refill\nA server-side only mod that allows players to refill their blood pool.  \n  \nWhen feed-killing an enemy, you'll be able to regain some blood.  \nThe amount of blood regained is based on the level difference, blood type and blood quality of the killed enemy with V-Bloods refilling your blood pool for a much larger amount.\n\n<details>\n<summary>Configuration Options</summary>\n\n* Enable/disable requiring feed-killing (when disabled, any kill grants some blood).\n* Choose the amount of blood gained on a 'regular refill' (i.e. a refill without any level, blood type or quality punishments applied)\n* A multiplier to reduce the amount of gained blood when feeding on an enemy of a different blood type. (blood dilution)\n* The ability to disable different blood type refilling (i.e. a 0 multiplier for different blood types)\n* Switch between having V-Blood act as diluted or pure blood, or have V-Blood completely refill your blood pool\n* The options to make refilling random between 0.1L and the calculated amount (which then acts as a max refill amount)\n* A global refill multiplier (applied after picking a random refill value)\n* Enable/disable blood refill chat messages for everyone\n\n</details>\n\n## How to manually install\n* Install [BepInEx](https://v-rising.thunderstore.io/package/BepInEx/BepInExPack_V_Rising/)\n* Install [Wetstone](https://v-rising.thunderstore.io/package/molenzwiebel/Wetstone/)\n* (Locally hosted games only) Install [ServerLaunchFix](https://v-rising.thunderstore.io/package/Mythic/ServerLaunchFix/)\n* Extract the Vmods._mod-name_.dll\n* Move the desired mod(s) to the `[VRising (server) folder]/BepInEx/WetstonePlugins/`\n* Launch the server (or game) to auto-generate the config files\n* Edit the configs as you desire (found in `[VRising (server) folder]/BepInEx/config/`)\n* Reload the mods using the Wetstone commands (by default F6 for client-side mods, and/or `!reload` for server-side mods)\n  * If this doesn't work, or isn't enabled, restart the server/game\n\n## Commands\nMost of the VMods come with a set of commands that can be used. To see the available commands, by default a player or admin can use `!help`.  \nNormal players won't see the Admin-only commands listed.  \nThe prefix (`!`) can be changed on a per-mod basis.  \nTo prevent spam/abuse there's also a command cooldown for non-admins, this value can also be tweaked on a per-mod basis.  \nCommands can also be disabled completely on a per-mod basis.\n\n## More Details\n* [ChangeLog](https://github.com/WhiteFang5/VMods/blob/master/CHANGELOG.md#blood-refill)\n"
+}

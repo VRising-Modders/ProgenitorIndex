@@ -1,0 +1,38 @@
+{
+  "format": 1,
+  "package_sha256": "19c67d62c9dc8e314139c574798aa60c3793d5c5c1c2fd2eade7e8df2a3b7ab8",
+  "size": 82705,
+  "manifest": {
+    "name": "TrackCrafts",
+    "version_number": "0.0.6",
+    "website_url": "https://github.com/armanckeser/TrackCrafts",
+    "description": "Adds the ability to pin multiple crafting recipes",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.668.5",
+      "deca-Bloodstone-0.1.4"
+    ]
+  },
+  "description": "Adds the ability to pin multiple crafting recipes",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.668.5",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.668.5/",
+      "sha256": "784c7a7f64ba0f1d4e9778c6558a061ab83dbacc6e0bb8ae0e3ab86698578113"
+    },
+    {
+      "id": "deca-Bloodstone-0.1.4",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/deca/Bloodstone/0.1.4/",
+      "sha256": "e57607799d1550191b274237ead53a2e6f0fb8ea5cbeb67cb24a9f1572e8432a"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "c123c5cc58a5fd140b8ba289a67b9205b2a2dd2ac9d3a4f7fc29cbb16623f33a"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "#### V Rising - Client Plugin\n\n# Track Crafts\n![GameIcon](https://raw.githubusercontent.com/p1xel8ted/TrackCrafts/master/icon.png)\n### Description\n\nMiddle Click on a recipe to track it. Press F1 to clear all. Press F2 to show/hide all.\nNote: Currently not auto updating\n\n### Features\n⚙️ Hot reloading with [Bloodstone API](https://v-rising.thunderstore.io/package/deca/Bloodstone/)\n\n### Installation\n- Install [BepInExPack V Rising](https://v-rising.thunderstore.io/package/BepInEx/BepInExPack_V_Rising/)\n- Install [Bloodstone API](https://v-rising.thunderstore.io/package/deca/Bloodstone/)\n- Install using your preferred Thunderstore mod manager. To install manually, extract ``TrackCrafts.dll`` folder into _(VRising folder)/BepInEx/plugins_ or _(VRising folder)/BepInEx/BloodstonePlugins_\n\n### Limitations\nThis is my first plugin, as well as my first time touching any game engine. If you know how to, I would love someone to teach me or create a PR for\n- Auto update cost details as you add items to your inventory\n\n### Credits\n- arwen - README\n- Elmegaard - build script\n- p1xel8ted - Updating for Gloomroot",
+  "changelog": "`0.0.6`\n- Gloomrot Update\n- Requires Bloodstone (Wetstone successor)\n- Can now configure the scale of the tracked items (default is 0.75)\n- Can now configure how many can be tracked at once (default is 3)\n\n`0.0.5` Forgot to add the readme to the release\n\n`0.0.4` You can now track many recipes and delete them individually\n- The size of the recipes is now smaller\n- Added a button to delete recipes individually\n- You can now set a key bind to show/hide the pinned recipes\n\n`0.0.3` Fix bug where middle clicking on non-recipes would pin the recipe\n\n`0.0.2` Update Readme\n\n`0.0.1` First release"
+}

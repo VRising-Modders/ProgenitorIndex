@@ -1,0 +1,30 @@
+{
+  "format": 1,
+  "package_sha256": "3cebc13c46e52d63d8bccd488fae55db3864993f7040dcce3bc86744e68a8db1",
+  "size": 229195,
+  "manifest": {
+    "name": "Wetstone",
+    "version_number": "1.2.0",
+    "website_url": "https://github.com/molenzwiebel/Wetstone",
+    "description": "Plugin framework and general utilities for V Rising mods.",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.0.0"
+    ]
+  },
+  "description": "Plugin framework and general utilities for V Rising mods.",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.0.0",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.0.0/",
+      "sha256": "27fd91f2951701faf324b9dcd34cf771a7f4534e1d3a679949b9a0ae67472054"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "73acb00317b2a282b0a684247d7e886ab10b08d755413fbf1038afbc6c5fd938"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "![](https://i.imgur.com/XghiZXX.png)\n\n---\n\nWetstone is a modding library for both client and server mods for V Rising. By itself, it does not do much except allow you to reload plugins you've put in the Wetstone plugins folder.\n\n### Installation\n\n- Install [BepInEx](https://v-rising.thunderstore.io/package/BepInEx/BepInExPack_V_Rising/).\n- Extract _Wetstone.dll_ into _`(VRising folder)/BepInEx/plugins`_.\n- Optional: extract any reloadable additional plugins into _`(VRising folder)/BepInEx/WetstonePlugins`_.\n\n### Configuration\n\nWetstone supports the following configuration settings, available in `BepInEx/config/xyz.molenzwiebel.wetstone.cfg`.\n\n**Client/Server Options:**\n- `EnableReloading` [default `false`]: Whether the reloading feature is enabled.\n- `ReloadablePluginsFolder` [default `BepInEx/WetstonePlugins`]: The path to the directory where reloadable plugins should be searched. Relative to the game directory.\n\n**Client Options:**\n- Wetstone keybinding can be configured through the in-game settings screen.\n\n**Server Options:**\n- `ReloadCommand` [default `!reload`]: Which text command (sent in chat) should be used to trigger reloading of plugins.\n\n### Support\n\nJoin the [modding community](https://discord.gg/CWzkHvekg3), and ping `@molenzwiebel#2773`.\n\nPost an issue on the [GitHub repository](https://github.com/molenzwiebel/Wetstone). \n\n### Changelog\n\n- **1.2.0**\n    - Fixed the `VWorld` helpers to not return stale world instances when disconnecting and reconnecting to servers on a client.\n        - This also resolves a crash when sending custom network messages after disconnecting and reconnecting to a server.\n    - Added the `GameFrame` hook API for easily subscribing to frame callbacks (thanks @adainrivers!)\n    - Included unhollowed assembly DLLs in the search path for reloaded plugins.\n\n- **1.1.0**\n    - Added initial version of networking API for sending network messages between client and server.\n    - Fixed `VWorld.IsClient` and `VWorld.IsServer` to always return correct values.\n    - Exposed `Il2CppMethodResolver` and `NativeHookUtil`.\n    - Added support for the game initialization hook for client-side plugins. The initialization hook will be called on startup, when the default world is initialized.\n    - Disabled reload command by default.\n\n- **1.0.0**\n    - Initial release"
+}

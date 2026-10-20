@@ -1,0 +1,37 @@
+{
+  "format": 1,
+  "package_sha256": "2635470f12e11063a2db7f5a23eb59997122c134c844fa52e31699d2f694ac35",
+  "size": 265563,
+  "manifest": {
+    "name": "VampireDB",
+    "version_number": "0.1.1",
+    "website_url": "https://github.com/phlebotomist/VampireDB",
+    "description": "Stupid simple wrapper for LiteDB",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "deca-VampireCommandFramework-0.10.2"
+    ]
+  },
+  "description": "Stupid simple wrapper for LiteDB",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.733.2/",
+      "sha256": "eabfb53d80bed427ddbd1ecf8af4dcd6e82e152809d44ab3218d0a09984f491c"
+    },
+    {
+      "id": "deca-VampireCommandFramework-0.10.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/deca/VampireCommandFramework/0.10.2/",
+      "sha256": "1853610b9dd246a53296c35a3c069548397ad4deeeeb243b17756b1395dffb51"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "6d1b5559b8dbca569cb6fe351f0d25732d7239f8fdf7cde2e34e41d74dd3dff5"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "![logo](logo.png)\n\n# VampireDB\n\nStupid simple wrapper for litedb\n\n## For Admins:\n\nTo install just take BOTH dlls and put them in the plugins folder. 🎉That's it!🎉\n\n## For devs:\n\nsome examples:\n\n```csharp\n// tdbset <key> <value>\n[Command(\"dbset\", shortHand: \"dbs\", adminOnly: true)]\npublic void SetValue(ChatCommandContext ctx, string key, string value)\n{\nStorage.Instance.Set(ctx.User.PlatformId, key, value);\nctx.Reply($\"Saved: {key} = {value}\");\n}\n\n// tdbget <key>\n[Command(\"dbget\", shortHand: \"dbg\", adminOnly: true)]\npublic void GetValue(ChatCommandContext ctx, string key)\n{\n    string result;\n    if (Storage.Instance.TryGet(ctx.User.PlatformId, key, out result))\n        ctx.Reply($\"{key} = {result}\");\n    else\n        ctx.Reply($\"No entry for '{key}'.\");\n}\n// tdbget <key>\n[Command(\"dbgetInt\", shortHand: \"dbgi\", adminOnly: true)]\npublic void GetIntValue(ChatCommandContext ctx, string key)\n{\n    int result;\n    if (Storage.Instance.TryGet(ctx.User.PlatformId, key, out result))\n        ctx.Reply($\"{key} = {result}\");\n    else\n        ctx.Reply($\"No entry for '{key}'.\");\n}\n// tdbinc <key> [delta]   (increments an integer field; default +1)\n[Command(\"dbinc\", shortHand: \"dbi\", adminOnly: true)]\npublic void IncrementValue(ChatCommandContext ctx, string key, int delta = 1)\n{\n    int newVal = Storage.Instance.Update<int>(\n        ctx.User.PlatformId,\n        key,\n        current => current + delta,\n        0\n    );\n    ctx.Reply($\"{key} incremented to {newVal}\");\n}\n\n// tdbdel <key>\n[Command(\"dbdel\", shortHand: \"dbd\", adminOnly: true)]\npublic void DeleteValue(ChatCommandContext ctx, string key)\n{\n    bool removed = Storage.Instance.Delete(ctx.User.PlatformId, key);\n    ctx.Reply(removed ? $\"Deleted '{key}'.\" : $\"Nothing to delete for '{key}'.\");\n}\n```\n"
+}

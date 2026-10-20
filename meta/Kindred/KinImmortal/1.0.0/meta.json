@@ -1,0 +1,31 @@
+{
+  "format": 1,
+  "package_sha256": "e401ca24f08d447151f2bc46e1d4bd56a2e8f155de84e985bc42b3282a411e58",
+  "size": 50934,
+  "manifest": {
+    "name": "KinImmortal",
+    "version_number": "1.0.0",
+    "website_url": "https://github.com/mfoltz/KinImmortal",
+    "description": "The abyss stirs... Blood endures.",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.733.2"
+    ]
+  },
+  "description": "The abyss stirs... Blood endures.",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.733.2/",
+      "sha256": "eabfb53d80bed427ddbd1ecf8af4dcd6e82e152809d44ab3218d0a09984f491c"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "8a162485d7e077fabc3325272974d33371b9d635a9421c180a3297fb240c6c0a"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# KinImmortal\n\nCleanse a terrible curse from Dracula’s blood, restoring it's ability to maintain form outside the Shadow Realm.\n\n---\n\nThanks to the V Rising modding and server communities for ideas and requests!\n\nThis was a collaborative effort from Odjit (DJ) and zfolmt ([Mitch](https://www.patreon.com/join/4865914)); feel free to reach out in the modding discord for questions or help with the mod!\n\n[V Rising Modding Discord](https://vrisingmods.com/discord) | [How to Install Mods on BepInEx](https://wiki.vrisingmods.com/user/Mod_Install.html)\n\n\nThis mod is licensed under `AGPL-3.0`.\n",
+  "changelog": "`1.0.0`\n- Thunderstore Release"
+}

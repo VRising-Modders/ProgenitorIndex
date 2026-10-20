@@ -1,0 +1,30 @@
+{
+  "format": 1,
+  "package_sha256": "0c5613815d4bea8160e532c74b61770728ff99ce7f680691d9c7b81fb04ecfa0",
+  "size": 16976769,
+  "manifest": {
+    "name": "PotionsHaveContainers",
+    "version_number": "1.0.0",
+    "website_url": "https://github.com/phillipsOG/PotionsHaveContainers",
+    "description": "Place the available .dll file inside of BepInEx\\plugins folder to automatically load the mod.",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.0.0"
+    ]
+  },
+  "description": "Place the available .dll file inside of BepInEx\\plugins folder to automatically load the mod.",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.0.0",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.0.0/",
+      "sha256": "27fd91f2951701faf324b9dcd34cf771a7f4534e1d3a679949b9a0ae67472054"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "4eea0ebd1dbbba3ddb6fb5260671b4b406650ae9690b1dd8b57d9413e440c733"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# PotionsHaveContainers\n## Potions and flasks will now return their empty counter-part containers. What were we doing before, eating them?\nPlace the available .dll file inside of BepInEx\\plugins folder to automatically load the mod.\n\n### Will be updated more in the comming weeks"
+}

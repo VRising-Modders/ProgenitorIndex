@@ -1,0 +1,21 @@
+{
+  "format": 1,
+  "package_sha256": "e394af6c66ef16af43f0f41a0a7ae8655072e17f3373c901502ecaae15da011a",
+  "size": 55742,
+  "manifest": {
+    "name": "ArachNOPE",
+    "version_number": "1.1.0",
+    "website_url": "https://github.com/Tmktahu/ArachNOPE",
+    "description": "Replaces all spider visuals with furniture models to help players with arachnophobia enjoy V Rising.",
+    "dependencies": []
+  },
+  "description": "Replaces all spider visuals with furniture models to help players with arachnophobia enjoy V Rising.",
+  "dependencies": [],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "d6c82481fc0b2a880a8d44e33e482ea20afdaa10b26b55c8414833bef457e3dd"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# ArachNOPE\n\n![](banner.png)\n\nReplaces all spider visuals in V Rising with furniture models to help players with arachnophobia enjoy the game.\n\n**WARNING: Biting spiders is broken with this mod installed.** The spider model is hidden by scaling its model to zero, which scales the bite interaction radius to zero, making it impossible to bite the creature. This includes Ungora the Spider Queen (V-Blood). Players will need to use other mods or get a friend to kill Ungora to receive unlock credit.\n\n## Features\n\n - **Spider enemies replaced** - All NPC spider types (Spiderlings, Broodmothers, Ungora the Spider Queen, summoned ability spiders, etc.) are visually replaced with furniture when they spawn. Combat mechanics and hitboxes are unchanged.\n- **Spider shapeshift replaced** - The vampire spider shapeshift buff replaces your spider model with furniture. The furniture follows your character and disappears when the buff ends.\n - **Client-side only** - Installed on your client, does not affect other players or require server-side installation.\n\n## Manual Installation\n\n1. Install [BepInExPack V Rising](https://thunderstore.io/c/v-rising/p/BepInEx/BepInExPack_V_Rising/) to your V Rising client folder\n2. Place `ArachNOPE.dll` in `VRising/BepInEx/plugins/`\n3. Start the game. Spiders are replaced with furniture\n\n## Spiders Replaced\n\n- Spider (Melee, Ranged, Forest variants and their summons)\n- Spiderling, Spiderling (Vermin Nest)\n- Baneling, Baneling (Summon)\n- Broodmother\n- Ungora the Spider Queen (and Gate Boss variant)\n- Unstable Arachnid, Unstable Arachnid (Small)\n- Vampire spider shapeshift buff (player spider form)\n\nEach spider type is replaced with a different furniture model (chair, stool, table, throne, etc.).\n\n## Known Limitations\n\n- Spiders appear to slide instead of walk\n- All ability effects are unchanged and untouched. We only target the models\n\n## Building from Source\n\n```bash\ndotnet build -c Release\n```\n\nThe built DLL is at `bin/Release/net6.0/ArachNOPE.dll`."
+}

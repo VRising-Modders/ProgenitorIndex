@@ -1,0 +1,30 @@
+{
+  "format": 1,
+  "package_sha256": "c2bd02c226e4e508ebf798b95cae681835204e3ab91ff309cb029e27ad863f25",
+  "size": 123060,
+  "manifest": {
+    "name": "ServantForge",
+    "version_number": "1.1.0",
+    "website_url": "https://github.com/Darreans/ServantForge",
+    "description": "Upgrades a fully converted servant’s expertise for a cost.",
+    "dependencies": [
+      "deca-VampireCommandFramework-0.9.0"
+    ]
+  },
+  "description": "Upgrades a fully converted servant’s expertise for a cost.",
+  "dependencies": [
+    {
+      "id": "deca-VampireCommandFramework-0.9.0",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/deca/VampireCommandFramework/0.9.0/",
+      "sha256": "d3ce9095d9772f979feb4ec792f022d213f0cdf56dc27c82de26a0f9db7cfc9f"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "c9b6795670309e20cf74c9f7871b52d41e0c889b2958ab93e65bb4a030f57220"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# ServantForge - README\n\n## Description\nServantForge is a V Rising mod that empowers players to upgrade their fully converted servant’s expertise using in-game resources. With the `.upgradeservant` (alias `.us`) command, you can boost your servant’s proficiency by consuming a specified amount of a cost item (default: Thistle). This mod seamlessly integrates with your inventory system, automatically verifying and deducting the required items, and updates both the servant’s expertise and associated blood quality.\n\nKey features include:\n- Servant Expertise Upgrades: Increment your servant’s proficiency up to a configurable maximum.\n- Inventory Management: Automatically checks for and removes the required cost items from your inventory.\n- Configurable Settings: Customize the proficiency increment, maximum proficiency, and cost item parameters via the BepInEx configuration file.\n- Use `!servantreload` to reload the config from in-game.\n\n### .upgradeservant / .us\nDescription: Upgrades a fully converted servant’s expertise for a cost.\nUsage: `.upgradeservant`\n\nFunctionality:\n- Proximity Check: Verifies that a servant coffin is near your mouse position.\n- State Check: Confirms that the servant is fully converted.\n- Inventory Verification: Checks if you have enough of the required cost item in your inventory.\n- Item Removal & Upgrade: Deducts the specified number of cost items and increases the servant’s expertise and blood quality accordingly.\n\n## Installation Instructions\n1. Download the Mod Files:\n   - Obtain the latest `ServantForge.dll` release from the official repository or release page.\n2. Extract and Place Files:\n   - Place the `ServantForge.dll` file in your server’s BepInEx plugins directory:\n     ```\n     V_Rising_Server/\n         └── BepInEx/\n             └── plugins/\n                 └── ServantForge.dll\n     ```\n3. Launch the Server:\n   - Start your V Rising dedicated server. ServantForge will initialize automatically and generate any necessary configuration files.\n\n## Dependencies\n- BepInEx\n- VampireCommandFramework\n\n## Support & Community\nJoin the **VArena Discord**: [https://discord.gg/varena](https://discord.gg/varena)\n\nFor general V Rising modding discussions and finding other mods:\nVisit the **V Rising Modding Wiki**: [https://wiki.vrisingmods.com/](https://wiki.vrisingmods.com/)\n\n## Acknowledgements\nSpecial thanks to the V Rising Modding community and the developers of the underlying frameworks. Collaboration and open code sharing make mods like this possible.\n\n## Developer\nDarrean (inility)\n\n## License\nThis ServantForge mod is licensed under the MIT License with a non-commercial clause.\n\nSummary:\n- You **ARE free** to use, copy, modify, merge, publish, and distribute copies of this software.\n- You **MUST include** the original copyright notice and this permission notice in all copies or substantial portions of the software.\n- You **MAY NOT** sell copies of the Software or derivative works based on the Software for profit.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n\n**Disclaimer**: ServantForge is a third-party mod and is not affiliated with Stunlock Studios or the official V Rising development team. Use at your own risk."
+}

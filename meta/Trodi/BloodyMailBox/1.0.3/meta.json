@@ -1,0 +1,51 @@
+{
+  "format": 1,
+  "package_sha256": "1a1d581c15c46be2357358e2f59839a6035186201625b1aed4b0bac6abf08f52",
+  "size": 110117,
+  "manifest": {
+    "name": "BloodyMailBox",
+    "version_number": "1.0.3",
+    "website_url": "https://github.com/oscarpedrero/BloodyMailBox",
+    "description": "The BloodyMailBox mod for VRising allows users to receive messages and receive notifications of new messages even when they are offline.",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.668.5",
+      "deca-Bloodstone-0.2.2",
+      "deca-VampireCommandFramework-0.9.0",
+      "Trodi-BloodyCore-1.2.4"
+    ]
+  },
+  "description": "The BloodyMailBox mod for VRising allows users to receive messages and receive notifications of new messages even when they are offline.",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.668.5",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.668.5/",
+      "sha256": "784c7a7f64ba0f1d4e9778c6558a061ab83dbacc6e0bb8ae0e3ab86698578113"
+    },
+    {
+      "id": "deca-Bloodstone-0.2.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/deca/Bloodstone/0.2.2/",
+      "sha256": "1b7de6e8ab631afacea7c757c81494848755fda9d39c93618fc52584eff06089"
+    },
+    {
+      "id": "deca-VampireCommandFramework-0.9.0",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/deca/VampireCommandFramework/0.9.0/",
+      "sha256": "d3ce9095d9772f979feb4ec792f022d213f0cdf56dc27c82de26a0f9db7cfc9f"
+    },
+    {
+      "id": "Trodi-BloodyCore-1.2.4",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/Trodi/BloodyCore/1.2.4/",
+      "sha256": "071874a76097c4e8d747b3d24ed52dc03e64aa4c5b64b943c60b405888f3d41e"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "71a5d5779d4c93ee8ed697e418152bc3b72077ae18bd571c6ca482177c0f937b"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# BloodyMailBox- Mod Server for V Rising\n\n![alt text](https://github.com/oscarpedrero/BloodyMailBox/blob/master/Images/image.png?raw=true)\n![alt text](https://github.com/oscarpedrero/BloodyMailBox/blob/master/Images/image-2.png?raw=true)\n\n# Support this project\n\n[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/K3K8ENRQY)\n\n## Requirements:\n\nFor the correct functioning of this mod you must have the following dependencies installed on your server:\n\n1. [BepInEx](https://thunderstore.io/c/v-rising/p/BepInEx/BepInExPack_V_Rising/)\n2. [Bloodstone](https://thunderstore.io/c/v-rising/p/deca/Bloodstone/)\n3. [VampireCommandFramework](https://thunderstore.io/c/v-rising/p/deca/VampireCommandFramework/)\n4. [Bloody.Core](https://thunderstore.io/c/v-rising/p/Trodi/BloodyCore/)\n\n1. ## IMPORTANT NOTE\n\nYou must have version 1.2.4 of Bloody.Core installed to be able to use version 1.0.3 or higher of this mod\n\n### Actual Features\n\n- [x] Mailbox system to receive and send messages to other users.\n\n### Next Features\n\n- [ ] Submit a support ticket to admins\n- [ ] UI to manage and manage the mailbox\n- [ ] Creation of a public API and being able to use the mod from other mods to send messages to users and store it in their mailbox\n\n\n<details>\n<summary>Changelog</summary>\n\n`1.0.3`\n- Updated the timer system through CoroutineHandler.\n\n`1.0.2`\n- Fixed the bug that created the wrong mailboxes for some users.\n\n`1.0.1`\n- Bloody.Core dependency removed as dll and added as framework\n\n`1.0.0`\n- Pre-release for use in VRising version 1.0\n\n`0.3.2`\n- Fix error that makes the mod not work if a user when connecting did not have messages (new or old) it gave an error\n\n`0.3.1`\n- Mod stability fix\n\n`0.3.0`\n- First public version of the mod\n\n</details>\n\n## Chat Commands\n\n| COMMAND                                          |DESCRIPTION|Example\n|--------------------------------------------------|-------------------------------|-------------------------------|\n| `.mailbox list`   | List of all your messages in the mailbox | `.mailbox list`\n| `.mailbox send <UserNick> \"<Message>\"`   | Send a message to the mailbox of a server user | `.mailbox send Trodi \"Hello World\"`\n| `.mailbox read <idMessage>`   | Read a certain message from your mailbox, the id to indicate is the number that appears between [ ] when you execute the list command | `.mailbox read 1`\n| `.mailbox delete <idMessage>`   | Delete a certain message from your mailbox, the id to indicate is the number that appears between [ ] when you execute the list command | `.mailbox delete 1`\n| `.mailbox deleteall`   | \"Delete all messages from your mailbox | `.mailbox deleteall`\n\n# Configuration\n\nOnce the mod installed, a configuration file will be created in the \\BepInEx\\config server folder where you can activate or desactivate any of the mod notifications.\n\n**BloodyMailBox.cfg**\n\n|SECTION|PARAM| DESCRIPTION                                                     | DEFAULT\n|----------------|-------------------------------|-----------------------------------------------------------------|-----------------------------|\n|Config|`ownMessages`            | Allows you to send messages to your mailbox to yourself.              | false\n|Config|`maxMessages`            | \"Maximum number of messages that a user can have in the mailbox. If the value is 0 they are infinite (Not recommended) | 20\n\nIf you need assistance you can ask in the discord [V Rising Mod Community](https://discord.gg/vrisingmods)\n\n\n# Credits\n\nThis mod idea was a suggestion from [@SynovA.cmd](https://ideas.vrisingmods.com/posts/93/ticket-system) on our community idea tracker, please go vote and suggest your ideas: https://ideas.vrisingmods.com/\n\n[V Rising Mod Community](https://discord.gg/vrisingmods) the best community of mods for V Rising\n\n[@Vexor Gaming](https://discord.gg/AyyenSJH) For giving me ideas and testing the mods on your server and with your community.\n\n[@Deca](https://github.com/decaprime) for your help and the wonderful framework [VampireCommandFramework](https://github.com/decaprime/VampireCommandFramework) and [BloodStone](https://github.com/decaprime/Bloodstone) based in [WetStone](https://github.com/molenzwiebel/Wetstone) by [@Molenzwiebel](https://github.com/molenzwiebel)\n\n[@Adain](https://github.com/adainrivers) for encouraging me to develop a UI to be able to use the mod from the client, for the support and for its [VRising.GameData](https://github.com/adainrivers/VRising.GameData) framework\n"
+}

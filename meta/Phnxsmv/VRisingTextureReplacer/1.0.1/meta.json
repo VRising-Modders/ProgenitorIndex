@@ -1,0 +1,22 @@
+{
+  "format": 1,
+  "package_sha256": "6800b3ebbbb5312127d724ebdddc013555cbc1833c97106c512757d20e9335b2",
+  "size": 11321568,
+  "manifest": {
+    "name": "VRisingTextureReplacer",
+    "version_number": "1.0.1",
+    "website_url": "https://github.com/Phnxsmv/VRisingTextureReplacer",
+    "description": "This is a framework that enables player texture replacement in V Rising single player. Included are a few sample textures.",
+    "dependencies": []
+  },
+  "description": "This is a framework that enables player texture replacement in V Rising single player. Included are a few sample textures.",
+  "dependencies": [],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "f4ea79c0eca55a340f198cd4e74971d4e6ce595177dcecdd7b88c37be3596a37"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# V Rising Texture Replacer\nThis is a framework that enables player character texture replacement in V Rising.\nIncluded are a few sample textures.\n\n**This mod is meant for single player!**\n\nThe changes are client side only, so they will probably not be visible to other players in multiplayer,\nunless everyone uses the same replacement textures. Even then, I have not tested this mod in multiplayer,\nso I cannot guarantee it will work without issues.\n## Requirements\n[BepInEx 1.733.2](https://thunderstore.io/c/v-rising/p/BepInEx/BepInExPack_V_Rising/)\n## Installation\n1. Put the DLL along with the Textures folder, and replacement textures in it, into the BepInEx plugins folder.\n2. The plugin will create a config file in the BepInEx config folder.\nThis file is meant for toggling info logging of this plugin.\nThe default setting is \"false\". If you have any issue, set it to \"true\".\nErrors and warnings will be logged regardless. The additional info tells you if and what textures have been replaced.\nThe info logging is disabled by default to avoid spamming the log file, but it can be helpful for debugging.\n## Creating Custom Textures\n- Assets are in VRising\\VRising_Data\\StreamingAssets\\ContentArchives\n\n- [AssetStudio](https://github.com/zhangjiequan/AssetStudio) for browsing and finding assets and their archives that contain them\n\n- [AssetRipper](https://github.com/AssetRipper/AssetRipper) for extracting assets. (AssetStudio has issues with extracting normal maps!)\n\n- [UABEA sixth release](https://github.com/nesrak1/UABEA) for replacing assets. The sixth release of UABEA works.\n  The seventh release is unstable, do not use! I have not tested UABEA for extracting assets.\n\nSave any edited texture as PNG. The plugin will convert it to the correct format when loading it, either DXT5 or DXT5 linear depending on the texture type.\n## Technical details\nThe plugin works by loading the replacement textures into memory and then patching the game's skinned mesh renderer.\nThe replacements happen when the player changes equipment. I hooked HybridEquipmentSystem because it ticks every frame on the client.\nI diff the Equipment component because HybridCurrentEquipment (which I suppose registers equipment changes)\nlives on a separate entity that's not in the player's GameObject map.\n## Credits\nClaude Opus 4.7 Adaptive for helping with the code and providing guidance on how to implement the texture replacement.\n## License\nThis project is licensed under the AGPL-3.0 license.",
+  "changelog": "`1.0.0`\n- Initial release"
+}

@@ -1,0 +1,37 @@
+{
+  "format": 1,
+  "package_sha256": "3fa7fee11a18f8eb5fe2a021bd62dedb5153005254bd25a5491e706fa38b38a6",
+  "size": 59474,
+  "manifest": {
+    "name": "StarterKit",
+    "version_number": "0.1.0",
+    "website_url": "https://github.com/Rianaid/StarterKit",
+    "description": "Server side only mod that allows you to issue different starter kits to new vampires.",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.691.3",
+      "deca-VampireCommandFramework-0.9.0"
+    ]
+  },
+  "description": "Server side only mod that allows you to issue different starter kits to new vampires.",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.691.3",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.691.3/",
+      "sha256": "04290fad8e4e619451c4f5eff3957778d3ab6a0da89bb9ba321822c9e88cf926"
+    },
+    {
+      "id": "deca-VampireCommandFramework-0.9.0",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/deca/VampireCommandFramework/0.9.0/",
+      "sha256": "d3ce9095d9772f979feb4ec792f022d213f0cdf56dc27c82de26a0f9db7cfc9f"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "c01227998843845fb7e5455b50cd07fd4229ce44bc1bbd660cdf5f24420b7f7a"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# StarterKit\n`Server side only` mod that allows you to issue different starter kits to new vampires.\n\n\n<details>\n<summary>Changelog</summary>\n\n0.1.0\n- Initial public release of the mod.\n\n</details>\n\n## Installation\n* Install [BepInEx](https://v-rising.thunderstore.io/package/BepInEx/BepInExPack_V_Rising/)\n* Install [VampireCommandFramework](https://v-rising.thunderstore.io/package/deca/VampireCommandFramework/)\n* Extract _StarterKit.dll_ into _(VRising server folder)/BepInEx/plugins_\n\n## Commands\n\nOnly one:  `.kit [Kit Name]` - Give kit with same name. Only one set can be obtained by each player.\n\nif you don't specify a name, it gives `startkit`\n\n## Configurable Values\n_BepInEx\\config\\StarterKit.cfg_\n```ini\n[StarterKit]\n\n## Enable kit command..\n# Setting type: Boolean\n# Default value: true\nEnableKitCommand = true\n\n## Message when kit given player.\n# Setting type: String\n# Default value: Enjoy your <color=#ffffffff>free gear pack</color> and let the battle begin!\nMessageOnGivenKit = Enjoy your <color=#ffffffff>free gear pack</color> and let the battle begin!\n\n## Message when the player has already used a kit and will try to use it again.\n# Setting type: String\n# Default value: You have already used the starter kit.\nMessageAlreadyUsedKit = You have already used the starter kit.\n```\n## StartKit.json\n_BepInEx\\config\\StarterKit\\StartKits.json_\n```json\n{\n  \"startkit\": [\n    {\n      \"Name\": \"Item_Boots_T09_Dracula_Brute\",\n      \"Amount\": 1\n    },\n    {\n      \"Name\": \"Item_Chest_T09_Dracula_Brute\",\n      \"Amount\": 1\n    },\n    {\n      \"Name\": \"Item_Gloves_T09_Dracula_Brute\",\n      \"Amount\": 1\n    },\n    {\n      \"Name\": \"Item_Legs_T09_Dracula_Brute\",\n      \"Amount\": 1\n    }\n  ]\n}\n```\n### Credits\n\nThis mod idea was suggested by [@Vex](https://ideas.vrisingmods.com/posts/165/kits-system) on our community idea tracker. Please vote and suggest your ideas [here](https://ideas.vrisingmods.com/).\n\n[V Rising Mod Community](https://discord.gg/vrisingmods) is the best community of mods for V Rising.\n\n[@Deca](https://github.com/decaprime), thank you for the exceptional frameworks [VampireCommandFramework](https://github.com/decaprime/VampireCommandFramework).\n\n"
+}

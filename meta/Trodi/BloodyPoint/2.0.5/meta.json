@@ -1,0 +1,51 @@
+{
+  "format": 1,
+  "package_sha256": "4e5929a453d03e8805dfcb81e90420576a3644aa1e5dd14015d805c27eba76c1",
+  "size": 79034,
+  "manifest": {
+    "name": "BloodyPoint",
+    "version_number": "2.0.5",
+    "website_url": "https://github.com/oscarpedrero/BloodyPoints",
+    "description": "Mod so that personal or global waypoints can be created.",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.668.5",
+      "deca-Bloodstone-0.2.2",
+      "deca-VampireCommandFramework-0.9.0",
+      "Trodi-BloodyCore-1.2.4"
+    ]
+  },
+  "description": "Mod so that personal or global waypoints can be created.",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.668.5",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.668.5/",
+      "sha256": "784c7a7f64ba0f1d4e9778c6558a061ab83dbacc6e0bb8ae0e3ab86698578113"
+    },
+    {
+      "id": "deca-Bloodstone-0.2.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/deca/Bloodstone/0.2.2/",
+      "sha256": "1b7de6e8ab631afacea7c757c81494848755fda9d39c93618fc52584eff06089"
+    },
+    {
+      "id": "deca-VampireCommandFramework-0.9.0",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/deca/VampireCommandFramework/0.9.0/",
+      "sha256": "d3ce9095d9772f979feb4ec792f022d213f0cdf56dc27c82de26a0f9db7cfc9f"
+    },
+    {
+      "id": "Trodi-BloodyCore-1.2.4",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/Trodi/BloodyCore/1.2.4/",
+      "sha256": "071874a76097c4e8d747b3d24ed52dc03e64aa4c5b64b943c60b405888f3d41e"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "681e5cd2daabf1a8aeb9f7b61d29c805354642267dc15a2bc8d4fdb1c2106135"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# BloodyPoints Mod so that personal or global waypoints can be created\n\nIf you had the previous version installed, you must delete the configuration files for the server and restart the server.\n\n## IMPORTANT NOTE\n\nYou must have version 1.2.4 of Bloody.Core installed to be able to use version 2.0.4 or higher of this mod\n\n## NEW IN 2.0.4\n\nNow you can configure that the tp have cooldown, that they cost a specific amount of an item and you can request to tp the position of another player.\n\nPlease check the mod settings and new commands for these features.\n\n# Support this project\n\n[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/K3K8ENRQY)\n\n## Requirements:\n\nFor the correct functioning of this mod you must have the following dependencies installed on your server:\n\n1. [BepInEx](https://thunderstore.io/c/v-rising/p/BepInEx/BepInExPack_V_Rising/)\n2. [Bloodstone](https://thunderstore.io/c/v-rising/p/deca/Bloodstone/)\n3. [VampireCommandFramework](https://thunderstore.io/c/v-rising/p/deca/VampireCommandFramework/)\n4. [Bloody.Core](https://thunderstore.io/c/v-rising/p/Trodi/BloodyCore/)\n\n\n<details>\n<summary>Changelog</summary>\n\n`2.0.5`\n- Updated the timer system through Coroutine that brings the new version of Bloody.Core\n- Fixed List of Waypoints\n- Fixed Remove Waypoints\n- Added animation when teleporting\n\n`2.0.4`\n- Added the cost option to make tp and the configuration of the PrefabGUID and its quantity.\n- Added the option to request a player to tp his position.\n\n`2.0.3`\n- Added option to the configuration file to prevent tp when a player is in combat\n- Added option in the configuration file so that players have a cooldown time between tp\n- Changed the short command from .bp to .blp to avoid incompatibility with other mods.\n\n`2.0.2`\n- Bloody.Core dependency removed as dll and added as framework\n- Added parameter in the mod configuration to avoid creating or teleporting to Dracula's room\n\n`2.0.0`\n- Updated to VRISING 1.0\n\n`1.0.2`\n- Fixed README\n\n`1.0.2`\n- Fix problem with config files when init first time mod\n\n`1.0.0`\n- First Release\n\n\n</details>\n\n## Configuration\n\nOnce the mod is installed, a configuration file will be created in the server folder \\BepInEx\\config where you can configure the maximum number of waypoints per user allowed\n\n**BloodyPoints.cfg**\n\n|SECTION|PARAM| DESCRIPTION                                                     | DEFAULT\n|----------------|-------------------------------|-----------------------------------------------------------------|-----------------------------|\n|Config|`Waypoint Limit`            | Set a waypoint limit per user              | 1\n|Config|`In Combat`            | Allows tp to be used when a player is in combat             | true\n|Config|`Dracula Room`            | Allows you to create waypoints or tp from Dracula's room              | false\n|Config|`CoolDown`            | Time in seconds for teleportation to cooldown              | 20\n|Config|`Cost`            | Activate cost to make tp              | true\n|Config|`PrefabGUID`            | PrefabGUID that the player will have to have in the inventory to make tp              | 862477668\n|Config|`Amount`            | Amount of PrefabGUID needed to make tp              | 20\n|Config|`TeleporPlayer`            | Enable players to tp another player             | true\n|Config|`RequestTeleportPlayer`            | Activate that players must accept a tp from another player who wants to tp their position.              | true\n \n ```\n## Settings file was created by plugin BloodyPoints v2.0.2\n## Plugin GUID: BloodyPoints\n\n[Config]\n\n## Set a waypoint limit per user.\n# Setting type: Int32\n# Default value: 1\nWaypoint Limit = 1\n\n## Allows tp to be used when a player is in combat\n# Setting type: Boolean\n# Default value: true\nIn Combat = true\n\n## Allows you to create waypoints or tp from Dracula's room\n# Setting type: Boolean\n# Default value: false\nDracula Room = false\n\n## Time in seconds for teleportation to cooldown\n# Setting type: Int32\n# Default value: 20\nCoolDown = 20\n\n## Activate cost to make tp\n# Setting type: Boolean\n# Default value: true\nCost = true\n\n## PrefabGUID that the player will have to have in the inventory to make tp\n# Setting type: Int32\n# Default value: 862477668\nPrefabGUID = 862477668\n\n## Amount of PrefabGUID needed to make tp\n# Setting type: Int32\n# Default value: 20\nAmount = 20\n\n## Enable players to tp another player\n# Setting type: Boolean\n# Default value: true\nTeleporPlayer = true\n\n## Activate that players must accept a tp from another player who wants to tp their position.\n# Setting type: Boolean\n# Default value: true\nRequestTeleportPlayer = true\n ```\n\n## Chat Commands\n\n| COMMAND                                          |DESCRIPTION\n|--------------------------------------------------|-------------------------------|\n| `.help bloodypoint`                                   | Command that returns all available commands    \n| `.blp wpg <Name>` (Only Admins)                   | Creates the specified global waypoint.\n| `.blp rmg <Name>` (Only Admins)   | Removes the specified global waypoint.\n| `.blp tpp <Name> <PlayerName/all>` (Only Admins)  | Teleports player to the specific waypoint. If we type \"all\" instead of the player's name it will teleport all online players to the specified point.\n| `.blp wp <Name>`  | Creates the specified personal waypoint.\n| `.blp rm <Name>`  | Removes the specified personal waypoint.\n| `.blp tp <Name>`  | Teleports you to the specific waypoint.\n| `.blp tlp <Name>`  | Teleports you to the specific player.\n| `.blp tla <Name>`  | Accept teleport request from a player.\n| `.blp l `  | Lists waypoints available to you\n\n## Credits\n\n- [decaprime (Bloodstone & VCF)](https://github.com/decaprime) \n- [Kaltharos (RPGMods)](https://github.com/Kaltharos/RPGMods) \n- [adainrivers (VRising.GameData)](https://github.com/adainrivers/VRising.GameData)\n"
+}

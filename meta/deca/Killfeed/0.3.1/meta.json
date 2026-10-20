@@ -1,0 +1,44 @@
+{
+  "format": 1,
+  "package_sha256": "dc98aad6534955af780830e5957154ad425b8742eecb20924959659c069b66bc",
+  "size": 79150,
+  "manifest": {
+    "name": "Killfeed",
+    "version_number": "0.3.1",
+    "website_url": "https://github.com/decaprime/Killfeed",
+    "description": "PvP Leaderboard and Killfeed Announcements",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.691.3",
+      "deca-VampireCommandFramework-0.9.0",
+      "deca-Bloodstone-0.2.2"
+    ]
+  },
+  "description": "PvP Leaderboard and Killfeed Announcements",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.691.3",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.691.3/",
+      "sha256": "04290fad8e4e619451c4f5eff3957778d3ab6a0da89bb9ba321822c9e88cf926"
+    },
+    {
+      "id": "deca-VampireCommandFramework-0.9.0",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/deca/VampireCommandFramework/0.9.0/",
+      "sha256": "d3ce9095d9772f979feb4ec792f022d213f0cdf56dc27c82de26a0f9db7cfc9f"
+    },
+    {
+      "id": "deca-Bloodstone-0.2.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/deca/Bloodstone/0.2.2/",
+      "sha256": "1b7de6e8ab631afacea7c757c81494848755fda9d39c93618fc52584eff06089"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "8015578392c979f783d66113b003331d0963f6c81cbae564cb8150b744fa20eb"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "![](logo.png)\n# Killfeed - PvP Announcer and Statistics\n\n## Features\n- Announce PvP kills in chat\n- Kill Leaderboard\n- Killstreak Leaderboard\n- Death Leaderboard\n- Announce kill streaks\n- Optionally include current level or maximum level\n \n## Upcoming features\n- Announce multi-kills\n- Track by clan\n\n## Setttings\n\nThis is a preview of the settings file, the plugin will generate a file with the default values when run.\n\n```ini\n[General]\n\n## Announce kills in chat\n# Setting type: Boolean\n# Default value: true\nAnnounceKills = true\n\n## Minimum killstreak count that must be lost to be announced.\n# Setting type: Int32\n# Default value: 3\nAnnounceKillstreakLostMinimum = 3\n\n## Announce killstreaks in chat\n# Setting type: Boolean\n# Default value: true\nAnnounceKillstreak = true\n\n## Include player gear levels in announcements.\n# Setting type: Boolean\n# Default value: true\nIncludeLevel = true\n\n## Use max gear level instead of current gear level.\n# Setting type: Boolean\n# Default value: false\nUseMaxLevel = true\n\n```\n\n## https://vrisingmods.com/discord\n\n# Changelog\n- 0.3.1\n\t- Added new options to show level, and if so to show current or maximum level\n- 0.2.1\n\t- Fixed confusing plugin ID, **important:** the config file was `com.deca.Bloodstone.cfg` it will now use `gg.deca.Killfeed.cfg`\n- 0.2.0\n\t- Update for 1.0\n- 0.1.0\n\t- Initial release\n"
+}

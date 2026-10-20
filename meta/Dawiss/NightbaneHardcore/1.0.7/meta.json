@@ -1,0 +1,38 @@
+{
+  "format": 1,
+  "package_sha256": "44108497062e3f83679a5ba066f0eebd02fb1df42fd69903d8d356e29cc5e910",
+  "size": 139457,
+  "manifest": {
+    "name": "NightbaneHardcore",
+    "version_number": "1.0.7",
+    "website_url": "https://github.com/Dawiss2/NightbaneHardcore/tree/main",
+    "description": "Hardcore Perma Death Mode for V Rising.",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.691.3",
+      "deca-VampireCommandFramework-0.9.0"
+    ]
+  },
+  "description": "Hardcore Perma Death Mode for V Rising.",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.691.3",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.691.3/",
+      "sha256": "04290fad8e4e619451c4f5eff3957778d3ab6a0da89bb9ba321822c9e88cf926"
+    },
+    {
+      "id": "deca-VampireCommandFramework-0.9.0",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/deca/VampireCommandFramework/0.9.0/",
+      "sha256": "d3ce9095d9772f979feb4ec792f022d213f0cdf56dc27c82de26a0f9db7cfc9f"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "81fc79b8ae19e6603dc448f37b129681f1d6f995af142d62d00704d8afceadea"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "![image](https://github.com/user-attachments/assets/f05d0627-cbdb-495b-8513-c9720995f640)\n\n# NightbaneHardcore\n\nWelcome to **NightbaneHardcore**, a hardcore survival experience designed to test your skills and resilience! This mod introduces punishing mechanics to elevate your gameplay. Ready to face the ultimate challenge?\n\n---\n\n## 1.1 Update\n- **Don't use Bepinex and VampireCommandFramework release from Thunderstore, it's not updated to 1.1 yet. [Get it from here](https://wiki.vrisingmods.com/user/game_update.html)**\n\n## Warning\n- **This mod was designed for solo gameplay. When you die, your entire castle gets deleted, SteamID of your character is set to 0 and you are kicked from the server.**\n\n## Features\n\n- **Total Progress Wipe on Death**: Die, and your entire journey resets. No second chances.\n- **Death Announcements**: Every death is broadcasted in chat for all to witness.\n- **Discord Deathlog**: Log every demise to Discord for a permanent record.\n- **Bloodmoon PvP**: PvP activates during bloodmoons—survive or conquer.\n- **Boosted Drops During Bloodmoon**: Higher drop rates make the chaos rewarding.\n- **Disable dropping items from your inventory**: Use it to avoid situations where high level player crafts high end gear for his low level friend that just joined the server.\n- **Last Words**: Your final message echoes in the chat announcement.\n\n---\n\n## Commands\n\n- `.dropenable`  \n  Unlock item deletion if item drops are disabled.\n- `.dropdisable`  \n  Lock item deletion to prevent accidental removals.\n\n---\n\n## Configuration\n\nCustomize your **NightbaneHardcore** experience with the following config options:\n\n### `[Bloodmoon]`\n\n- **`PvPOnBloodmoon`**  \n  *Enable PvP during Bloodmoon.*  \n  - Type: `Boolean`  \n  - Default: `true`\n\n- **`HigherDropOnBloodmoon`**  \n  *Enable higher item drop rates during Bloodmoon.*  \n  - Type: `Boolean`  \n  - Default: `true`\n\n- **`DropRateOnBloodmoon`**  \n  *Set the drop rate multiplier during Bloodmoon (if enabled).*  \n  - Type: `Int32`  \n  - Default: `3`\n\n### `[Discord]`\n\n- **`DiscordDeathlog`**  \n  *Log deaths to a Discord webhook.*  \n  - Type: `Boolean`  \n  - Default: `false`\n\n- **`DiscordWebhookID`**  \n  *Discord webhook ID for PvE death logging.*  \n  - Type: `String`  \n  - Default: `(empty)`\n\n- **`DiscordWebhookToken`**  \n  *Discord webhook token for PvE death logging.*  \n  - Type: `String`  \n  - Default: `(empty)`\n\n- **`DiscordWebhookIDPvP`**  \n  *Discord webhook ID for PvP kill logging.*  \n  - Type: `String`  \n  - Default: `(empty)`\n\n- **`DiscordWebhookTokenPvP`**  \n  *Discord webhook token for PvP kill logging.*  \n  - Type: `String`  \n  - Default: `(empty)`\n\n### `[General]`\n\n- **`AnnounceDeaths`**  \n  *Announce player deaths in chat.*  \n  - Type: `Boolean`  \n  - Default: `true`\n\n- **`LockItemDropping`**  \n  *Prevent players from dropping items on ground.*  \n  - Type: `Boolean`  \n  - Default: `true`\n\n- **`LastWords`**  \n  *Add last words of player that just died to the chat announcement.*  \n  - Type: `Boolean`  \n  - Default: `true`\n    \n---\nIf you have any questions, feel free to join Nightbane Discord: https://discord.gg/23Bd9ryzUH",
+  "changelog": "# Changelog\n\nAll notable changes to this project will be documented in this file.\n\nThe format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).\n\n## [1.0.7] - 2025-05-09\n### Changed\n- Updated `README.md` on Thunderstore (no code changes).\n\n## [1.0.6] - 2025-05-08\n### Fixed\n- V Rising 1.1 Hotfix 6 Compatibility\n\n## [1.0.5] - 2025-05-08\n### Fixed\n- Fixed deaths to sun showing as PvP Kill.\n\n## [1.0.4] - 2025-05-08\n### Fixed\n- V Rising 1.1 compatibility\n### Changed\n- Removed BloodyCore dependency\n- Removed Bloodstone dependency\n\n## [1.0.3] - 2025-03-24\n### Fixed\n- Fixed Bloodmoon detection to ensure proper event triggering.\n- Fixed Bloodmoon drop rate configuration to read from config file (previously hardcoded at x3).\n\n## [1.0.2] - 2025-03-13\n### Changed\n- Updated `README.md` on Thunderstore (no code changes).\n\n## [1.0.1] - 2025-03-13\n### Fixed\n- Fixed PvP Discord deathlog webhook to correctly log player deaths.\n\n## [1.0.0] - 2025-03-13\n### Added\n- Initial release of the project.\n"
+}

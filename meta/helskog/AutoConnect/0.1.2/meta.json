@@ -1,0 +1,31 @@
+{
+  "format": 1,
+  "package_sha256": "ea875e5bdea91eb20320a1e400518f6f7ef1e320f9540320c2a0fc60ec2f07d7",
+  "size": 17812,
+  "manifest": {
+    "name": "AutoConnect",
+    "version_number": "0.1.2",
+    "website_url": "https://github.com/helskog/AutoConnect",
+    "description": "Reconnect automatically if the server is full",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.733.2"
+    ]
+  },
+  "description": "Reconnect automatically if the server is full",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.733.2/",
+      "sha256": "eabfb53d80bed427ddbd1ecf8af4dcd6e82e152809d44ab3218d0a09984f491c"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "8a9cb5aec869e8bc8ccbd18f999ef9b3ee2b8b674cab59bc742ff60a5bf36563"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# AutoConnect\nAutomatically connect to servers that are full, instead of having to manually spam connect.\n\n## Features\n🔁 Automatically connect to a server until a spot opens up<br>\n🔧 Adjust amount of seconds to wait before trying again<br>\n📌 Saves & reloads options automatically when closing and re-opening the game<br>\n\n## How It Works\nAutoConnect will very simply try to connect again if you have been kicked from a server with the \"Error: Server full\" message. Effectively removing the need to spam-connect on newly wiped servers.\n\n![](https://github.com/helskog/AutoConnect/blob/master/preview.gif)\n\n## Installing AutoConnect\n1️⃣ Navigate to the game install folder. Typically: `C:\\Program Files (x86)\\Steam\\steamapps\\common\\VRising`<br>\n\n2️⃣ Make sure you have the latest version of [BepInEx](https://thunderstore.io/c/v-rising/p/BepInEx/BepInExPack_V_Rising/) for V Rising, if installed for the first time make sure to run the game at least once and close it afterwards for the plugins & config directories to be created automatically.<br>\n\n3️⃣ ️Place the `AutoConnect.dll` file inside the `\\BepInEx\\plugins` folder.<br>\n\n## Options Menu\nThe options are available inside the normal game menu under `General` at the very bottom of the page.\n\n<img src=\"https://i.ibb.co/tpvQGJY6/Discord-O3-Jbdqt-GGM.png\"/>\n\n### Credits\n🧛 [V Rising Modding Community](https://wiki.vrisingmods.com/)  |  [Discord](https://discord.com/invite/QG2FmueAG9)\n\n### Support & Bug reports\nJoin the V Rising Modding Community discord with the link above and create a post in the `🙋|Technical Support` channel and tag `#helskog` \n\n### License\n[This project is licensed under the AGPL-3.0 license.](https://choosealicense.com/licenses/agpl-3.0/#)\n",
+  "changelog": "v0.1.2\n- Removed redundant dependencies\n- Updated unhollowed lib references\n- Updated readme\n- adjusting dependency string for thunderstore release"
+}

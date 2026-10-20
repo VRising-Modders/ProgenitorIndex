@@ -1,0 +1,30 @@
+{
+  "format": 1,
+  "package_sha256": "cc31335151cab693c3ecbe6699cbc3a700c63ff62fc406b4128492011e5eb32b",
+  "size": 47750,
+  "manifest": {
+    "name": "IntroSkip",
+    "version_number": "1.0.0",
+    "website_url": "https://github.com/iZastic/vrising-autoready",
+    "description": "Skips the intro when the game starts",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.668.5"
+    ]
+  },
+  "description": "Skips the intro when the game starts",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.668.5",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.668.5/",
+      "sha256": "784c7a7f64ba0f1d4e9778c6558a061ab83dbacc6e0bb8ae0e3ab86698578113"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "3cc9e003530ec1ef4772384cd2e7e77df5226f8afaed5899aff7f0a605cad98f"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# IntroSkip\nAutomatically skips the intro video when starting the game\n\n### Installation\n- Install [BepInEx](https://v-rising.thunderstore.io/package/BepInEx/BepInExPack_V_Rising/)\n- Extract _IntroSkip.dll_ into _(VRising folder)/BepInEx/plugins_\n\n### Support\nJoin the [modding discord](https://vrisingmods.com/discord) for support and tag `@iZastic#0365`\n\nSubmit a ticket on [GitHub](https://github.com/iZastic/vrising-introskip/issues)\n\n### Changelog\n`1.0.0`\n- Initial release\n\n</details>"
+}

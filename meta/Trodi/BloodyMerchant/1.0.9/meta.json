@@ -1,0 +1,59 @@
+{
+  "format": 1,
+  "package_sha256": "7d45e85819ef38e459affdba423b15856f9e222044bdcb1c426901d878cf9c89",
+  "size": 116716,
+  "manifest": {
+    "name": "BloodyMerchant",
+    "version_number": "1.0.9",
+    "website_url": "https://github.com/oscarpedrero/BloodyMerchant",
+    "description": "BloodyMerchant is a mod designed for V Rising, offering the capability to create custom in-game merchants, adding a layer of dynamic and immersive gameplay.",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.668.5",
+      "deca-Bloodstone-0.2.2",
+      "deca-VampireCommandFramework-0.9.0",
+      "Trodi-BloodyCore-1.2.4",
+      "Trodi-BloodyWallet-0.1.1"
+    ]
+  },
+  "description": "BloodyMerchant is a mod designed for V Rising, offering the capability to create custom in-game merchants, adding a layer of dynamic and immersive gameplay.",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.668.5",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.668.5/",
+      "sha256": "784c7a7f64ba0f1d4e9778c6558a061ab83dbacc6e0bb8ae0e3ab86698578113"
+    },
+    {
+      "id": "deca-Bloodstone-0.2.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/deca/Bloodstone/0.2.2/",
+      "sha256": "1b7de6e8ab631afacea7c757c81494848755fda9d39c93618fc52584eff06089"
+    },
+    {
+      "id": "deca-VampireCommandFramework-0.9.0",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/deca/VampireCommandFramework/0.9.0/",
+      "sha256": "d3ce9095d9772f979feb4ec792f022d213f0cdf56dc27c82de26a0f9db7cfc9f"
+    },
+    {
+      "id": "Trodi-BloodyCore-1.2.4",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/Trodi/BloodyCore/1.2.4/",
+      "sha256": "071874a76097c4e8d747b3d24ed52dc03e64aa4c5b64b943c60b405888f3d41e"
+    },
+    {
+      "id": "Trodi-BloodyWallet-0.1.1",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/Trodi/BloodyWallet/0.1.1/",
+      "sha256": "eb6484c24e944223c3524478614baa673d18219259a58111a96525388b903abc"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "0239614a08984c0ac2a0f784327d7a2cfb54bd8c2e69c756fcfc62faa18dbbce"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# BloodyMerchant\n\n**BloodyMerchant** is a mod designed for V Rising, offering the capability to create custom in-game merchants, adding a layer of dynamic and immersive gameplay ( Vrising 1.0 ).\n\n## IMPORTANT NOTE\n\n## For the mod to work correctly you need Bloody.Core version 1.2.4 or higher. This is very important because otherwise the mod will not work. Updating this library does not break any of your other mods.\n\n## NEW IN 1.0.8\n\n- Now you can use [BloodyWallet](https://thunderstore.io/c/v-rising/p/Trodi/BloodyWallet/) to buy at the merchant with virtual currencies. Check the configuration file to activate this option.\n\n# Instructions for BloodyWallet\n\n1.- Edit the file ` config/trodi.Bloody.Wallet.cfg` and configure the PrefabGUID you want to use to purchase from the merchant in the `prefabGUIDExchange` option. \n2.- Edit the file ` config/BloodyMerchant.cfg` and set the value true to the `enabled` option.\n\n\nThe Prefab that you configured in Bloody.Wallet will appear in your inventory immediately after opening the merchant's store, if you do not have enough space it will not let you open a purchasing window.\n\n**This Prefab cannot be thrown to the ground or picked up from the ground so you must take into account configuring a Prefab that is not used in the game such as [Crystals](https://vrising.gaming.tools/items /item_ingredient_crystal) or [Witchdust](https://vrising.gaming.tools/items/item_ingredient_witchdust) to avoid problems**\n\nYou can configure the merchant with other purchase items other than the BloodyWallet Prefab. It still works in the same way, but the ideal is that you change all of them to the BloodyWallet Prefab, so any object from your merchants can be purchased with the virtual currency.\n\n\n<details>\n<summary>Changelog</summary>\n\n`1.0.8`\n- Updated the timer system through Coroutine that brings the new version of Bloody.Core\n- Now you can use BloodyWallet to buy at the merchant with virtual currencies.\n\n`1.0.7`\n- Added cleanicons command. This command will delete all the icons on the map, if you have any active merchant it will also delete their icon. \n- Added control of the number of items that can be added to a merchant. The limit is 33, after that number the client UI breaks.\n- Fixed the error that caused the merchant in some places to not display the items correctly.\n- System improvement and small fixes.\n\n`1.0.6`\n- Added a command to clear all items from a merchant\n\n`1.0.5`\n- Add or remove items from merchant in real time\n\n`1.0.4`\n- Bloody.Core dependency removed as dll and added as framework\n\n`1.0.3`\n- Refactored the Patch system\n- Added Bloody.Core.\n- Added restriction to the create command so that only valid merchant PrefabsGUIDs can be added\n- Improved performance.\n\n`1.0.0`\n- Fix with Autorespawn\n- Updated to a VRising 1.0 \n- Added the functionality to show the icon on the merchant map\n\n`0.2.0`\n- Fix Autorefill\n- Fixed a problem with products that did not work correctly\n\n`0.1.0`\n- Fix Autorefill by [@Backxtar](https://github.com/Backxtar)\n\n`0.0.1`\n- Initial public release of the mod\n</details>\n\n# Support this project\n\n[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/K3K8ENRQY)\n\n## Mod Features\nBloodyMerchant is a key component of the Blood Mod Pack. This plugin empowers you to craft personalized in-game traders, akin to BloodyShop. However, it leverages in-game traders, providing a more dynamic and immersive experience.\n\n# Requirements\n\n1. [BepInEx](https://thunderstore.io/c/v-rising/p/BepInEx/BepInExPack_V_Rising/)\n2. [Bloodstone](https://thunderstore.io/c/v-rising/p/deca/Bloodstone/)\n3. [VampireCommandFramework](https://thunderstore.io/c/v-rising/p/deca/VampireCommandFramework/)\n4. [Bloody.Core](https://thunderstore.io/c/v-rising/p/Trodi/BloodyCore/)\n\n## Installation\n1. Copy `BloodyMerchant.dll` to your `BepInEx/Plugins` directory.\n2. Launch the server to create the config file; all configurations can be done in real-time in-game.\n\n### Important note:\nThe system is not in real time, that is, first we create the merchant, we add products to it and we spawn.\nIf at any time we add or remove any product from the merchant we must kill it and spawn again!\n\n## Merchant PrefabGUIDs\n\nOnly merchant PrefabGUIDs are supported.\n\n```ansi\n  \"CHAR_Trader_Dunley_Gems_T02\": 194933933,\n  \"CHAR_Trader_Dunley_Herbs_T02\": 233171451,\n  \"CHAR_Trader_Dunley_Knowledge_T02\": 281572043,\n  \"CHAR_Trader_Dunley_RareGoods_T02\": -1594911649,\n  \"CHAR_Trader_Farbane_Gems_T01\": -1168705805,\n  \"CHAR_Trader_Farbane_Herbs_T01\": -375258845,\n  \"CHAR_Trader_Farbane_Knowledge_T01\": -208499374,\n  \"CHAR_Trader_Farbane_RareGoods_T01\": -1810631919,\n  \"CHAR_Trader_Gloomrot_T04\": -1292194494,\n  \"CHAR_Trader_Noctem_Major\": 1631713257,\n  \"CHAR_Trader_Noctem_Minor\": 345283594,\n  \"CHAR_Trader_Silverlight_Gems_T03\": -1990875761,\n  \"CHAR_Trader_Silverlight_Herbs_T03\": 1687896942,\n  \"CHAR_Trader_Silverlight_Knowledge_T03\": -915182578,\n  \"CHAR_Trader_Silverlight_RareGoods_T03\": 739223277\n```\n\n## Commands\n\n\n```ansi\n.bm list\n```\n- Lists all available merchants on the server.\n```ansi\n.bm create <NameOfMerchant> [PrefabGUIDOfMerchant] [Immortal] [Move] [Autorespawn]\n```\n- Creates a custom merchant and adds it to the merchant's list.\n  - **NameOfMerchant**: Unique identifier for the merchant.\n  - **PrefabGUIDIfMerchant**: GUID for the merchant NPC to spawn.\n  - **Immortal (True/False)**: Makes the merchant immortal and impervious to damage.\n  - **Move (True/False)**: Enables or disables the merchant's movement.\n  - **Auto respawn (True/False)**: Respawns the merchant when the server is back online.\n  - Example: `.bm create test -208499374 true false true`\n```ansi\n.bm remove <NameOfMerchant>\n```\n- Removes the merchant from the list (requires killing the merchant while alive).\n  - Example: `.bm remove test`\n```ansi\n.bm spawn <NameOfMerchant>\n```\n- Spawns your custom merchant.\n  - Example: `.bm spawn test`\n```ansi\n.bm kill <NameOfMerchant>\n```\n- Kills the desired merchant.\n  - Example: `.bm kill test`\n```ansi\n.bm cleanicon\n```\n- This command will delete all the icons on the map, if you have any active merchant it will also delete their icon. \n  - Example: `.bm cleanicon`\n```ansi\n.bm product add <NameOfMerchant> <ItemPrefabID> <CurrencyfabID> <Stack> <Price> <Stock> [Autorefill true/false]\n```\n- Adds products to the merchant in real-time.\n  - **NameOfMerchat**: Unique merchant name set previously.\n  - **ItemPrefabID**: Product item ID for the merchant to sell.\n  - **CurrencyfabID**: ID of the item used as currency to buy the product.\n  - **Stack**: Number of products received by the player for that item when purchased.\n  - **Price**: Amount of currency item players need to purchase the item.\n  - **Stock**: Availability of the item with the merchant (limited or unlimited, max is 99).\n  - **Autorefill (True/False)**: Allows players to buy the item infinitely.\n  - Example: `.bm product add test 1557814269 -77477508 1 1 99 true`\n```ansi\n.bm product remove <NameOfMerchant> <ItemPrefabID>\n```\n- Removes a product from the merchant in real-time.\n  - Example: `.bm product remove test 1557814269`\n```ansi\n.bm product clean <NameOfMerchant>\n```\n- Removes a product from the merchant in real-time.\n  - Example: `.bm product clean test`\n```ansi\n.bm product list <NameOfMerchant>\n```\n- Lists all products currently available for sale by a certain merchant.\n  - Example:  `.bm product list test`\n```ansi\n.bm config show <NameOfMerchant>\n```\n- Shows the Immortal, Move, and Autospawn configuration for a certain merchant.\n  - Example: `.bm config show test`\n```ansi\n.bm config immortal <NameOfMerchant> <true/false>\n```\n- Changes the immortal configuration for a certain merchant in real-time.\n  - Example: `.bm config immortal test true`\n```ansi\n.bm config move <NameOfMerchant> <true/false>\n```\n- Changes the move configuration for a certain merchant in real-time.\n  - Example: `.bm config move test true`\n```ansi\n.bm config autorespawn <NameOfMerchant> <true/false>\n```\n- Changes the auto-spa",
+  "readme_truncated": true
+}

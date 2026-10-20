@@ -1,0 +1,37 @@
+{
+  "format": 1,
+  "package_sha256": "225a74f3f33606ddec441b96dcb3d8552f8b6572588e0b5b00b88d6565706698",
+  "size": 59329,
+  "manifest": {
+    "name": "VampireWebhook",
+    "version_number": "0.1.0",
+    "website_url": "https://github.com/phlebotomist/VampireWebhook",
+    "description": "A simple package for sending messages to Discord.",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "deca-VampireCommandFramework-0.10.2"
+    ]
+  },
+  "description": "A simple package for sending messages to Discord.",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.733.2/",
+      "sha256": "eabfb53d80bed427ddbd1ecf8af4dcd6e82e152809d44ab3218d0a09984f491c"
+    },
+    {
+      "id": "deca-VampireCommandFramework-0.10.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/deca/VampireCommandFramework/0.10.2/",
+      "sha256": "1853610b9dd246a53296c35a3c069548397ad4deeeeb243b17756b1395dffb51"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "d72e8ad70cdeb5ca139eeea70d2fc4c39d44502e59e35ca5260af9dccc4b8f69"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "![](logo.png)\n\n# VampireWebhook - Simple Discord webhook integration\n\n## Features\n\n- Loads webhook from hook.txt\n- Allows mods to send messages to discord\n- Format messages with markdown syntax\n\n## For admins and server owners:\n\nTo properly setup this mod you need to:\n\n- Create a `hook.txt` file in `\\BepInEx\\config\\`\n- Go to your discord and get your webhook url in the channel you want messages sent to. ([how to get hook url](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks))\n- Add the webhook url to hook.txt\n- ‼️NOTE: Do not share the webhook url with anyone. Don't post it when asking for support either.\n- Add the `VampireWebhook.dll` to `\\BepInEx\\plugins\\`\n- You're good to go!\n\n## Setttings\n\nThe settings file will be created at: `BepInEx\\config\\phlebotomist.morphine.VampireWebhook.cfg`\nSet the value to `false` if you need to turn off the webhook for some reason.\n\n```ini\n[General]\n\n## toggle for sending messages to the webhook\n# Setting type: Boolean\n# Default value: true\nUseDiscordWebhook = true\n```\n\n## For devs:\n\nThe code is pretty short and I added doc comments above all functions but here's a quick overview of how it's intended to be used.\n\n`SendDiscordMessageAsync` can be used to send the messages. `HookEnabled` is public so you can short circuit any proccessing or string building if the hook is turned off, however it is not required.\n\n```csharp\nusing VampireWebhook;\n\nprivate static void exmapleMessageBuilder(int someNumber){\n    if (!HookEnabled())\n        return;\n\n    string myString = $\"Wow it's over: {someNumber}!\"\n    _ = DiscordWebhook.SendDiscordMessageAsync(myString)\n\n}\n```\n\n## credits and thanks:\n\nWant to give thanks to Deca, Odjit and everyone in the VrisingModing discord who helped answer questions.\n\n## Support:\n\n- I go by `Morphine` on the Vrising modding [Discord](https://vrisingmods.com/discord)\n- Additionally feel free to open issues on the github\n\n## Pull Requests:\n\nI want to keep this thing simple but if there's anything you think I missed or did stupid I will try to review any PR's in a timely manner. Feel free to msg me on [Discord](https://vrisingmods.com/discord) (@morphine) if I don't respond within a day.\n"
+}

@@ -1,0 +1,30 @@
+{
+  "format": 1,
+  "package_sha256": "50ec6527ac0607c0118e21dc12d41bb8c5db2e67d1f88e53ee167a681fff2e56",
+  "size": 48028,
+  "manifest": {
+    "name": "RemoveVignette",
+    "version_number": "1.1.0",
+    "website_url": "https://github.com/iZastic/vrising-removevignette",
+    "description": "Removes Vignette",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.668.5"
+    ]
+  },
+  "description": "Removes Vignette",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.668.5",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.668.5/",
+      "sha256": "784c7a7f64ba0f1d4e9778c6558a061ab83dbacc6e0bb8ae0e3ab86698578113"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "3cc9e003530ec1ef4772384cd2e7e77df5226f8afaed5899aff7f0a605cad98f"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# RemoveVignette\nRemoves Vignette\n\n### Installation\n- Install [BepInEx](https://v-rising.thunderstore.io/package/BepInEx/BepInExPack_V_Rising/)\n- Extract _RemoveVignette.dll_ into _(VRising folder)/BepInEx/plugins_\n\n### Support\nJoin the [modding discord](https://vrisingmods.com/discord) for support and tag `@iZastic#0365`\n\nSubmit a ticket on [GitHub](https://github.com/iZastic/vrising-removevignette/issues)\n\n### Changelog\n`1.1.0`\n- Updated for Gloomrot\n\n<details>\n\n`1.0.0`\n- Initial upload\n\n</details>"
+}

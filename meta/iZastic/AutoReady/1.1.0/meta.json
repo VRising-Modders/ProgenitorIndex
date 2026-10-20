@@ -1,0 +1,30 @@
+{
+  "format": 1,
+  "package_sha256": "d68365a1cc54c9c68d01371bcb3b87dacde3ac12f581e53a75fd205aadfec87e",
+  "size": 47745,
+  "manifest": {
+    "name": "AutoReady",
+    "version_number": "1.1.0",
+    "website_url": "https://github.com/iZastic/vrising-autoready",
+    "description": "Automatically skips the ready screen when loaded",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.668.5"
+    ]
+  },
+  "description": "Automatically skips the ready screen when loaded",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.668.5",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.668.5/",
+      "sha256": "784c7a7f64ba0f1d4e9778c6558a061ab83dbacc6e0bb8ae0e3ab86698578113"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "3cc9e003530ec1ef4772384cd2e7e77df5226f8afaed5899aff7f0a605cad98f"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# AutoReady\nAutomatically skips the ready screen when loaded\n\n### Installation\n- Install [BepInEx](https://v-rising.thunderstore.io/package/BepInEx/BepInExPack_V_Rising/)\n- Extract _AutoReady.dll_ into _(VRising folder)/BepInEx/plugins_\n\n### Support\nJoin the [modding discord](https://vrisingmods.com/discord) for support and tag `@iZastic#0365`\n\nSubmit a ticket on [GitHub](https://github.com/iZastic/vrising-autoready/issues)\n\n### Changelog\n`1.1.0`\n- Updated for Gloomrot\n\n<details>\n\n`1.0.1`\n- Forgot to remove logging\n\n`1.0.0`\n- Initial upload\n\n</details>"
+}

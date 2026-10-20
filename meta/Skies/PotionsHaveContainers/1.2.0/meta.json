@@ -1,0 +1,37 @@
+{
+  "format": 1,
+  "package_sha256": "f72e9f8581cfc55b50ca80290d314829182e62e068c7f083abbef17ca1381895",
+  "size": 39050,
+  "manifest": {
+    "name": "PotionsHaveContainers",
+    "version_number": "1.2.0",
+    "website_url": "https://github.com/skythebro/PotionsHaveContainers",
+    "description": "V Rising mod that makes potions and flasks return their empty counter-part containers. What were we doing before, eating them?",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.668.5",
+      "deca-Bloodstone-0.1.4"
+    ]
+  },
+  "description": "V Rising mod that makes potions and flasks return their empty counter-part containers. What were we doing before, eating them?",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.668.5",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.668.5/",
+      "sha256": "784c7a7f64ba0f1d4e9778c6558a061ab83dbacc6e0bb8ae0e3ab86698578113"
+    },
+    {
+      "id": "deca-Bloodstone-0.1.4",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/deca/Bloodstone/0.1.4/",
+      "sha256": "e57607799d1550191b274237ead53a2e6f0fb8ea5cbeb67cb24a9f1572e8432a"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "bae2e09903d53f8a4d7be58141efd9c2e5e626b2dc018908daad2f252b329b60"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# 🫗 Potions Have Containers - Gloomrot Update\nforked from [phillipsOG/C2ierce](https://github.com/phillipsOG/PotionsHaveContainers) and updated to Gloomrot.\n\n## Potions and flasks will now return their empty counter-part containers. What were we doing before, eating them?\n* Works with all potions, flasks/Canteens.\n* NEW Blood bottle and blood merlot will now return an empty bottle.\n* Because of the abilitygroup of the water bottle and canteen being the same they can both only give back one or the other so I added a config option to choose which one you want.\n* The best option would be to not use a water canteen and use the water bottles instead. (it is ofcourse your choice :D)\nIf there is a non water related potion I have missed be sure to open an issue on [github](https://github.com/skythebro/PotionsHaveContainers/issues).\n\n## Installation\nPlace the _PotionsHaveContainers.dll_ file inside of (Vrising Server)\\BepInEx\\plugins folder.\n\n## Configurable Values\n```ini\n[Config]\n\n## Enable or Disable PotionsHaveContainers\n# Setting type: Boolean\n# Default value: true\nEnable Mod = true\n\n## Always give canteens(false) or always give bottles(true) for both water containers.\n# Setting type: Boolean\n# Default value: false\nGive Bottles = false\n\n```\n\n## Developer & credits\n<details>\n\n### V rising modding discord [Discord](https://discord.gg/XY5bNtNm4w)\n### Current Developer\n- `skythebro/skyKDG` - Also known as realsky on discord\n\n### Original Creator & Developers\n- `phillipsOG`\n- `C2ierce`\n\n</details>"
+}

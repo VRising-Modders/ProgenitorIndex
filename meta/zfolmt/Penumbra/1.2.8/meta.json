@@ -1,0 +1,38 @@
+{
+  "format": 1,
+  "package_sha256": "b62dbf2d8986c904ccf63e55f3bc49fd66a46916b00c188c9935fef414739c44",
+  "size": 891680,
+  "manifest": {
+    "name": "Penumbra",
+    "version_number": "1.2.8",
+    "website_url": "https://github.com/mfoltz/Penumbra",
+    "description": "Simple custom merchants, use defaults or create your own!",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "deca-VampireCommandFramework-0.10.4"
+    ]
+  },
+  "description": "Simple custom merchants, use defaults or create your own!",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.733.2/",
+      "sha256": "eabfb53d80bed427ddbd1ecf8af4dcd6e82e152809d44ab3218d0a09984f491c"
+    },
+    {
+      "id": "deca-VampireCommandFramework-0.10.4",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/deca/VampireCommandFramework/0.10.4/",
+      "sha256": "e554e964242db0b1cfef5824129aa6794c8a7138c9321b617d633f9aaffac19b"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "db821dac674c2b949f3d16d15df2d4c76932cba460cbc0427ff58caac3cfdd16"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "## Table of Contents\n\n- [Sponsors](#sponsors)\n- [Features](#features)\n- [Configuration](#configuration)\n- [Commands](#commands)\n- [Development](#development)\n- [Credits](#credits)\n\n## Sponsor this project\n\n[![patreon](https://i.imgur.com/u6aAqeL.png)](https://www.patreon.com/join/4865914)  [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/zfolmt)\n\n## Sponsors\n\nJairon O.; Odjit; Jera; Kokuren TCG and Gaming Shop; Rexxn; Eduardo G.; DirtyMike; Imperivm Draconis; Geoffrey D.; SirSaia; Robin C.; Colin F.; Jade K.; Jorge L.; Adrian L.;\n\n## Features\n\n- **Configurable Merchants:** Comes with several default sets of wares that can be modified, replaced or added to (follow the example template shown in the configuration section below and increment merchant number for additional sets of wares).\n- **Tokens & Login Rewards:** Earn tokens for time spent online and redeem them for trader currency! Optional daily login bonus.\n\n## Configuration\n\n### Merchant(#)\n- **Name**: (string, default: \"Merchant#\")\n  Name/identifier for the merchant, used for easy referencing and verifying existence when autospawning merchants.\n- **Output Items**: (string, default: \"-1370210913,1915695899,862477668,429052660,28358550\")\n  Item prefabGUIDs for outputs.\n- **Output Amounts**: (string, default: \"1,1,1500,15,250\")\n  Item output amounts.\n- **Input Items**: (string, default: \"-257494203,-257494203,-257494203,-257494203,-257494203\")\n  Item prefabGUIDs for inputs.\n- **Input Amounts**: (string, default: \"250,250,250,250,250\")\n  Item input amounts.\n- **Stock Amounts**: (string, default: \"99,99,99,99,99\")\n  Stock amounts for outputs.\n- **Restock Time**: (int, default: 60)\n  Time between restocks in minutes (1min minimum, no option to not restock atm since I completely forgot about that >_>).\n- **Trader Prefab**: (int, default: 0)\n  Trader prefab ID; leave this blank, will be saved out by the mod after spawning a merchant.\n- **Position**: (string, default: \"\")\n  Position of merchant spawn in world; leave this blank, will be saved out by the mod after spawning a merchant.\n- **Roam**: (bool, default: false)\n  Pace around or stay put.\n\n## Commands\n- `.penumbra spawnmerchant [#]` 🔒\n  - Spawns merchant as configured at mouse; defaults to major noctem trader (can set per merchant in config).\n  - Shortcut: *.pen sm [#]*\n- `.penumbra removemerchant` 🔒\n  - Removes hovered merchant.\n  - Shortcut: *.pen rm*\n- `.penumbra redeemtokens`\n  - Redeems tokens for configured item.\n  - Shortcut: *.pen rt*\n- `.penumbra gettokens`\n  - Shows and updates tokens.\n  - Shortcut: *.pen gt*\n- `.penumbra getdaily`\n  - Check time remaining or receive daily login reward if eligible.\n  - Shortcut: *.pen gd*\n\n## Development\n\n1. Run `./dev_init.sh` from the repository root to provision the .NET SDK (via the local `.dotnet` folder when necessary), restore NuGet packages, and produce a Release build.\n   - Set `BEPINEX_PLUGIN_DIR` to copy the compiled plugin to a different BepInEx directory (defaults to `/workspace/plugins`).\n   - Use `DOTNET_CHANNEL` to pin a specific .NET release channel if you need something other than the default 8.0 LTS toolset (required for the repository's C# 12 syntax).\n2. When invoking builds manually, prefer `dotnet build Penumbra.csproj -c Release -p:RunGenerateREADME=false` so that the README generation target is skipped during routine development builds.\n\n## Credits\n\n- [BloodyMerchant](https://github.com/oscarpedrero/BloodyMerchant) by [@Trodi](https://github.com/oscarpedrero) was invaluable in putting this together, many thanks to him and other listed contributors!\n",
+  "changelog": "`1.2.8`\n- Added config option (`Token Economy`; can be used without the `Token System`) to remove coin recipes when enabled; recipes are added back on world load when disabled where applicable.\n- Spawn command no longer takes trader prefabs directly (e.g., `.pen sm 1`), defaulting to major noctem trader; other traders may still be used via config.\n- Merchant positions now cleared in config when removed; apologies for the oversight, this should prevent unwanted autospawns.\n- 25 max stock entries per merchant; extras are trimmed (more than 25 results in merchant interface issues, per user reports).\n\n`1.1.7`\n- fixed json deserialization for tokens/login data\n\n`1.1.6`\n- merchants with restock intervals of 0 will not refill their wares as was originally intended\n- fixed daily login timestamp\n\n`1.1.5`\n- integrated token system\n- added name, trader prefab and position entries to config; name for easier keeping track of which wares are which and is also used to verify existence in world, trader prefab and position for saving existing merchant details to then be able to be used on another server (if these have valid values and no existing merchants detected with same name mod will spawn them in at that location with the prefab)\n- changed faction for merchants to prevent being targeted for combat\n\n`1.0.4`\n- minor change after hotfix\n\n`1.0.3`\n- Back to VRising.Unhollowed.Client nuget for github workflow, versioning for Thunderstore\n\n`1.0.2`\n- Updated for VRising 1.1 compatibility\n\n`1.0.1`\n- added missing VCF dependency to thunderstore.toml\n \n`1.0.0`\n- initial Thunderstore release\n\n"
+}

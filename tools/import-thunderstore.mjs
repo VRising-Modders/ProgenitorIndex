@@ -11,7 +11,8 @@
 //
 // --exclude-owner leaves out every package of that owner; the report counts them without naming them.
 //
-// Needs the GitHub CLI (`gh`), signed in, for the release lookups.
+// Needs the GitHub CLI (`gh`), signed in, for the release lookups. Afterwards, generate the meta
+// for the new entries from the same downloads: node tools/validate.mjs --write-meta --cache-only
 
 import { execFileSync } from 'node:child_process';
 import { existsSync, mkdirSync, writeFileSync } from 'node:fs';

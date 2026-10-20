@@ -26,14 +26,15 @@ jobs:
         with:
           node-version: 22
 
-      - name: Check entries (shape only)
+      # No package downloads here: the entries and their committed meta (checked when each
+      # pull request was reviewed) hold everything the index needs.
+      - name: Check entries and meta (offline)
         run: node tools/validate.mjs --offline
 
       - name: Build index.json
-        env:
-          INDEX_CACHE_DIR: ${{ runner.temp }}/index-cache
-        run: node tools/build-index.mjs
+        run: node tools/build-index.mjs --strict
 
+      # ECDSA P-256 / SHA-256, IEEE P1363 r||s as hex: the format Progenitor verifies.
       - name: Sign index.json
         env:
           INDEX_SIGNING_KEY: ${{ secrets.INDEX_SIGNING_KEY }}

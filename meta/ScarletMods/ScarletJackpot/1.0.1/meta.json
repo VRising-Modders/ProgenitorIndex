@@ -1,0 +1,37 @@
+{
+  "format": 1,
+  "package_sha256": "d69a04b163b63089ad0b28ae82d7526d54af005cb38f2883ff19fae8e3139677",
+  "size": 184450,
+  "manifest": {
+    "name": "ScarletJackpot",
+    "version_number": "1.0.1",
+    "website_url": "https://github.com/markvaaz/ScarletJackpot",
+    "description": "Spin, win, or get trolled by Rag Hands! Add slot machines to V Rising, bet your loot, and let luck (or mischief) decide your fate.",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "ScarletMods-ScarletCore-1.3.11"
+    ]
+  },
+  "description": "Spin, win, or get trolled by Rag Hands! Add slot machines to V Rising, bet your loot, and let luck (or mischief) decide your fate.",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.733.2/",
+      "sha256": "eabfb53d80bed427ddbd1ecf8af4dcd6e82e152809d44ab3218d0a09984f491c"
+    },
+    {
+      "id": "ScarletMods-ScarletCore-1.3.11",
+      "from": "index",
+      "package": "https://thunderstore.io/package/download/ScarletMods/ScarletCore/1.3.11/",
+      "sha256": "1a879411b8258f9c28b8d6804720563e825fa1788eca87f7b89bab081ca6569f"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "c3effb8c0ec77073b5abfd71d8a6b5fdc3ac7bb75f2164a9559da6af6de0940b"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# ScarletJackpot\n\n**ScarletJackpot** is a V Rising mod that adds a slot machine system to the game.\n\n## Support & Donations\n\n<a href=\"https://www.patreon.com/bePatron?u=30093731\" data-patreon-widget-type=\"become-patron-button\"><img height='36' style='border:0px;height:36px;' src='https://i.imgur.com/o12xEqi.png' alt='Become a Patron' /></a>  <a href='https://ko-fi.com/F2F21EWEM7' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi6.png?v=6' alt='Buy Me a Coffee at ko-fi.com' /></a>\n\n---\n\n## Real Money Trading (RMT) Notice\n\nScarletJackpot is designed only for fun with in-game items.\nPlease don’t use it for real money trades or connect it to external gambling systems, as this could break the V Rising EULA and community rules.\nServer owners are responsible for ensuring their use of the mod follows the game’s terms.\n\n## How It Works\n\n- Slot machines are created by admins and placed in the world.\n- Players can set their bet amount using `.slot bet <amount>` or simply drag the desired quantity of items into the slot machine's inventory.\n- Each spin consumes items (configurable) and can award prizes based on the result.\n- Prize items and amounts for each winning line are fully configurable.\n- The prize received is multiplied according to the bet amount and the configured maximum multiplier (`MaxBetMultiplier`). Higher bets yield higher rewards, up to the defined maximum.\n- The mod supports RTP (Return to Player) control, allowing server owners to balance win rates.\n- Optional animations and sound effects for spins and wins.\n- The rare \"Rag Hands\" event (if enabled) can steal the current winnings from the slot machine when triggered (it does not steal all previous winnings, only the current spin's prizes).\n\n## Features\n\n- Slot machine creation, movement, rotation, and removal by admins\n- Configurable bet amount and spin cost for players\n- Prize pool and win multipliers are fully customizable\n- RTP (Return to Player) control for balancing\n- Optional animations and sound effects\n- Rag Hands event: rare chance to lose the current spin's prizes\n- Reload and clear all slot machines with admin commands\n\n## Commands\n\n### Player Commands\n\n- `.slot bet <amount>` — Sets your bet amount for the slot machine\n\n### Admin Commands\n\n- `.slot create` — Creates a slot machine at your position\n- `.slot reload` — Reloads slot machine settings\n- `.slot iwanttoremoveeverything` — Removes all slot machines\n- `.slot rotate <steps>` — Rotates the slot machine near your cursor (steps: 1, 2, 3, 4)\n- `.slot rotateclosest <steps>` — Rotates the closest slot machine to you (steps: 1, 2, 3, 4)\n- `.slot remove` — Removes the slot machine near your cursor\n- `.slot move` — Allows you to move a slot machine by aiming and clicking\n\n\n## Configuration\n\nAll prize items, amounts, spin cost, bet limits, RTP, and special events are configurable via the mod's settings file.\n**Important:** The mod does not include default configuration values for bet items or prizes. You must manually define all required settings before using the slot machine, otherwise it will not function.\n\n## Installation\n\n### Requirements\n\n* **[BepInEx](https://wiki.vrisingmods.com/user/bepinex_install.html)**\n* **[ScarletCore](https://thunderstore.io/c/v-rising/p/ScarletMods/ScarletCore/)**\n* **[VampireCommandFramework](https://thunderstore.io/c/v-rising/p/deca/VampireCommandFramework/)**\n\nMake sure BepInEx is installed before installing ScarletJackpot.\n\n### Manual Installation\n\n1. Download the latest release of **ScarletJackpot**.\n2. Extract the contents into `BepInEx/plugins`:\n   `<V Rising Server Directory>/BepInEx/plugins/`\n   The directory should contain:\n   `BepInEx/plugins/ScarletJackpot.dll`\n3. Ensure **ScarletCore** and **VampireCommandFramework** are also installed.\n4. Restart your server.\n\n## Credits\n\n- **cheesasaurus, EduardoG, Helskog, Mitch, SirSaia, Odjit** & the [V Rising Mod Community on Discord](https://vrisingmods.com/discord)\n"
+}

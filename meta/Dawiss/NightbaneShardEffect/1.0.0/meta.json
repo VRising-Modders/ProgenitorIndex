@@ -1,0 +1,51 @@
+{
+  "format": 1,
+  "package_sha256": "191d0dbff59e2caf17b393a8c29ba82cb7bacc64ae785103315d88f7f93ffd26",
+  "size": 172743,
+  "manifest": {
+    "name": "NightbaneShardEffect",
+    "version_number": "1.0.0",
+    "website_url": "https://github.com/Dawiss2/NightbaneShardEffect/tree/main",
+    "description": "Adds a glow effect to player that hold the Soul Shard!",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.691.3",
+      "deca-VampireCommandFramework-0.9.0",
+      "deca-Bloodstone-0.2.2",
+      "Trodi-BloodyCore-1.2.4"
+    ]
+  },
+  "description": "Adds a glow effect to player that hold the Soul Shard!",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.691.3",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.691.3/",
+      "sha256": "04290fad8e4e619451c4f5eff3957778d3ab6a0da89bb9ba321822c9e88cf926"
+    },
+    {
+      "id": "deca-VampireCommandFramework-0.9.0",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/deca/VampireCommandFramework/0.9.0/",
+      "sha256": "d3ce9095d9772f979feb4ec792f022d213f0cdf56dc27c82de26a0f9db7cfc9f"
+    },
+    {
+      "id": "deca-Bloodstone-0.2.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/deca/Bloodstone/0.2.2/",
+      "sha256": "1b7de6e8ab631afacea7c757c81494848755fda9d39c93618fc52584eff06089"
+    },
+    {
+      "id": "Trodi-BloodyCore-1.2.4",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/Trodi/BloodyCore/1.2.4/",
+      "sha256": "071874a76097c4e8d747b3d24ed52dc03e64aa4c5b64b943c60b405888f3d41e"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "20b559aaab9187d2cf76d16fdcb10a896f02e2a81c79057e418bedec0a41ef4d"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# NightbaneShardEffect\nSmall plugin that adds a glow effect to player that holds a Soul Shard.\n\nDracula:\n\n![image](https://github.com/user-attachments/assets/a9b62eeb-c086-4e70-b961-a4eb2df816bb)\n\nSolarus:\n\n![image](https://github.com/user-attachments/assets/485ac576-c248-453e-a8f0-ffe7d9e9f4f8)\n\nAdam:\n\n![image](https://github.com/user-attachments/assets/0c4a1aa5-e164-4c71-b73c-fd3685da1a5c)\n\nWinged Horror:\n\n![image](https://github.com/user-attachments/assets/b4b2f542-94ce-403c-922e-cda04b49d96e)\n"
+}

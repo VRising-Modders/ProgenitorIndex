@@ -1,0 +1,37 @@
+{
+  "format": 1,
+  "package_sha256": "bf52cb17aeba3fd0ce3c16c4c41305414fb12c3fabf642b474c82e430d91d3ce",
+  "size": 96113,
+  "manifest": {
+    "name": "MuteChatPlayer",
+    "version_number": "0.1.0",
+    "website_url": "https://github.com/Rianaid/MuteChatPlayer",
+    "description": "Server side only mod which allows server admins to prohibit a specific player from sending messages to the chat.",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.691.3",
+      "deca-VampireCommandFramework-0.9.0"
+    ]
+  },
+  "description": "Server side only mod which allows server admins to prohibit a specific player from sending messages to the chat.",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.691.3",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.691.3/",
+      "sha256": "04290fad8e4e619451c4f5eff3957778d3ab6a0da89bb9ba321822c9e88cf926"
+    },
+    {
+      "id": "deca-VampireCommandFramework-0.9.0",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/deca/VampireCommandFramework/0.9.0/",
+      "sha256": "d3ce9095d9772f979feb4ec792f022d213f0cdf56dc27c82de26a0f9db7cfc9f"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "6c9baa6befde75d312438c96caa2a3c6a3f938c192e74fa4003567e2c8b137d7"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# MuteChatPlayer\n`Server side only` mod which allows server admins to prohibit a specific player from sending messages to the chat.\n\n`Since the mod checks messages after VCF, all commands should work for the player with a ban on sending messages.`\n\n<details>\n<summary>Changelog</summary>\n\n0.1.0\n- Initial public release of the mod.\n\n</details>\n\n## Installation\n* Install [BepInEx](https://v-rising.thunderstore.io/package/BepInEx/BepInExPack_V_Rising/)\n* Install [VampireCommandFramework](https://v-rising.thunderstore.io/package/deca/VampireCommandFramework/)\n* Extract _MuteChatPlayer.dll_ into _(VRising server folder)/BepInEx/plugins_\n\n## Commands\n\nMod have only 1 command: `.mute [Player Name] [global|local|all] [time in minuts]`\n\n### Credits\n\nThis mod idea was suggested by [@GraturGud](https://ideas.vrisingmods.com/posts/117/server-moderation-disable-chat-for-a-player)  on our community idea tracker. Please vote and suggest your ideas [here](https://ideas.vrisingmods.com/).\n\n[V Rising Mod Community](https://discord.gg/vrisingmods) is the best community of mods for V Rising.\n\n[@Deca](https://github.com/decaprime), thank you for the exceptional frameworks [VampireCommandFramework](https://github.com/decaprime/VampireCommandFramework).\n\n"
+}

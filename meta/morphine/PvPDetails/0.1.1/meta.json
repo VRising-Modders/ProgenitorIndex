@@ -1,0 +1,52 @@
+{
+  "format": 1,
+  "package_sha256": "64fb5a886030ff0c9bbc350052523762b158b6ba8d4b6d15cb9fd0153bae3561",
+  "size": 223561,
+  "manifest": {
+    "name": "PvPDetails",
+    "version_number": "0.1.1",
+    "website_url": "https://github.com/phlebotomist/PvPDetails",
+    "description": "Player stats, Killfeeds, Death Recaps!",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "deca-VampireCommandFramework-0.10.2",
+      "morphine-VampireWebhook-0.1.0",
+      "morphine-VampireDB-0.1.0"
+    ]
+  },
+  "description": "Player stats, Killfeeds, Death Recaps!",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.733.2/",
+      "sha256": "eabfb53d80bed427ddbd1ecf8af4dcd6e82e152809d44ab3218d0a09984f491c"
+    },
+    {
+      "id": "deca-VampireCommandFramework-0.10.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/deca/VampireCommandFramework/0.10.2/",
+      "sha256": "1853610b9dd246a53296c35a3c069548397ad4deeeeb243b17756b1395dffb51"
+    },
+    {
+      "id": "morphine-VampireWebhook-0.1.0",
+      "from": "index",
+      "package": "https://thunderstore.io/package/download/morphine/VampireWebhook/0.1.0/",
+      "sha256": "225a74f3f33606ddec441b96dcb3d8552f8b6572588e0b5b00b88d6565706698"
+    },
+    {
+      "id": "morphine-VampireDB-0.1.0",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/morphine/VampireDB/0.1.0/",
+      "sha256": "db201eded4a85d3f2256a743ad0b62a0ac5c99c24617b0ab7014ab160d1562b8"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "13daea1fc5a1a061cede294aa1830e9f691d4688428b6d37254ccf44b3982737"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "![logo](logo.png)\n\n# PvPDetails - player stats, killfeed, death recap!\n\nMore features to come!\nPlease don't hesitate to give feedback I'm all ears. @Morphine on the Vrising modding [Discord](https://vrisingmods.com/discord).\n\n## install\n\nDownload all dependencies and put them next to eachother in the plugins folder.\n\nTo setup death recaps add your webhook url to `hook.txt`. More instructions [here](https://github.com/phlebotomist/VampireWebhook).\n\n## commands\n\n```ini\nCommands:\n    - .pvpme\n    - .pvptop [category]\n\nCurrent category options are [damage, kills, assists]\n```\n\n`.pvpme`:  \n![.pvpme](pvpme.png)\n\n`.pvptop damage`:  \n![.pvptop damage](pvptop_dmg.png)\n\nKillFeed example:  \n![KillFeed example](igkill.png)\n\n## Settings:\n\nRight now there's only one but there will be many toggles later.\n\n```ini\n## The level of detail you want to show in the combat report sent to discord.\n## can be set to 1,2 or 3 (see example images of each level below)\n# Default value: 2\nCombatBreakdownDetail = 2\n```\n\n## Webhook CombatBreakdownDetail examples:\n\n### Detail level 1:\n\n![](detail1.png)\n\n### Detail level 2:\n\n![](detail2.png)\n\n### Detail level 3:\n\n![](detail3.png)\n\n## Setting up webhook:\n\nfollow instructions here: [VampireWebhook](https://github.com/phlebotomist/VampireWebhook)\n\n# thanks to everyone on the Vrising mod discord!\n\nDeca, Odjit, Helskog, Mitch and others who answered my endless coffee fueled questions.\n\n## known issues:\n\nSome weapon/ability names in damage recap may show up as numbers (weapon ID) instead of the name.\n",
+  "changelog": "- Fixed some names causing .pvpme and .pvptop to fail due to incorrect parsing of ' during server load\n- Fixed some names in damage breakdowns\n- Add some more detailed logging for failed ids\n- Fix pvpdetail of 3 having killer and victim swapped\n"
+}

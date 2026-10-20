@@ -1,0 +1,30 @@
+{
+  "format": 1,
+  "package_sha256": "8dab772dc3795bd776f92ec5223a8eab07371cd40c4d78cedb14744defac08ac",
+  "size": 29325,
+  "manifest": {
+    "name": "VRisingDiscordBotCompanion",
+    "version_number": "0.9.3",
+    "website_url": "https://github.com/DarkAtra/v-rising-discord-bot-companion",
+    "description": "A companion mod for DarkAtra's v-rising-discord-bot.",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.733.2"
+    ]
+  },
+  "description": "A companion mod for DarkAtra's v-rising-discord-bot.",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.733.2/",
+      "sha256": "eabfb53d80bed427ddbd1ecf8af4dcd6e82e152809d44ab3218d0a09984f491c"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "3a4f78d932833c3c35d2f1ac5b609dd03867cf9ab20f68dd03eb6ee8bac50f4e"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# V Rising Discord Bot Companion\n\nThis BepInEx plugin for V Rising Servers adds additional http endpoints to the server's `ServerWebAPISystem`. This\nallows you to expose additional information about players, such as the current gear level. Intended to be used\nwith [v-rising-discord-bot](https://github.com/DarkAtra/v-rising-discord-bot#v-rising-discord-bot-companion-integration).\n\n[Refer to the documentation for details on how to use this mod.](https://vrising.darkatra.dev/bot-companion.html)\n\n## Support\n\nIf you have questions or need support, feel free to join [this discord server](https://discord.gg/KcMcYKa6Nt).\n"
+}

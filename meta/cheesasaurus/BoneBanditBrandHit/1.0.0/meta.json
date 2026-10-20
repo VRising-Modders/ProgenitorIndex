@@ -1,0 +1,38 @@
+{
+  "format": 1,
+  "package_sha256": "b6b62c808b02cb91f252bd18ccd3fac25b7748d09c3a45e65caa92c665b6e2d8",
+  "size": 123309,
+  "manifest": {
+    "name": "BoneBanditBrandHit",
+    "version_number": "1.0.0",
+    "website_url": "https://github.com/cheesasaurus/ProfuselyViolentProgression",
+    "description": "Prevent newly awakened (PvP protected) players from looting death containers which don't belong to their clan.",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "cheesasaurus-HookDOTS_API-1.0.0"
+    ]
+  },
+  "description": "Prevent newly awakened (PvP protected) players from looting death containers which don't belong to their clan.",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.733.2/",
+      "sha256": "eabfb53d80bed427ddbd1ecf8af4dcd6e82e152809d44ab3218d0a09984f491c"
+    },
+    {
+      "id": "cheesasaurus-HookDOTS_API-1.0.0",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/cheesasaurus/HookDOTS_API/1.0.0/",
+      "sha256": "e8384aeab17575eb6d581eff41e326df48b38bd6598b7339ebf9f30ac2829e0f"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "3b722f2a52d827bbdc455bf94f450678fbb409c559e1be8d9e5244c112d35cee"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# BoneBanditBrandHit\n\nPrevent newly awakened (PvP protected) players from looting death containers which don't belong to their clan.\n\n## Installation\n\nThis is a server-side mod. (No need to install anything if you're not the server operator.)\n\n- Install [BepInEx](https://v-rising.thunderstore.io/package/BepInEx/BepInExPack_V_Rising/).\n- Install [HookDOTS](https://thunderstore.io/c/v-rising/p/cheesasaurus/HookDOTS_API/).\n- Extract `BoneBanditBrandHit.dll` into _`(VRising folder)/BepInEx/plugins`_.\n\n\n### Support\n\nJoin the [modding community](https://vrisingmods.com/discord).\n\nPost an issue on the [GitHub repository](https://github.com/cheesasaurus/ProfuselyViolentProgression).",
+  "changelog": "# 1.0.0\n- Initial release"
+}

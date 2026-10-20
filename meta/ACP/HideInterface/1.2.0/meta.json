@@ -1,0 +1,37 @@
+{
+  "format": 1,
+  "package_sha256": "921148a6b13e7c5d0ea509ae4aecda4d21a07f1e224786ba0ee2edb28066a36e",
+  "size": 101242,
+  "manifest": {
+    "name": "HideInterface",
+    "version_number": "1.2.0",
+    "website_url": "https://github.com/jokeruarwentto/HideInterface",
+    "description": "Toggle the game interface with F11 key, now with an keybinding through in-game settings to set your own custom key!",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.0.0",
+      "molenzwiebel-Wetstone-1.0.0"
+    ]
+  },
+  "description": "Toggle the game interface with F11 key, now with an keybinding through in-game settings to set your own custom key!",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.0.0",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.0.0/",
+      "sha256": "27fd91f2951701faf324b9dcd34cf771a7f4534e1d3a679949b9a0ae67472054"
+    },
+    {
+      "id": "molenzwiebel-Wetstone-1.0.0",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/molenzwiebel/Wetstone/1.0.0/",
+      "sha256": "163d47560eba1cf0ec55830edb46129cde2ed5c44b16f5a3ad126c9ed6f13d07"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "9f56a0292f476b73ecf10b229ab8b6d7b2d15dd26320e987487f802342b28230"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "<img width=\"120\" height=\"120\" align=\"left\" src=\"https://raw.githubusercontent.com/jokeruarwentto/HideInterface/main/assets/hideinterface.png\" alt=\"HideInterface Logo\">\n\n#### V Rising - Client Plugin\n\n# HideInterface\n\n### Description\n\nToggle the game interface with F11 key, now with an keybinding through in-game settings to set your own custom key!\n\n### Features\n🗒️ Configurable\n\n⚙️ Hot reloading with [Wetstone API](https://v-rising.thunderstore.io/package/molenzwiebel/Wetstone/)\n\n### Screenshots\n![With interface](https://i.imgur.com/pQv9MaU.png)\n![Without interface](https://i.imgur.com/KpRqrvp.png)\n\n### Installation\n- Install [BepInExPack V Rising](https://v-rising.thunderstore.io/package/BepInEx/BepInExPack_V_Rising/)\n- Install [Wetstone API](https://v-rising.thunderstore.io/package/molenzwiebel/Wetstone/)\n- Extract ``me.arwent.HideInterface.dll`` folder into _(VRising folder)/BepInEx/plugins_ or _(VRising folder)/BepInEx/WetstonePlugins_\n\n### Configuration\nHideInterface supports the following configuration settings, available in `me.arwent.HideInterface.cfg`\n\nPlugin Options:\n- `Enabled` [default `true`]: Whether to enable this plugin\n- `IncludeVersionWatermark` [default `true`]: Hide the version watermark at the bottom right of the screen when toggling interface\n\nClient Options:\n- HideInterface keybinding can be configured through the in-game settings screen.\n\n### Support\n- [V Rising Mod Community](https://discord.gg/CWzkHvekg3) and ping `@Arwent#6190`\n- Post an issue on the [Github repository](https://github.com/jokeruarwentto/HideInterface)\n\n### Changelog\n`1.2.0` Using [Wetstone API](https://v-rising.thunderstore.io/package/molenzwiebel/Wetstone/) for in-game keybind configuration and hot reloading\n\n`1.1.0` Added a configuration file for custom key and if you wish to hide the version watermark at the bottom right of the game\n\n`1.0.0` First release"
+}

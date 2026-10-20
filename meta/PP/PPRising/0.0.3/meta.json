@@ -1,0 +1,37 @@
+{
+  "format": 1,
+  "package_sha256": "5a874ae78ca693afa4449fe551cacd0a003597eeaeae7e4f525ccff764276f2b",
+  "size": 19393,
+  "manifest": {
+    "name": "PPRising",
+    "version_number": "0.0.3",
+    "website_url": "https://github.com/vildaberper/VRisingModding/tree/main/PPRising",
+    "description": "Makes your PP rise with a collection of QoL-features",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.0.0",
+      "molenzwiebel-Wetstone-1.1.0"
+    ]
+  },
+  "description": "Makes your PP rise with a collection of QoL-features",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.0.0",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.0.0/",
+      "sha256": "27fd91f2951701faf324b9dcd34cf771a7f4534e1d3a679949b9a0ae67472054"
+    },
+    {
+      "id": "molenzwiebel-Wetstone-1.1.0",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/molenzwiebel/Wetstone/1.1.0/",
+      "sha256": "60d4cf20da7d8be01cb71447e5cf2165532ed0f3d19bd6788d9fc4403a257133"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "584465f2615380dadd461837f930ebbb4f7f0095b4d5efc9c7dc4bacf93a6c54"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# PP Rising\n\n**Client and server mod.**\n\n> This means you **have** to install it both on the client and the server for it to work. I recommend installing [ServerLaunchFix](https://v-rising.thunderstore.io/package/Mythic/ServerLaunchFix/) if you're launching in-game.\n\nPP Rising is very much in development, but the end goal is to have a collection of QoL-features that makes sense to me.\n\n## Quick Stack\n\nCompulsively count to nearby containers. Prioritizes containers based on fill ratio (higher first).\n\n### Config\n\n- `Enable` [default `true`]: Enable quick stacking.\n- `Distance` [default `20`]: Maximum distance to container.\n- `NameIgnore` [default `nostack`]: Ignore containers with name including this.\n- `SortOnStack` [default `true`]: Sort the container after stacking to it.\n- `Cooldown` [default `1`]: Quick stack cooldown in seconds.\n- Control `Quick Stack` [default `Insert`]: Hotkey for quick stacking.\n\n# Changelog\n\n- `0.0.3` _2022-06-08_\n\n  - Minor code cleanup.\n  - Updated docs.\n  - Updated csproj (plugin version should now be correct in logs and config).\n  - Update items that are stacked (compare inventory before & after). Should work with all items with debuffs.\n  - Add quick stack cooldown.\n\n- `0.0.2` _2022-06-06_\n\n  - Minor code cleanup.\n  - Updated config descriptions to reflect what is server-side.\n  - Updated docs & manifest.\n\n- `0.0.1` _2022-06-05_\n\n  - Initial release.\n"
+}

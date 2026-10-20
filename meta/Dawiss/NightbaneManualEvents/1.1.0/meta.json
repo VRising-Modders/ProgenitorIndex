@@ -1,0 +1,52 @@
+{
+  "format": 1,
+  "package_sha256": "001682117f3ce27ac726f16862849095931fda19e3416683a14b7d7079bae2e1",
+  "size": 159407,
+  "manifest": {
+    "name": "NightbaneManualEvents",
+    "version_number": "1.1.0",
+    "website_url": "https://github.com/Dawiss2/NightbaneManualEvents",
+    "description": "Tools to help manually organize an event for players.",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.691.3",
+      "deca-VampireCommandFramework-0.9.0",
+      "deca-Bloodstone-0.2.2",
+      "Trodi-BloodyCore-1.2.4"
+    ]
+  },
+  "description": "Tools to help manually organize an event for players.",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.691.3",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.691.3/",
+      "sha256": "04290fad8e4e619451c4f5eff3957778d3ab6a0da89bb9ba321822c9e88cf926"
+    },
+    {
+      "id": "deca-VampireCommandFramework-0.9.0",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/deca/VampireCommandFramework/0.9.0/",
+      "sha256": "d3ce9095d9772f979feb4ec792f022d213f0cdf56dc27c82de26a0f9db7cfc9f"
+    },
+    {
+      "id": "deca-Bloodstone-0.2.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/deca/Bloodstone/0.2.2/",
+      "sha256": "1b7de6e8ab631afacea7c757c81494848755fda9d39c93618fc52584eff06089"
+    },
+    {
+      "id": "Trodi-BloodyCore-1.2.4",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/Trodi/BloodyCore/1.2.4/",
+      "sha256": "071874a76097c4e8d747b3d24ed52dc03e64aa4c5b64b943c60b405888f3d41e"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "25371d28a7cf6044312ddfe442e6eedcea742adedb55c2ac89e207c30d682428"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# NightbaneManualEvents\n\nEmpower your server with **NightbaneManualEvents**, a plugin that puts event management in your hands. Whether it’s a chaotic PvP showdown or a cooperative challenge, this tool gives admins the power to start, pause, and control events with precision—while players join the action seamlessly.\n\nExample of use: https://www.youtube.com/watch?v=mJTzd9U83l0\n\n\n## Features\n\n- **Manual Event Control**: Start, pause, or end events on your terms.\n- **Player Management**: Ban, kick, or gather participants with ease.\n- **Dynamic Participation**: Players can join or leave events with simple commands.\n- **Inventory Check**: Ensures fair play by requiring empty inventories to join.\n- **Real-Time Updates**: Broadcast event status to all players via system messages.\n\n## Planned Features\n\n- **Freeze all players**\n- **Give a specific gear set and remove it when event ends**\n- **PvP Protection**\n\n\n## Commands\n\n### Admin Commands (Restricted to Admins)\n- `.event add <playerName>`  \n  Manually add a specific player to the Event (works while the event is closed to new participants).\n\n- `.event pause`  \n  Pause or resume the event. Pausing closes it to new participants.  \n  *Example Reply: \"The event is now paused.\"*\n\n- `.event count`  \n  Check the number of players currently in the event.  \n  *Example Reply: \"There are 5 Players in Event.\"*\n\n- `.event start <eventName>`  \n  Launch a new event with a custom name. Only one event can run at a time.  \n  *Fails if an event is already active.*\n\n- `.event end`  \n  Shut down the active event and reset the system.  \n  *Fails if no event is active.*\n\n- `.event ban <playerName>`  \n  Ban a player from joining events. Persistent across sessions.  \n  *Fails if the player doesn’t exist.*\n\n- `.event unban <playerName>`  \n  Lift a ban, allowing the player back into events.  \n  *Fails if the player isn’t banned or doesn’t exist.*\n\n- `.event kick <playerName>`  \n  Remove a player from the current event.  \n  *Fails if the player isn’t in the event or doesn’t exist.*\n\n- `.event gather`  \n  Teleport all event participants to your location.  \n  *Example Reply: \"Teleported all event players to you.\"*  \n  *Fails if no event is active.*\n\n### Player Commands (Available to All)\n- `.event join`  \n  Join the active event (requires an empty inventory).  \n  *Fails if the event is paused, you’re banned, or no event is active.*  \n  *Example Reply: \"You have joined the event. Use .event leave to exit.\"*\n\n- `.event leave`  \n  Exit the event and return to your original position.  \n  *Fails if you’re not in the event.*  \n  *Example Reply: \"You have left the event and were teleported back.\"*\n\n\n## Configuration\n\nNo config file is required—this plugin is ready to use out of the box. Future updates may add options like custom teleport locations or event rules.\n\n\n## Dependencies\n\n- `BepInEx`\n- `VampireCommandFramework`\n- `Bloodstone.API`\n- `Bloody.Core`\n\nFor bug reports or suggestions, join Nightbane discord community!\nhttps://discord.gg/23Bd9ryzUH\n",
+  "changelog": "# Changelog\n\nAll notable changes to this project will be documented in this file.\n\nThe format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).\n\n## [1.1.0] - 2025-03-25\n### Added\n- **Manual Player Addition**: Admins can now use the `.event add <playerName>` command to manually add a specific player to an event, improving event management flexibility.\n- **Death Hooks**: Players who die during an event are now automatically removed from the event, streamlining gameplay and reducing manual oversight.\n- **Unstuck Prevention**: Disabled the \"Unstuck\" feature for players during events to maintain fairness and prevent exploits.\n\n## [1.0.1] - 2025-03-25\n### Fixed\n- **Plugin Loading Issue**: Corrected `MyPluginInfo` data to ensure the plugin loads properly on startup.\n\n## [1.0.0] - 2025-03-24\n### Added\n- **Initial Release**: First version of the project, including core functionality for event management and plugin operation."
+}

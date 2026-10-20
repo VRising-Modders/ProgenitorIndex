@@ -1,0 +1,38 @@
+{
+  "format": 1,
+  "package_sha256": "b1a0b9a1afd24a3092e55a4eed322536a71e7d11583cf8451cb2b76a3ebfe52f",
+  "size": 567450,
+  "manifest": {
+    "name": "KinPonds",
+    "version_number": "1.0.2",
+    "website_url": "https://github.com/Odjit/KinPonds",
+    "description": "A pond to call your own.",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "deca-VampireCommandFramework-0.10.4"
+    ]
+  },
+  "description": "A pond to call your own.",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.733.2/",
+      "sha256": "eabfb53d80bed427ddbd1ecf8af4dcd6e82e152809d44ab3218d0a09984f491c"
+    },
+    {
+      "id": "deca-VampireCommandFramework-0.10.4",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/deca/VampireCommandFramework/0.10.4/",
+      "sha256": "e554e964242db0b1cfef5824129aa6794c8a7138c9321b617d633f9aaffac19b"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "0282c794bf508139a4bd1c3faafb982c1656adc6b4bca961e9e278831344b846"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# KinPonds for V Rising\nKinPonds is a fishing enhancement mod for V Rising that allows players to transform decorative pools (Eternal Dominance DLC req) and water wells into functional fishing ponds. Create your own fishing spots and customize the fishing experience on your server.\n\n![waterwell01](https://github.com/user-attachments/assets/79f1bf63-31ce-4763-a2ea-499ceb834aa5)\n![waterwell03](https://github.com/user-attachments/assets/6c93e084-6293-4657-b1cd-c13fb8572d1b)\n![Pool01](https://github.com/user-attachments/assets/57385287-b7a7-400f-971b-183939afd000)\n![Pool02](https://github.com/user-attachments/assets/81474616-471d-4c51-9c5e-836455048b4c)\n---\n\nThanks to the V Rising modding and server communities for ideas and requests!\nFeel free to reach out to us on discord (odjit or zfolmt) if you have any questions or need help with the mod.\n\n[V Rising Modding Discord](https://vrisingmods.com/discord)\n\n## Features\n\n- **Transform Pools into Ponds**: Convert decorative castle pools and water wells into functional fishing spots\n- **Regional Fish Types**: Ponds automatically use region-appropriate fish based on their location\n- **Selectable Drop Tables**: Admins can choose loot tables for ponds\n- **Configurable Costs**: Set item requirements for pond creation\n- **Territory Limits**: Control how many ponds can exist per territory\n- **Adjustable Respawn Rates**: Configure fish respawn timing\n\n## Commands\n\n### Player Commands\n- `.pond`\n  - Converts the nearest pool into a fishing pond. Must be standing near a decorative pool or water well.\n  - May require items if pond creation cost is configured by admin.\n- `.pond info`\n  - Shows the current pond settings including respawn time, drop table, and territory limit.\n\n\n### Admin Commands\n- `.pond respawn (minTime) (maxTime)`\n  - Sets the minimum and maximum time between fish respawns in seconds.\n- `.pond cost (item) (amount)`\n  - Sets the item cost required to create a pond. Use item name or PrefabGUID. Use `clear`, set amount to 0 or specify no parameters to clear cost.\n  - Example: `.pond cost Stone 10`\n  - Example: `.pond cost clear`\n- `.pond limit (number)`\n  - Sets maximum ponds allowed per territory. Use -1 for unlimited.\n- `.pond globaldrop (dropTable)`\n  - Sets the global drop table used by all new ponds. Set to 0 or `clear` to return to default region-based fish.\n- `.pond override (dropTable)`\n  - Sets an override drop table for the pond you're looking at, not beholden to global changes. Set to `clear` to place it back on global.\n\n## Configuration\n\nServer admins can configure:\n- **Pond Creation Cost**: Require specific items to create ponds\n- **Territory Limits**: Maximum ponds per claimed territory\n- **Fish Respawn Timing**: How quickly fish respawn in ponds\n- **Drop Table Choice**: Override default regional fish with another loot table.\n  - Drop table references: https://github.com/Odjit/KinPonds/wiki \n\n## Installation\n\n1. Install [BepInEx for V Rising](https://wiki.vrisingmods.com/user/game_update.html)\n2. Install [VampireCommandFramework](https://github.com/decaprime/VampireCommandFramework)\n3. Place `KinPonds.dll` in your `BepInEx/plugins` folder\n4. Restart your server\n\n### Additional Notes\n- If a droptable's first layer of drops does not add up to 100%, the rest is the chance of no reward.\n- Updating the global droptable will effect all globally set ponds. It will not change overridden ponds.\n- If you use the console teleport unit on a pond, it will divorce the fishing spot, but they'll still \"togther\". Just remove pond or don't teleport them.\n- If you set a cost hoping for an item entity instead of just a prefab (like a blood potion), it'll want the empty non entity prefab version. So no \"warrior blood\" cost, it'll just want frail.\n- Want to change permissions on any command? Use [VRoles](https://thunderstore.io/c/v-rising/p/odjit/VRoles/} to allow or prevent any command to players!\n\nThis mod is licensed under the AGPL-3.0 license.\n",
+  "changelog": "`1.0.2`\n- Fixed internal error on .pond when KCommands was not installed.\n\n`1.0.1`\n- Missing regions restored (none/hallowed mountains)\n- Will not attempt to load on a client any longer.\n\n`1.0.0`\n- Initial release"
+}

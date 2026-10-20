@@ -1,0 +1,31 @@
+{
+  "format": 1,
+  "package_sha256": "5e635837582dfdc03c2f6987ef0f49ecd49876807186e37d868fe328e119a733",
+  "size": 111742,
+  "manifest": {
+    "name": "KinCreator",
+    "version_number": "1.0.1",
+    "website_url": "https://github.com/mfoltz/KinCreator",
+    "description": "Save, load, edit and rename character appearance presets in V Rising. Also auto-reconnects when joining a full server.",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.733.2"
+    ]
+  },
+  "description": "Save, load, edit and rename character appearance presets in V Rising. Also auto-reconnects when joining a full server.",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.733.2/",
+      "sha256": "eabfb53d80bed427ddbd1ecf8af4dcd6e82e152809d44ab3218d0a09984f491c"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "c684c5d0b7b3e1c94bd38ea2dbd9524df2a6d67db5d347a01031a5a4e70377ec"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "![](icon.png)\n# KinCreator for V Rising\nKinCreator lets you save your character's appearance as presets and load them back whenever you create a character or use a castle mirror.\n\n*Never lose the look you love.*\n\n---\nThanks to the V Rising modding and server communities for ideas and requests!\n\nThis was a collaborative effort from Odjit (Dj) and Zfolmt [(Mitch)](https://www.patreon.com/join/4865914). Feel free to reach out to either of us if you have questions or need help with the mod!\n\n[V Rising Modding Discord](https://vrisingmods.com/discord) | [How to Install Mods on BepInEx](https://wiki.vrisingmods.com/user/Mod_Install.html)\n\n## Features\n\n### Appearance Presets\n- **Save New Preset** stores your current appearance as a new preset, prompting you for a name (prefilled with the next \"Preset N\").\n- **Load Preset** applies a saved preset from the dropdown, and names your character after the preset on confirm.\n- **Edit** overwrites a preset with your current appearance (Save Edit) or renames it; the same button becomes **Back** to leave edit mode.\n- **Delete** removes the selected preset after a confirmation prompt.\n- Works in both new character creation and the in-game mirror customization.\n- Presets are saved to disk, so they persist between sessions.\n\n### Auto Reconnect\n- When you try to join a full server, KinCreator automatically retries the connection for you.\n- Configurable in the mod's config file (toggle, retry interval).\n\nThis mod is licensed under the AGPL-3.0 license.\n",
+  "changelog": "`1.0.1`\n- Saving a preset now prompts for a name, prefilled with the next \"Preset N\"\n- Added an Edit mode with a Back toggle to leave it; renaming moved into the Delete slot while editing\n- Deleting a preset now asks for confirmation first\n- Added a gold highlight to the preset controls so it's clear which preset you're editing\n- The Complete button is no longer hidden while using the preset menu\n- Fixed the Save Edit label sometimes reverting while still in edit mode\n- Fixed the rename/name popup occasionally disabling its Confirm button\n\n`1.0.0`\n- Initial Release\n"
+}

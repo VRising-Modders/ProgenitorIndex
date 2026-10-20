@@ -1,0 +1,52 @@
+{
+  "format": 1,
+  "package_sha256": "6b214b0c6428f67188db31fc94d0af152b30bfbeff7fa152b62276beee39ceea",
+  "size": 122482,
+  "manifest": {
+    "name": "BloodyRewards",
+    "version_number": "2.0.0",
+    "website_url": "https://github.com/oscarpedrero/BloodyRewards",
+    "description": "Rewards System for VRising.",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.691.3",
+      "deca-VampireCommandFramework-0.9.0",
+      "Trodi-BloodyCore-2.0.0",
+      "Trodi-BloodyWallet-1.0.0"
+    ]
+  },
+  "description": "Rewards System for VRising.",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.691.3",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.691.3/",
+      "sha256": "04290fad8e4e619451c4f5eff3957778d3ab6a0da89bb9ba321822c9e88cf926"
+    },
+    {
+      "id": "deca-VampireCommandFramework-0.9.0",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/deca/VampireCommandFramework/0.9.0/",
+      "sha256": "d3ce9095d9772f979feb4ec792f022d213f0cdf56dc27c82de26a0f9db7cfc9f"
+    },
+    {
+      "id": "Trodi-BloodyCore-2.0.0",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/Trodi/BloodyCore/2.0.0/",
+      "sha256": "56adaaaad9022cb43e7756ebe676ecf5d7cddc544370cfbfd7a8077548f25fc7"
+    },
+    {
+      "id": "Trodi-BloodyWallet-1.0.0",
+      "from": "index",
+      "package": "https://thunderstore.io/package/download/Trodi/BloodyWallet/1.0.0/",
+      "sha256": "2ebe6ed689643c56753524064e89b8d1c29b0cd663aec6278cbcec77c2f4e0f5"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "95f7878211141e4eb631b7ab22fc4e47a914e6b6524be3fabaf454b4e83bda77"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# BloodyRewards\n\nRewards System for VRising\n\n## [BepInEx 1.733.2 (RC2)](https://github.com/decaprime/VRising-Modding/releases/tag/1.733.2)\n\n## IMPORTANT NOTE\n\nYou must have version 2.0.0 of Bloody.Core installed to be able to use version 2.0.0 or higher of this mod\n\n## NEW IN 1.0.10\n\n- Added option for maximum number of deaths in pvp of the same player. This parameter defines how many times you can kill the same player in 24 hours.\n- Added cooldown option that a player will receive when they exceed the established daily death limit for the same player.\n\n```\n## Maximum number of consecutive deaths to the same player that are allowed before executing the cooldown\n# Setting type: Int32\n# Default value: 1\nMaximumDeathsSamePlayer = 3\n\n## Minutes a player must wait to receive a reward for killing the same player again\n# Setting type: Int32\n# Default value: 30\nCoolDownDeathsSamePlayer = 30\n```\n\n## NEW IN 1.0.5\n\n- You can now earn virtual currency rewards through [BloodyWallet](https://thunderstore.io/c/v-rising/p/Trodi/BloodyWallet/) mod. Check the configuration file to activate this option.\n- Now you can activate rewards that will be awarded once per day through daily login to the server.  Check the configuration file to activate this option.\n- Now you can activate rewards that will be awarded for connection time, the longer people are logged in, the more rewards they will get.  Check the configuration file to activate this option.\n\n## Known bugs\n- PVP rewards do not work as they should.\n\n<details>\n<summary>Changelog</summary>\n\n`2.0.0`\n- Updated to Oakveil\n- Removed Bloodstone dependency\n\n`1.0.11`\n- Added a control so that if the timer fails when giving the reward to a player, the Timer does not stop.\n- Add command `.brew force start connection timer`\n\n`1.0.10`\n- Added option for maximum number of deaths in pvp of the same player. This parameter defines how many times you can kill the same player in 24 hours.\n- Added cooldown option that a player will receive when they exceed the established daily death limit for the same player.\n\n`1.0.9`\n- Fixed all normal reward system bugs\n- Fixed the error in the normal reward system that always dropped the item on the ground instead of adding it to the inventory\n\n`1.0.8`\n- Fixed all virtual reward system bugs\n\n`1.0.7`\n- Fixed all virtual reward system bugs\n\n`1.0.6`\n- Updated the timer system through Coroutine that brings the new version of Bloody.Core\n- Fixed PVP reward system\n- Fixed daily server connection reward system\n- Fixed get the NPC reward for Vblood kills\n\n`1.0.5`\n- Updated to work with [BloodyWallet](https://thunderstore.io/c/v-rising/p/Trodi/BloodyWallet/)\n- Added daily login reward system\n- Added reward system for connection time\n\n`1.0.4`\n- Bug fixes and performance improvements\n\n`1.0.3`\n- Bloody.Core dependency removed as dll and added as framework\n\n`1.0.0`\n- First Release\n\n\n</details>\n\n# Sponsor this project\n\n[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/K3K8ENRQY)\n\n# Requirements\n\n1. [BepInEx 1.733.2 (RC2)](https://github.com/decaprime/VRising-Modding/releases/tag/1.733.2)\n2. [VampireCommandFramework](https://thunderstore.io/c/v-rising/p/deca/VampireCommandFramework/)\n3. [Bloody.Core](https://thunderstore.io/c/v-rising/p/Trodi/BloodyCore/)\n4. [BloodyWallet](https://thunderstore.io/c/v-rising/p/Trodi/BloodyWallet/)\n\n## Configuration\n\nOnce the mod is installed, it's time for configuration:\n\nFor this we will go to the folder that we have defined within BepInEx for the configuration files and there we will find the configuration file of the mod called `BloodyRewards.cfg` that we will explain:\n\n```\n## Settings file was created by plugin BloodyRewards v1.0.9\n## Plugin GUID: BloodyRewards\n\n[ConnectionTimeReward]\n\n## Connection time reward\n# Setting type: Boolean\n# Default value: true\nConnectionTimeReward = true\n\n## Amount of rewards for connection time\n# Setting type: Int32\n# Default value: 1\nAmountTimeReward = 1\n\n## Every how many minutes the reward will be awarded\n# Setting type: Int32\n# Default value: 5\nTimeReward = 2\n\n[DayliLoginRewardsSystem]\n\n## Daily reward for connecting to the server\n# Setting type: Boolean\n# Default value: true\nDailyLoginRewards = true\n\n## Amount of rewards for login\n# Setting type: Int32\n# Default value: 15\nAmountDailyLoginReward = 15\n\n[RewardsSystem]\n\n## Enable Rewards System\n# Setting type: Boolean\n# Default value: true\nenabled = true\n\n## Percent chance that an NPC will drop the type of reward from the shop\n# Setting type: Int32\n# Default value: 5\nminPercentageDropNpc = 5\n\n## Percentage increase for every rank of 10 levels of the NPC\n# Setting type: Int32\n# Default value: 5\nIncrementPercentageDropEveryTenLevelsNpc = 5\n\n## Minimum reward an NPC can drop\n# Setting type: Int32\n# Default value: 1\nDropdNpcRewardsMin = 1\n\n## Maximum reward an NPC can drop\n# Setting type: Int32\n# Default value: 5\nDropNpcRewardsMax = 5\n\n## Maximum number of reward that a user can get per day by NPC death\n# Setting type: Int32\n# Default value: 5\nMaxRewardsPerDayPerPlayerNpc = 5\n\n## Percent chance that an VBlood will drop the type of reward from the shop\n# Setting type: Int32\n# Default value: 20\nminPercentageDropVBlood = 20\n\n## Percentage increase for every rank of 10 levels of the VBlood\n# Setting type: Int32\n# Default value: 5\nIncrementPercentageDropEveryTenLevelsVBlood = 5\n\n## Minimum reward an VBlood can drop\n# Setting type: Int32\n# Default value: 10\nDropVBloodRewardsMin = 10\n\n## Maximum reward an VBlood can drop\n# Setting type: Int32\n# Default value: 20\nDropVBloodRewardsMax = 20\n\n## Maximum number of reward that a user can get per day by VBlood death\n# Setting type: Int32\n# Default value: 20\nMaxRewardsPerDayPerPlayerVBlood = 20\n\n## Percent chance that victory in a PVP duel will drop the type of reward in the store\n# Setting type: Int32\n# Default value: 100\nminPercentageDropPvp = 100\n\n## Percentage increase for every rank of 10 levels of the Player killed in pvp duel\n# Setting type: Int32\n# Default value: 5\nIncrementPercentageDropEveryTenLevelsPvp = 5\n\n## Minimum reward can drop victory in PVP\n# Setting type: Int32\n# Default value: 15\nDropPvpRewardsMin = 15\n\n## Maximum reward can drop victory in PVP\n# Setting type: Int32\n# Default value: 20\nDropPvpRewardsMax = 20\n\n## Maximum number of reward that a user can get per day by victory in PVP\n# Setting type: Int32\n# Default value: 20\nMaxRewardsPerDayPerPlayerPvp = 20\n\n## Maximum number of consecutive deaths to the same player that are allowed before executing the cooldown\n# Setting type: Int32\n# Default value: 1\nMaximumDeathsSamePlayer = 3\n\n## Minutes a player must wait to receive a reward for killing the same player again\n# Setting type: Int32\n# Default value: 30\nCoolDownDeathsSamePlayer = 30\n\n[Wallet]\n\n## Activate rewards in virtual currency through BloodyWallet ( https://github.com/oscarpedrero/BloodyWallet )\n# Setting type: Boolean\n# Default value: false\nenabled = true\n\n## Maximum amount of virtual coins for when you drop in PVE\n# Setting type: Int32\n# Default value: 2\namountPveMax = 2\n\n## Minumun amount of virtual coins for when you drop in PVE\n# Setting type: Int32\n# Default value: 1\namountPveMin = 1\n\n## Maximum amount of virtual coins for when you drop in VBlood\n# Setting type: Int32\n# Default value: 2\namountVBloodMax = 2\n\n## Minimun amount of virtual coins for when you drop in VBlood\n# Setting type: Int32\n# Default value: 1\namountVBloodMin = 1\n\n## Maximum amount of virtual coins for when you drop in PVE\n# Setting type: Int32\n# Default value: 2\namountPVPMax = 2\n\n## Minimun amount of virtual coins for when you drop in PVE\n# Setting type: Int32\n# Default value: 1\namountPVPMin = 1\n```\n\n|SECTION|PARAM| DESCRIPTION                                                     | DEFAULT\n|----------------|-------------------------------|-----------------------------------------------------------------|-----------------------------|\n|RewardsSystem|`enabled `            | Define if the system enabled or disabled | true\n|RewardsSystem|`minPerc",
+  "readme_truncated": true
+}

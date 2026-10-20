@@ -1,0 +1,37 @@
+{
+  "format": 1,
+  "package_sha256": "4f8c673e2af533d02fb6cc03f7efaa0579fa56f4e3966dfa73448b8fc243775f",
+  "size": 106659,
+  "manifest": {
+    "name": "NoGameCursor",
+    "version_number": "1.0.0",
+    "website_url": "https://github.com/DerNap/VRisingAddicts",
+    "description": "Switch the game cursor back to your system cursor in the game.",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.668.5",
+      "deca-Bloodstone-0.1.4"
+    ]
+  },
+  "description": "Switch the game cursor back to your system cursor in the game.",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.668.5",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.668.5/",
+      "sha256": "784c7a7f64ba0f1d4e9778c6558a061ab83dbacc6e0bb8ae0e3ab86698578113"
+    },
+    {
+      "id": "deca-Bloodstone-0.1.4",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/deca/Bloodstone/0.1.4/",
+      "sha256": "e57607799d1550191b274237ead53a2e6f0fb8ea5cbeb67cb24a9f1572e8432a"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "3cff7feb12e3a25f82e6f6325837cbd94ede5dad275eec12568a9e55ab18ce7a"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# NoGameCursor\nThis mod is based on [ACPs](https://v-rising.thunderstore.io/package/ACP/NoGameCursor/) mod that stopped working for me after the Gloomrot update.\n\nA mod that change the game cursor to fit your operating system cursor.\n\n<details>\n\n*_Q:_* Why would you want to hide the game cursor?<br>\n*_A:_* Well, in a game that heavily relies on the mouse location for aiming, \nyou need to make sure to be able to see the cursor at any time. \nUnfortunaltely the pace of the game and the fast changing graphics often make \nyou lose track of the current mouse location.\nFurther more the game cursor is fix and can't be customized by the game, but \nthe desktop cursor can. \nWith this mod you can disable the game cursor and use any customized Windows \ncursor or even use tools like YoloMouse.\n\n*_Disclaimer:_* I am *NOT* affiliated at any means with YoloMouse! I haven't \nprogrammed it, I don't earn anything from it, I am just a happy user of that\ntool for quite some years now, especially in heavy graphic mouse location \ndependend games like VRising or Path of Exile.\n\n*_Q:_* What is Yolomouse?<br>\n*_A:_* Yolomouse is a tool to switch the mouse cursor based on the application currently \nrunning in foreground. This allows you to have different mouse cursor designs \nwhich are only visible if you really use the configured application.\nYou could therefore have a really huge cursor that you will never ever lose \ntrack only while playing a certain game, e.g. VRising.\n\n*_Q:_* I am hooked. Where can I get YoloMouse?<br>\n*_A:_* The newest version can be downloaded from [here](https://pandateemo.github.io/YoloMouse/).\nPersonally I recommend the fully working older version 0.11.3 since it is free \nof charge, which you can download [here](https://github.com/PandaTeemo/YoloMouse/releases/download/0.11.3/YoloMouse64.msi).\n\n</details>\n\n### Screenshots\n<details>\n<summary>Default Windows 11 cursor</summary>\n\n![Default Windows 11 cursor](https://i.imgur.com/hPcEqZV.png)\n\n</details>\n\n<details>\n<summary>Default Windows 11 cursor with custom color</summary>\n\n![Default Windows 11 cursor with custom color](https://i.imgur.com/rxbHpNW.png)\n\n</details>\n\n<details>\n<summary>Default Windows 11 cursor in Build Mode</summary>\n\n![Default Windows 11 cursor in Build Mode](https://i.imgur.com/3ReafZw.png)\n\n</details>\n\n### Installation\n- Install [BepInExPack V Rising](https://v-rising.thunderstore.io/package/BepInEx/BepInExPack_V_Rising/)\n- Extract _NoGameCursor.dll_ into _(VRising folder)/BepInEx/plugins_\n\n### Support\n- Raise an issue on [Github](https://github.com/DerNap/VRisingAddicts).\n\n### Changelog\n`1.0.0` First release\n\n## Developer & credits\n<details>\n\n### Original Creator & Developer\n- [ACS](https://v-rising.thunderstore.io/package/ACP/NoGameCursor/)\n\n### Current Developer\n- [DerNap](https://github.com/DerNap)\n\n\n### VRisingAddicts\n- [VRisingAddicts](https://github.com/DerNap/VRisingAddicts) is my selection of mods \nfor V-Rising, mostly updated stuff from projects no longer maintained by the original \nauthor and therefore no longer working with the latest game patches.\nActually I only do it for mods I am using on my own server.\n\n</details>"
+}

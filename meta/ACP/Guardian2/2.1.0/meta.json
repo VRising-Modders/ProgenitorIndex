@@ -1,0 +1,30 @@
+{
+  "format": 1,
+  "package_sha256": "36d25621ea4511b08039c6fc8edfec1480ebb409df459a87ad444ac12ebc3ce4",
+  "size": 57068,
+  "manifest": {
+    "name": "Guardian2",
+    "version_number": "2.1.0",
+    "website_url": "https://github.com/jokeruarwentto/Guardian2",
+    "description": "A simple whitelist system to let you the choice of who can connect on your server.",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.0.0"
+    ]
+  },
+  "description": "A simple whitelist system to let you the choice of who can connect on your server.",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.0.0",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.0.0/",
+      "sha256": "27fd91f2951701faf324b9dcd34cf771a7f4534e1d3a679949b9a0ae67472054"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "d04c1e18467f8cbaecf6c77bee58dd025602a6407aef55d8853035d0a0e75132"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "#### V Rising - Server Plugin\n\n# Guardian 2\n\n### Description\n\nDo you want to make a private server password protected, and fearing about players that share your password ? Or you just want to have a whitelist ? \n\nGuardian is here for you, a simple whitelist system to let you the choice of who can connect on your server.\n\n### Features\n🗒️ Configurable\n\n👟 Automatic Kick system\n\n📜 Whitelist system\n\n⚙️ Hot reloading\n\n🤖 RCON command\n\n### Installation\n- Install [BepInExPack V Rising](https://v-rising.thunderstore.io/package/BepInEx/BepInExPack_V_Rising/) on your server\n- Extract ``arwent-Guardian2`` folder into _(VRising Server folder)/BepInEx/plugins_\n\n### Configuration\n- Open ``me.arwent.Guardian2.Configuration.xml`` with your favorite text editor\n\n### Usage\n- Open ``me.arwent.Guardian2.Whitelist.txt`` with your favorite text editor\n- Add the player ``SteamID`` into it\n- Save\n\n### Usage RCON\n- `guardian (add/remove) (steamId)`\n\n### Support\n- [V Rising Mod Community](https://discord.gg/CWzkHvekg3) and ping `@Arwent#6190`\n\n### Changelog\n`2.1.0` Added RCON command\n\n`2.0.1` Fixed configuration not taked in count\n\n`2.0.0` Totally reworked the plugin and open sourced\n\n`1.1.0` Added automatic Kick feature\n\n`1.0.0` First release"
+}

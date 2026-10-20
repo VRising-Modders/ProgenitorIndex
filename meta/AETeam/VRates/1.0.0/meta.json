@@ -1,0 +1,31 @@
+{
+  "format": 1,
+  "package_sha256": "77dcc81e9900e6d979f3b6afca01ea51844a5f45d2f5bcf565ce5e6737802b6f",
+  "size": 24661,
+  "manifest": {
+    "name": "VRates",
+    "version_number": "1.0.0",
+    "website_url": "https://github.com/Scintyx/VRates",
+    "description": "Configurable V Rising harvest, loot, mission, shard, blood essence, crafting, refinement, recipe cost, refinement cost, and build cost multipliers. Rates default x10; costs default x1.",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.733.2"
+    ]
+  },
+  "description": "Configurable V Rising harvest, loot, mission, shard, blood essence, crafting, refinement, recipe cost, refinement cost, and build cost multipliers. Rates default x10; costs default x1.",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.733.2/",
+      "sha256": "eabfb53d80bed427ddbd1ecf8af4dcd6e82e152809d44ab3218d0a09984f491c"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "ca23a144671906ad779d89dbc4051e1c061e61862733068cd0270193034c2c36"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# VRates\n\n**VRates** is a managed-only BepInEx 6 IL2CPP mod for **V Rising** that extends common server rates and costs beyond the normal game-setting limits.\n\nVRates v1.0.0 exposes **10 independently configurable settings**.\n\nRate/speed defaults are **x10**. Cost defaults remain **x1 (vanilla)**.\n\n## Configuration\n\nOn first server/host launch, VRates creates:\n\n```text\nBepInEx/config/VRates.cfg\n```\n\nDefault configuration:\n\n```ini\n[Rates]\nHarvestMultiplier = 10\nLootMultiplier = 10\nMissionLootMultiplier = 10\nStygianShardMultiplier = 10\nBloodEssenceMultiplier = 10\nCraftSpeedMultiplier = 10\nRefinementSpeedMultiplier = 10\n\nRecipeCostMultiplier = 1\nRefinementCostMultiplier = 1\nBuildCostMultiplier = 1\n```\n\nRestart the server/host after changing the file.\n\n## Setting map\n\n| Config option | V Rising setting | Default | Purpose |\n|---|---|---:|---|\n| `HarvestMultiplier` | `MaterialYieldModifier_Global` | x10 | Resource-node harvesting yield |\n| `LootMultiplier` | `DropTableModifier_General` | x10 | General loot |\n| `MissionLootMultiplier` | `DropTableModifier_Missions` | x10 | Servant mission rewards |\n| `StygianShardMultiplier` | `DropTableModifier_StygianShards` | x10 | Stygian Shard drops |\n| `BloodEssenceMultiplier` | `BloodEssenceYieldModifier` | x10 | Blood Essence yield |\n| `CraftSpeedMultiplier` | `CraftRateModifier` | x10 | Crafting speed |\n| `RefinementSpeedMultiplier` | `RefinementRateModifier` | x10 | Refinement/processing speed |\n| `RecipeCostMultiplier` | `RecipeCostModifier` | x1 | Crafting recipe material cost |\n| `RefinementCostMultiplier` | `RefinementCostModifier` | x1 | Refinement material cost |\n| `BuildCostMultiplier` | `BuildCostModifier` | x1 | Building material cost |\n\n### Cost multiplier examples\n\nFor the three cost settings:\n\n```text\n1.0 = normal vanilla cost\n0.5 = approximately half material cost\n2.0 = approximately double material cost\n```\n\nThe mod accepts positive values from `0.01` up to `65504`.\n\n## Intentionally not modified\n\nVRates does not modify:\n\n```text\nInventoryStacksModifier\n```\n\nInventory stack size remains the responsibility of VStacks.\n\n## Compatibility with VStacks\n\nVRates works by itself or together with **VStacks 1.0.1+**.\n\nWhen VStacks is installed:\n\n1. BepInEx loads VStacks first because VRates declares it as a soft dependency.\n2. VStacks owns the single native `SettingsClamp::Half` detour.\n3. VRates registers all 10 exact supported setting names with VStacks.\n4. VRates does **not** install a second native detour.\n\nWhen VStacks is absent, VRates installs its own standalone `SettingsClamp::Half` hook.\n\nIf VStacks 1.0.0 is detected, VRates refuses to install a competing native hook and asks for VStacks 1.0.1+.\n\n## Installation\n\nVRates is intended to be **server-side**.\n\n### Dedicated server\n\nInstall:\n\n```text\nBepInEx/plugins/VRates/VRates.dll\n```\n\nStart the server once, then edit:\n\n```text\nBepInEx/config/VRates.cfg\n```\n\nRestart after changes.\n\nClients do not need VRates installed.\n\n### Host & Play\n\nInstall VRates into the host's BepInEx environment.\n\n## Implementation\n\nWhen running standalone, VRates:\n\n1. locates the current `SettingsClamp::Half` implementation in `GameAssembly.dll` using a fail-closed executable signature;\n2. installs one managed BepInEx `INativeDetour`;\n3. compares the IL2CPP field name against the 10 supported setting names;\n4. substitutes the configured value only for an exact match;\n5. passes every unrelated setting through unchanged.\n\nWhen VStacks 1.0.1+ is present, VRates registers those exact names through VStacks' cooperative hook API instead.\n\nVRates contains no custom native DLL, MinHook, or proxy DLL.\n\n## Build\n\n```bash\ndotnet restore src/VRates/VRates.csproj --configfile nuget.config\ndotnet build src/VRates/VRates.csproj -c Release --no-restore\n```\n\nOutput:\n\n```text\nsrc/VRates/bin/Release/net6.0/VRates.dll\n```\n",
+  "changelog": "# Changelog\n\n## 1.0.0\n\n- Initial public release.\n- Added configurable x10-default:\n  - Harvest\n  - General Loot\n  - Mission Loot\n  - Stygian Shards\n  - Blood Essence\n  - Craft Speed\n  - Refinement Speed\n- Added configurable x1-default:\n  - Recipe Cost\n  - Refinement Cost\n  - Build Cost\n- Added cooperative compatibility with VStacks 1.0.1+ so both mods share one `SettingsClamp::Half` native hook.\n- VRates remains standalone when VStacks is absent.\n- Server-side only; connecting clients do not require VRates.\n- No custom native DLL, MinHook, or proxy DLL.\n"
+}

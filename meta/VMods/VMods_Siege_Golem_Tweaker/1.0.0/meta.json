@@ -1,0 +1,37 @@
+{
+  "format": 1,
+  "package_sha256": "06f8f3f1bae7c74d8e607f414c006aa4cbd76c5a57c17d834fcc10e136faae96",
+  "size": 62716,
+  "manifest": {
+    "name": "VMods_Siege_Golem_Tweaker",
+    "version_number": "1.0.0",
+    "website_url": "https://github.com/WhiteFang5/VMods#resource-stash-withdrawal",
+    "description": "A mod that allows you to tweak the stats (Power, Resists, (Move)Speed, Max HP) of Siege Golems.",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.0.0",
+      "molenzwiebel-Wetstone-1.1.0"
+    ]
+  },
+  "description": "A mod that allows you to tweak the stats (Power, Resists, (Move)Speed, Max HP) of Siege Golems.",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.0.0",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.0.0/",
+      "sha256": "27fd91f2951701faf324b9dcd34cf771a7f4534e1d3a679949b9a0ae67472054"
+    },
+    {
+      "id": "molenzwiebel-Wetstone-1.1.0",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/molenzwiebel/Wetstone/1.1.0/",
+      "sha256": "60d4cf20da7d8be01cb71447e5cf2165532ed0f3d19bd6788d9fc4403a257133"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "ffddce467b7b52acfbde8fdad28f0244a395636347f9dfdd4d89b3906dab410b"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# Siege Golem Tweaker\nA server-side only mod that allows you to tweak the stats (Power, Resists, (Move)Speed, Max HP) of Siege Golems.\n\n<details>\n<summary>Configuration Options</summary>\n\n* Siege Power Multiplier\n* Physical Power Multiplier\n* Spell Power Multiplier\n* Movement Speed Multiplier\n* Attack Speed Multiplier\n* Max Health Multiplier\n* Passive Health Regen\n* Physical Resistance\n* Spell Resistance\n* Fire Resistance\n* Holy Resistance\n* Sun Resistance\n* Silver Resistance\n* Garlic Resistance\n\n</details>\n\n## How to manually install\n* Install [BepInEx](https://v-rising.thunderstore.io/package/BepInEx/BepInExPack_V_Rising/)\n* Install [Wetstone](https://v-rising.thunderstore.io/package/molenzwiebel/Wetstone/)\n* (Locally hosted games only) Install [ServerLaunchFix](https://v-rising.thunderstore.io/package/Mythic/ServerLaunchFix/)\n* Extract the Vmods._mod-name_.dll\n* Move the desired mod(s) to the `[VRising (server) folder]/BepInEx/WetstonePlugins/`\n* Launch the server (or game) to auto-generate the config files\n* Edit the configs as you desire (found in `[VRising (server) folder]/BepInEx/config/`)\n* Reload the mods using the Wetstone commands (by default F6 for client-side mods, and/or `!reload` for server-side mods)\n  * If this doesn't work, or isn't enabled, restart the server/game\n\n## Commands\nMost of the VMods come with a set of commands that can be used. To see the available commands, by default a player or admin can use `!help`.  \nNormal players won't see the Admin-only commands listed.  \nThe prefix (`!`) can be changed on a per-mod basis.  \nTo prevent spam/abuse there's also a command cooldown for non-admins, this value can also be tweaked on a per-mod basis.  \nCommands can also be disabled completely on a per-mod basis.\n\n## More Details\n* [ChangeLog](https://github.com/WhiteFang5/VMods/blob/master/CHANGELOG.md#siege-golem-tweaker)\n"
+}

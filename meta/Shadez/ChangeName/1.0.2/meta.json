@@ -1,0 +1,44 @@
+{
+  "format": 1,
+  "package_sha256": "17e3b222561a08823a7b23f3283e0bab0410b184b06625eaf8e0dc14f27715ba",
+  "size": 125512,
+  "manifest": {
+    "name": "ChangeName",
+    "version_number": "1.0.2",
+    "website_url": "https://github.com/KrisCoulson/ChangeName-Vrising-Mod",
+    "description": "Allow players to change their name without admin support",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.691.3",
+      "deca-Bloodstone-0.2.2",
+      "deca-VampireCommandFramework-0.9.0"
+    ]
+  },
+  "description": "Allow players to change their name without admin support",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.691.3",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.691.3/",
+      "sha256": "04290fad8e4e619451c4f5eff3957778d3ab6a0da89bb9ba321822c9e88cf926"
+    },
+    {
+      "id": "deca-Bloodstone-0.2.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/deca/Bloodstone/0.2.2/",
+      "sha256": "1b7de6e8ab631afacea7c757c81494848755fda9d39c93618fc52584eff06089"
+    },
+    {
+      "id": "deca-VampireCommandFramework-0.9.0",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/deca/VampireCommandFramework/0.9.0/",
+      "sha256": "d3ce9095d9772f979feb4ec792f022d213f0cdf56dc27c82de26a0f9db7cfc9f"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "3a904fe90324b9539b37c98a3b6e96f01e5d7f757a03386c4b39b80d92c35a9b"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# ChangeName VRising Mod\n<img src=\"https://github.com/user-attachments/assets/081eee78-2c61-4b8f-8d67-fba37bb6928b\" width=400px height=\"400px\">\n\n\n## Description\nServer Admins Rejoice! No more support tickets for name changes!\n\nChangeName is a mod for the game *V Rising* that allows players to change their character name without assistance from an admin.\nAdmins can setup a currency and price for the name change, and players can use the `.changename` or `.cn` command to change their name if the required amount of currency is in their inventory.\n\nNote this mod does not do any type of filtering and does not prevent players for changing their name to something inappropriate.\n\n\nFor other great mods and support join the modding community at on discord by going to https://wiki.vrisingmods.com/\n\n---\n\n## Patch Notes (v1.0.2)\n- **New `.changename (newName)` / `.cn (newName)` command**: Allows players to change their character name.\n\n\n---\n\n## Features\n- **Player Command**: Players can change their character name.\n- **Admin Configuration**: Set the price and currency for name changes.\n- **Map Icon Updates**: Player names are updated on the map when they are in a clan.\n- **Reloadable**: Simply place the mod in the Bloodstone plugins folder run `!reload`. No need to restart the server when updating settings.\n\n---\n\n## Commands\nPrefix all commands with a period (`.`).\n\n### `.changename (newName)` or `.cn (newName)`\n**Description**: Change your character name.\n- `Admins` → No cost to change name.\n- `Players` → Admins can set a cost for name changes.\n\n\n\n### Installation Instructions\n\nDownload the Mod Files:\n\nObtain the latest ChangeName.dll release from our official repository or release page.\n\n#### Extract Files:\n\nPlace ChangeName.dll in your server’s BepInEx plugins directory\nChangeName is also reloadable. Instead of placing the mod in the plugins folder, you can place it in the Bloodstone plugins folder and run `!reload` from the chat box. All of the mods settings will be reloaded without shutting down the server.\n\n#### Launch the Server:\n\nStart your V Rising dedicated server. ChangeName will initialize automatically, creating any needed config files.\n\n### Configuration:\nThe name of the currency, The currency Prefab ID, and Cost (Setting 0 makes it free) \n\nThe default values are:\n| Config Name | Default Value |\n| --- | --- |\n| Currency | Silver Coins |\n| RequiredCurrencyGUID | -949672483 |\n| CurrencyCost | 500 |\n\n## Dependencies\n- VampireCommandFramework\n- Bloodstone\n\n## Developer\nKris Coulson (Shadez).\n\n## Shoutouts\ninility (Darrean) - for inspiration and outlining the currency inventory system\nOdjit - for the base work of character renaming (kinderd commands)\nHelskog - for helping me run down Map player icons!\n\n## License\nThis mod is free to use or modify.\n\n## Disclaimer:\nChangeName is a third-party mod, not affiliated with the official V Rising development team. Use at your own risk.\n\n"
+}

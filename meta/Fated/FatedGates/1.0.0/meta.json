@@ -1,0 +1,37 @@
+{
+  "format": 1,
+  "package_sha256": "b314a82874d835222571a7abed61e064960e0502b60224d17749a9dd6b1b88a4",
+  "size": 372720,
+  "manifest": {
+    "name": "FatedGates",
+    "version_number": "1.0.0",
+    "website_url": "https://github.com/xfateless/FatedGates",
+    "description": "Server-side V Rising mod for persistent public waygates, reveal zones, portals, and map icons.",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "deca-VampireCommandFramework-0.11.0"
+    ]
+  },
+  "description": "Server-side V Rising mod for persistent public waygates, reveal zones, portals, and map icons.",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.733.2/",
+      "sha256": "eabfb53d80bed427ddbd1ecf8af4dcd6e82e152809d44ab3218d0a09984f491c"
+    },
+    {
+      "id": "deca-VampireCommandFramework-0.11.0",
+      "from": "index",
+      "package": "https://thunderstore.io/package/download/deca/VampireCommandFramework/0.11.0/",
+      "sha256": "06a3d1bf244f3d37e82b62e5b1304d32ddd06985b3ed8616e5c27e3df5ae01ff"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "f4d2ef2d96f09d2b3e9117b11c5c08c710ecc6a7249e70a528c510118bfbc0ab"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# FatedGates\n\nServer-side V Rising mod for custom waygates, public waygates, reveal zones, portals, and map icons.\n\nFatedGates is an extended fork of KindredPortals. It includes the original portal/map-icon/waygate functionality, plus public waygates, persistent reveal zones, save-scoped config, and command shorthands.\n\n## Features\n\n- Create custom discoverable waygates\n- Create public waygates that unlock for all players\n- Reveal small map areas so public waygates appear on the normal teleport map\n- Persist public waygates and reveal zones across restarts\n- Spawn linked portals\n- Spawn map icons\n- Use short command aliases\n\n## Installation\n\nInstall as a server-side BepInEx plugin.\n\n1. Install BepInExPack for V Rising.\n2. Install VampireCommandFramework.\n3. Place `FatedGates.dll` in `BepInEx/plugins/FatedGates/`.\n4. Restart the server.\n\nLogs are written to:\n\n```txt\nBepInEx/LogOutput.log\n````\n\n## Quick Start\n\nCreate a public waygate:\n\n```txt\n.wg cp \"Market\"\n```\n\nReveal the area around it so players can use it from the normal teleport map:\n\n```txt\n.rv c 2\n```\n\nList public waygates:\n\n```txt\n.wg lp\n```\n\nDelete public waygate #1:\n\n```txt\n.wg d 1\n```\n\n## Important Note About Public Waygates\n\nUnlocking a waygate makes it available on the **respawn map**, but it may not appear on the normal teleport map unless the surrounding area is revealed.\n\nThat is why the recommended public waygate workflow is:\n\n```txt\n.wg cp \"Name\"\n.rv c 2\n```\n\n## Commands\n\n### Waygates: `.waygate` / `.wg`\n\n| Command           | Shorthand | Usage                           | Description                                         |\n| ----------------- | --------- | ------------------------------- | --------------------------------------------------- |\n| `create`          | `c`       | `.wg c [waygatePrefab]`         | Create a normal discoverable waygate                |\n| `createpublic`    | `cp`      | `.wg cp [name] [waygatePrefab]` | Create a public waygate                             |\n| `teleportclosest` | `tc`      | `.wg tc`                        | Teleport to closest spawned waygate                 |\n| `destroy`         | `d`       | `.wg d [publicWaygateIndex]`    | Destroy closest waygate, or public waygate by index |\n| `listpublic`      | `lp`      | `.wg lp`                        | List saved public waygates                          |\n\n### Reveals: `.reveal` / `.rv`\n\n| Command   | Shorthand | Usage                    | Description                              |\n| --------- | --------- | ------------------------ | ---------------------------------------- |\n| `zone`    | `z`       | `.rv z <x> <y> [radius]` | Add reveal zone by bitmap coordinates    |\n| `here`    | `h`       | `.rv h [radius]`         | Add reveal zone at your position         |\n| `closest` | `c`       | `.rv c [radius]`         | Add reveal zone at closest waygate       |\n| `list`    | `l`       | `.rv l`                  | List saved reveal zones                  |\n| `remove`  | `rm`      | `.rv rm [index]`         | Remove reveal zone by index, or closest  |\n| `apply`   | `a`       | `.rv a`                  | Apply all reveal zones to online players |\n| `pos`     | `p`       | `.rv p`                  | Show world and reveal bitmap position    |\n\n### Portals: `.portal` / `.port`\n\n| Command           | Shorthand | Usage               | Description                          |\n| ----------------- | --------- | ------------------- | ------------------------------------ |\n| `start`           | `s`       | `.port s [mapIcon]` | Start a portal connection            |\n| `end`             | `e`       | `.port e [mapIcon]` | Finish and connect the portal        |\n| `teleportclosest` | `tc`      | `.port tc`          | Teleport to closest spawned portal   |\n| `destroy`         | `d`       | `.port d`           | Destroy nearby portal and connection |\n\n### Map Icons: `.mapicon` / `.mi`\n\n| Command   | Shorthand | Usage             | Description                          |\n| --------- | --------- | ----------------- | ------------------------------------ |\n| `create`  | `c`       | `.mi c <mapIcon>` | Create a map icon                    |\n| `destroy` | `d`       | `.mi d`           | Destroy map icon you are standing on |\n| `list`    | `l`       | `.mi l`           | List available map icon prefabs      |\n\n## Reveal Radius\n\n| Radius    | Use                                                              |\n| --------- | ---------------------------------------------------------------- |\n| `1`       | Very tight reveal; target should remain inside the revealed area |\n| `3+`      | Larger visible patch                                             |\n| `50-100`  | Reveal whole regions                                             |\n| `200-400` | Reveal most or all of the map                                    |\n\n## Configuration\n\nPersistent data is saved per world save:\n\n```txt\nBepInEx/config/FatedGates/<SaveName>/PublicWaygates.json\nBepInEx/config/FatedGates/<SaveName>/PublicRevealZones.json\n```\n\n## Notes\n\nReveal zones only reveal map areas; removing a reveal zone does not re-fog the map for players who already received it.\n\nPlayers who are already online may need to relog before newly revealed areas appear on their client.\n\n## Credits\n\nFatedGates is an extended fork of KindredPortals by Odjit.\n\nThanks to the V Rising Modding Community for documentation, examples, and tooling.\n"
+}

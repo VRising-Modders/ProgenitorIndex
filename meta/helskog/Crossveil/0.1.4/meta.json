@@ -1,0 +1,31 @@
+{
+  "format": 1,
+  "package_sha256": "22773f431a10104da7251d8340c7fedb61bfbaa9b7284d0b7cb168b71cc7e440",
+  "size": 91366,
+  "manifest": {
+    "name": "Crossveil",
+    "version_number": "0.1.4",
+    "website_url": "https://github.com/helskog/Crossveil",
+    "description": "Fully replace the standard Cursors/Crosshairs with your own!",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.733.2"
+    ]
+  },
+  "description": "Fully replace the standard Cursors/Crosshairs with your own!",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.733.2/",
+      "sha256": "eabfb53d80bed427ddbd1ecf8af4dcd6e82e152809d44ab3218d0a09984f491c"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "7aa20d76d5c9cdf8385f5cb392d169a039983e18b98efa8d43580bdcd9fcd994"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# Crossveil\n\nA client-sided mod for V Rising made for fully replacing the default game crosshairs with your own.\n\n## Features\n\n🎯 Swap default crosshairs with custom images<br>\n☝ Swap default crosshairs with your Windows Cursor<br>\n🔎 Hide the crosshair completely<br>\n💾 Import folders of .png images into custom collections<br>\n🔥 Adjustable crosshair hotspot location<br>\n🗿 Scale crosshairs to your preferred size<br>\n🔧 Toggle options & adjust the crosshair through the normal game menu<br>\n📌 Saves & reloads options automatically when closing and re-opening the game<br>\n\n## How It Works\n\nCrossveil intercepts cursor rendering logic inside `SetCursorSystem.OnUpdate` and applies your chosen crosshair based on\nthe current UI state. It uses Unity's `SetCursor()` to override visuals, and falls back to the default game crosshairs\nwhen disabled.\n\n## Installing Crossveil\n\n1️⃣ Navigate to the game install folder. Typically: `C:\\Program Files (x86)\\Steam\\steamapps\\common\\VRising`<br>\n\n2️⃣ Make sure you have the latest version\nof [BepInEx](https://thunderstore.io/c/v-rising/p/BepInEx/BepInExPack_V_Rising/) for V Rising, if installed for the\nfirst time make sure to run the game at least once and close it afterwards for the plugins & config directories to be\ncreated automatically.<br>\n\n3️⃣ ️Place the `Crossveil.dll` file inside the `\\BepInEx\\plugins` folder.<br>\n\n## Options Menu\n\nThe options are available inside the normal game menu under `General` at the very bottom of the page.\n\n<img src=\"https://i.ibb.co/4nYR9S7k/Screenshot-20250514-163949.png\"/>\n\n## Included crosshairs\n\nThe mod comes with a selection of default crosshairs pre-installed to get you started.\n<img src=\"https://i.ibb.co/ynRY6wM7/bg-removed-crosshairselection.png\"/>\n\n## Custom Collections\n\n1️⃣ Make sure you have ran the game at least once since installing the mod.<br>\n\n2️⃣ The directory `\\BepInEx\\config\\Crossveil` should have been automatically created.<br>\n\n3️⃣ Each sub-folder inside containing **at least one .png image**  will be defined as and imported as its own\ncollection of crosshairs when you start up V Rising.<br>\n\nExample:\n\n```\nC:\\Program Files (x86 \\Steam\\steamapps\\common\\VRising\\BepInEx\\config\\Crossveil\n04.05.2025  11:12    <DIR>          .\n05.05.2025  08:39    <DIR>          ..\n04.05.2025  11:10    <DIR>          Cats\n04.05.2025  11:09    <DIR>          Memes\n29.04.2025  06:11    <DIR>          Funny\n\nC:\\Program Files (x86)\\Steam\\steamapps\\common\\VRising\\BepInEx\\config\\Crossveil\\Funny\n05.05.2025  11:14    <DIR>          .\n04.05.2025  11:12    <DIR>          ..\n23.04.2025  21:11             4 132 crosshair1.png\n23.04.2025  21:11             4 274 crosshair2.png\n23.04.2025  21:10             3 691 crosshair3.png\n```\n\n## Limitations\n\n❗Software & Hardware Rendering<br>\nDue to the nature of Unity Engine and how V Rising was built we primarily use hardware rendering for the cursors (\ndefault & custom). Textures are limited to the size of 32x32 pixels in this mode and cannot be overriden without using\nforced software rendering. This is automatically accounted for when using the **scaling** option.\n\n✅ For best experience<br>\nUse images that are even in size and has an obvious **hotspot** placement for aligning the click zone correctly to the\ncrosshair image.\n\nIs is recommended to keep crosshair scaling **off** due to potential negative impacts on performance and colouration of\nthe images. Mileage may vary here, so feel free to play around with it!\n\n### Credits\n\n🧛 [V Rising Modding Community](https://wiki.vrisingmods.com/)  |  [Discord](https://discord.com/invite/QG2FmueAG9)\n\n🤝 Special thanks to [Mitch (mfoltz)](https://github.com/mfoltz/) for some borrowed UI elements\n\n### Support & Bug reports\n\nJoin the V Rising Modding Community discord with the link above and create a post in the `🙋|Technical Support` channel\nand tag `#helskog`\n\n### License\n\n[This project is licensed under the AGPL-3.0 license.](https://choosealicense.com/licenses/agpl-3.0/#)\n",
+  "changelog": "# Version 0.1.4\n\n- Updated dependency for BepInExPack published on thunderstore\n- Adjusted readme"
+}

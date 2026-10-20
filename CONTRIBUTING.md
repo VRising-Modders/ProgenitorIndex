@@ -94,6 +94,23 @@ entries/<Owner>/<Name>/<version>.json
 
 Schema: [`schema/entry.schema.json`](schema/entry.schema.json). Get the fingerprint with `sha256sum <file>.zip` (Linux, macOS, Git Bash) or `Get-FileHash <file>.zip` (PowerShell; lowercase the result).
 
+### Meta files
+
+Next to your entry, commit the details the index shows, read from your package by the checks:
+
+```
+meta/<Owner>/<Name>/<version>/meta.json
+meta/<Owner>/<Name>/<version>/icon.png
+```
+
+Don't write these by hand. Generate them with:
+
+```
+node tools/validate.mjs --write-meta entries/<Owner>/<Name>/<version>.json
+```
+
+`meta.json` holds the manifest fields, the README (first 8,000 characters), the changelog (first 3,000), the `progenitor.json` values or their defaults, each dependency with its fingerprint, and the icon's fingerprint. The pull request check regenerates them from the package and fails if the committed files differ. Publishing builds the index from entries and meta alone, without downloading any package.
+
 `commit` and `sha256` are the lock: the exact source revision and the exact file. Moving a tag or re-uploading a release asset changes nothing for players; a replaced file simply stops installing. An update is a **new** entry file for the new version. Listed versions are not edited after review.
 
 ## Dependencies
@@ -131,6 +148,7 @@ Hard checks block the pull request:
 | Release | For `github-release`, the package is a release asset of `repo` |
 | Dependencies | Every dependency is in the Index or on Thunderstore, and each Thunderstore one matches its fingerprint in `thunderstore-lock.json` |
 | Contents | No executables, scripts or installers in the package |
+| Meta | `meta/<Owner>/<Name>/<version>/` exists and is exactly what `--write-meta` produces from the package |
 
 The bot also notes things for the reviewer without blocking: an edit to an already listed version (only confirmations of imported entries are accepted), a `website_url` that does not match `repo`, deprecated dependencies, and more than one entry in one pull request.
 

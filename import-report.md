@@ -15,9 +15,10 @@ Every imported entry is marked `"imported": true, "confirmed": false` until its 
 | Left out with --exclude-owner (not named) | 4 |
 | Checked | 200 |
 | Skipped | 20 |
-| **Listed** (latest version only) | **180** |
+| Left out after import: README names a person this listing must not name (not named) | 1 |
+| **Listed** (latest version only) | **179** |
 | Package matched a GitHub release asset (source `github-release`) | 29 |
-| No matching release asset (source `thunderstore`) | 151 |
+| No matching release asset (source `thunderstore`) | 150 |
 | Thunderstore dependencies locked in `thunderstore-lock.json` | 27 |
 
 ## Excluded as not mods
@@ -121,7 +122,6 @@ Every imported entry is marked `"imported": true, "confirmed": false` until its 
 | `Fryke-Keys` | 1.0.1 | thunderstore |
 | `fumzou-TrackCrafts` | 1.1.1 | thunderstore |
 | `Gator-Gator_Bounty` | 1.0.1 | thunderstore |
-| `Geckuss-CastleLink` | 1.1.1 | thunderstore |
 | `GGs-DailyQuest` | 1.1.0 | thunderstore |
 | `GGs-DropTeleportBound` | 1.0.1 | thunderstore |
 | `GGs-FinishZone` | 1.0.0 | thunderstore |

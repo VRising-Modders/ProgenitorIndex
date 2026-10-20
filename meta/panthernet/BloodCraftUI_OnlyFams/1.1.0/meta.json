@@ -1,0 +1,31 @@
+{
+  "format": 1,
+  "package_sha256": "297c3f4fb60e09b5d3b74bd4d94949575e1c3e58c34dbfdfdd76d179edee012c",
+  "size": 210023,
+  "manifest": {
+    "name": "BloodCraftUI_OnlyFams",
+    "version_number": "1.1.0",
+    "website_url": "https://github.com/panthernet/BloodCraftUI",
+    "description": "Custom UI for BloodCraft familiars management",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.733.2"
+    ]
+  },
+  "description": "Custom UI for BloodCraft familiars management",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.733.2/",
+      "sha256": "eabfb53d80bed427ddbd1ecf8af4dcd6e82e152809d44ab3218d0a09984f491c"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "2e0d8b45d583a6c0572a0ecc2269f28bbd30df2dcb299ab591f4d98e05d2d47b"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# BloodCraft UI - OnlyFams!\n\nCurrently BloodCraftUI is in development and provides UI `only for Familiars`. It is coded to send Bloodcraft commands and parse chatlog response messages. Considering the 'unreliable' nature of message parsing approach it may produce errors in parsing boxes on `rare` occasion if some other server messages interfere with the routine.\n\n### Supported Bloodcraft `v1.9.7`\n\n## Sponsor this project\n\n[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/panthernet)\n\n## Installation\n1. Install [BepInEx](https://thunderstore.io/c/v-rising/p/BepInEx/BepInExPack_V_Rising/)\n2. Download mod archive from [Releases](https://github.com/panthernet/BloodCraftUI/releases) and unpack its content into `VRising` root folder\n3. Run the game\nNOTE: Requires [BloodCraft](https://github.com/mfoltz/Bloodcraft) mod to be installed and running on server side\n\n## Showcase and FAQ\nYou will see control panel on top of the screen and can drag it around as you like and pin with checkbox on the left.\n<img src=\"https://github.com/user-attachments/assets/8c8277ec-cc64-4e6a-b45b-8509bf365c6d\" width=\"750\">\n\n\n### Box List button\nWill open list of available boxes. Update occur on opening the panel. Press '-' button to close panel.\nYou can drag this panel by the title area. Clicking the box in the list will open the Box Content panel\n\n<img src=\"https://github.com/user-attachments/assets/9b549f17-8738-46b6-a1d7-72cec6753221\" width=\"200\">\n\n### Box Content panel\nWill open list of available familiars in the box. Update occur on opening the panel. Press '-' button to close panel.\nYou can drag this panel by the title area. Clicking familiar in the list will perform two actions:\n1. Try to unbind current familiar\n2. Bind selected familiar\nAction might take several seconds due to server response lag.\n\n<img src=\"https://github.com/user-attachments/assets/276351ca-b4ed-4645-ab48-a4813787c4a9\" width=\"200\">\n\n### Fam Stats button\nWill open familiar stats panel. Press the button again to hide panel. You can drag this panel by the title area and pin with checkbox in the top left corner.\n\n<img src=\"https://github.com/user-attachments/assets/7fa6e0bf-7e80-4792-9ebd-dd37705e2395\" width=\"200\">\n\n### Unbind button\nWill try to unbind current familiar.\n\n### Bind Last button\nWill try to bind familiar, the last one that you have binded before. \nWill not work if:\n- You checked content of another box (as it selects it as current box to get fam list)\n- Server was restarted and reset your current selected box\n  \nIn all other cases it would persist even when client is restarted.\n\n### Combat Mode checkbox\nToggle current familiar combat mode\n\n### * button\nWill cycle the UI scaling for all panels. You can select the scale that better suits your screen resolution.\n\n## Additional settings\nMod config file path: `VRising\\BepInEx\\config\\panthernet.BloodCraftUI.cfg`\n\n- `UseHorizontalContentLayout` when set to False will render main panel vertically.\n- `UITransparency` change all panels transparency from 1.0f as opaque to 0f as invisible\n- `FamStatsQueryIntervalInSeconds` time in seconds between queries to server to update fam stats, minimum value is 10 sec\n- `ClearServerMessages` when set to False will make server response messages visible, which can clutter your chat \n- `IsFamStatsPanelEnabled` enable or disable corresponding panel and button\n- `IsBoxPanelEnabled` enable or disable corresponding panel and button\n- `IsBindButtonEnabled` enable or disable corresponding buttons\n- `IsCombatButtonEnabled` enable or disable corresponding button\n",
+  "changelog": "### V1.1.0\n- Added delete familiar buttons to the box content list\n- Added Prestige! button for current familiar, works only if server conditions are met\n- Fixed screen size calculations so panel should be always visible\n- Reenabled UI scaling using (*) button\n- Misc UI improvements\n\n### V1.0.9\n!!! Panel scaling is off atm while I investigate issues\n- Added familiar current health\n- Added familiar Toggle button control\n- Added additional familiar stats\n- Fixed very nasty issue with screen resolution spawning main panel offscreen at the start\n- Improved fam stats panel font visibility\n- Improved text localization\n- Code refactoring\n### V1.0.8\n- Latest BepInEx update\n### V1.0.7\n- Added auto enable familiar equip emotes option (enabled by default)\n- Fixed windows to hide when escape menu is open\n- Fixed some message parsing overlap with Legacy module\n### V1.0.6\n- Updated for V Rising version 1.1.8 & BloodCraft 1.9.7\n- Removed Bloodstone dependency\n\n"
+}

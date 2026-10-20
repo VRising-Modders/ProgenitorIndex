@@ -1,0 +1,32 @@
+{
+  "format": 1,
+  "package_sha256": "ef9106ae0366e35a71d4dbc10d2e22848ea7e3de70a520cc40494b95598983d2",
+  "size": 975597,
+  "manifest": {
+    "name": "Eclipse",
+    "version_number": "1.3.14",
+    "website_url": "https://github.com/mfoltz/Eclipse",
+    "description": "Client UI for Bloodcraft!",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.733.2"
+    ]
+  },
+  "description": "Client UI for Bloodcraft!",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.733.2/",
+      "sha256": "eabfb53d80bed427ddbd1ecf8af4dcd6e82e152809d44ab3218d0a09984f491c"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "11f8251a6347592a0ca233f06aec0a5d61a40c8c68f69e86ba5a9a8dc46b114b"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "## Table of Contents\n\n- [Sponsors](#sponsors)\n- [Features](#features)\n- [Configuration](#configuration)\n\n## Sponsor this project\n\n[![patreon](https://i.imgur.com/u6aAqeL.png)](https://www.patreon.com/join/4865914)  [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/zfolmt)\n\n## Sponsors\n\nJairon O.; Odjit; Jera; Kokuren TCG and Gaming Shop; Rexxn; Eduardo G.; DirtyMike; Imperivm Draconis; Geoffrey D.; SirSaia; Robin C.; Colin F.; Jade K.; Jorge L.; Adrian L.;\n\n## Features\n\n- Currently supports progress bars and info for leveling, legacies, expertise, familiars, professions, and quest progress. Also shows shift slot ability when being used with cooldown. Blood orb can be clicked to enable/disable UI.\n- Can disable individual UI elements via config or by clicking on your abilities (1-7, each disables and enables one UI element when clicked (clicking on the shift slot disables itself until reactivated by blood orb since can't click it after it's not there to toggle back).\n- Attributes tab entries now show stats from Bloodcraft in green with tinted backgrounds (grey=expertise, red=legacy) and can be clicked on to perform respective commands (`.bl cst...` or `.wep cst...`).\n \n## Configuration\n\n### UIOptions\n\n- **Experience Bar**: `ExperienceBar` (bool, default: true)  \n  Enable or disable the experience bar.\n- **Show Prestige**: `ShowPrestige` (bool, default: true)  \n  Enable or disable showing prestige levels.\n- **Legacy Bar**: `LegacyBar` (bool, default: true)  \n  Enable or disable the legacy bar.\n- **Expertise Bar**: `ExpertiseBar` (bool, default: true)  \n  Enable or disable the expertise bar.\n- **Familiars**: `Familiars` (bool, default: true)  \n  Enable or disable the familiar bar.\n- **Quest Tracker**: `QuestTracker` (bool, default: true)  \n  Enable or disable the quest windows.\n- **Professions**: `Professions` (bool, default: true)  \n  Enable or disable the profession bars.\n- **ShiftSlot**: `ShiftSlot` (bool, default: true)  \n  Enable or disable the shift slot appearing when applicable.\n- **Eclipsed**: `Eclipsed` (bool, default: true)  \n  Controls update frequency for UI; true for 0.1s, false for 1s. Minimal effect if server setting for Eclipsed does not match.\n",
+  "changelog": "`1.3.14`\n- optional Emberglass bridge support for Bloodcraft registration and server messages\n- release workflow hardening for safer prerelease and Thunderstore publishing\n\n`1.3.13`\n- primal weapons\n\n`1.3.12`\n- attributes\n\n`1.3.11`\n- decreased update interval for more responsive UI elements (1s -> 0.1s), added config option if you prefer the old behavior; for noticeable effect requires Bloodcraft v1.11.14 or higher with fast updates enabled (Eclipsed = true)\n\n`1.3.10`\n- gamepad mode (position of quest windows and profession bars will change based on detected input)\n- ability slot click-toggle for profession bars functional again\n\n`1.3.9`\n- preventing duplicate coroutine instances from being created if one is already present\n\n`1.3.8`\n- removing interact progress bar when unlocking familiars from buff entity on client\n- changed abbreviation for PrimaryLifeLeech to PAL\n\n`1.3.7`\n- adjusted name trimming to target only vBloods for fam bar/quest targets\n- handling for movementSpeed to show correctly on expertise bar and weapon tooltips\n\n`1.3.6`\n- small fix for legacy bar errors in console\n- weapon expertise stats (most, not all) appear on tooltips\n\n`1.3.5`\n- Updated for VRising 1.1 compatibility\n\n`1.3.3`\n- small changes to accomodate minor version increases without needing to add more boilerplate logic to client/server\n- minor recipe adjustments to match server-side changes for the client visually\n\n`1.3.2`\n- backwards compatible with Bloodcraft 1.5.3 (will show NPC spell cooldown's on shift when using 1.6.4 #soonYM, other changes below do not require additional information from Bloodcraft)\n- weapon expertise stats show on tooltips accordingly (not all stats will show there for some reason but works for most)\n- new recipe/salvage additions and changes added in 1.6.4 with ExtraRecipes enabled are best experienced with Eclipse\n- profession bars no longer an eyesore (thin gold bar represents progress to max level, icon indicates profession, reordered to crafting profs then gathering profs)\n\n`1.2.2`\n- added bar for basic familiar info\n- added bargraph of sorts for professions\n- can toggle individual parts by clicking on ability slots 1-7\n\n`1.1.2`\n- removed unneeded dependency like I meant to for 1.1.1, oopsie\n\n`1.1.1`\n- class text under experience bar formatted more aesthetically\n- improved positioning for UI elements at various resolutions (probably >_>)\n\n`1.0.0`\n- versioning for Thunderstore/sanity\n- requires Bloodcraft 1.4.0\n\n`0.2.1`\n- fixed loop update if more than 3 bonus stats were chosen\n- added quest icons for crafting and gathering\n\n`0.2.0`\n- added icons for quests based on normal/vblood target\n- handled displaying stats in different locales\n\n`0.1.4`\n- making an attempt at handling scaling for UI elements at various resolutions, will need feedback on this although seems decent so far\n\n`0.1.3`\n- changed click detection to work off the same blood object that shows blood information when hovered over (this should fix any issues with errant clicks as i",
+  "changelog_truncated": true
+}

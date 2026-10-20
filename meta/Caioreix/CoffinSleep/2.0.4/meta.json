@@ -1,0 +1,30 @@
+{
+  "format": 1,
+  "package_sha256": "fe029402b597c4fdaebd256c81a0fc3469dbd6557f483011511efab5ab52712c",
+  "size": 57586,
+  "manifest": {
+    "name": "CoffinSleep",
+    "version_number": "2.0.4",
+    "website_url": "https://github.com/caioreix/CoffinSleep",
+    "description": "A VRising mod that speeds up time while you sleep in your coffin.",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.733.2"
+    ]
+  },
+  "description": "A VRising mod that speeds up time while you sleep in your coffin.",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.733.2/",
+      "sha256": "eabfb53d80bed427ddbd1ecf8af4dcd6e82e152809d44ab3218d0a09984f491c"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "3054fdcf9e644209d5f9411a0236e7edcbea11deb18f70ca610e1f55791d81dd"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# CoffinSleep\n\nCoffin Sleep is a VRising mod that speeds up time while you sleep in your coffin.\n\n## Installation (Manual)\n\n* Install [BepInEx](https://docs.bepinex.dev/master/articles/user_guide/installation/index.html)\n* Extract [CoffinSleep.dll](https://github.com/caioreix/CoffinSleep/releases) into (VRising client folder)/BepInEx/plugins\n* [ServerLaunchFix](https://v-rising.thunderstore.io/package/Mythic/ServerLaunchFix/) recommended for in-game hosted\n  games\n* (Optional) If not using ServerLaunchFix, extract CoffinSleep.dll into (VRising server folder)/BepInEx/plugins\n\n## How to use\n\n* Just need to enter in your coffin and sleep.\n\n* Actually Features:\n  - Day night cycle speed.\n  - Mission Progress speed.\n  - Servant Conversion speed.\n  - Servant Injuries speed.\n  - Resources speed (trees, stones, ores, vegetation...)\n  - Bosses respawn speed.\n  - Npc respawn speed.\n  - Chests respawn speed.\n  - Stop speed during day/night transitions.\n  - Stop speed during blood moon.\n\n* Future possible features:\n  - Blood recover while sleep.\n  - De-buffs recover speed.\n  - Clock UI while sleeping.\n  - All creation/refining stations speed.\n  - Config max consecutive sleeping time.\n\n## Configuration\n\nValues can be configured at `(VRising client/server folder)/VRising/BepInEx/config/CoffinSleep.cfg`\n\n```\n[🔧Server]\n\n## Change the increased game time in hours per real time second\n# Setting type: Int32\n# Default value: 1\nIncreasedTime = 1\n\n## Enabled, sleep just speeds the time when it's daytime\n# Setting type: Boolean\n# Default value: true\nOnlyDayTimeSleep = true\n\n## Enabled, sleep just speeds the time if all players of the server are sleeping\n# Setting type: Boolean\n# Default value: true\nOnlyAllPlayersSleeping = true\n\n## Enabled, will stop time speed during the day and night transitions\n# Setting type: Boolean\n# Default value: true\nPauseDuringTransitions = true\n\n## Enabled, will stop time speed during blood moon nights\n# Setting type: Boolean\n# Default value: false\nSleepBloodMoon = false\n```\n"
+}

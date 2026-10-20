@@ -1,0 +1,30 @@
+{
+  "format": 1,
+  "package_sha256": "3e48cbc635d6841c3afb217656e0abffd51a1f97a438915ec291bcd0a5fb3837",
+  "size": 93187,
+  "manifest": {
+    "name": "NoBloodMooonTint",
+    "version_number": "4.0.0",
+    "website_url": "https://github.com/HussienElSawy/VRising-NoBloodMoonTint",
+    "description": "Removes the blood moon's red screen tint, red fog, warm ambient cast, and sky glow while keeping the rest of the game fully intact. Toggle it on/off at any time and the screen returns to its exact pre-blood-moon state.",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.733.2"
+    ]
+  },
+  "description": "Removes the blood moon's red screen tint, red fog, warm ambient cast, and sky glow while keeping the rest of the game fully intact. Toggle it on/off at any time and the screen returns to its exact pre-blood-moon state.",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.733.2/",
+      "sha256": "eabfb53d80bed427ddbd1ecf8af4dcd6e82e152809d44ab3218d0a09984f491c"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "68b2efc8727e70efd8a503216b9cb38a55187088999b4cb15faf7dfc28991993"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# NoBloodMoonTint — V Rising BepInEx Mod\n\nRemoves the blood moon's red screen tint, red fog, warm ambient cast, and sky glow while keeping the rest of the game fully intact. Toggle it on/off at any time and the screen returns to its exact pre-blood-moon state.\n\n---\n\n## Features\n\n- Suppresses the blood moon HDRP volume stack (ColorAdjustments, SplitToning, WhiteBalance) per-frame\n- Kills the red volumetric fog (`StunlockFogVolumeComponent`) tied to blood moon profiles\n- Neutralizes the `CustomVignette` full-screen red vignette pass\n- Corrects warm ambient light to a neutral gray so blue/cool colors render correctly\n- Applies a compensating brightness lift (`+0.50 EV`) on the baseline post-process profile so the scene stays visually bright\n- Full state restore on toggle-off — nothing is permanently altered\n- Session log written to `BepInEx/logs/NoBloodMoonTint.log`\n\n---\n\n## Keybinds\n\n| Key | Action |\n|-----|--------|\n| `F7` | Toggle suppression on / off |\n| `F6` | Scan and log all active scene volumes (diagnostic) |\n\nBoth keys are configurable in `BepInEx/config/NoBloodMoonTint.cfg`.\n\n---\n\n## Requirements\n\n### Runtime\n\n| Requirement | Notes |\n|---|---|\n| **V Rising** (Steam) | Tested on the current Steam release |\n| **BepInEx 6 IL2CPP** (`6.0.0-be.1` or newer) | Must be the IL2CPP build, not the Mono build |\n\n## Manual Installation (pre-built)\n\n1. Install **BepInEx 6 IL2CPP** into your V Rising folder and launch the game once to generate interop assemblies.\n2. Copy `NoBloodMoonTint.dll` into:\n   ```\n   VRising\\BepInEx\\plugins\\\n   ```\n3. Launch V Rising. Press `F7` during a blood moon to toggle the visual effect off.\n\n---\n\n## Version History\n\n| Version | Summary |\n|---|---|\n| 2.5.0 | Fix blue colors appearing darker — ambient now neutralizes to true gray |\n| 2.4.0 | Brightness lift (+0.50 EV) on baseline profile to compensate suppression dimness |\n| 2.3.0 | F7 toggle is now silent (no auto-scan) |\n| 2.2.0 | Filter sound/music volume profiles from diagnostic log output |\n| 2.1.0 | Suppress `CustomVignette` red fog pass; force blood moon fog component off |\n| 2.0.0 | Stable release; minimal logging; F6 scan only |\n"
+}

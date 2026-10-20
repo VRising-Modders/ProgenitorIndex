@@ -1,0 +1,31 @@
+{
+  "format": 1,
+  "package_sha256": "d33ac56f5ef52d32b19191b16cf1895b5462c85c47ca01712d50aa37b29392f9",
+  "size": 23058,
+  "manifest": {
+    "name": "DeathNotDrop",
+    "version_number": "1.0.1",
+    "website_url": "https://github.com/yxzwym/VRising-DeathNotDrop",
+    "description": "Prevents all item drops upon player death, including potions and crafting materials.",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.733.2"
+    ]
+  },
+  "description": "Prevents all item drops upon player death, including potions and crafting materials.",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.733.2/",
+      "sha256": "eabfb53d80bed427ddbd1ecf8af4dcd6e82e152809d44ab3218d0a09984f491c"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "18839835f393998a2bdb67f93b613214c1b3efd70599d52850b66b98a2313633"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# Death Not Drop\n\n### `Server-Side Only Mod`\n\nPrevents all item drops upon player death, including potions and crafting materials.\n\n## Installation\n\n1. Install [BepInEx](https://v-rising.thunderstore.io/package/BepInEx/BepInExPack_V_Rising/) if you haven't already.\n2. Place the `DeathNotDrop.dll` file in your server's plugins folder:  \n   `\\Server\\BepInEx\\plugins\\`\n\n## Important Note\n\nThis mod works by marking all items as \"Blood Bound\" (soulbound). For proper functionality:\n\n- Ensure `BloodBoundEquipment` is set to `true` in your `ServerGameSettings.json` file.\n- The server takes 20-30 seconds longer to start, but it's worth it to avoid corpse runs.",
+  "changelog": "`1.0.1`  \n- Fixed: Feature now works when creating new saves  \n\n`1.0.0`  \n- Added: Death penalty removed (no item drops)  "
+}

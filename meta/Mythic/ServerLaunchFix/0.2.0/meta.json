@@ -1,0 +1,30 @@
+{
+  "format": 1,
+  "package_sha256": "a9c4f101a754cfb9f5371b00debb6487fccce62539f59bd77300cc1e2ad19396",
+  "size": 200830,
+  "manifest": {
+    "name": "ServerLaunchFix",
+    "version_number": "0.2.0",
+    "website_url": "https://github.com/MythicManiac/VRising",
+    "description": "Enable mods for single player and host & play",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.0.0"
+    ]
+  },
+  "description": "Enable mods for single player and host & play",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.0.0",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.0.0/",
+      "sha256": "27fd91f2951701faf324b9dcd34cf771a7f4534e1d3a679949b9a0ae67472054"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "4baaf5bffcfb2fe621687f64d9f30a476697883a5d40c0a84b84444161db9229"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# Server Launch Fix\n\nEnables mods for single player and host & play.\n\n## Why is this necessary?\n\nWhen launching a single player game or a host & play session, V Rising will\nlaunch a dedicated server as a separate process. By default the automatically\nlaunched server does not have mods installed on it, and as such you'd have to\nmanually install mods both to the client as well as the bundled server to\nactually use them.\n\n## What does Server Launch Fix do?\n\nServer Launch Fix will configure the server to use the same mods which have been\ninstalled on the client, meaning you need to install mods only to a single\nlocation.\n\nThe way this happens is by automatically copying the mod loader from the client\nto the server before launch and configuring it to load mods from the same\nlocation as the client. In addition a `BepInEx_Server` directory is created,\nwhich is used by the server to store state such as cache & unhollowed DLLs. The\nmods themselves only reside in one place and are used by the server via\nsymlinks.\n\nWhen installed on a server, this mod does nothing.\n\n## Limitations\n\n- On first launch of the server, it will likely time out connecting to it, as it\n  has to build the unhollowed DLL cache which is required by mods.\n  - If/when it timeouts, just attempt to re-launch a few times. If the issue\n    persists for more than 4 attempts, reach out on Discord for support.\n- Does not work on non-NTFS file systems.\n- **The doorstop_config.ini of the server will be overwritten on every launch**\n- **The BepInEx.cfg of the server will be overwritten on every launch**\n"
+}

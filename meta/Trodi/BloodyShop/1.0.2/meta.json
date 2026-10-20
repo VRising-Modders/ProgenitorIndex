@@ -1,0 +1,51 @@
+{
+  "format": 1,
+  "package_sha256": "db54da9a269a58f38280091305d0d850c008fc30bdba3cf92cd45d9dad581631",
+  "size": 503158,
+  "manifest": {
+    "name": "BloodyShop",
+    "version_number": "1.0.2",
+    "website_url": "https://github.com/oscarpedrero/BloodyShop",
+    "description": "Mod to create a store in VRising.",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.668.5",
+      "deca-Bloodstone-0.2.2",
+      "deca-VampireCommandFramework-0.9.0",
+      "Trodi-BloodyCore-1.2.4"
+    ]
+  },
+  "description": "Mod to create a store in VRising.",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.668.5",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.668.5/",
+      "sha256": "784c7a7f64ba0f1d4e9778c6558a061ab83dbacc6e0bb8ae0e3ab86698578113"
+    },
+    {
+      "id": "deca-Bloodstone-0.2.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/deca/Bloodstone/0.2.2/",
+      "sha256": "1b7de6e8ab631afacea7c757c81494848755fda9d39c93618fc52584eff06089"
+    },
+    {
+      "id": "deca-VampireCommandFramework-0.9.0",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/deca/VampireCommandFramework/0.9.0/",
+      "sha256": "d3ce9095d9772f979feb4ec792f022d213f0cdf56dc27c82de26a0f9db7cfc9f"
+    },
+    {
+      "id": "Trodi-BloodyCore-1.2.4",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/Trodi/BloodyCore/1.2.4/",
+      "sha256": "071874a76097c4e8d747b3d24ed52dc03e64aa4c5b64b943c60b405888f3d41e"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "f437d9ad7ac8400687893f767f31a79c67877eb0b3f3632b0d8bdc2d706d3919"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# BloodyShop Mod to create a store in VRising (with optional client UI) Update to VRising 1.0\n\n## IMPORTANT NOTE\n\n- At the moment it only works in the server version, the client mode with the UI is disabled.\n- Removed the daily drop system, an external mod has been generated for this called [BloodyRewards](https://thunderstore.io/c/v-rising/p/Trodi/BloodyRewards/)\n- You must have version 1.2.4 of Bloody.Core installed to be able to use version 1.0.2 or higher of this mod\n\n# Support this project\n\n[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/K3K8ENRQY)\n\n# Requirements\n\n1. [BepInEx](https://thunderstore.io/c/v-rising/p/BepInEx/BepInExPack_V_Rising/) (Client and Server)\n2. [Bloodstone](https://thunderstore.io/c/v-rising/p/deca/Bloodstone/) (Client and Server)\n3. [VampireCommandFramework](https://thunderstore.io/c/v-rising/p/deca/VampireCommandFramework/) (Only on the Server)\n4. [Bloody.Core](https://thunderstore.io/c/v-rising/p/Trodi/BloodyCore/) (Client and Server)\n4. UniverseLib.IL2CPP.Interop.dll include in zip (Only on the client)\n\n<details>\n<summary>Changelog</summary>\n\n`1.0.2`\n- Performance improvements\n\n`1.0.1`\n- Removed the daily drop system, an external mod has been generated for this called BloodyRewards\n\n`1.0.0`\n- Removed dependency on V Rising.Game Data\n- Added Bloody.Core as a dependency\n- Updated to VRising version 1.0\n\n`0.9.92`\n- Added to the add and buy command the possibility of adding buffs and not just items. Example: .shop add Cursed 1425734039 1 1 1 1 true\n\n`0.9.9`\n- Added command to reload configuration of products and currencies\n- Now you can configure if you want a currency to be active or not in the drop system\n\n`0.9.82`\n- Fixed bug that did not allow adding infinite items\n\n`0.9.81`\n- Fixed a bug that existed when the currency_list.json file was first generated.\n- Added option within the client configuration file to disable sounds.\n\n`0.9.8`\n- Added UI to set and remove currencies.\n- Added messaging system for currencies.\n- Optimize the performance of network messages from the server that caused lag to different players.\n- Added a user registration system that uses the UI to only notify those users of changes in real time.\n- Change of icons of the main menu.\n- Refactoring of the window to add or remove products from the store, now everything is displayed in a single window.\n- Fixed bug that did not allow deleting products from the UI.\n- Added sounds to the UI for certain actions.\n- The UniverseLib.IL2CPP.Interop.dll library is no longer compiled into the dll to avoid incompatibilities with other mods that use this library to create UIs.\n\n`0.9.7`\n- Added multi-currency\n\n`0.9.6`\n- Fixed error when you tried to buy or delete an item that there are several purchase options in the store, now you delete or buy the one you select from the UI\n\n`0.9.5`\n- Added Stacks for products\n\n`0.9.0`\n- Gloomrot Update\n\n`0.8.3`\n- Removed debug logs to improve server performance\n\n`0.8.2`\n- Simplified core inventory\n\n`0.8.1`\n\n- First public version of the mod\n\n</details>\n\n![alt text](https://github.com/oscarpedrero/BloodyShop/blob/master/Images/userui.png?raw=true)\n\n[Manual](https://github.com/oscarpedrero/BloodyShop/wiki/Manual)\n\n[Known bugs](https://github.com/oscarpedrero/BloodyShop/wiki/Known-bugs)\n\n# Important note\n\n- At the moment it only works in the server version, the client mode with the UI is disabled.\n- Removed the daily drop system, an external mod has been generated for this called [BloodyRewards](https://thunderstore.io/c/v-rising/p/Trodi/BloodyRewards/)\n\n## Gloomrot Update\n\nSince the update to Gloomrot the server does not have the names of the Prefabs, so the name of the Prefab has been added to the add command as a necessary parameter.\n\nAdd currency:\n.shop currency add \"Silver Coin\" -949672483 true\n\nNew add command:\n.shop add \"\\<NameOfProduct\\>\" \\<PrefabGUID\\> \\<Currency\\> \\<Price\\> \\<Stock\\> \\<Stack\\> \\<Buff| true/false \\> \n\nExample Item:\n.shop add \"Silver Currency\" -949672483 1 1 1 100 1 false\n\nExample Buff:\n.shop add Cursed 1425734039 1 1 1 1 true\n\n[Buff List by Vex](https://github.com/oscarpedrero/BloodyShop/wiki/Manual#buff-list-recomendation-by-vex-vexor-gaming)\n\nFor this same reason, it is best to manage the store from the client, which implies that you must [install the BloodyShop mod on the client](https://github.com/oscarpedrero/BloodyShop/wiki/Manual#requirements) and the server if you are a server administrator.\n\n[Complete list of prefabs](https://vrising-website.pages.dev/items)\n\n# Credits\n\nThis mod idea was a suggestion from [@Daavy](https://ideas.vrisingmods.com/posts/11/silver-shop) on our community idea tracker, please go vote and suggest your ideas: https://ideas.vrisingmods.com/\n\n[V Rising Mod Community](https://discord.gg/vrisingmods) the best community of mods for V Rising\n\n@Godwin for all the ideas you have brought to the project and testing the mod on your server.\n\n[@Vexor Gaming](https://discord.gg/AyyenSJH) For giving me ideas and testing the mods on your server and with your community.\n\n[@Deca](https://github.com/decaprime) for your help and the wonderful framework [VampireCommandFramework](https://github.com/decaprime/VampireCommandFramework) and [BloodStone](https://github.com/decaprime/Bloodstone) based in [WetStone](https://github.com/molenzwiebel/Wetstone) by [@Molenzwiebel](https://github.com/molenzwiebel)\n\n[@Adain](https://github.com/adainrivers) for encouraging me to develop a UI to be able to use the mod from the client, for the support and for its [VRising.GameData](https://github.com/adainrivers/VRising.GameData) framework\n\n[@Paps](https://github.com/phillipsOG) for all the help and encouragement he has given us to get this idea off the ground.\n\n[@NopeyBoi](https://github.com/NopeyBoi) Author of the buff system that I extracted from [ChatCommands](https://github.com/NopeyBoi/ChatCommands) mod\n\n**A special thanks to the testers and supporters of the project:**\n\n- @Vex [Vexor Gaming](https://discord.gg/rxaTBzjuMc) as a tester and great supporter, who provided his server as a test platform!\n- @SynovA [Iron Fist RPG](https://discord.gg/iron-fist-rpg) as a tester and great supporter, who provided his server as a test platform!\n- @iska as a tester and great supporter!\n- @JosiUwU as a supporter for manuals.\n"
+}

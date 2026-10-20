@@ -1,0 +1,38 @@
+{
+  "format": 1,
+  "package_sha256": "03a3825e5723e60346fb9e0e15e6d603337fbdf440689f4e3ce6dd9b807f5711",
+  "size": 117788,
+  "manifest": {
+    "name": "PleadIgnorance",
+    "version_number": "0.1.0",
+    "website_url": "https://github.com/helskog/PleadIgnorance",
+    "description": "Make sure players acknowledge the rules before entering!",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "deca-VampireCommandFramework-0.10.2"
+    ]
+  },
+  "description": "Make sure players acknowledge the rules before entering!",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.733.2/",
+      "sha256": "eabfb53d80bed427ddbd1ecf8af4dcd6e82e152809d44ab3218d0a09984f491c"
+    },
+    {
+      "id": "deca-VampireCommandFramework-0.10.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/deca/VampireCommandFramework/0.10.2/",
+      "sha256": "1853610b9dd246a53296c35a3c069548397ad4deeeeb243b17756b1395dffb51"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "ac1d8f0090d85261eaaea5b39b3ef52b1a729f0bd1469b2943bf6efdfb117496"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# PleadIgnorance\nA V Rising server plugin made to make sure players acknowledge the rules before entering!\n\n## Features\n🔁 Force players to acknowledge a message before exiting the spawn cave.<br>\n⚙️ Customizable header, message and footer<br>\n🖌️ Style text with rich text tags (check [Unity Documentation](https://docs.unity3d.com/Packages/com.unity.ugui@1.0/manual/StyledText.html))<br>\n\n## How It Works\nPlayers must read & acknowledge a custom message shown in chat before being able to leave the spawn cave area. Once the player types .accept in chat they will be able to teleport out of the spawn cave area.\n\n<img src=\"https://i.ibb.co/pBd14y9Y/Screenshot-20250521-193336.png\"/>\n\n## Installing PleadIgnorance\n1️⃣ Navigate to the server install folder. Typically: `ServerDirectory/BepInEx/plugins`<br>\n\n2️⃣ Make sure you have the latest version of [BepInEx](https://thunderstore.io/c/v-rising/p/BepInEx/BepInExPack_V_Rising/) as well as [VampireCommandFramework](https://thunderstore.io/c/v-rising/p/deca/VampireCommandFramework/)<br>\n\n3️⃣ ️Place the `PleadIgnorance.dll` file inside the `ServerDirectory\\BepInEx\\plugins` folder.<br>\n\n## Configuration\nThe header, footer & message text can be configured in the files found inside `ServerDirectory/BepInEx/config/PleadIgnorance`\n\n```cfg\n<color=#ffffffff>Rule 1:</color> Dont be an asshole.\n<color=#ffffffff>Rule 2:</color> <b>You can</b>\n<color=#ffffffff>Rule 3:</color> <i>Also use</i>\n<color=#ffffffff>Rule 4:</color> <size=10>Rich text</size>\n<color=#ffffffff>Rule 5:</color> <size=15>Formatting in</size>\n<color=#ffffffff>Rule 6:</color> <size=20>The <color=#add8e6ff>Message</color></size>\n```\n\n```cfg\n[Options]\n\n## Prevent cave exit until player accepts the rules.\n# Setting type: Boolean\n# Default value: true\nPreventCaveExit = true\n\n[Text]\n\n## Message header text\n# Setting type: String\n# Default value: <color=#add8e6ff>Server Rules</color>\nHeader = <color=#add8e6ff>Server Rules</color>\n\n## Message footer text\n# Setting type: String\n# Default value: Type <color=#ffff00ff><b>.accept</b></color> to continue\nFooter = Type <color=#ffff00ff><b>.accept</b></color> to continue\n```\n\n### Credits\n🧛 [V Rising Modding Community](https://wiki.vrisingmods.com/)  |  [Discord](https://discord.com/invite/QG2FmueAG9)\n\n### Support & Bug reports\nJoin the V Rising Modding Community discord with the link above and create a post in the `🙋|Technical Support` channel and tag `#helskog`\n\n### License\n[This project is licensed under the AGPL-3.0 license.](https://choosealicense.com/licenses/agpl-3.0/#)\n",
+  "changelog": "Initial release v0.1.0"
+}

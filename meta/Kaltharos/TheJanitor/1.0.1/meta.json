@@ -1,0 +1,30 @@
+{
+  "format": 1,
+  "package_sha256": "8895640a66d004a42f6bb8a6db41e342fcbbd5134ef6163798da83b0d4b7659b",
+  "size": 76426,
+  "manifest": {
+    "name": "TheJanitor",
+    "version_number": "1.0.1",
+    "website_url": "https://github.com/Kaltharos/VRising-TheJanitor",
+    "description": "Server only mod for automatically removing all dropped items. Relics, and death containers are excluded.",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.0.0"
+    ]
+  },
+  "description": "Server only mod for automatically removing all dropped items. Relics, and death containers are excluded.",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.0.0",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.0.0/",
+      "sha256": "27fd91f2951701faf324b9dcd34cf771a7f4534e1d3a679949b9a0ae67472054"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "3df657bf9f72f3e67b10b68e057b19ac05743b131492449be50ddf01a41afe7e"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# TheJanitor\n### Server Only Mod\nServer only mod for automatically removing all dropped items.\nRelics, and death containers are excluded.\n\n## Installation\nCopy & paste the `TheJanitor.dll` to `\\Server\\BepInEx\\plugins\\` folder.\n\n## Removal\nDelete the `TheJanitor.dll` from your plugins folder.\n\n## Config\n<details>\n<summary>Config</summary>\n\n- `Enable Chat Listen` [default `true`]\\\nEnable hooking into chat to listen to chat messages.\n- `Chat Command` [default `~cleanallnow`]\\\nClean all dropped items on the server.\\\nCommand is only usable by admin.\n- `Enable Auto Cleaner` [default `true`]\\\nEnable the auto cleaner.\\\nDoes not included an already existing dropped items.\\\nRelics & death bags are also excluded.\n- `Auto Clean Timer` [default `600`]\\\nTimer in seconds to wait before the dropped item is deleted automatically.\n\n</details>\n\n## Commands\nAll commands are admin only!\n\n<details>\n<summary>cleanallnow</summary>\n\n`~cleanallnow`\\\nClean all dropped items on the server.\n\n</details>\n\n## More Information\n<details>\n<summary>Changelog</summary>\n\n`1.0.1`\n- Minor optimization\n\n`1.0.0`\n- Initial Release\n\n</details>\n\n<details>\n<summary>Known Issues</summary>\n\n### General\n- No known issue.\n\n</details>"
+}

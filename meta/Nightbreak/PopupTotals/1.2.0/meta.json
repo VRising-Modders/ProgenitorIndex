@@ -1,0 +1,30 @@
+{
+  "format": 1,
+  "package_sha256": "1611192d02205acd5f79f3c20481f53c907b5546e0d45aa023d553eb3e3fd4ea",
+  "size": 47194,
+  "manifest": {
+    "name": "PopupTotals",
+    "version_number": "1.2.0",
+    "website_url": "https://github.com/matt-harp/PopupTotals",
+    "description": "Shows the total amount of an item in your inventory when collecting resources",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.733.2"
+    ]
+  },
+  "description": "Shows the total amount of an item in your inventory when collecting resources",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.733.2/",
+      "sha256": "eabfb53d80bed427ddbd1ecf8af4dcd6e82e152809d44ab3218d0a09984f491c"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "8f642f704c3dc02e0d834aefe956402d91401ac09ae2d43068ac0efae49ab1c6"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# PopupTotals\nA mod to show the total amount of an item in your inventory while collecting resources\n\nPlease note that I am not actively working on this but will gladly accept pull requests :)\n\n<details>\n<summary>Examples</summary>\n<br>\n<img src=\"https://i.imgur.com/Tbv3wft.jpg\" alt=\"example 1\">\n<img src=\"https://i.imgur.com/3BN62ER.jpg\" alt=\"example 2\">\n</details>\n\n\n### Manual Installation\n- Install [BepInExPack V Rising](https://v-rising.thunderstore.io/package/BepInEx/BepInExPack_V_Rising/)\n- Extract _PopupTotals.dll_ into _(VRising folder)/BepInEx/plugins_\n\n### Known Issues\n- None ([report one?](https://github.com/matt-harp/PopupTotals)) \n\n### Support\nPost an issue on the [github repo](https://github.com/matt-harp/PopupTotals)\n\n### Changelog\n\n`1.2.0` Updated for Oakveil (contributed by Moj-FPS)\n\n`1.1.0` V Rising 1.0 Update\n\n`1.0.7` Gloomrot Update (kindly contributed by p1xel8ted)\n\n`1.0.6` Fixes for Trippy Shroom and seeds\n\n`1.0.5` Fixes water filling related bugs\n\n`1.0.4` Forgot to update Known Issues\n\n`1.0.3` \n* Switching languages no longer causes the mod to break\n* Fixed Cotton and Bone always displaying (0) instead of the real amount in your inventory\n\n`1.0.2` Now dependant on BepInExPack\n\n`1.0.1` Example images changed\n\n`1.0.0` Initial mod upload\n"
+}

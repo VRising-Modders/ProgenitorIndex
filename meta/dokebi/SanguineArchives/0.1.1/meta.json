@@ -1,0 +1,45 @@
+{
+  "format": 1,
+  "package_sha256": "6ced72268397abfe13dae5843d8b5a8489f4154ef0bfb45ddf5229bc168ad86b",
+  "size": 970805,
+  "manifest": {
+    "name": "SanguineArchives",
+    "version_number": "0.1.1",
+    "website_url": "https://github.com/dokebi21/SanguineArchives",
+    "description": "Keep records of combat times whenever players defeat V Blood bosses.",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.691.3",
+      "deca-Bloodstone-0.2.2",
+      "deca-VampireCommandFramework-0.9.0"
+    ]
+  },
+  "description": "Keep records of combat times whenever players defeat V Blood bosses.",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.691.3",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.691.3/",
+      "sha256": "04290fad8e4e619451c4f5eff3957778d3ab6a0da89bb9ba321822c9e88cf926"
+    },
+    {
+      "id": "deca-Bloodstone-0.2.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/deca/Bloodstone/0.2.2/",
+      "sha256": "1b7de6e8ab631afacea7c757c81494848755fda9d39c93618fc52584eff06089"
+    },
+    {
+      "id": "deca-VampireCommandFramework-0.9.0",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/deca/VampireCommandFramework/0.9.0/",
+      "sha256": "d3ce9095d9772f979feb4ec792f022d213f0cdf56dc27c82de26a0f9db7cfc9f"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "8e42af401737dbd5e7060960e21e493ed8f136c16fdcddb90bd1465f52049b2a"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "![](icon.png)\n# SanguineArchives for V Rising\n\nSanguineArchives is a server mod for V Rising. Keep records of combat times whenever players defeat V Blood bosses.\n\nThis is an unstable release version to get feedback. There will be bugs.\n\nYou can reach out to me on the V Rising Mod Community Discord (dokebi) for issues, questions, or suggestions.\n\n## Commands\n\n- `.archives boss [BossName]` or `.sga b [BossName]`\n  - Show records for the specified V Blood boss.\n- `.archives player (0-4) (PlayerName)` or `.sga p (0-4) (PlayerName)`\n  - Show player records for V Blood bosses in the given Act. Shows recent records for Act 0 or when no Act is specified. If no player is provided, it defaults to yourself.\n- `.archives top (0-4)` or `.sga t (0-4)`\n  - Show the top records for V Blood bosses in the given Act. Shows recent records for Act 0 or when no Act is specified.\n\n## Notes\n\n- Records are only kept for solo fights.\n- Records are only kept if the player level is equal to or less than the V Blood boss level.\n- Records are only kept if the combat begins with the V Blood boss at full HP.\n\n## Future Plans\n\n- [ ] Support tracking more than 1 of the same V Blood bosses at the same time.\n- [ ] Allow owners to configure messages.\n- [ ] Configure restrictions on gear levels.\n- [ ] Allow players to opt-out of messages.\n- [ ] Staff commands to clear records. Currently, you must edit the data file.\n- [ ] Localization\n\n## Known Issues\n\n- Messaging for Beatrice in Brutal mode is confusing, but combat times are recorded. This will be fixed this soon. \n- I don't know how this works with BloodyBosses.\n- Tracking more than 1 of the same V Blood boss is not supported yet.\n\n## Credits\n\nThe V Rising Mod Community has been a great help in developing this mod. Thank you for collaborating with me on Discord.\n\nThis mod shares a lot of code from existing mods from the community, especially from the following mods.\n\n- [Bloodcraft](https://github.com/mfoltz/Bloodcraft) by [mfoltz (zfolmt)](https://github.com/mfoltz)\n- [KindredCommands](https://github.com/Odjit/KindredCommands) by [odjit](https://github.com/Odjit)\n- [BloodyNotify](https://github.com/oscarpedrero/BloodyNotify) by [oscarpedrero (Trodi)](https://github.com/oscarpedrero)\n\nSpecial thanks to [mfoltz (zfolmt)](https://github.com/mfoltz) for the mod name suggestion and ChatGPT for the genius hourglass blood icon concept lol.\n",
+  "changelog": "`0.1.1`\n- Fixed tracking record issue when Player Level equals V Blood level.\n\n`0.1.0`\n- Initial unstable release.\n- Added commands:\n  - `.archives boss [BossName]` or `.sga b [BossName]`\n    - Show records for the specified V Blood boss.\n  - `.archives player (0-4) (PlayerName)` or `.sga p (0-4) (PlayerName)`\n    - Show player records for V Blood bosses in the given Act. Shows recent records for Act 0 or when no Act is specified. If no player is provided, it defaults to yourself.\n  - `.archives top (0-4)` or `.sga t (0-4)`\n    - Show the top records for V Blood bosses in the given Act. Shows recent records for Act 0 or when no Act is specified.\n"
+}

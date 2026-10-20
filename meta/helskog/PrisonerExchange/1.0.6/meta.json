@@ -1,0 +1,38 @@
+{
+  "format": 1,
+  "package_sha256": "2427b2ebe94369f794b17d82dd9a18a6cbdb9cd0fe88ac71623041e4b5b37595",
+  "size": 141745,
+  "manifest": {
+    "name": "PrisonerExchange",
+    "version_number": "1.0.6",
+    "website_url": "https://github.com/helskog/PrisonerExchange",
+    "description": "A server plugin made to enable trading and swapping prisoners between clans, without the hassle of manually transferring them.",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "deca-VampireCommandFramework-0.10.3"
+    ]
+  },
+  "description": "A server plugin made to enable trading and swapping prisoners between clans, without the hassle of manually transferring them.",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.733.2/",
+      "sha256": "eabfb53d80bed427ddbd1ecf8af4dcd6e82e152809d44ab3218d0a09984f491c"
+    },
+    {
+      "id": "deca-VampireCommandFramework-0.10.3",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/deca/VampireCommandFramework/0.10.3/",
+      "sha256": "ac4fd2c6c10ed49f91556aa9a236a3e55b78124a88de75f2bd4e33004c2db713"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "5cfd419183ce55fe8fe1ba1c4d2ed061b0793b0b31deec339ffd2353495faac3"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# PrisonerExchange\nA V Rising plugin made to enable trading and swapping prisoners between clans, without the hassle of manually transferring them.\n\n## Features\n- Sell a prisoner to another user or clan.\n- Swap a prisoner for another with a user or clan.\n- Set a custom PrefabGUID as currency for handling sales.\n- Announce completed prisoner sales in global chat\n- Set a minimum/maximum sale price as a global limit.\n- Customizable command cooldown for selling/swapping prisoners.\n- Automatic expiration of sale and swap offers.\n\n## Commands\n<details>\n<summary><strong>Staff Commands</strong></summary>\n\n- `.pe clear` Clear all active prisoner exchanges between users.\n- `.pe remove (username)` Remove any sale/swap request involving a specified user.\n- `.pe removecooldown (username)` Removes command cooldown on specified user.\n\n</details>\n\n<details>\n<summary><strong>Sale commands</strong></summary>\n\n- `.pe sell (username) (price)` Sends a sale offer to the specified username.\n- `.pe cancelsale` Cancel outgoing sale offer.\n- `.pe acceptsale` Accept incoming sale offer.\n- `.pe declinesale` Decline incoming sale offer.\n\n</details>\n\n<details>\n<summary><strong>Swap commands</strong></summary>\n\n- `.pe swap (username)` Initiate a trade with another user (prisoner for prisoner).\n- `.pe cancelswap` Cancel outgoing swap offer.\n- `.pe acceptswap` Accept incoming swap offer.\n- `.pe declineswap` Decline incoming swap offer.\n\n</details>\n\n## Usage\n\n<details>\n<summary>Selling a prisoner</summary>\n  \n1. Stand right in front of the prison cell holding the prisoner you would like to sell.\n2. Type .pe sell (username) (price)\n   - If you regret sending the offer, you can type `.pe cancelsale` to cancel the offer.\n3. The request is sent to the specified user with information about the trade (prisoner type, blood and price and who is selling it).\n   - The receiving user can now type `.pe acceptsale` while standing next to an *empty* prison cell.\n   - If the receiving user would like to decline they can type `.pe declinesale` or simply wait for it to expire.\n4. If the user has enough currency, the sale will conclude and the currency will be transferred from the buyers inventory into yours.\n\n</details>\n\n<details>\n<summary>Swapping a prisoner</summary>\n  \n1. Stand right in front of the prison cell holding the prisoner you would like to swap.\n2. Type .pe swap (username)\n   - A list of the users prisoners will appear in chat.\n3. You will be prompted to select a number representing the prisoner you want to swap for.\n4. Once the number has been selected, the offer will be sent to the receiving user.\n   - If you regret sending the offer, you can type `.pe cancelswap` to cancel the offer.\n5. The receiving user can type `.pe acceptswap` or `.pe declineswap` to conclude the swap.\n6. Once concluded the prisoners will switch places and be assigned to the *same* cage you started the swap from.\n\n</details>\n\n## Configuration\nThe config file is automatically generated under the server install directory as `\\BepInEx\\config\\PrisonerExchange.cfg`\n<details>\n<summary><strong>Sample configuration</strong></summary>\n\n```CFG\n## Allow admins to bypass restrictions on selling/swapping prisoners.\n# Setting type: Boolean\n# Default value: true\nAdminBypass = true\n\n## Enable or disable the ability to sell prisoners.\n# Setting type: Boolean\n# Default value: true\nSellingEnabled = true\n\n## Enable or disable the ability to swap prisoners.\n# Setting type: Boolean\n# Default value: true\nSwappingEnabled = true\n\n## Announce completed sales in global chat.\n# Setting type: Boolean\n# Default value: true\nAnnounceExchange = true\n\n## Prefab GUID for the currency. (Crystals by default)\n# Setting type: String\n# Default value: -257494203\nCurrencyPrefab = -257494203\n\n## Name of currency.\n# Setting type: String\n# Default value: Crystals\nCurrencyName = Crystals\n\n## Set the minimum amount of currency required for a sale.\n# Setting type: Int32\n# Default value: 100\nMinimumSalePrice = 100\n\n## Set the maximum amount of currency allowed for a sale.\n# Setting type: Int32\n# Default value: 5000\nMaximumSalePrice = 5000\n\n## Only allow clan leader to sell prisoners.\n# Setting type: Boolean\n# Default value: false\nClanLeaderOnly = false\n\n## Adds a fixed cooldown period for selling/swapping prisoners (minutes).\n# Setting type: Int32\n# Default value: 5\nCommandCoolDownPeriod = 5\n\n## Automatically expire sales and swap requests. (seconds)\n# Setting type: Int32\n# Default value: 60\nExpireExchangeAfter = 60\n```\n\n</details>\n\n### Credits\nSome crucial parts of the plugin is either derived or copied from existing open-source resources in the V Rising Modding Community. Although not mentioned below, I also want to thank the server owners and other community members in the modding community discord for helping out where needed.\n\n> **[Deca](https://github.com/decaprime)** for their work on **VampireCommandFramework**\n\n> **[Odjit](https://github.com/Odjit)** for their work on the **Kindred** suite of plugin.\n\n> **[Trodi](https://github.com/oscarpedrero)** for their work on the **Bloodycore** framework.\n\n> **[inility](https://github.com/Darreans)** for helping out with testing a version of the plugin on his server **Sanguine Reign**.\n\n\n#### License\n[This project is licensed under the AGPL-3.0 license.](https://choosealicense.com/licenses/agpl-3.0/#)\n",
+  "changelog": "Version 1.0.6\n- Update VCF dependency version\n- Fix removal of electric buff on sale expiry\n- Added audio queue notification to offer for receiving users\n- Added visual \"smite\" effect on prisoners after trade/swap completion\n- Small bugfixes/refactoring.\n- Project migration from Idea to Vscode"
+}

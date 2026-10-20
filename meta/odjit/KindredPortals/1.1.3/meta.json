@@ -1,0 +1,38 @@
+{
+  "format": 1,
+  "package_sha256": "827176bf1fbbeb5d8269ccf033e9521191d9a4aa1def7f39c9b9906d0de9e8d9",
+  "size": 478120,
+  "manifest": {
+    "name": "KindredPortals",
+    "version_number": "1.1.3",
+    "website_url": "https://github.com/odjit/KindredPortals",
+    "description": "Expand your V Rising fast travel options. Also Map Icons",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.691.3",
+      "deca-VampireCommandFramework-0.9.0"
+    ]
+  },
+  "description": "Expand your V Rising fast travel options. Also Map Icons",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.691.3",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.691.3/",
+      "sha256": "04290fad8e4e619451c4f5eff3957778d3ab6a0da89bb9ba321822c9e88cf926"
+    },
+    {
+      "id": "deca-VampireCommandFramework-0.9.0",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/deca/VampireCommandFramework/0.9.0/",
+      "sha256": "d3ce9095d9772f979feb4ec792f022d213f0cdf56dc27c82de26a0f9db7cfc9f"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "a438863b85932504e65d1cea25d4f989dcc68bfb4287f92bbce7f7add0e9eb06"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# KindredPortals for V Rising\nKindredPortals is a fast travel mod for V Rising. It allows you to create portals to travel between locations.\n   - **Note:** Until BepInEx is updated for 1.1, please do not use the thunderstore version. Get the correct testing version https://wiki.vrisingmods.com/user/game_update.html.\n\n\n- Portal Travel: Functions like caves but not attached to anything unless you make them! Assign mapicons to them or don't! Use [KindredSchematics](https://thunderstore.io/c/v-rising/p/odjit/KindredSchematics/) to place tilemodels at their location for extra pizzazz.\n- Waygates: Create new waygates on the map! Accessible by all players via the map, but must be \"discovered\" first by getting close to them. (Unless unlock all waygates is on)\n- MapIcons: Some require attachment to an object to be seen (like a portal), others are fine on their own. [Helpful Sheet](https://docs.google.com/spreadsheets/d/1FcbO8aMtH2FtSx-ntoMXjoyXhfGQkjnjzj1nkeR2Tk4/edit?usp=sharing)\n\n\nNotes: \n- Portals are limited to 8 per chunk. Waygates are limited to 1 per chunk. Chunks are 160x160 coordinate points / 32x32 tiles. (5 coordinates = 1 tile) [Map](https://i.imgur.com/2H0TMoS.jpeg)\n- Waygates cannot be seen in the \"inky black\" of the map. It covers up the mapicons.\n- Portals are best for travel into the \"inky black\" as they do not involve the map for use. (Like Dev Island! `teleporttochunk 7,2`)\n- If you destroy a waygate, it will be removed from the map for all players immediately\n- If you destroy a portal, it will be removed from use, but the text will remain to players until they relog.\n\n---\nThanks to the V Rising modding and server communities for ideas and requests!\nFeel free to reach out to me on discord (odjit) if you have any questions or need help with the mod.\n\n[V Rising Modding Discord](https://vrisingmods.com/discord)\n\n## Commands\n\n### Portal Commands\n- `.portal start (Icon)` \n  - Starts creating a portal at the player's location.  Needs a second location for the other end. Add an icon to assign a map icon to this side of the portal.\n- `.portal end (Icon)`\n  - Connects the location started creating a portal. Add an icon to assign a map icon to this side of the portal.\n- `.portal destroy`\n  - Destroys the spawned portal connection you are standing near. (Both sides will go)\n- `.portal teleporttoclosest`\n  - Teleports you to the closest spawned portal.\n\n\n### Waygate Commands\n- `.waygate create (waygateprefab)`\n  - Creates a waygate at the player's location.\n- `.waygate destroy`\n  - Destroys the spawned waygate you are standing on.\n- `.waygate teleporttoclosest`\n  - Teleports you to the closest spawned waygate.\n\n\n### MapIcon Commands\n- `.mapicon create (Icon)`\n  - Creates a map icon at the player's location.\n- `.mapicon destroy`\n  - Destroys the map icon you are standing near.\n- `.mapicon list`\n  - Lists all map icons prefabs and their text.\n\n\t\n## Eventual To-Do/Possible features\n- Come find out in the V Rising Modding Discord!\n\nThis mod is licensed under the AGPL-3.0 license.",
+  "changelog": "`1.1.2`\n- Updated for Hotfix\n\n`1.1.1`\n- Updated Readme\n\n`1.1.0`\n- updated for Oakveil\n\n`1.0.2`\n- If AllWaypointsUnlocked is set then don't need to check to see if things need to be unlocked\n- Also bit of refactoring\n\n`1.0.1`\n- fixed a bug that allowed the start position to be reused.\n- fixed postfix handling of spawned portals to ensure they are still valid.\n\n`1.0.0`\n- Initial Release\n"
+}

@@ -1,0 +1,30 @@
+{
+  "format": 1,
+  "package_sha256": "1a879411b8258f9c28b8d6804720563e825fa1788eca87f7b89bab081ca6569f",
+  "size": 236430,
+  "manifest": {
+    "name": "ScarletCore",
+    "version_number": "1.3.11",
+    "website_url": "https://github.com/markvaaz/ScarletCore",
+    "description": "Framework and utilities for all Scarlet mods in V Rising.",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.733.2"
+    ]
+  },
+  "description": "Framework and utilities for all Scarlet mods in V Rising.",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.733.2/",
+      "sha256": "eabfb53d80bed427ddbd1ecf8af4dcd6e82e152809d44ab3218d0a09984f491c"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "947aaa9dbff18a9a9c45e5eac3eb50772908e3abebfa2ba783687a1e1bb37d9e"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# ScarletCore\n\n**A Framework and utilities for all Scarlet mods in V Rising**\n\nScarletCore is the foundational framework that powers all **ScarletMods** - a collection of advanced mods for V Rising. While primarily designed to support the ScarletMods ecosystem, ScarletCore can also be used by any developer who wants to create their own V Rising mods.\n\n---\n\n## Support & Donations\n\n<a href=\"https://www.patreon.com/bePatron?u=30093731\" data-patreon-widget-type=\"become-patron-button\"><img height='36' style='border:0px;height:36px;' src='https://i.imgur.com/o12xEqi.png' alt='Become a Patron' /></a>  <a href='https://ko-fi.com/F2F21EWEM7' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi6.png?v=6' alt='Buy Me a Coffee at ko-fi.com' /></a>\n\n---\n\n## What does it do?\n\nScarletCore provides a foundation with:\n\n- **Unified Event System** - Custom events for chat, death, damage, connections, and much more\n- **Ready-to-use Services** - PlayerService, BuffService, TeleportService, AdminService, RevealMapService and others\n- **Essential Utilities** - Logger, text formatting, task scheduler, math utilities\n- **Data Management** - Custom player data and settings management systems\n\n---\n\n## 🔧 For Developers\n\nIf you're a developer wanting to use ScarletCore to create your own mods, check out the **[Documentation Wiki](https://github.com/markvaaz/ScarletCore/wiki)**.\n\n## ScarletMods\n\nScarletCore was specifically created to support the **ScarletMods**:\n\n- **ScarletTeleports**\n- **ScarletRCON**\n- **ScarletHooks**\n- And more...\n\n---\n\n## Installation\n\n### Requirements\n\nThis mod requires the following dependency:\n\n* **[BepInEx](https://wiki.vrisingmods.com/user/bepinex_install.html)** - Modding framework for V Rising\n\n### Manual Installation\n\n1. Download the latest release of **ScarletCore** from Thunderstore\n2. Extract the contents into your `BepInEx/plugins` folder:\n\n   ```\n   <V Rising Server Directory>/BepInEx/plugins/\n   ```\n\n   Your folder should now include:\n\n   ```\n   BepInEx/plugins/ScarletCore.dll\n   ```\n\n3. Start or restart your server\n\n## 👥 Credits and Contributors\n\nThis project is made possible by the contributions of the following individuals:\n\n- **cheesasaurus, EduardoG, Helskog, Mitch, SirSaia, Odjit** & the [V Rising Mod Community on Discord](https://vrisingmods.com/discord)"
+}

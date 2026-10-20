@@ -1,0 +1,37 @@
+{
+  "format": 1,
+  "package_sha256": "340fbb9e87ba0b38dddd5a6b47296ee231d165f09fc41df52947b8074937d86b",
+  "size": 183003,
+  "manifest": {
+    "name": "SoulForge",
+    "version_number": "2.1.0",
+    "website_url": "https://github.com/Darreans/SoulForge",
+    "description": "SoulForge gives you flexible control over shard containers and glowing effects to shard holders.",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "deca-VampireCommandFramework-0.10.3"
+    ]
+  },
+  "description": "SoulForge gives you flexible control over shard containers and glowing effects to shard holders.",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.733.2/",
+      "sha256": "eabfb53d80bed427ddbd1ecf8af4dcd6e82e152809d44ab3218d0a09984f491c"
+    },
+    {
+      "id": "deca-VampireCommandFramework-0.10.3",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/deca/VampireCommandFramework/0.10.3/",
+      "sha256": "ac4fd2c6c10ed49f91556aa9a236a3e55b78124a88de75f2bd4e33004c2db713"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "737bcc7b3e89af446ba125a59a2b629e3bbdb6fbacf51d0a290577f794403ccf"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# SoulForge\n\nSoulForge is an open-source mod for V Rising that gives server administrators granular control over special container placements and visual glow effects for shard holders. This helps manage server balance by preventing players from stashing powerful shards and allows for deep visual customization.\n\n## Features\n\n* **Block Shard Container Placement**: Individually enable or disable the ability for players to build specific shard-holding containers.\n    * Solarus Container\n    * Monster (Adam) Container\n    * Manticore (Winged Horror) Container\n    * Dracula Container\n    * Morgana Container\n\n* **Customize Visual Glows**:\n    * Enable or disable the visual glow effect for each of the five shard types when equipped.\n    * Change the glow effect for each shard by editing its Prefab GUID in the config file, allowing for full personalization.\n\n* **Reload On-the-Fly**: A simple chat command lets administrators reload all configuration settings live without needing to restart the server.\n\n## Installation\n\n1.  **Download:** Download the latest `SoulForge.dll` from the official mod release page.\n2.  **Transfer:** Place the `SoulForge.dll` file into your server’s `BepInEx/plugins` folder.\n3.  **Generate Config:** Launch the server once. This will generate the configuration file at the following location: `BepInEx/config/SoulForge/SoulForge_Glows.cfg`\n\n## Configuration\n\nAll settings are managed in the `SoulForge_Glows.cfg` file.\n\n#### `[Containers]`\nEnable or disable the placement of each container. Set to `true` to allow, `false` to block.\n* `Allow_Solarus`\n* `Allow_Monster`\n* `Allow_Manticore`\n* `Allow_Dracula`\n* `Allow_Morgana`\n\n#### `[Glows]`\nEnable or disable the default visual glow for each shard.\n* `Enable_Dracula_Glow`\n* `Enable_Adam_Glow`\n* `Enable_Horror_Glow`\n* `Enable_Solarus_Glow`\n* `Enable_Morgana_Glow`\n\n#### `[Glow Prefab GUIDs]`\nChange the integer Prefab GUID to use a different visual effect for each glow.\n* `Dracula_Glow_Prefab`\n* `Adam_Glow_Prefab`\n* `Horror_Glow_Prefab`\n* `Solarus_Glow_Prefab`\n* `Morgana_Glow_Prefab`\n\n## Commands\n\n### `.reloadsoulforge`\nReloads all settings from the configuration file live. This is an **admin-only** command.\n\n---\n\n## Patch Notes\n\n#### **Version 2.1.0**\n* Fixed an issue where glow effects would not be removed correctly when swapping between Grimoires.\n* Re-implemented the system for blocking shard container placement.\n* Added the `.reloadsoulforge` chat command to reload the config on the fly.\n* Added a config option to change the Prefab GUID for each glow effect.\n* The Solarus shard glow has been corrected (for real this time!).\n\n#### **Version 2.0.1**\n* Fixed a bug where glows were incorrectly removed when swapping weapons.\n* Changed the default buff effect for the Solarus shard.\n\n## Contact & Support\n\nFor support, bug reports, or feature requests, please reach out:\n\n* **Discord DM:** `inility#4118`\n* **Discord Server:** `discord.gg/VArena`\n* **V Rising Modding Community:** [https://wiki.vrisingmods.com/](https://wiki.vrisingmods.com/) - A great resource for help and other fantastic mods.\n\n---\n\n*This mod is open-source. You are free to use, modify, and redistribute it under the provided license. Special thanks to the V Rising modding community for their collaboration and inspiration!*"
+}

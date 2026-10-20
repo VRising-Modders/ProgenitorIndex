@@ -1,0 +1,37 @@
+{
+  "format": 1,
+  "package_sha256": "0f1943470389e9157074781b1ea3c3327371242fce879b695562627761adcacd",
+  "size": 11395,
+  "manifest": {
+    "name": "QuickStash",
+    "version_number": "1.2.3",
+    "website_url": "https://github.com/Elmegaard/QuickStash",
+    "description": "Allows you to use Compulsively Count on all nearby stashes with 1 click",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.0.0",
+      "molenzwiebel-Wetstone-1.1.0"
+    ]
+  },
+  "description": "Allows you to use Compulsively Count on all nearby stashes with 1 click",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.0.0",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.0.0/",
+      "sha256": "27fd91f2951701faf324b9dcd34cf771a7f4534e1d3a679949b9a0ae67472054"
+    },
+    {
+      "id": "molenzwiebel-Wetstone-1.1.0",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/molenzwiebel/Wetstone/1.1.0/",
+      "sha256": "60d4cf20da7d8be01cb71447e5cf2165532ed0f3d19bd6788d9fc4403a257133"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "e0f4775542e6aa7a368945aa6cb34a71bfd488d0f13fc189b01dfbb145c93343"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# QuickStash\n\nA mod that uses _Compulsively Count_ on all nearby stashes with 1 click.  \nDefault key is G.\n\nNote this is both a client and server mod.\n\n### Installation\n\nRequired\n\n- Install [BepInEx](https://v-rising.thunderstore.io/package/BepInEx/BepInExPack_V_Rising/)\n- Install [Wetstone](https://v-rising.thunderstore.io/package/molenzwiebel/Wetstone/)\n- Extract _quick_stash.dll_ into _(VRising folder)/BepInEx/plugins_\n- Extract _quick_stash.dll_ into _(VRising folder)/VRising_Server/BepInEx/plugins_\n\nOptional\n\n- for singleplayer, install [ServerLaunchFix](https://v-rising.thunderstore.io/package/Mythic/ServerLaunchFix/) to fix issues with the server mod not working\n\n### Configuration\n\nThe keybindings are changed in the menu in-game.\n\nFor server configuration, after running the game once, the config file will be generated.\n\n- Update server config in _(VRising folder)/VRising_Server/BepInEx/config/quick_stash.cfg_\n\n### Troubleshooting\n\n- If the mod doesn't work, it is probably because the server part is not installed, check your BepInEx logs on both the client and server to make sure you are running the latest version of both QuickStash and Wetstone.\n\n### Support\n\nFor you\n\n- Open an [issue](https://github.com/Elmegaard/QuickStash/issues) on [github](https://github.com/Elmegaard/QuickStash)\n- Ask in the [V Rising Mod Community](https://discord.gg/CWzkHvekg3) Discord\n\nFor me\n\n- [Buy me a cup of coffee](https://ko-fi.com/elmegaard)\n\n<details>\n<summary>Changelog</summary>\n\n`1.2.3`\n\n- Upgrade to Wetstone 1.1.0\n- Potentially fixed rare client crash\n- Fixed silver debuff not getting removed\n\n`1.2.2`\n\n- Reduce cooldown from 2 seconds to 0.5 seconds\n\n`1.2.1`\n\n- Fixed Readme\n\n`1.2.0`\n\n- Increased default range to 50\n- Added Wetstone (keybinds added to controls in-game)\n- Code refactor\n- Fixed memory leak (but added small stutter when depositing)\n\n`1.1.2`\n\n- Fixed a client crash\n\n`1.1.1`\n\n- Updated Readme\n\n`1.1.0`\n\n- Set max distance\n- Made config for keybind\n- Made config for max distance\n\n`1.0.1`\n\n- Updated Readme\n\n`1.0.0`\n\n- Initial mod upload\n\n</details>\n"
+}

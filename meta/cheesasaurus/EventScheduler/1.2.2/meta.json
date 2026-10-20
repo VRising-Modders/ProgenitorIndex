@@ -1,0 +1,45 @@
+{
+  "format": 1,
+  "package_sha256": "6c50ae4fe3d195823f8fcf75ed038fc329753978171e061f7e12743c87d2f48d",
+  "size": 135176,
+  "manifest": {
+    "name": "EventScheduler",
+    "version_number": "1.2.2",
+    "website_url": "https://github.com/cheesasaurus/v-rising-mods",
+    "description": "Enables server operators to schedule recurring Events.",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "cheesasaurus-HookDOTS_API-1.1.0",
+      "deca-VampireCommandFramework-0.10.2"
+    ]
+  },
+  "description": "Enables server operators to schedule recurring Events.",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.733.2/",
+      "sha256": "eabfb53d80bed427ddbd1ecf8af4dcd6e82e152809d44ab3218d0a09984f491c"
+    },
+    {
+      "id": "cheesasaurus-HookDOTS_API-1.1.0",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/cheesasaurus/HookDOTS_API/1.1.0/",
+      "sha256": "aa3d8f1f36739711e8da534788fb7ccf6e6147205b29a8b48b540af3c6eddccf"
+    },
+    {
+      "id": "deca-VampireCommandFramework-0.10.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/deca/VampireCommandFramework/0.10.2/",
+      "sha256": "1853610b9dd246a53296c35a3c069548397ad4deeeeb243b17756b1395dffb51"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "40fc527c6ac5a2755e5deba40377aa6e5ca15a9f39ae528d85ec0bd9c65ccac4"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# EventScheduler\n\nEnables server operators to schedule recurring Events.\n\n\n## Installation\n\n- Install [BepInEx](https://v-rising.thunderstore.io/package/BepInEx/BepInExPack_V_Rising/).\n- Install [HookDOTS](https://thunderstore.io/c/v-rising/p/cheesasaurus/HookDOTS_API/).\n- Install [VampireCommandFramework](https://thunderstore.io/c/v-rising/p/deca/VampireCommandFramework/).\n- Extract `EventScheduler.dll` into `(VRising folder)/BepInEx/plugins`.\n\n\n## Scheduling an event\n\nAn Event is really just a series of chat commands to be executed on a schedule.\n\nEvents are set up in `BepinEx/config/EventScheduler/events.jsonc`\n\nExample:\n```jsonc\n{\n    // Chat commands have to be executed by a user, so we specify which user\n    \"executingAdmin\": {\n        \"steamId\": 123456\n    },\n\n    // List of all events\n    \"events\": [\n\n        // an event to reset shards every 2 weeks\n        {\n            // after you've decided on an eventId, it shouldn't be changed\n            \"eventId\": \"Bi-Weekly Shard Reset\",\n            \"schedule\": {\n                // when the first run of the event should happen\n                \"firstRun\": \"2069-12-15 20:00:00\",\n\n                // how frequently the event should run\n                \"frequency\": \"2 weeks\",\n\n                // In case the event is overdue: allow running it late, but not too late.\n                // This could happen if the server was down/restarting when the event was supposed to run.\n                // If it's too late, the event will be skipped until the next valid time slot.\n                \"overdueTolerance\": \"5 minutes\",\n            },\n            \"chatCommands\": [\n                // a series of chat commands to be executed each time the event runs\n                \".shards-reset\",\n                \".buff all rage 2h\",\n                \".buff all witch 2h\",\n            ]\n        },\n\n        // an event to give players a gift every hour\n        {\n            \"eventId\": \"Hourly lumber gift\",\n            \"schedule\": {\n                \"firstRun\": \"2069-12-15 20:00:00\",\n                \"frequency\": \"1 hour\",\n                \"overdueTolerance\": \"1 minute\",\n            },\n            \"chatCommands\": [\n                \".giveToAll wood 9\",\n            ]\n        },\n\n    ]\n}\n```\n\nConfiguration changes are automatically applied; no need to restart the server every time.\n\nNote that all chat commands shown above are only examples. The actual commands available depend on which mods you have installed.\n\n\n### Frequency and overdueTolerance\nThe expected format is `{integer} {unit}`\n\nValid units are: `weeks`, `days`, `hours`, `minutes`, `seconds`\n\nexamples:\n- `2 weeks`\n- `1 week`\n- `30 days`\n- `1 day`\n- `5 hours`\n- `1 hour`\n- `90 minutes`\n- `1 minute`\n- `30 seconds`\n- `1 second`\n\n\n## Chat commands\n\n- `.testRunEvent \"Hourly lumber gift\"`\n  - Do an immediate test run of the event with id \"Hourly lumber gift\"\n\n\n## Support\n\nJoin the [modding community](https://vrisingmods.com/discord).\n\nPost an issue on the [GitHub repository](https://github.com/cheesasaurus/V-rising-mods). ",
+  "changelog": "# 1.2.2\n- Another potential fix for events not running when scheduled.\n\n# 1.2.1\n- Potential fix for events not running when scheduled.\n\n# 1.2.0\n- Added command `.testRunEvent` to immediately do a test run of a specific scheduled event.\n\n# 1.1.0\n- When running an event with adminOnly commands, the executingAdmin is no longer required to be online / AdminAuth'd.\n\n# 1.0.0\n- Initial release"
+}

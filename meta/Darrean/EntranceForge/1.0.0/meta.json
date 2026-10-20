@@ -1,0 +1,30 @@
+{
+  "format": 1,
+  "package_sha256": "bb15c9801903a1f97527fe905ab420b4d5f6b811cfd2a1b0fa74886a7401343d",
+  "size": 102372,
+  "manifest": {
+    "name": "EntranceForge",
+    "version_number": "1.0.0",
+    "website_url": "https://github.com/Darreans/EntranceForge",
+    "description": "Prevents abuse from raiding doors on the doorframe with golems. ",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.733.2"
+    ]
+  },
+  "description": "Prevents abuse from raiding doors on the doorframe with golems. ",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.733.2/",
+      "sha256": "eabfb53d80bed427ddbd1ecf8af4dcd6e82e152809d44ab3218d0a09984f491c"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "4855bcfff140e504292b170bf29d3231d5df2a69a755cecfcda210470441e796"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# EntranceForge Mod - README\n\nEntranceForge is a mod that prevents an exploit where raiders can achieve a faster breach time by hitting the door frame instead of the door itself. For support, please visit the VArena Discord(https://discord.gg/Varena or join the VRising modding community discord at https://wiki.vrisingmods.com/\n\n### Patch Notes:\n* **(1.0.0)**\n    * Initial release.\n\n### Description\nEntranceForge is a mod that prevents an bug where raiders can achieve a faster breach time by hitting the door frame instead of the door itself\n\n\n\n### Installation Instructions\n1.  Ensure BepInEx is correctly installed on your V Rising server.\n2.  Download the latest **EntranceForge.dll** from the releases page.\n3.  Place **EntranceForge.dll** into your server’s `BepInEx/plugins` directory.\n4.  Start the server. The mod will be active immediately.\n\n### Dependencies\n* **BepInEx:** Required to load the mod.\n* **Harmony:** Required for patching game systems. (This is usually included with BepInEx).\n\n### Support & Community\nFor support, questions, or to join the community:\n* Join the **VArena Discord:** https://discord.gg/varena\n* Join **The Modding Community Discord**. https://wiki.vrisingmods.com/\n\n\n### Developer\n* Darrean (inility#4118) (converted for public use)\n* Rendy\n\n### License\nThis EntranceForge mod is licensed under the MIT License with a non-commercial clause.\n**Summary:**\n* You **ARE free** to use, copy, modify, merge, publish, and distribute copies of this software.\n* You **MUST include** the original copyright notice and this permission notice in all copies or substantial portions of the software.\n* You **MAY NOT** sell copies of the Software or derivative works based on the Software for profit.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n\n### Disclaimer\nEntranceForge is a third-party mod and is not affiliated with Stunlock Studios or the official V Rising development team. Use at your own risk."
+}

@@ -1,0 +1,30 @@
+{
+  "format": 1,
+  "package_sha256": "08696fce90541d29ae7fe1c8a078009d37f6675bc8dd9665f27b3357ddca6ce2",
+  "size": 44939,
+  "manifest": {
+    "name": "DojoArenaKT",
+    "version_number": "1.0.0",
+    "website_url": "https://github.com/KillingTorcher/DojoArenaKT/releases/tag/release",
+    "description": "Dojo's PvP Arena Plugin - Now opensource!",
+    "dependencies": [
+      "deca-Bloodstone-0.1.6"
+    ]
+  },
+  "description": "Dojo's PvP Arena Plugin - Now opensource!",
+  "dependencies": [
+    {
+      "id": "deca-Bloodstone-0.1.6",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/deca/Bloodstone/0.1.6/",
+      "sha256": "9d787de7a8fea9edf3da6f38cd90850236745d770a7547316356cfb3dcbd1352"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "cfad4c7a3f8623d99f5efad4fa65ddb63a18498b719ae215b21d26728f78cc0f"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# KT's DojoArena Plugin\nThis is the first public release of Dojo's Arena Plugin. Documentation will be written to follow up soon, but for now just wanted to get this out here as soon as possible!\n\nEnjoy :)"
+}

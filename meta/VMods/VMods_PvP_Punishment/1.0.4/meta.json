@@ -1,0 +1,37 @@
+{
+  "format": 1,
+  "package_sha256": "c214b69b1c3381a45081c2b5a9ecd81edad032afe6605a19ccfa05c203f013e4",
+  "size": 73940,
+  "manifest": {
+    "name": "VMods_PvP_Punishment",
+    "version_number": "1.0.4",
+    "website_url": "https://github.com/WhiteFang5/VMods#pvp-punishment",
+    "description": "A mod that punishes low-level kills.",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.0.0",
+      "molenzwiebel-Wetstone-1.1.0"
+    ]
+  },
+  "description": "A mod that punishes low-level kills.",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.0.0",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.0.0/",
+      "sha256": "27fd91f2951701faf324b9dcd34cf771a7f4534e1d3a679949b9a0ae67472054"
+    },
+    {
+      "id": "molenzwiebel-Wetstone-1.1.0",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/molenzwiebel/Wetstone/1.1.0/",
+      "sha256": "60d4cf20da7d8be01cb71447e5cf2165532ed0f3d19bd6788d9fc4403a257133"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "ffddce467b7b52acfbde8fdad28f0244a395636347f9dfdd4d89b3906dab410b"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# PvP Punishment\nA server-side only mod that punishes low-level kills.  \n  \nThis mod also has the option prevent cheesing the low-level restriction where the highest gear score (in the past X minutes) is used instead of the current gear score.  \nBoth the amount of offenses before being punishes as well as the punishment itself can be tweaked.\n\n<details>\n<summary>Configuration Options</summary>\n\n* Set a Level Difference at which an offense is being recorded\n* Enable/disable usage of the anti-cheesing system (highest gear score tracking)\n* Change the amount of offenses a player can make before actually being punished\n* Change the offense cooldown time before the offense counter resets\n* Change the duration of the punishment\n* Change the following for the actual punishment:\n  * % reduced Movement Speed\n  * % reduced Max Health\n  * % reduced Physical Resistance\n  * % reduced Spell Resistance\n  * amount of reduced Fire Resistance\n  * amount of reduced Holy Resistance\n  * amount of reduced Sun Resistance\n  * amount of reduced Silver Resistance\n  * % of reduced Physical Power\n  * % of reduced Spell Power\n\n</details>\n\n## How to manually install\n* Install [BepInEx](https://v-rising.thunderstore.io/package/BepInEx/BepInExPack_V_Rising/)\n* Install [Wetstone](https://v-rising.thunderstore.io/package/molenzwiebel/Wetstone/)\n* (Locally hosted games only) Install [ServerLaunchFix](https://v-rising.thunderstore.io/package/Mythic/ServerLaunchFix/)\n* Extract the Vmods._mod-name_.dll\n* Move the desired mod(s) to the `[VRising (server) folder]/BepInEx/WetstonePlugins/`\n* Launch the server (or game) to auto-generate the config files\n* Edit the configs as you desire (found in `[VRising (server) folder]/BepInEx/config/`)\n* Reload the mods using the Wetstone commands (by default F6 for client-side mods, and/or `!reload` for server-side mods)\n  * If this doesn't work, or isn't enabled, restart the server/game\n\n## Commands\nMost of the VMods come with a set of commands that can be used. To see the available commands, by default a player or admin can use `!help`.  \nNormal players won't see the Admin-only commands listed.  \nThe prefix (`!`) can be changed on a per-mod basis.  \nTo prevent spam/abuse there's also a command cooldown for non-admins, this value can also be tweaked on a per-mod basis.  \nCommands can also be disabled completely on a per-mod basis.\n\n## More Details\n* [ChangeLog](https://github.com/WhiteFang5/VMods/blob/master/CHANGELOG.md#pvp-punishment)\n"
+}

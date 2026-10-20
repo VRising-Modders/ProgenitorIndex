@@ -1,0 +1,37 @@
+{
+  "format": 1,
+  "package_sha256": "b9caa3d80822c9750f0ba6e84614cfb3435ae0e3a5384f96c4f0ad979ecd1565",
+  "size": 137619,
+  "manifest": {
+    "name": "DropTeleportBound",
+    "version_number": "1.0.1",
+    "website_url": "https://github.com/delta663/DropTeleportBound",
+    "description": "Server-side V Rising mod that helps players handle teleport-bound items before using Vampire Waygates.",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "deca-VampireCommandFramework-0.11.0"
+    ]
+  },
+  "description": "Server-side V Rising mod that helps players handle teleport-bound items before using Vampire Waygates.",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.733.2/",
+      "sha256": "eabfb53d80bed427ddbd1ecf8af4dcd6e82e152809d44ab3218d0a09984f491c"
+    },
+    {
+      "id": "deca-VampireCommandFramework-0.11.0",
+      "from": "index",
+      "package": "https://thunderstore.io/package/download/deca/VampireCommandFramework/0.11.0/",
+      "sha256": "06a3d1bf244f3d37e82b62e5b1304d32ddd06985b3ed8616e5c27e3df5ae01ff"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "a4345d6d74c8f07063467df2097d7e6b3d17ae64cdb5c76cb506146ec73daf9e"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# DropTeleportBound\nServer-side V Rising mod that helps players handle teleport-bound items before using Vampire Waygates.\n\n## Features\n- Server-side only.\n- Drops only items marked by the game as teleport-bound.\n- Supports manual dropping of teleport-bound items.\n- Supports optional auto-drop when waypoint teleport is blocked.\n  - Auto-drop for teleport-bound items is still in beta and may not work perfectly in every situation.\n\n## Requirements\n1. [BepInEx](https://thunderstore.io/c/v-rising/p/BepInEx/BepInExPack_V_Rising/)\n2. [VampireCommandFramework](https://thunderstore.io/c/v-rising/p/deca/VampireCommandFramework/)\n\n## Installation\n1. Install the required dependencies.\n2. Place `DropTeleportBound.dll` into your server's BepInEx plugins folder.\n3. Start or restart the server.\n\n## Commands\n\n### Manual drop\n- `.throw` or `.dropbound`\n  - Drops all teleport-bound items from your inventory.\n\n### Auto drop\n- `.tpbound on`\n  - Enables automatic dropping of teleport-bound items when you press a waypoint and vanilla teleport is blocked.\n  - Shortcut: *.tpb on*\n\n- `.tpbound off`\n  - Disables automatic dropping of teleport-bound items.\n  - Shortcut: *.tpb off*\n\n- `.tpbound status`\n  - Shows your current auto-drop setting.\n  - Shortcut: *.tpb status*\n\n## Credits\n- [KindredCommands](https://thunderstore.io/c/v-rising/p/odjit/KindredCommands) by **odjit** for the project structure and architecture that inspired this mod.\n- [DropTeleportBound](https://thunderstore.io/c/v-rising/p/ministerfrolo/DropTeleportBound) by **ministerfrolo** for the original client-side mod that inspired this server-side version.\n- [V Rising Modding Community](https://discord.com/invite/QG2FmueAG9)\n\n## License\nThis project is licensed under the AGPL-3.0 license.\n\n## Notes\n> - If you have any problems or run into bugs, please report them to me in the [V Rising Modding Community](https://discord.com/invite/QG2FmueAG9).\n> **Del** (delta_663)\n"
+}

@@ -4,6 +4,7 @@ on:
   pull_request:
     paths:
       - "entries/**"
+      - "meta/**"
       - "revoked.json"
       - "thunderstore-lock.json"
       - "schema/**"
@@ -23,7 +24,8 @@ jobs:
     timeout-minutes: 30
     steps:
       # The checks run with the tools from the base branch, so a pull request cannot change
-      # how it is checked. The pull request itself is checked out only as data.
+      # how it is checked. The pull request itself is checked out only as data. Validation
+      # downloads each changed package, regenerates its meta and fails if the committed meta differs.
       - name: Check out the base branch tools
         uses: actions/checkout@v5
         with:

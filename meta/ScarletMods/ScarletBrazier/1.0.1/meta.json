@@ -1,0 +1,37 @@
+{
+  "format": 1,
+  "package_sha256": "8f7acbabee34b5ac42ba63dc2c8c0ffb69de5d592ed23613cf15c7a4fb70280b",
+  "size": 160949,
+  "manifest": {
+    "name": "ScarletBrazier",
+    "version_number": "1.0.1",
+    "website_url": "https://github.com/markvaaz/ScarletBrazier",
+    "description": "Makes all braziers burn indefinitely without consuming bones as fuel. Provides perpetual sun protection for vampires without the hassle of constantly feeding braziers with bones.",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "ScarletMods-ScarletCore-1.1.5"
+    ]
+  },
+  "description": "Makes all braziers burn indefinitely without consuming bones as fuel. Provides perpetual sun protection for vampires without the hassle of constantly feeding braziers with bones.",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.733.2/",
+      "sha256": "eabfb53d80bed427ddbd1ecf8af4dcd6e82e152809d44ab3218d0a09984f491c"
+    },
+    {
+      "id": "ScarletMods-ScarletCore-1.1.5",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/ScarletMods/ScarletCore/1.1.5/",
+      "sha256": "2923f3ae8731b43e446a02da361bfda109cdb61a661df4cb8bc41e1d37362495"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "ad7c8885725ead0da0b2fb1741e70005184fd754ba4ba129661a5fb2e65af14a"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# ScarletBrazier\n\n**ScarletBrazier** is a V Rising mod that makes all braziers burn indefinitely without consuming bones as fuel. The mod provides a convenient way to have perpetual sun protection throughout your castle without the hassle of constantly feeding your braziers with bones.\n\n---\n\n## Support & Donations\n\n<a href=\"https://www.patreon.com/bePatron?u=30093731\" data-patreon-widget-type=\"become-patron-button\"><img height='36' style='border:0px;height:36px;' src='https://i.imgur.com/o12xEqi.png' alt='Become a Patron' /></a>  <a href='https://ko-fi.com/F2F21EWEM7' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi6.png?v=6' alt='Buy Me a Coffee at ko-fi.com' /></a>\n\n---\n\n## How It Works\n\nWhen enabled globally, all braziers in the world will automatically burn without consuming bones as fuel. They will stay lit indefinitely, creating smoke that blocks sunlight and provides permanent sun protection for vampires in your castle and territories. The mod also handles newly placed braziers, ensuring they are automatically set to burn freely without requiring fuel.\n\n**Note:** Free braziers will automatically light up when the server restarts or when `.brazier enable` or `.brazier force` commands are used.\n\n**Troubleshooting:** If a brazier doesn't light up when clicked, simply add 1 bone to it - the bone will be consumed and the brazier will start working fuel-free again.\n\n## Features\n\n* All braziers burn indefinitely without consuming bones as fuel\n* Braziers remain fuel-free even after being manually turned off and on again\n* Global enable/disable functionality\n* Automatic handling of newly placed braziers\n* Individual brazier control with force commands\n* Admin-only commands for server management\n* Persistent settings that survive server restarts\n\n## Commands\n\n**Note:** All commands require admin privileges.\n\n* `.brazier enable` - Enables free braziers globally (all braziers burn without consuming bones)\n* `.brazier disable` - Disables free braziers globally (braziers return to consuming bones normally)\n* `.brazier force` - Forces all existing braziers to burn freely, regardless of global setting\n\n### Command Details\n\n**Global Control:**\n- When enabled globally, all braziers (existing and newly placed) will burn indefinitely without consuming fuel\n- When disabled globally, all braziers return to normal operation, consuming bones as fuel when lit\n- Braziers affected by the mod remain fuel-free even when manually turned off and on by players\n\n**Force Command:**\n- Use this to manually make all current braziers burn freely, even if global mode is disabled\n- Useful for one-time setup or testing purposes\n\n## Installation\n\n### Requirements\n\nThis mod requires the following dependencies:\n\n* **[BepInEx](https://wiki.vrisingmods.com/user/bepinex_install.html)**\n* **[ScarletCore](https://thunderstore.io/c/v-rising/p/ScarletMods/ScarletCore/)**\n* **[VampireCommandFramework](https://thunderstore.io/c/v-rising/p/deca/VampireCommandFramework/)**\n\nMake sure BepInEx is installed and loaded **before** installing ScarletBrazier.\n\n### Manual Installation\n\n1. Download the latest release of **ScarletBrazier**.\n\n2. Extract the contents into your `BepInEx/plugins` folder:\n\n   `<V Rising Server Directory>/BepInEx/plugins/`\n\n   Your folder should now include:\n\n   `BepInEx/plugins/ScarletBrazier.dll`\n\n3. Ensure **ScarletCore** and **VampireCommandFramework** are also installed in the `plugins` folder.\n4. Start or restart your server.\n\n## Configuration\n\nThe mod creates a configuration file that allows you to set the default behavior:\n\n* **EnableGlobally** (default: true) - If true, all braziers will burn without consuming bones as fuel\n\n## This project is made possible by the contributions of the following individuals:\n\n- **cheesasaurus, EduardoG, Helskog, Mitch, SirSaia, Odjit** & the [V Rising Mod Community on Discord](https://vrisingmods.com/discord)\n"
+}

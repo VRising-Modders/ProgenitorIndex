@@ -1,0 +1,37 @@
+{
+  "format": 1,
+  "package_sha256": "db630a3f69af84547ef95334bd89b2ca80ab7dd9fbf1245ed4772785e4d1f1ba",
+  "size": 100968,
+  "manifest": {
+    "name": "QuickBrazier",
+    "version_number": "0.3.1",
+    "website_url": "https://github.com/harminded/QuickBrazier",
+    "description": "Auto turn on/off based on time of day. Hotkey (L) to quickly toggle mist braziers, also adds bones if brazier is empty.",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.0.0",
+      "molenzwiebel-Wetstone-1.1.0"
+    ]
+  },
+  "description": "Auto turn on/off based on time of day. Hotkey (L) to quickly toggle mist braziers, also adds bones if brazier is empty.",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.0.0",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.0.0/",
+      "sha256": "27fd91f2951701faf324b9dcd34cf771a7f4534e1d3a679949b9a0ae67472054"
+    },
+    {
+      "id": "molenzwiebel-Wetstone-1.1.0",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/molenzwiebel/Wetstone/1.1.0/",
+      "sha256": "60d4cf20da7d8be01cb71447e5cf2165532ed0f3d19bd6788d9fc4403a257133"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "b76ee96845cda670338243f73b76bbe4049de1e5897311964c51d051a229af37"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# QuickBrazier\n\n## Instalation (Manual)\n\n* Install BepInEx\n* Extract quick_brazier.dll into (VRising server folder)/BepInEx/plugins\n* [ServerLaunchFix](https://v-rising.thunderstore.io/package/Mythic/ServerLaunchFix/) recommended for in-game hosted\n  games\n* (Optional) If not using ServerLaunchFix, extract quick_brazier.dll into (VRising server folder)/BepInEx/plugins\n\n## How to use\n\n* Toggle nearest brazier in range with L (bindable)\n* Braziers will automatically turn on when day starts, and turn off when night starts. Only for online players/clans\n\n## Configuration\n\nValues can be configured at `(VRising client/server folder)/VRising/BepInEx/config/quick_brazier.cfg`\n\n```\n## Settings file was created by plugin quick_brazier v0.3.0\n## Plugin GUID: quick_brazier\n\n[Server]\n\n## Maximum distance to toggle Mist Braziers. 5 'distance' is about 1 tile.\n# Setting type: Single\n# Default value: 5\nrange = 5\n\n## Turn braziers on when day starts, and off during the night starts, for online players/clans only.\n# Setting type: Boolean\n# Default value: true\nautoToggleEnabled = true\n```\n\n## Changelog\n\n### 0.3.1\n* Readme and description updates\n\n### 0.3.0\n\n* Added auto turn on/off\n\n### 0.2.0\n\n* Now if brazier has no bones, the mod tries to split bones in your inventory and add to the brazier\n\n## Possible upcoming features\n\n* ~~Auto add bones from inventory if brazier is empty~~\n* ~~Auto turn on when day starts, and off when night starts~~\n* Auto turn on when get player is nearby, turn off when not"
+}

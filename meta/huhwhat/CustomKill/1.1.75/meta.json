@@ -1,0 +1,37 @@
+{
+  "format": 1,
+  "package_sha256": "1feba8929e8969604fdfd0bc0a5aa057c45f7b9ba591b9fc8e65495045eb262a",
+  "size": 321670,
+  "manifest": {
+    "name": "CustomKill",
+    "version_number": "1.1.75",
+    "website_url": "https://github.com/BeardMagics/CustomKill",
+    "description": "A Custom V-Rising killfeed plugin utilizing existing foundations, easier configuration, and customization for server owners.",
+    "dependencies": [
+      "deca-VampireCommandFramework-0.10.4",
+      "BepInEx-BepInExPack_V_Rising-1.733.2"
+    ]
+  },
+  "description": "A Custom V-Rising killfeed plugin utilizing existing foundations, easier configuration, and customization for server owners.",
+  "dependencies": [
+    {
+      "id": "deca-VampireCommandFramework-0.10.4",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/deca/VampireCommandFramework/0.10.4/",
+      "sha256": "e554e964242db0b1cfef5824129aa6794c8a7138c9321b617d633f9aaffac19b"
+    },
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.733.2/",
+      "sha256": "eabfb53d80bed427ddbd1ecf8af4dcd6e82e152809d44ab3218d0a09984f491c"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "18117315377be488a96a2f32c5924de3ccb18da1f0d1ac8f92d8cd74d9dc0580"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# 💀 CustomKill\n\n**CustomKill** A custom V-Rising killfeed plugin utilizing existing foundations, made for easier configuration and customization for server owners.\nOriginally forked from BestKillfeed + PvP Details to use existing framework/foundations.\nCredits and copyright: \nCredit for original author(s)\n- Deca (retired) (https://github.com/decaprime) [OG Killfeed author]\n- Sunrise (https://github.com/SunrisesvRising/BestKillfeed)\n- Morphine (Phlebotomist) (https://github.com/phlebotomist/PvPDetails)\n\n## 🔧 Main Features\n- [Clan name] + Player Name + Level in feed\n  - Damage / Kills / Deaths / Assists / MaxStreak system\n  - LiteDB persistent data storage\n\n## ☑️ Enhanced Killfeed in Chat\n- Displays **clan**, **player name**, and **max level** for each kill.\n- Automatically detects player max levels on **login**, **kill**, or when executing the `.pi` command\n\n\n## 🛡️ Kill-Steal Protection \n- If **Player A** downs **Player B**, but **Player C** finishes them, the kill is credited to **Player A**.\n  - Credit to Sunrise (left code source in place but updated namespace for attribution and file matching)\n\n## 🚫 Anti-Grief Level Difference System\n- Configurable level-difference protection:\n  - For level **91**: max difference = **10 levels**\n  - For levels **below 91**: max difference = **15 levels**\n- Player levels are shown in **red** if they exceed the allowed difference.\n  - Credit again to Sunrise (thanks big guy)\n\n---\n\n## 📊 Custom Commands\n\n#### `.pi` – Player Info\n- Displays detailed **player info**:\n  - Name, clan, level, clan members, and connection status\n  - Name in **green** = connected  \n  - Name in **red** = offline\n  - Credit yet again to Sunrise (left this system in place)\n  \n#### `.stats` - Stats\n- Displays users stats including:\n  - Damage, Kills, Deaths, Assists, Killstreak, Max Killstreak\n  - Future: ~~damage tracking~~ (DONE) , assist tracking (Needs testing)\n\n#### `.kd` & `.kda`\n- Display your Kill/Death or K/D/Assist ratio\n  - Utilizes simple K/D and K/D/A math\n  - Added to eliminate need for additional plugins and for simplicity\n\n#### `.top` [category] – Leaderboard (top 5 players)\n- Displays an aesthetic **leaderboard** with:\n  - Kills, deaths, max killstreaks\n  - Pagination and ranking system\n  - Categories including clan, damage, kills, deaths, assists, ms (maxstreak)\n  - Future: ~~damage category~~ (DONE) , ~~top clan category~~ (DONE) [kills / deaths ]\n\n#### `.rs` - Reset Stats\n- Wipes database of player information, clan association, members, and stats\n  - Prompt system to avoid accidental deletion ( `.y` or `.n` )\n  - Future TODO: ~~Export database to file~~ (DONE) | ~~Discord command to commit stats~~ (DONE)\n  \n#### `.exportstats` - Export Stats\n- Writes all stats to 2 separate HTML files currently\n - Designed for easier reading/tracking\n  - Found in CustomKill/Exports folder when searching for the files\n  - Writes a Player stats HTML based on the wipe cycle\n  - Writes a Clan stats HTML based on the wipe cycle\n  - This command is meant to be used at the end of your wipe cycle (I highly recommend not using it for more than its intention)\n  - File names: WipeCycle_PlayerStats.html , WipeCycle_ClanStats.html\n\n#### `.ptd` - Post To Discord\n- Post to discord command unification (post stats to a discord webhook)\n  - Uses a secondary webhook URL entry in main config (customkill.cfg)\n  - Will post the top 10 players and top 5 clans.\n  - Output lists player names and clan names in bold for easier reading\n   - Has been confirmed working as of 7/22/25\n \n---\n\n## ⚙️ Easy Configuration\n- Edit the `CustomKill.cfg` file to customize:\n  - Text colors\n  - Level difference thresholds\n  - Discord webhook URL for kill notifications\n    - Displays webhook name as \"app\" (i.e. if webhook is named FozzyBear, when a kill takes place the webhook will show \"FozzyBear 'APP'\") for high customization\n\n---\n\n## 🎨 Color Settings (.top / .stats)\n- Customizable color settings\n  - Title (change appearance when --Top 5 players-- or --Username Stats-- is read from config)\n  - Damage/Kills/Deaths/Assists/Killstreak/Maxstreak\n  - Customizable for both .top and .stats respectively\n\n---\n\n## ❗ Admin Flagging System\n- Configurable system for adding admin only restrictions\n  - Config file of CustomKill.cfg\n  - Configurable to set each category as viewable by all or by admin\n  - Config flag field: `RestrictKillsToAdmin` = `boolean` (true / false)\n\n---\n\n## 💾 Persistent Data Storage\n-Uses **LiteDB** for efficient data storage, ensuring:\n  - Better overhead performance and reliability.\n  - Reduced load for server resources (i.e. no saving to json file)\n\n---\n\n### Misc Info:\nAll source is distributed as is. I do not own any strict rights to any material contained within.\nYou are free to copy, modify, change, enhance, distribute as you see fit.\nI ask that you include the original authors (top of the readme) and myself for credits and contributions.\nYou can contact me on discord in the V-Rising Modding discord. Username BeardMagics.\n\n## 📝 License\n\nThis mod is distributed under the **MIT License**.  \nYou are free to **modify** and **redistribute** it, as long as proper **credit is given** to the original author.\n"
+}

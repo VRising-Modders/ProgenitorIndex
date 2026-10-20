@@ -1,0 +1,31 @@
+{
+  "format": 1,
+  "package_sha256": "18e3a7585c91764a63f523015fa62eda1483f4e198d9fb87ab83a37e3e599965",
+  "size": 171530,
+  "manifest": {
+    "name": "TrackCrafts",
+    "version_number": "1.1.1",
+    "website_url": "https://github.com/armanckeser/TrackCrafts",
+    "description": "Middle-click recipes in workstation/refinement UIs to track multi-craft requirements with icons, inventory counts, and floor bonus detection.",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.0.0"
+    ]
+  },
+  "description": "Middle-click recipes in workstation/refinement UIs to track multi-craft requirements with icons, inventory counts, and floor bonus detection.",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.0.0",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.0.0/",
+      "sha256": "27fd91f2951701faf324b9dcd34cf771a7f4534e1d3a679949b9a0ae67472054"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "98ea6a8ec303dafbcc20ff4ebc77b887d4b3fe01c84183425df703afabf50d02"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# TrackCrafts\n\nClient-side V Rising mod that lets you track crafting recipes directly from vanilla crafting UIs.\n\n## What It Does\n- Middle-click (`Mouse3`) a recipe in workstation or refinement UIs to pin it.\n- Track multiple recipes at once.\n- Set exact quantities with inline number input and quick +/- controls.\n- Show ingredient `have / need` counts from your client-visible inventory.\n- Resolve recipe and ingredient icons using vanilla game data + UI fallbacks.\n- Auto-detect and display `-25%` station floor bonus when reflected by the UI costs.\n\n## Controls\n- `Mouse3` on a recipe: Pin/track recipe\n- `F2`: Toggle TrackCrafts HUD\n- `F1`: Clear all tracked recipes\n\n## Installation\n### Thunderstore / r2modman\n1. Install `BepInExPack_V_Rising`.\n2. Install `TrackCrafts`.\n\n### Manual\n1. Install `BepInExPack_V_Rising`.\n2. Copy these files to your game folder:\n   - `BepInEx/plugins/TrackCrafts.dll`\n   - `BepInEx/plugins/TrackCrafts_names.json`\n\n## Notes\n- This mod is client-only.\n- Recipe tracking is read from visible/replicated client data.\n- If an icon is not available in one resolver path, TrackCrafts falls back to alternate UI/data paths.\n\n## Dependencies\n- `BepInEx-BepInExPack_V_Rising-1.0.0`\n\n## Source\n- https://github.com/armanckeser/TrackCrafts\n",
+  "changelog": "# Changelog\n\n## 1.1.1\n- Repackaged release to allow a new Thunderstore upload (version bump only).\n- No gameplay logic changes.\n\n## 1.1.0\n- Reworked recipe tracking pipeline for both workstation and refinement UIs.\n- Improved Mouse3 tracking reliability on workstation entries.\n- Added robust icon resolution chain (game data + UI fallback extraction).\n- Fixed multiple wrong icon/name mapping cases in workstation/artisan menus.\n- Added accurate quantity UX:\n  - Direct numeric input (click value, type exact amount)\n  - Increment/decrement controls for large and small steps\n- Added independent per-recipe card controls and improved collapse behavior.\n- Added floor bonus detection (`-25%`) from UI requirement costs.\n- Improved HUD layout behavior to respect screen height and avoid overflow stacking.\n- Removed old debug/testing elements from release build (no F3 test recipe, no on-screen debug overlay).\n- General stability and compatibility improvements for IL2CPP OnGUI usage.\n\n## 1.0.0\n- Initial public release.\n- Middle-click to pin recipes from crafting UI.\n- Multi-recipe tracking HUD.\n- Quantity controls and material count display.\n- Basic floor bonus handling and inventory-aware requirement display.\n"
+}

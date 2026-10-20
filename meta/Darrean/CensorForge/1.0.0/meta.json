@@ -1,0 +1,30 @@
+{
+  "format": 1,
+  "package_sha256": "cac00ae6c4ce195eb482378ee266ea4f0795fe767c4983c0b674f1c731c763e2",
+  "size": 114516,
+  "manifest": {
+    "name": "CensorForge",
+    "version_number": "1.0.0",
+    "website_url": "https://github.com/Darreans/CensorForge",
+    "description": "Block characters from being created with those naughty names",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.733.2"
+    ]
+  },
+  "description": "Block characters from being created with those naughty names",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.733.2/",
+      "sha256": "eabfb53d80bed427ddbd1ecf8af4dcd6e82e152809d44ab3218d0a09984f491c"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "ce233fdf25d2880f2efdfd23401e19b350273baf4992f4e05b9fcbf5dd0c27f9"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# CensorForge Mod - README\n\n*The naughty list will grow and will add more, if you would like to request words to be added please feel free to reach out. The list was generated from common bad words used, there are more yes, but this list will grow and keep being updated.*\n\n*This mod is actively maintained and will continue to receive improvements and optimizations. For issues or support, please reach out to Darrean (inility#4118) on the [VArena Discord](https://discord.gg/varena) or [The Modding Community Discord](https://wiki.vrisingmods.com).*\n\n## Description\n\nCensorForge is a V Rising mod designed to help server administrators maintain a more respectful and appropriate environment by preventing players from creating characters with offensive or undesirable names. It utilizes an internally managed, multi-language blacklist that can be easily expanded by the mod author.\n\nWith CensorForge, you can:\n\n* Prevent the creation of characters with names from a comprehensive, pre-defined blacklist.\n* Maintain different sets of forbidden words for various languages, all managed within the mod's source.\n* Ensure a cleaner naming environment on your V Rising server.\n\n## Features\n\n* **Embedded Multi-Language Blacklist:** Utilizes word lists defined directly within the mod's C# source code, organized by language (e.g., English, Chinese, Russian, French).\n* **No External Word List Files:** Server admins do not need to manage external `.txt` or `.json` files for the blacklist; the lists are part of the compiled DLL.\n* **Exact Match Filtering:** Blocks names if they are an exact, case-insensitive match to any word or phrase in the combined blacklist.\n* **Developer-Friendly Updates:** The mod author can easily add new words or entire language lists by editing the relevant C# source files and recompiling the mod.\n* **Seamless Integration:** Works by patching the character creation event handling to validate names before they are finalized.\n\n\n## Configuration\n\nCensorForge's word blacklists are embedded within the mod's compiled DLL for simplicity and to ensure they are always present. There are no external configuration files for managing the word lists at this time.\n\nFuture versions might include configuration options for toggling the mod or other behaviors if requested.\n\n## Installation Instructions\n\n1.  Ensure **BepInEx (for IL2CPP games like V Rising)** is correctly installed on your V Rising server.\n2.  Download the latest `CensorForge.dll` from its release source.\n3.  Place `CensorForge.dll` into your server’s `BepInEx/plugins` directory (e.g., in a subfolder like `BepInEx/plugins/CensorForge/`).\n4.  Start the server. CensorForge will automatically be active.\n\n## Dependencies\n\n* **BepInEx:** Required to load the mod.\n\n## Support & Community\n\nFor support, questions, to request new words for the blacklist, or to join the community:\n\n* Join the **VArena Discord:** [https://discord.gg/varena](https://discord.gg/varena)\n* Join **The Modding Community Discord** (V Rising Modding Community): https://wiki.vrisingmods.com](https://wiki.vrisingmods.com)\n* For general V Rising modding discussions and finding other mods, visit the V Rising Modding Wiki. *(If there's a direct wiki URL, that can be used here, otherwise the Discord link is primary).*\n\n## Acknowledgements\n\nSpecial thanks to the V Rising Modding community and the developers  that make mods like this possible.\n\n## Developer\n\n* Darrean (inility#4118)\n\n## License\n\nThis CensorForge mod is licensed under the MIT License with a non-commercial clause.\n\n**Summary:**\n\n* You **ARE free** to use, copy, modify, merge, publish, and distribute copies of this software.\n* You **MUST include** the original copyright notice and this permission notice in all copies or substantial portions of the software.\n* You **MAY NOT** sell copies of the Software or derivative works based on the Software for profit.\n* THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n\n*Disclaimer: CensorForge is a third-party mod and is not affiliated with Stunlock Studios or the official V Rising development team. Use at your own risk.*"
+}

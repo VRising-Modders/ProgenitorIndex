@@ -1,0 +1,30 @@
+{
+  "format": 1,
+  "package_sha256": "a8b23896f2d5566760fa019750dd2803511e3ed103568718f44d565925d4beb7",
+  "size": 770648,
+  "manifest": {
+    "name": "BloodCraftEZLife",
+    "version_number": "0.8.2",
+    "website_url": "https://github.com/tiben20/BloodCraftEZLife",
+    "description": "Make way easier to play pve bloodcraft server",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.733.2"
+    ]
+  },
+  "description": "Make way easier to play pve bloodcraft server",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.733.2/",
+      "sha256": "eabfb53d80bed427ddbd1ecf8af4dcd6e82e152809d44ab3218d0a09984f491c"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "bf0b961f8377a0af0239d08f2adb63a8344f1b6cc46c5acf41cd652722d06f99"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# BloodCraft UI - Ezlife!\n\nForked from BloodCraft UI Onlyfam\n\nFeature\n- Auto teleport (Accept every request without typing anything)\n- Pull from inventory from a panel using kindred logistic\n- Teleport list make a list of everyoone on the server and you can click to teleport to them\n- Hotkey and settings added to the escape menu.\n- Hotkeys made to send chat commands example f5 send \".fam ub\"\n\nChangelog:\n\n0.4.0\n-Remade the fullscreen menu to be more clean and easier to use\n-Kills popup msg more clean\n\n0.5.0\nFixed scaling on new file config\nadded delete hotkey\n\n0.6.0\nAdded msg for commande sended\nFinished the pull panel\n\n0.7.0\nAdded chat panel for logging message through sessions\nFixed pull panel with the missing items\nReadded scaling\n\n0.8.0\nFixed bugs mostly\n\n0.8.1\nAdded knowledge in pull tab\n\n0.8.2\nFixed auto teleport\n\nSourcecode: https://github.com/tiben20/BloodCraftEZLife"
+}

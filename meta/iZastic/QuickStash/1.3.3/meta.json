@@ -1,0 +1,37 @@
+{
+  "format": 1,
+  "package_sha256": "b4d417bebfd4c7b0a4099ceda449ff9546c5f879c1749ae6c18dfcc6027d6ff8",
+  "size": 12437,
+  "manifest": {
+    "name": "QuickStash",
+    "version_number": "1.3.3",
+    "website_url": "https://github.com/iZastic/QuickStash",
+    "description": "Allows you to use Compulsively Count on all nearby stashes with 1 click",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.668.5",
+      "deca-Bloodstone-0.1.4"
+    ]
+  },
+  "description": "Allows you to use Compulsively Count on all nearby stashes with 1 click",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.668.5",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.668.5/",
+      "sha256": "784c7a7f64ba0f1d4e9778c6558a061ab83dbacc6e0bb8ae0e3ab86698578113"
+    },
+    {
+      "id": "deca-Bloodstone-0.1.4",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/deca/Bloodstone/0.1.4/",
+      "sha256": "e57607799d1550191b274237ead53a2e6f0fb8ea5cbeb67cb24a9f1572e8432a"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "e0f4775542e6aa7a368945aa6cb34a71bfd488d0f13fc189b01dfbb145c93343"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# QuickStash\n\nA fork of the original QuickStash which uses _Compulsively Count_ on all nearby stashes.\n\nQuickStash can be installed using multiple methods depending on your needs. See installation methods below.\n\n### Client and Server Installation (Default)\nThe default installation which requires the mod to be installed on the client and server. Uses the default keybind `G` to stash items.\n- Install [BepInEx](https://v-rising.thunderstore.io/package/BepInEx/BepInExPack_V_Rising)\n- Install [Bloodstone](https://v-rising.thunderstore.io/package/deca/Bloodstone)\n- Extract _QuickStash.dll_ into _(VRising folder)/BepInEx/plugins_\n- Extract _QuickStash.dll_ into _(VRising folder)/VRising_Server/BepInEx/plugins_\n\n### Client and Server Installation using VampireCommandFramework (Optional)\nOptional installation which requires the mod to be installed on the client and server. Uses the default keybind `G` or the `.stash` command to stash items.\n- Install [BepInEx](https://v-rising.thunderstore.io/package/BepInEx/BepInExPack_V_Rising)\n- Install [Bloodstone](https://v-rising.thunderstore.io/package/deca/Bloodstone)\n- Install [VampireCommandFramework](https://v-rising.thunderstore.io/package/deca/VampireCommandFramework/)\n- Extract _QuickStash.dll_ into _(VRising folder)/BepInEx/plugins_\n- Extract _QuickStash.dll_ into _(VRising folder)/VRising_Server/BepInEx/plugins_\n\n### Server Only Installation using VampireCommandFramework (Optional)\nOptional installation which is **server side only**. Uses the `.stash` command to stash items.\n- Install [BepInEx](https://v-rising.thunderstore.io/package/BepInEx/BepInExPack_V_Rising) on the server\n- Install [Bloodstone](https://v-rising.thunderstore.io/package/deca/Bloodstone) on the server\n- Install [VampireCommandFramework](https://v-rising.thunderstore.io/package/deca/VampireCommandFramework/) on the server\n- Extract _QuickStash.dll_ into _(VRising folder)/VRising_Server/BepInEx/plugins_\n\n#### Optional\nSingleplayer requires [ServerLaunchFix](https://v-rising.thunderstore.io/package/Mythic/ServerLaunchFix/) to fix issues with the server mods not working.\n\n### Configuration\n\nThe keybinding can be changed in the in-game controls menu.\n\nFor server configuration, after running the game once, the config file will be generated.\n\n- Update server config in _(VRising folder)/VRising_Server/BepInEx/config/QuickStash.cfg_\n\n### Troubleshooting\n\n- If the mod doesn't work, it may be because it is not installed on the server. Check your BepInEx logs on both the client and server to make sure the latest version of both QuickStash and Bloodstone where loaded.\n\n### Support\n- Open an issue on [github](https://github.com/iZastic/QuickStash/issues)\n- Ask in the V Rising Mod Community [discord](https://vrisingmods.com/discord)\n\n### Contributors\n- iZastic: `@iZastic` on Discord\n- Elmegaard: `Elmegaard#` on Discord\n- Dresmyr: `@小爛土` on Discord\n\n### Changelog\n`1.3.3`\n- Added support for optional VCF command\n\n<details>\n\n`1.3.2`\n- Moved from Wetstone to Bloodstone\n\n`1.3.1`\n- Added support for bags\n\n`1.3.0`\n- Upgrade for Gloomrot\n\n`1.2.3`\n- Upgrade to Wetstone 1.1.0\n- Potentially fixed rare client crash\n- Fixed silver debuff not getting removed\n\n`1.2.2`\n- Reduce cooldown from 2 seconds to 0.5 seconds\n\n`1.2.1`\n- Fixed Readme\n\n`1.2.0`\n- Increased default range to 50\n- Added Wetstone (keybinds added to controls in-game)\n- Code refactor\n- Fixed memory leak (but added small stutter when depositing)\n\n`1.1.2`\n- Fixed a client crash\n\n`1.1.1`\n- Updated Readme\n\n`1.1.0`\n- Set max distance\n- Made config for keybind\n- Made config for max distance\n\n`1.0.1`\n- Updated Readme\n\n`1.0.0`\n- Initial mod upload\n\n</details>\n"
+}

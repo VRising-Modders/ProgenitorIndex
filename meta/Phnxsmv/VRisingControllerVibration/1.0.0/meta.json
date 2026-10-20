@@ -1,0 +1,22 @@
+{
+  "format": 1,
+  "package_sha256": "5364f0aa83384942cd118cc73995b4143635c7a9668573ce596839b2a492747a",
+  "size": 161653,
+  "manifest": {
+    "name": "VRisingControllerVibration",
+    "version_number": "1.0.0",
+    "website_url": "https://github.com/Phnxsmv/VRisingControllerVibration",
+    "description": "This is a fix and workaround for the bugged gamepad haptics in V Rising.",
+    "dependencies": []
+  },
+  "description": "This is a fix and workaround for the bugged gamepad haptics in V Rising.",
+  "dependencies": [],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "942ac6e9611d1f72bebd6611e05f3a460c88263fb555550ce59f3869d8e373d0"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# V Rising Controller Vibration\nThis is a fix and workaround for the bugged gamepad haptics in V Rising.\nI implemented my own system to trigger vibration on certain gameplay events.\n\n## Requirements\n[BepInEx 1.733.2](https://thunderstore.io/c/v-rising/p/BepInEx/BepInExPack_V_Rising/)\n## Installation\n1. Put the DLL into the BepInEx plugins folder.\n2. The plugin will create a config file in the BepInEx config folder.\nThis file is meant for toggling info logging of this plugin.\nThe default setting is \"false\". If you have any issue, set it to \"true\".\nErrors and warnings will be logged regardless. The additional info tells you if and what textures have been replaced.\nThe info logging is disabled by default to avoid spamming the log file, but it can be helpful for debugging.\n\n## Technical details\nThe plugin works by detecting which abilities are used by the player and which buffs are applied.\nTechnically all weapon and spell slots count as abilities, while buffs are \"tags\" applied to the player character,\nto indicate certain status effects, such as being hit by certain enemy abilites and spells and other statuses,\nin addition to what is generally understood as \"buffs\", gameplaywise.\n## Credits\nClaude Opus 4.7 Adaptive for helping with the code and providing guidance on how to implement the system for triggering vibration.\n## License\nThis project is licensed under the AGPL-3.0 license.",
+  "changelog": "`1.0.0`\n- Initial release"
+}

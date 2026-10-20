@@ -1,0 +1,52 @@
+{
+  "format": 1,
+  "package_sha256": "74644ee91021bf3b8741de9b2ee5a022d03a70216133f5f358ee12c811650699",
+  "size": 84173,
+  "manifest": {
+    "name": "BloodyEncounters",
+    "version_number": "3.0.0",
+    "website_url": "https://github.com/oscarpedrero/BloodyEncounters",
+    "description": "A server side mod for V Rising which spawns a random NPC near a random online player at random intervals, and the player wins a random item reward if the NPC is killed within the given time limit.",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.668.5",
+      "deca-Bloodstone-0.2.2",
+      "deca-VampireCommandFramework-0.9.0",
+      "Trodi-BloodyCore-1.2.4"
+    ]
+  },
+  "description": "A server side mod for V Rising which spawns a random NPC near a random online player at random intervals, and the player wins a random item reward if the NPC is killed within the given time limit.",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.668.5",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.668.5/",
+      "sha256": "784c7a7f64ba0f1d4e9778c6558a061ab83dbacc6e0bb8ae0e3ab86698578113"
+    },
+    {
+      "id": "deca-Bloodstone-0.2.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/deca/Bloodstone/0.2.2/",
+      "sha256": "1b7de6e8ab631afacea7c757c81494848755fda9d39c93618fc52584eff06089"
+    },
+    {
+      "id": "deca-VampireCommandFramework-0.9.0",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/deca/VampireCommandFramework/0.9.0/",
+      "sha256": "d3ce9095d9772f979feb4ec792f022d213f0cdf56dc27c82de26a0f9db7cfc9f"
+    },
+    {
+      "id": "Trodi-BloodyCore-1.2.4",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/Trodi/BloodyCore/1.2.4/",
+      "sha256": "071874a76097c4e8d747b3d24ed52dc03e64aa4c5b64b943c60b405888f3d41e"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "f0a843b9e918b5e047d3eaf53848de379ec5e722a6c4110f67f89b244493cbc8"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# BloodyEncounters\n\n**BloodyEncounters** represents an enhanced iteration of the RandonmEncounters mod by [@adainrivers](https://github.com/adainrivers), functioning as a server-side mod that introduces a thrilling dynamic to gameplay. It randomly spawns NPCs near online players at unpredictable intervals, challenging players to defeat these NPCs within a set time limit to earn random item rewards.\n\n## IMPORTANT NOTE\n\nYou must have version 1.2.4 of Bloody.Core installed to be able to use version 2.0.5 or higher of this mod\n\n## NEW IN 3.0.0\n\n- Complete refactoring of the mod.\n- Added the functionality that if an NPC has the group value filled, it spawns all the NPCs in that group.\n- Added the ability to modify npc statistics.\n\n```json\n[\n {\n    \"name\": \"Rifle Man\",\n    \"PrefabGUID\": 1148936156,\n    \"AssetName\": \"CHAR_ChurchOfLight_Rifleman\",\n    \"levelAbove\": 10,\n    \"items\": [\n      {\n        \"name\": \"Blood Rose Potion\",\n        \"ItemID\": 429052660,\n        \"Stack\": 25,\n        \"Chance\": 1,\n        \"Color\": \"#daa520\"\n      },\n      {\n        \"name\": \"Blood Token\",\n        \"ItemID\": -77477508,\n        \"Stack\": 10,\n        \"Chance\": 1,\n        \"Color\": \"#daa520\"\n      }\n    ],\n    \"Lifetime\": 300,\n    \"Group\": \"Uno\",\n    \"unitStats\": {\n      \"PhysicalCriticalStrikeChance\": 0,\n      \"PhysicalCriticalStrikeDamage\": 2,\n      \"SpellCriticalStrikeChance\": 0,\n      \"SpellCriticalStrikeDamage\": 2,\n      \"PhysicalPower\": 45.550457,\n      \"SpellPower\": 45.550457,\n      \"ResourcePower\": 28.449999,\n      \"SiegePower\": 17,\n      \"ResourceYieldModifier\": 1,\n      \"ReducedResourceDurabilityLoss\": 1,\n      \"PhysicalResistance\": 0,\n      \"SpellResistance\": 0,\n      \"SunResistance\": 0,\n      \"FireResistance\": 0,\n      \"HolyResistance\": 0,\n      \"SilverResistance\": 0,\n      \"SilverCoinResistance\": 0,\n      \"GarlicResistance\": 0,\n      \"PassiveHealthRegen\": 1,\n      \"CCReduction\": 0,\n      \"HealthRecovery\": 1,\n      \"DamageReduction\": 0,\n      \"HealingReceived\": 0,\n      \"ShieldAbsorbModifier\": 1,\n      \"BloodEfficiency\": 1\n    }\n  }\n]\n```\n\n<details>\n<summary>Changelog</summary>\n\n`3.0.0`\n- Complete refactoring of the mod\n- Added an optional extar parameter called \"group\" to the NPC add command\n- Added option in the mod configuration for the default message of the groups\n- Added the functionality that if an NPC has the group value filled, it spawns all the NPCs in that group.\n- Added the ability to modify npc statistics.\n\n`2.0.8`\n- Fixed reload command\n\n`2.0.5`\n- Updated the timer system through Coroutine that brings the new version of Bloody.Core\n- Removed the original Drop Table from every NPC you set up.\n- Removed the ability to unlock Trophies by killing a VBlood that you set up for encounters.\n- Eliminate the possibility of tracking VBlood in case they are configured for meetings\n\n`2.0.4`\n- Update Timer Systems\n\n`2.0.4`\n- Bloody.Core dependency removed as dll and added as frameworkrk\n\n`2.0.3`\n- Fixed the bug that the encounter spawn had. A new spawn system has been generated to avoid incompatibilities with other mods\n- Fixed bug that caused the BloodyEncounter reward system and death message to also affect the game's default NPC if the NPC Prefab was configured as BloodyEncounter.\n\n`2.0.0`\n- World boss functionality has been removed to create a standalone mod called [BloodyBoss](https://github.com/oscarpedrero/BloodyBoss)\n- Updated to a VRising 1.0\n\n`1.5.0`\n- Added World Boss\n\n`1.0.0`\n- Initial public release of the mod\n</details>\n\n# Support this project\n\n[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/K3K8ENRQY)\n\n## Mod Features\nBloodyEncounters elevates gameplay by injecting an element of unpredictability and formidable challenges. As players venture outside their castles, there's a chance a random NPC will spawn nearby. You can customize the NPC level difference, ensuring balanced encounters for all players. This mod is highly configurable, offering an array of options to tailor the experience to your preferences.\n\n## Requirements:\n\nFor the correct functioning of this mod you must have the following dependencies installed on your server:\n\n1. [BepInEx](https://thunderstore.io/c/v-rising/p/BepInEx/BepInExPack_V_Rising/)\n2. [Bloodstone](https://thunderstore.io/c/v-rising/p/deca/Bloodstone/)\n3. [VampireCommandFramework](https://thunderstore.io/c/v-rising/p/deca/VampireCommandFramework/)\n4. [Bloody.Core](https://thunderstore.io/c/v-rising/p/Trodi/BloodyCore/)\n\n## Installation\n1. Copy `BloodyEncounters.dll` to your `BepInEx/Plugins` directory.\n2. Launch the server once to generate the config file; configurations will be located in the `BepInEx/Config` directory.\n\n## Commands\nIt's crucial to note that for any command containing a name argument such as `<NameOfNPC>`, `<ItemName>` or `<GroupName>`, if your name consists of more than one word, include it inside `\"\"` to ensure proper functionality (e.g., \"Rifle Man\" or \"Blood Rose Potion\").\n\n```ansi\n.be npc create <NameOfNPC> <PrefabGUIDOfNPC> <LevelsAbovePlayer> <LifeTime> <GroupName>\n```\n- Create your desired NPCs to include in the encounter randomized pool.\n  - **NameOfNPC**: The NPC name that will appear in the chat when the player triggers an encounter event.\n  - **PrefabGUIDOfNPC**: The GUID of the NPC you prefer to use. \n  - **LevelsAbovePlayer**: Specify how many levels you want the NPC to be above the player level. For example, if a player is level 10 and the value is 10, the NPC will spawn at level 20.\n  - **LifeTime**: The duration the player has to kill the NPC encounters in seconds.\n  - **Group** ( Optional ): If you give it a group value, when this NPC touches it it spawns all the NPCS in that group..\n  - Example: `.be npc create \"Rifle Man\" 1148936156 10 300 \"Group One\"`\n```ansi\n.be npc remove <NameOfNPC>\n```\n- Removes an NPC from the encounter randomized pool.\n  -  **NameOfNPC**: The NPC name you want to remove.\n  - Example: `.be npc remove \"Rifle Man\"`\n```ansi\n.be items add <NameOfNPC> <ItemName> <ItemPrefabID> <Stack>\n```\n- Adds items/rewards to the randomized pool that the player will receive from killing a particular NPC encounter.\n  - **NameOfNPC**: The NPC name to which you want to add items.\n  - **ItemName**: The name of the item/reward appearing in the chat once the player wins the encounter.\n  - **ItemPrefabID**: The GUID for the item you want to add.\n  - **Stack**: The quantity of items the player will gain upon winning the encounter (e.g., x25 Blood Potions).\n  - Example: `.be items add \"Rifle Man\" \"Blood Rose Potion\" 429052660 25`\n```ansi\n.be items list (NPCName)\n```\n- Displays the list of items included within a particular NPC.\n  - Example: `.be items list \"Rifle Man\"`\n```ansi\n.be enable\n```\n- Enables the BloodyEncounter mod.\n  - Example: `.be enable`\n```ansi\n.be disable\n```\n- Disables the BloodyEncounter mod.\n  - Example: `.be disable`\n```ansi\n.be reload\n```\n- Reloads the mod configuration in real-time.\n  - Example: `.be reload`\n```ansi\n.be start\n```\n- Triggers an encounter for a random online player.\n  - Example: `.be start`\n```ansi\n.be me\n```\n- Triggers an encounter for yourself.\n  - Example: `.be me`\n```ansi\n.be player <PlayerName>\n```\n- Triggers an encounter for a specific player.\n  - Example: `.be player Vex`\n\n# Resources\n\n[Complete items list of prefabs/GUID](https://discord.com/channels/978094827830915092/1117273637024714862/1117273642817044571)\n\n# Credits\n\nThis mod was originally developed by [@adainrivers](https://github.com/adainrivers/randomencounters) and was ported/updated to be compatible with the Gloomrot update.\n\n[V Rising Mod Community](https://discord.gg/vrisingmods) is the premier community of mods for V Rising.\n\n[@Deca](https://github.com/decaprime), thank you for the exceptional frameworks [VampireCommandFramework](https://github.com/decaprime/VampireCommandFramework) and [BloodStone](https://github.com/decaprime/Bloodstone), based on [WetStone](https://github.com/molenzwiebel/Wetstone) by [@Molenzwiebel](https://github.com/molenzwiebel).\n\n[@Backxtar",
+  "readme_truncated": true
+}

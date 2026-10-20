@@ -1,0 +1,45 @@
+{
+  "format": 1,
+  "package_sha256": "c041bf005e7862e50163d3523864acfefcf1dffd42a700d1d6f2721baf23f797",
+  "size": 138595,
+  "manifest": {
+    "name": "ScarletHooks",
+    "version_number": "1.1.4",
+    "website_url": "https://github.com/markvaaz/ScarletHooks",
+    "description": "Advanced webhook integration for V Rising servers. Send chat, login/logout, PvP kills, and VBlood defeats to Discord. Features admin/public/clan-specific logs with customizable formatting.",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "deca-VampireCommandFramework-0.10.2",
+      "ScarletMods-ScarletCore-1.3.11"
+    ]
+  },
+  "description": "Advanced webhook integration for V Rising servers. Send chat, login/logout, PvP kills, and VBlood defeats to Discord. Features admin/public/clan-specific logs with customizable formatting.",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.733.2/",
+      "sha256": "eabfb53d80bed427ddbd1ecf8af4dcd6e82e152809d44ab3218d0a09984f491c"
+    },
+    {
+      "id": "deca-VampireCommandFramework-0.10.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/deca/VampireCommandFramework/0.10.2/",
+      "sha256": "1853610b9dd246a53296c35a3c069548397ad4deeeeb243b17756b1395dffb51"
+    },
+    {
+      "id": "ScarletMods-ScarletCore-1.3.11",
+      "from": "index",
+      "package": "https://thunderstore.io/package/download/ScarletMods/ScarletCore/1.3.11/",
+      "sha256": "1a879411b8258f9c28b8d6804720563e825fa1788eca87f7b89bab081ca6569f"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "3341113acf371f65cd5d478c2fec62f2cf7603aed644d2aa2cb39bbd08d65d34"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# ScarletHooks\n\nScarletHooks is a V Rising server mod that enables advanced webhook integration for chat messages, login/logout events, PvP kills, and VBlood boss defeats. It allows admins to configure multiple webhooks for admin, public, clan-specific, and dedicated notifications, with fine-grained control over which message types are sent to each destination. Message formats and prefixes are fully customizable via the config file, supporting placeholders like `{playerName}`, `{clanName}`, and `{targetName}`. All features can be managed through in-game chat commands and configuration, including sending various event notifications to dedicated webhooks.\n\n**Notes:**\n* This mod only supports sending messages from the server to external webhooks. It does not support sending messages to the in-game chat from external sources, if you need that feature, please check out [ScarletRCON](https://thunderstore.io/c/v-rising/p/ScarletMods/ScarletRCON/).\n* While the mod isn’t restricted to Discord, using other webhook services may require modifying the source code.\n   - [See the FAQ for more information](https://thunderstore.io/c/v-rising/p/ScarletMods/ScarletHooks/wiki/3487-faq/).\n\n---\n\n## Added new hooks\n- **PvP Kills**: Track player kills in PvP combat.\n- **VBlood Kills**: Track VBlood boss eliminations.\n\n## Support & Donations\n\n<a href=\"https://www.patreon.com/bePatron?u=30093731\" data-patreon-widget-type=\"become-patron-button\"><img height='36' style='border:0px;height:36px;' src='https://i.imgur.com/o12xEqi.png' alt='Become a Patron' /></a>  <a href='https://ko-fi.com/F2F21EWEM7' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi6.png?v=6' alt='Buy Me a Coffee at ko-fi.com' /></a>\n\n---\n\n## For more information, please visit the [ScarletHooks Wiki on Thunderstore](https://thunderstore.io/c/v-rising/p/ScarletMods/ScarletHooks/wiki/).\n\n---\n\n## Installation\n\n### Requirements\n\nThis mod requires the following dependencies to function correctly:\n\n* **[BepInEx (RC2)](https://wiki.vrisingmods.com/user/bepinex_install.html)**\n* **[ScarletCore](https://thunderstore.io/c/v-rising/p/ScarletMods/ScarletCore/)**\n* **[VampireCommandFramework](https://thunderstore.io/c/v-rising/p/deca/VampireCommandFramework/)**\n\nMake sure both are installed and loaded **before** installing ScarletHooks.\n\n### Manual Installation\n\n1. Download the latest release of **ScarletHooks**.\n2. Extract the contents into your `BepInEx/plugins` folder:\n\n   ```\n   <V Rising Server Directory>/BepInEx/plugins/\n   ```\n\n   Your folder should now include:\n\n   ```\n   BepInEx/plugins/ScarletHooks.dll\n   ```\n\n3. Ensure **ScarletCore** and **VampireCommandFramework** are also installed in the `plugins` folder.\n4. Start or restart your server.\n\n## Join the [V Rising Mod Community on Discord](https://vrisingmods.com/discord)\n",
+  "changelog": "<details>\n<summary>Update 1.1.4</summary>\n\n- Updated compatibility with the latest ScarletCore version.\n</details>\n\n<details>\n<summary>Update 1.1.3</summary>\n\n- Fixed Login messages not appearing.\n</details>\n\n<details>\n<summary>Update 1.1.2</summary>\n\n- Fixed PvP kill messages so they are dispatched when players are downed.\n</details>\n\n<details>\n<summary>Update 1.1.1</summary>\n\n- Fixed PvP kill messages to correctly display the target player's clan.\n</details>\n\n<details>\n<summary>Update 1.1.0</summary>\n\n- Added PvP kills hook to track player kills in PvP combat.\n- Added VBlood kills hook to track VBlood boss eliminations.\n- **Major Refactor**: Migrated most services and systems to use existing ScarletCore infrastructure.\n- Improved performance and reduced code duplication by leveraging ScarletCore's established systems.\n- Enhanced compatibility and stability through unified core architecture.\n- Reduced mod footprint and potential conflicts with other ScarletCore-based mods.\n</details>\n\n<details>\n<summary>Update 1.0.2</summary>\n\n- Improved the handling of login/logout messages to ensure they are sent only once per connection.\n- Added new RCON commands for setting webhook URLs without needing to modify or reload the configuration file. (RCON exclusive due to in-game chat limitations)\n\n</details>\n\n<details>\n<summary>Update 1.0.1</summary>\n\n- Removed `Destroy_TravelBuffSystem.OnUpdate` patch, as it was causing lag.\n\n</details>\n\n<details>\n<summary>Update 0.1.23</summary>\n\n- Removed some logs that were not needed anymore.\n- Added support for dedicated login/logout webhooks and message formatting\n- Introduced customizable prefixes and formats for all message types\n- Implemented granular control over login/logout message routing\n- Updated configuration system to support new options\n- Improved in-game command management and documentation\n\n</details>"
+}

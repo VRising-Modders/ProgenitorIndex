@@ -1,0 +1,37 @@
+{
+  "format": 1,
+  "package_sha256": "a5961fa223f93540bbdf430148a5b5aa9815654af57dbb95f6c7ea75ed4138c5",
+  "size": 77688,
+  "manifest": {
+    "name": "VMods_PvE_Leaderboard",
+    "version_number": "1.0.0",
+    "website_url": "https://github.com/WhiteFang5/VMods#pve-leaderboard",
+    "description": "A server-side only mod that keeps track of PvE Kills, Death, K/D ratio and Lvl Kills of players and ranks them in multiple leaderboards.",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.0.0",
+      "molenzwiebel-Wetstone-1.1.0"
+    ]
+  },
+  "description": "A server-side only mod that keeps track of PvE Kills, Death, K/D ratio and Lvl Kills of players and ranks them in multiple leaderboards.",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.0.0",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.0.0/",
+      "sha256": "27fd91f2951701faf324b9dcd34cf771a7f4534e1d3a679949b9a0ae67472054"
+    },
+    {
+      "id": "molenzwiebel-Wetstone-1.1.0",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/molenzwiebel/Wetstone/1.1.0/",
+      "sha256": "60d4cf20da7d8be01cb71447e5cf2165532ed0f3d19bd6788d9fc4403a257133"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "ffddce467b7b52acfbde8fdad28f0244a395636347f9dfdd4d89b3906dab410b"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# PvE Leaderboard\nA server-side only mod that keeps track of PvE Kills, Death, K/D ratio and Lvl Kills of players and ranks them in multiple leaderboards.  \n  \nThere are leaderboards for each enemy faction, blood type and an overall leaderboard.  \nAdditionally when killing an enemy, the level of that enemy is added to your \"Lvl Kills\" score.  \n  \nThis mod also has the option to exclude low-level kills from counting towards the K/D of the leaderboard(s).  \nThere's also an option to prevent cheesing this restriction where the highest gear score (in the past X minutes) is used instead of the current gear score.  \n  \nPlayers can see their own stats and the leaderboard itself using a command (By default: `!pvestats [<faction>/<blood-type>/all/overall]`).  \nThe leaderboard shows up to 5 ranks at a time and allows players to input a page number so they can \"browse\" the leaderboard (By default: `!pvelb [<faction/blood-type>] [<pagenum>]`).\nThe Lvl Kills leaderboards can also be browsed using a command (By default: `!pvelklb [<faction/blood-type>] [<pagenum>]`).\n  \n<details>\n<summary>Configuration Options</summary>\n\n* Set a Level Difference at which the K/D isn't counting anymore of the leaderboard.\n* Enable/disable usage of the anti-cheesing system (highest gear score tracking)\n* Change the amount of time the highest gear score is remembered/tracked\n\n</details>\n\n## How to manually install\n* Install [BepInEx](https://v-rising.thunderstore.io/package/BepInEx/BepInExPack_V_Rising/)\n* Install [Wetstone](https://v-rising.thunderstore.io/package/molenzwiebel/Wetstone/)\n* (Locally hosted games only) Install [ServerLaunchFix](https://v-rising.thunderstore.io/package/Mythic/ServerLaunchFix/)\n* Extract the Vmods._mod-name_.dll\n* Move the desired mod(s) to the `[VRising (server) folder]/BepInEx/WetstonePlugins/`\n* Launch the server (or game) to auto-generate the config files\n* Edit the configs as you desire (found in `[VRising (server) folder]/BepInEx/config/`)\n* Reload the mods using the Wetstone commands (by default F6 for client-side mods, and/or `!reload` for server-side mods)\n  * If this doesn't work, or isn't enabled, restart the server/game\n\n## Commands\nMost of the VMods come with a set of commands that can be used. To see the available commands, by default a player or admin can use `!help`.  \nNormal players won't see the Admin-only commands listed.  \nThe prefix (`!`) can be changed on a per-mod basis.  \nTo prevent spam/abuse there's also a command cooldown for non-admins, this value can also be tweaked on a per-mod basis.  \nCommands can also be disabled completely on a per-mod basis.\n\n## More Details\n* [ChangeLog](https://github.com/WhiteFang5/VMods/blob/master/CHANGELOG.md#pve-leaderboard)\n"
+}

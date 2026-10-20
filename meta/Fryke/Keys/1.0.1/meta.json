@@ -1,0 +1,30 @@
+{
+  "format": 1,
+  "package_sha256": "92268d2ec4a6ec42ae79689bb18bbed31d08c87c03d258b98e102297b5925667",
+  "size": 62333,
+  "manifest": {
+    "name": "Keys",
+    "version_number": "1.0.1",
+    "website_url": "https://github.com/Tmktahu/Keys",
+    "description": "Clan key management system for V Rising. Issue, revoke, and use keys to join clans.",
+    "dependencies": [
+      "deca-VampireCommandFramework-0.11.0"
+    ]
+  },
+  "description": "Clan key management system for V Rising. Issue, revoke, and use keys to join clans.",
+  "dependencies": [
+    {
+      "id": "deca-VampireCommandFramework-0.11.0",
+      "from": "index",
+      "package": "https://thunderstore.io/package/download/deca/VampireCommandFramework/0.11.0/",
+      "sha256": "06a3d1bf244f3d37e82b62e5b1304d32ddd06985b3ed8616e5c27e3df5ae01ff"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "b79e3f2eebce89dd50d58b8d7dd181c7eada9af82eefe3c7dd0eb12ff0e372f7"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "![Keys](https://raw.githubusercontent.com/Tmktahu/Keys/master/banner.png)\n\n[![AGPL-3.0 License](https://img.shields.io/static/v1?label=Licence&message=AGPL-3.0&color=green)](https://opensource.org/licenses/AGPL-3.0) [![GitHub Release](https://img.shields.io/static/v1?label=Version&message=1.0.1&color=blue)]() [![Patreon](https://img.shields.io/badge/Patreon-FFFFFF)](https://patreon.com/FrykesFiddlings)\n\nThis is the repository for Keys, coded by Fryke (fryke) on Discord.\n\nKeys is a V Rising dedicated server mod that adds a clan key management system. Clan leaders can register their clan, issue invite keys to players, and those players can use their keys to join the clan directly, bypassing the game's standard clan invite flow and member limits.\n\n## Features\n\n- **Clan Registration** - Clan leaders register their clan with the keys system to start issuing keys.\n- **Key Issuance** - Issue keys to individual players, all current clan members, or everyone within a radius.\n- **Bypass Keys** - Special keys that ignore the configurable clan member limit when joining.\n- **Ownership Transfer** - Transfer clan ownership to another player (with admin override support).\n- **Key Revocation** - Revoke individual keys, all non-owner keys for a clan, or deregister a clan entirely.\n- **Clan Joining via Keys** - Players use `.keys use \"Clan Name\"` to join a registered clan they hold a key for.\n- **Discord Webhook Integration** - Configurable webhook notifications for key join events.\n- **Configurable Clan Member Limit** - Server-wide clan member cap, enforced (or bypassed) by the keys system.\n- **Persistent Data** - All player and key data is saved to a local JSON file and survives server restarts.\n\n## Commands\n\nAll commands use the `.keys` prefix.\n\n| Command | Description | Admin Only |\n|---|---|---|\n| `.keys register` | Register your clan with the keys system | No |\n| `.keys owner <player>` | Transfer clan ownership to another player | No |\n| `.keys owner <origOwner> <newOwner>` | Transfer ownership between any two players | Yes |\n| `.keys give <player>` | Issue a key to a player for your clan | No |\n| `.keys give <player> <clan>` | Issue a key to a player for a specific clan | Yes |\n| `.keys give <player> <clan> bypass` | Issue a bypass key (ignores member limit) | Yes |\n| `.keys giveall <clan>` | Issue keys to all members of a clan | Yes |\n| `.keys giveall <clan> bypass` | Issue bypass keys to all members | Yes |\n| `.keys giveradius <clan> <radius>` | Issue keys to players within radius | Yes |\n| `.keys giveradius <clan> <radius> bypass` | Issue bypass keys within radius | Yes |\n| `.keys list mine` | List all keys you hold | No |\n| `.keys list clan` | List all keys for your clan (owner only) | No |\n| `.keys list all` | List all registered clans and key counts | Yes |\n| `.keys list <clan>` | List keys for a specific clan | Yes |\n| `.keys remove <player>` | Revoke a player's key for your clan | No |\n| `.keys remove clan` | Revoke all non-owner keys for your clan | No |\n| `.keys remove <player> <clan>` | Revoke a specific player's key for any clan | Yes |\n| `.keys deregister <clan>` | Deregister a clan and revoke all keys | Yes |\n| `.keys use \"Clan Name\"` | Join a clan using your key | No |\n\n## Data Storage\n\nAll player and key data is stored locally on the server as a JSON file at `BepInEx/config/Keys/keys_player_data.json`. Configuration is stored in `BepInEx/config/io.vrising.Keys.cfg`.\n\nData persists through server restarts and is saved automatically when changes are made.\n\n## Installation\n\n1. Install [BepInEx](https://docs.bepinex.dev/) and [VampireCommandFramework](https://github.com/decaprisan/VampireCommandFramework) on your V Rising dedicated server.\n2. Place `Keys.dll` in your `BepInEx/plugins/` directory.\n3. Start the server, the mod will generate its config file automatically.\n4. Configure `ClanMemberLimit`, Discord webhook URLs, and other settings in `BepInEx/config/io.vrising.Keys.cfg`.\n\n## Attribution\n\nThis project is licensed under AGPL-3.0.\n\nPortions of code and design patterns in this project were inspired by or adapted from the following projects:\n\n  - KindredCommands <https://github.com/odjit/KindredCommands>\n    Licensed under AGPL-3.0\n\nThis is an independent project with its own purpose and functionality. It is not a fork, modification, or derivative of any of the above projects. Some utility code and patterns were referenced during development.\n"
+}

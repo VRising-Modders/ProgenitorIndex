@@ -1,0 +1,38 @@
+{
+  "format": 1,
+  "package_sha256": "822933df9d594126417cfe3dcb1a5b1f8c41938b8219f44073baee7bd5fe2b85",
+  "size": 130751,
+  "manifest": {
+    "name": "Protector",
+    "version_number": "0.2.2",
+    "website_url": "https://github.com/iiiLollo/Protector",
+    "description": "Whitelist based access control for V Rising",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "deca-VampireCommandFramework-0.10.2"
+    ]
+  },
+  "description": "Whitelist based access control for V Rising",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.733.2/",
+      "sha256": "eabfb53d80bed427ddbd1ecf8af4dcd6e82e152809d44ab3218d0a09984f491c"
+    },
+    {
+      "id": "deca-VampireCommandFramework-0.10.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/deca/VampireCommandFramework/0.10.2/",
+      "sha256": "1853610b9dd246a53296c35a3c069548397ad4deeeeb243b17756b1395dffb51"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "7fa6dfdd2a374ea1c86a8d3abfcbf59a58132b0e7007cff18311b0b4376e0c7d"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "## Table of Contents\n\n\n- [Features](#features)\n- [Commands](#commands)\n- [Configuration](#configuration)\n- [Acknowledgments](#acknowledgments)\n\n## Features\n\nThis mod can be used to allow only known player to access an otherwhise open server. \nIf not present, the mod will create the configuration files on startup\n\nThe mod will check if a connecting user steamID is in the whitelist file, if not, it will prevent the user from accessing the server.\nAdditionally, is possible to add/remove users from the whitelist file while the server is running.\nIf the option \"GateKeeperKickPlayer\" as been enabled, the mod will kick any user from the server that has been removed from the whitelist.\n\nThe whitelist file can be reloaded on a live server in multiple ways:\n- GateKeeperFileWatcherEnabled will enable a file whatcher what will reload the file on change (this doesn't work on Wine installations).\n- GateKeeperUpdateEnabled will enable a time based reload of the file.\n- Using the \".Protector reload\" command, an Admin user can ask the mod to reload the list.\n\n## Commands\n\n### Protector Commands\n- `.Protector list`\n  - Returns the list of current whitelisted clients.\n- `.Protector reload`\n  - Forces the reload of the whitelist file\n \n## Configuration\n\n### Main configuration file \nThe main configuration file is the following: BepInEx\\config\\Protector.cfg\n\n- **Whitelist File**: `GateKeeperWhitelistFile` (String, default: \\BepInEx\\config\\Protector\\WhiteList.txt)  \n  Path to the WhiteList file.\n- **Whitelist File watcher**: `GateKeeperFileWatcherEnabled` (bool, default: true)  \n  Enable or disable hot monitor of configuration file, if this is set to true, chaning the file will update the whitelist without having to restart the server. Please be aware that this setting doesn't work if the server is running in wine\n- **Background update**: `GateKeeperUpdateEnabled` (bool, default: true) \n  Enable background processor. If this is set to true, the whitelist will be reaload periodically (to be used in place of the watcher)\n- **Background update delay**: `GateKeeperUpdateInterval` (Int32, default: 9999) \n  IF the Background process is enabled, this is the delay in minutes between executions.\n- **Kick Player**: `GateKeeperKickPlayer` (bool, default: false) \n  If set to true, players removed from the whitelist will be kicked from the server\n  \n### Whitelist configuration file \nThe default location for the Whitelis file is main configuration file is \\BepInEx\\config\\Protector\\WhiteList.txt\nAdd all Whitelisted steamID to this file.\n\n\n## Acknowledgments\n- This mod is inspired by the Guardian2 mod for V Rising: https://github.com/jokeruarwentto/Guardian2/\n- The mod structure is based on the https://raw.githubusercontent.com/mfoltz/Sanguis",
+  "changelog": "`0.2.20`\n- Updated to version: 2022.3.58f1\n\n`0.2.00`\n- Updated to Oakveil version\n\n`0.1.10`\n- Initial Release\n"
+}

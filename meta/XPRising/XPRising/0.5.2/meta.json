@@ -1,0 +1,46 @@
+{
+  "format": 1,
+  "package_sha256": "63308000058d6175c1a9cc8af983f0a54e151b4e02521d0e95c885b6208a9603",
+  "size": 376503,
+  "manifest": {
+    "name": "XPRising",
+    "version_number": "0.5.2",
+    "website_url": "https://github.com/aontas/XPRising",
+    "description": "Server mod that exchanges item gear level for an XP levelling system",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "deca-VampireCommandFramework-0.10.3",
+      "XPRising-XPShared-0.5.2"
+    ]
+  },
+  "description": "Server mod that exchanges item gear level for an XP levelling system",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.733.2/",
+      "sha256": "eabfb53d80bed427ddbd1ecf8af4dcd6e82e152809d44ab3218d0a09984f491c"
+    },
+    {
+      "id": "deca-VampireCommandFramework-0.10.3",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/deca/VampireCommandFramework/0.10.3/",
+      "sha256": "ac4fd2c6c10ed49f91556aa9a236a3e55b78124a88de75f2bd4e33004c2db713"
+    },
+    {
+      "id": "XPRising-XPShared-0.5.2",
+      "from": "index",
+      "package": "https://github.com/aontas/XPRising/releases/download/v0.5.2/XPRising-XPShared-0.5.2.zip",
+      "sha256": "9cd1cf2e518bb706070202ea0504ba1d0be18bac6e95df567899d77e7b7fc6a2"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "7e85d50e5103627ebe7ffb496390af6da205ad462d1421621219340fedb7d9bf"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# XPRising\n\n## About\n\nThis mod provides a mechanism for players to have their level set by gaining XP in the world, primarily by killing enemies.\n\nThere is an optional (but recommended) [companion UI](https://thunderstore.io/c/v-rising/p/XPRising/ClientUI/) that supports displaying XP bars and notifications for players.\n\n## Features\n\n### XP system\n- Players gain experience by killing enemies\n- Admin configurable setting for giving players stat bonuses for each level\n\n### Mastery system\n- Allows players to accrue \"mastery\" towards weapons and bloodlines\n- Mastery systems allow stat bonuses to be applied to players\n\n### Wanted system\n- A system that tracks player kills against different factions in the game and causes factions to ambush players with enemies as their \"heat\" level increases.\n\n### Challenge system\n- A system to set up challenges for players and records scores that are used on a leaderboard to rank players\n\n### Installation\n\n- Install [BepInEx](https://thunderstore.io/c/v-rising/p/BepInEx/BepInExPack_V_Rising/).\n- Install [VCF](https://thunderstore.io/c/v-rising/p/deca/VampireCommandFramework/).\n- Install [XPShared](https://thunderstore.io/c/v-rising/p/XPRising/XPShared/).\n- Extract `XPRising.dll` into `(VRising folder)/BepInEx/plugins`.\n\n### Configuration\n\nThe base configuration and data files will be generated after the game launches the first time.\nYou can use the chat commands listed in [Commands.md](https://github.com/aontas/XPRising/blob/main/Command.md) for some admin tasks and for users to display more data/logging.   \n\n#### Main config: `(VRising folder)/BepInEx/config/XPRising.cfg`\nThis file can be used to enable/disable the systems in this mod. See the config file for more documentation.\n\n#### Secondary config folder: `(VRising folder)/BepInEx/config/XPRising_(Server name)/`\nThis folder will contain the configuration files for the enabled systems. Any save with the same server name will load the same config files.\n\n#### Data folder: `(VRising folder)/BepInEx/config/XPRising_(Server name)/Data/`\nThis folder contains data files used by this mod.\n\n### Language folder: `(VRising folder)/BepInEx/config/XPRising_(Server name)/Languages/`\nThis folder contains localisation files that can be used to add new localisations.\n\n#### Security config\nFor group/dedicated servers, it is recommended that an admin grants themselves higher permission early on (run the `.paa` command as admin).\nThis will allow that user to grant higher privilege levels to other users and configure privilege levels of commands.\nSee [Commands.md](https://github.com/aontas/XPRising/blob/main/Command.md) for the default command/privilege list.\n\n### Documentation\n\nDocumentation can be found [here](https://github.com/aontas/XPRising/blob/main/Documentation.md).\n\n### Support\n\nJoin the [modding community](https://vrisingmods.com/discord) and add a post in the technical-support channel.\n\n### Changelog\n\nFound [here](https://github.com/aontas/XPRising/blob/main/CHANGELOG.md)\n\n### Donations\n\nIf you would like to make a donation, you can do so through [Kofi](https://ko-fi.com/aontas)",
+  "changelog": "# Changelog\n\nAll notable changes to this project will be documented in this file.\n\nThe format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),\nand this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).\n\n- `Added` for new features.\n- `Changed` for changes in existing functionality.\n- `Deprecated` for soon-to-be removed features.\n- `Removed` for now removed features.\n- `Fixed` for any bug fixes.\n- `Security` in case of vulnerabilities.\n\n## [0.5.2] - 2026-06-17\n\n### Fixed\n\n- ExperienceSystem will no longer attempt to apply character level changes unless the feature is enabled. This prevents erroneous character levels being added to the user's currently equipped weapon.\n\n## [0.5.1] - 2025-08-02\n\n### Changed\n\n- Unknown/unhandled attacks/spells now only get logged when mastery debugging is enabled, instead of getting logged by default.\n\n## [0.5.0] - 2025-07-27\n\n### Added\n\n- Added a new Challenge system to provide a mechanism to add extra challenges for players. This system is still in early stages, so currently only offers kill challenges.\n- Added support for disabling \"+XX Experience\" scrolling combat text messages (via in-game `.xpconf` command)\n- Added support for displaying current player buffs provided by XPRising\n\n### Fixed\n\n- Improved the display of heat > 6 stars. It will now show the heat number above that stage, as there is no maximum. This allows users to see the value as it drops.\n\n## [0.4.10] - 2025-06-04\n\n### Added\n\n- Added support for allowing all mastery gain to reduce as mastery increase (separate from prestige mechanics). The `Mastery Gain Reduction` configuration option in `GlobalMasteryConfig.cfg` can be used to allow a linear mastery gain (across 0-100%) to having the mastery gain reduced to 0 as the mastery reaches 100%.\n\n### Fixed\n\n- Fixed XP gain on mobs that should get 0 XP\n- Updated support for ambush mobs so that Bloodcraft will treat them as normal mobs and give an appropriate amount of XP\n\n## [0.4.9] - 2025-05-30\n\n### Changed\n\n- Updated documentation for bloodline mastery to make it match current behaviour and describe it clearer\n\n### Fixed\n\n- Fixed issue that would double apply growth reduction for bloodline mastery when feeding on V Bloods\n- Fixed configuration folder normalisation to ensure folder paths are more consistent/usable\n\n## [0.4.8] - 2025-05-30\n\n### Changed\n\n- Updated UnitStats.md to fix some stat inconsistencies\n\n### Fixed\n\n- Ensured that if there is an error during initialisation that we print out the message, rather than just the stack trace\n\n## [0.4.7] - 2025-05-27\n\n### Changed\n\n- Change XP scaling outside a valid \"level range\". Default level range is 30, which gives plenty of scope for normal play but effectively restricts players from cheesing high level mobs when low level to massively boost their level.\n\n### Fixed\n\n- Fixed support for keeping level bonuses configured in `globalMasteryConfig.json` when mastery config preset is set to something other than ",
+  "changelog_truncated": true
+}

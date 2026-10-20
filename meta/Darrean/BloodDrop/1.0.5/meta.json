@@ -1,0 +1,31 @@
+{
+  "format": 1,
+  "package_sha256": "64f3240554618074b865e0180ff8e552e11c64030af827b62b1d23c3ec036fc7",
+  "size": 153168,
+  "manifest": {
+    "name": "BloodDrop",
+    "version_number": "1.0.5",
+    "website_url": "https://github.com/Darreans/BloodDrop",
+    "description": "NPC blood bottle drops matching blood type and quality. Configurable chance, minimum quality, guaranteed drops and admin config reload. Excludes V Bloods.",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.733.2"
+    ]
+  },
+  "description": "NPC blood bottle drops matching blood type and quality. Configurable chance, minimum quality, guaranteed drops and admin config reload. Excludes V Bloods.",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.733.2/",
+      "sha256": "eabfb53d80bed427ddbd1ecf8af4dcd6e82e152809d44ab3218d0a09984f491c"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "0c24289fe6f5cf668535b4eebe1277a2f8c7d2c0b482b391ff1d6b4b03d0e03a"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# BloodDrop\n\nNPCs drop blood bottles matching their blood type and quality. V Bloods, players, and NPCs without a valid blood type do not drop blood bottles.\n\n## Configuration\n\nAfter the first server launch, edit `BepInEx/config/BloodDrop.cfg`:\n\n```ini\n[BloodDrops]\nEnabled = true\nDropChancePercent = 100\nDropOnFeedingKills = true\nEnableMinimumBloodQuality = false\nMinimumBloodQualityPercent = 40\nEnableGuaranteedDrops = false\nGuaranteedDropAtOrAboveQualityPercent = 100\n```\n\n- **Enabled:** turns all BloodDrop drops on or off.\n- **DropChancePercent:** chance for an eligible NPC to drop a bottle, from 0 to 100.\n- **DropOnFeedingKills:** allows drops when feeding kills an NPC.\n- **EnableMinimumBloodQuality:** enables the minimum blood quality requirement.\n- **MinimumBloodQualityPercent:** only blood at or above this quality qualifies when the minimum requirement is enabled.\n- **EnableGuaranteedDrops:** enables guaranteed drops at the configured blood quality.\n- **GuaranteedDropAtOrAboveQualityPercent:** eligible blood at or above this quality always drops, even when normal drop chance is zero. The minimum requirement and feeding setting still apply.\n\nBoth quality options are disabled by default. Percentages accept decimals. Set GuaranteedDropAtOrAboveQualityPercent to **90** to guarantee eligible blood of **90% and above**, including exactly 90%. Existing GuaranteedBloodQualityPercent values migrate automatically on startup; use the new key for future edits.\n\nFor example, enable both quality options, set the minimum to **40**, the drop chance to **25**, and the guarantee to **100**. Blood below 40% never drops; blood from 40% to below 100% has a 25% drop chance; 100% blood always drops.\n\n### Reload configuration\n\nAfter editing the file, enter **`!reloadblooddropconfig`** in game chat as an authenticated server admin (`adminauth`). You receive a private confirmation. The command also works while drops are disabled. You can alternatively restart the server.\n\n## Manual installation\n\n1. Install BepInExPack V Rising 1.733.2 on the dedicated server.\n2. Remove older BloodDrop or NPC Blood Drops plugin DLLs.\n3. Copy `BloodDrop.dll` into the server's `BepInEx/plugins` folder.\n4. Start the server.\n\n## Bugs and Support\n\nIf you find a bug, please report it so it can be reproduced and resolved.\n\nJoin the [VArena Discord](https://discord.gg/varena) and open a ticket in the appropriate support area. You may also contact **Darrean (inility#4118)** directly for BloodDrop support.\n\n## AI assistance disclosure\n\nBloodDrop's code, documentation, and artwork were created with AI assistance, while still involving human development. Independent community mod; not affiliated with or endorsed by Stunlock Studios.\n\n## Credit\n\n**Zallestial** : Requested a minimum blood quality setting so blood potions only drop from NPCs with blood quality at or above a configurable percentage.\n",
+  "changelog": "# Changelog\n\n## 1.0.5\n\n- Renamed the guarantee setting to GuaranteedDropAtOrAboveQualityPercent to make the inclusive threshold clear: 90 means 90% and above.\n- Existing GuaranteedBloodQualityPercent values migrate automatically on startup.\n- Moved request credits to a bottom Credit section using Name : Reason.\n\n\n## 1.0.4\n\n- Added an optional minimum blood quality requirement, requested by **Zallestial**.\n- Added optional guaranteed drops at or above a configurable blood quality.\n- Added the admin-only `!reloadblooddropconfig` command.\n- Added automated checks for drop thresholds and chance behavior.\n\n## 1.0.3\n\n- Initial Thunderstore package.\n- NPC blood bottles preserve blood type and quality.\n- Configurable drop chance and feeding-kill support.\n- Excludes players, V Bloods, and NPCs without valid blood types.\n"
+}

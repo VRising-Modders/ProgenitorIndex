@@ -1,0 +1,45 @@
+{
+  "format": 1,
+  "package_sha256": "7130b4275b65e24b792fa8d4626c7bb88fe0a206318259ea890e1ce61d96564f",
+  "size": 150103,
+  "manifest": {
+    "name": "LoadoutLockdown",
+    "version_number": "1.3.0",
+    "website_url": "https://github.com/cheesasaurus/ProfuselyViolentProgression",
+    "description": "Restrict (or unrestrict) equipping gear, both in and out of combat. Fully customizable.",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "cheesasaurus-HookDOTS_API-1.0.0",
+      "deca-VampireCommandFramework-0.10.2"
+    ]
+  },
+  "description": "Restrict (or unrestrict) equipping gear, both in and out of combat. Fully customizable.",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.733.2/",
+      "sha256": "eabfb53d80bed427ddbd1ecf8af4dcd6e82e152809d44ab3218d0a09984f491c"
+    },
+    {
+      "id": "cheesasaurus-HookDOTS_API-1.0.0",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/cheesasaurus/HookDOTS_API/1.0.0/",
+      "sha256": "e8384aeab17575eb6d581eff41e326df48b38bd6598b7339ebf9f30ac2829e0f"
+    },
+    {
+      "id": "deca-VampireCommandFramework-0.10.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/deca/VampireCommandFramework/0.10.2/",
+      "sha256": "1853610b9dd246a53296c35a3c069548397ad4deeeeb243b17756b1395dffb51"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "896cded507c444ad720aa1896d6d46785e8ab24fb9dad6b86d822d12000efbd5"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# LoadoutLockdown\n\nRestrict (or unrestrict) equipping gear, both in and out of combat. Fully customizable.\n\n### Some example uses\n- Allow equipping a fishing pole from your inventory.\n- Disallow swapping armour and amulets during pvp combat.\n- Forbid disliked weapons from being equipped.\n- Limit how many hotbar slots can be used for weapons.\n- Remove all vanilla restrictions, and menu-swap any gear during pvp.\n\n\n## Installation\n\n- Install [BepInEx](https://v-rising.thunderstore.io/package/BepInEx/BepInExPack_V_Rising/).\n- Install [HookDOTS](https://thunderstore.io/c/v-rising/p/cheesasaurus/HookDOTS_API/).\n- Install [VampireCommandFramework](https://thunderstore.io/c/v-rising/p/deca/VampireCommandFramework/).\n- Extract `LoadoutLockdown.dll` into _`(VRising folder)/BepInEx/plugins`_.\n\n\n## Configuration\n\nConfiguration files are created after the mod runs. Saved changes are automatically applied; no need to restart the server each time you edit something.\n\n### Main config\n\nThe following configuration settings are available in `(VRisingFolder)/BepInEx/config/LoadoutLockdown.cfg`.\n\n- `RulesetFilepath` [default `MyRuleset.jsonc`]: The location of the ruleset file to use for configuration.\n- `LogRulings` [default `false`]: When enabled, logs details about every ruling made. For debugging purposes.\n\n### Rulesets\n\nThere are 5 initial rulesets found in `(VRisingFolder)/BepInEx/config/LoadoutLockdown/`\n\n- `MyRuleset` - The default ruleset used. Feel free to edit it.\n- `Example_Default` - Default ruleset used to initially set up MyRuleset.\n- `Example_FishersFantasy` - Mostly same behaviour as the vanilla game, but with fishing pole restrictions lifted.\n- `Example_CrutchersCrucible` - \"Bans\" some overperforming crutch weapons. Imposes tradeoffs with weapon selection.\n- `Example_SweatlordsSwag` - Lifts all restrictions. Menu-swap between 15 weapons and 3 amulets if you want.\n\nAny filenames starting with `Example_` are examples and will be overwritten. Don't change these; copy them to your own files.\n\nIn case you don't have LoadoutLockdown installed yet, and want to see what a ruleset looks like: [CrutchersCrucible.jsonc](https://github.com/cheesasaurus/ProfuselyViolentProgression/tree/main/BepInExPlugins/LoadoutLockdown/resources/presets/CrutchersCrucible.jsonc)\n\n### Explanation of rules\n\n- `RequiresHotbarSlot` - If true, requires the gear to be in a valid hotbar slot to use it. Not relevant for things with a designated slot, such as a cape.\n- `FromMenuDuringPVP` - Allowed values:\n  - `AllowSwapIntoWastedSlot` - During pvp, the gear can only be inserted into an empty slot, or take the place of \"junk\" in the slot. (i.e. a non-weapon in a hotbar slot)\n  - `AllowSwapIntoFilledSlot` - During pvp, the gear can be put into any slot regardless of what's already in it.\n- `Forbidden` - If true, the gear can **never** be equipped.\n\n### Forbidden gear\nA `forbidden` piece of gear is **never** allowed to be equipped.\n\nBroad types of gear can be forbidden (for example, all slashers).\\\nAs well as specific gear pieces, like \"The Thousand Storms\".\n\nA searchable list of prefabs (for identifying specific gear) can be found [here](https://wiki.vrisingmods.com/prefabs/Item).\n\n\nIf you do decide to forbid gear, I would recommend setting up some kind of exchange system to \"cash in\" unusable weapon drops from rifts.\\\n[Penumbra](https://thunderstore.io/c/v-rising/p/zfolmt/Penumbra/) can help with this.\n\n### Weapon Slots\n\nThis is a little-known vanilla setting, which LoadoutLockdown overrides.\\\nSlots in the action bar are counted from left to right. Equipping a weapon which doesnt sit in a valid slot is disallowed.\n\nFor example, with `WeaponSlots` set to `3`, any weapons in slots [4, 5, 6, 7, 8] cannot be equipped. Weapons in the main inventory also cannot be equipped.\n\nThe `RequiresHotbarSlot` rule can be set to `false` to let a specific type of weapon (such as the fishing pole) bypass this restriction.\n\n### Wasted slots\n\nAn empty slot can always be filled from the menu. Junk items (e.g. a pinecone sitting in a weapon slot) can also be swapped out during PvP.\\\nForbidden weapons are considered to be junk items.\n\nPrefabs can be added to the `NotWaste` list to prevent them from being swapped out via `AllowSwapIntoWastedSlot`.\n\nIf you would like specific items to always be moveable into their slot (e.g. soul shards), add their prefabs to the `AlwaysAllowSwapIntoSlot` list.\n\n### ApplyPvpMenuSwapRulesToPVE\n\n`ApplyPvpMenuSwapRulesToPVE` can be enabled to make the FromMenuDuringPVP rules also apply during PVE combat.\n\n### UnEquipAction\n\n`UnEquipAction` - Allowed values:\n  - `NotRestricted` - Default. No restrictions on the \"unequip action\".\n  - `DisallowDuringPvpCombat` - The \"unequip action\" cannot be performed during PVP combat.\n  - `DisallowDuringAnyCombat` - The \"unequip action\" cannot be performed during PVP or PVE combat.\n\nUnEquipAction pertains to the same thing covered by the vanilla setting \"Allow Unequip Action\", which lets a player directly unequip their handheld item.\n\nIn the vanilla game, it's a per-player usability setting which often gets turned off in favor of weapon swapping.\n\nThere's usually no reason to globally force it off. Its mainly intended for use with mods changing the \"unarmed\" moveset. For example, you may want to ensure commitment to a monk class, rather than effectively just granting a ninth slot of weapon abilities.\n\n\n## Chat commands\n\n- `.UnEquipForbiddenGear` - Admin only. Unequips forbidden gear from all players. \n\n\n## Support\n\nJoin the [modding community](https://vrisingmods.com/discord).\n\nPost an issue on the [GitHub repository](https://github.com/cheesasaurus/ProfuselyViolentProgression). ",
+  "changelog": "# 1.3.0\n- When deciding if a weapon slot is wasted, shattered and broken weapons will be treated as junk.\n- Bugfix: In some circumstances shattered or broken weapons could be equipped.\n\n# 1.2.0\n- Bugfix: Weapons couldn't be unequipped in PVP combat.\n- Added `UnEquipAction` option for rulesets. Allowed values:\n  - `NotRestricted` - Default. No restrictions on the \"unequip action\".\n  - `DisallowDuringPvpCombat` - The \"unequip action\" cannot be performed during PVP combat.\n  - `DisallowDuringAnyCombat` - The \"unequip action\" cannot be performed during PVP or PVE combat.\n\n# 1.1.0\n- Moving an equipped weapon out of a weapon slot will unequip it. (unless its configured to not require a hotbar slot)\n- Added `ApplyPvpMenuSwapRulesToPVE` option for rulesets. Can be enabled to make PVP menu-swapping rules apply to PVE combat too.\n- Fixed an issue where trying to equip a weapon from the inventory would move it into a weapon slot, but not equip it.\n- Added `LogRulings` option to main config. When enabled, logs details about every ruling made.\n\n# 1.0.0\n- Initial release"
+}

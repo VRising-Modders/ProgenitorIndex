@@ -1,0 +1,58 @@
+{
+  "format": 1,
+  "package_sha256": "dd35fbf4649e4d5c066c53c16c7e7a5b81c3a2bc69fba311c466464b2092b618",
+  "size": 67391,
+  "manifest": {
+    "name": "Gator_Bounty",
+    "version_number": "1.0.1",
+    "website_url": "https://github.com/tmsullivan7750/GatorBounty",
+    "description": "Bounty System for VRising",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.691.3",
+      "deca-VampireCommandFramework-0.9.0",
+      "deca-Bloodstone-0.2.2",
+      "deca-Killfeed-0.3.1",
+      "Trodi-BloodyCore-1.2.4"
+    ]
+  },
+  "description": "Bounty System for VRising",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.691.3",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.691.3/",
+      "sha256": "04290fad8e4e619451c4f5eff3957778d3ab6a0da89bb9ba321822c9e88cf926"
+    },
+    {
+      "id": "deca-VampireCommandFramework-0.9.0",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/deca/VampireCommandFramework/0.9.0/",
+      "sha256": "d3ce9095d9772f979feb4ec792f022d213f0cdf56dc27c82de26a0f9db7cfc9f"
+    },
+    {
+      "id": "deca-Bloodstone-0.2.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/deca/Bloodstone/0.2.2/",
+      "sha256": "1b7de6e8ab631afacea7c757c81494848755fda9d39c93618fc52584eff06089"
+    },
+    {
+      "id": "deca-Killfeed-0.3.1",
+      "from": "index",
+      "package": "https://thunderstore.io/package/download/deca/Killfeed/0.3.1/",
+      "sha256": "dc98aad6534955af780830e5957154ad425b8742eecb20924959659c069b66bc"
+    },
+    {
+      "id": "Trodi-BloodyCore-1.2.4",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/Trodi/BloodyCore/1.2.4/",
+      "sha256": "071874a76097c4e8d747b3d24ed52dc03e64aa4c5b64b943c60b405888f3d41e"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "8a2d312d9affd5b4c72d0b967e9acc845adbdd49f967921ceacd0320e94b03bf"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# Gator Bounty - V Rising Bounty System\n\n## Features\n- Announce bounties based on killstreaks or player set bounties\n- Bounty Leaderboard\n- Players can use currency to place bounties on others\n- Skull icons on the map for players with high bounties\n\n## Commands\n- `.gb list` \n  - Lists all bounties on the server.\n- `.gb add <PlayerName> <Amount>` \n  - Add a bounty of the amount to the player.\n- `.gb remove (Admin Only)` \n  - Removes all icons on the map incase of bugs.\n\n\n## Setttings\n\n```ini\n[General]\n\n## Announce bounties in chat\n# Setting type: Boolean\n# Default value: true\nAnnounceBounty = true\n\n## Prefab GUID for the currency for bounty system\n# Setting type: String\n# Default value: 576389135\nbountyCurrency = 576389135\n\n## Name of currency for bounty system\n# Setting type: String\n# Default value: Greater Stygian Shards\nbountyCurrencyName = Greater Stygian Shards\n\n## How much each kill is worth towards bounty\n# Setting type: String\n# Default value: 50\nbountyKillValue = 50\n\n## Killstreak size for bounty to start\n# Setting type: String\n# Default value: 7\nbountyAnnounceValueKill = 7\n\n## Killstreak size for bounty map icon to start\n# Setting type: String\n# Default value: 12\nbountyMapValueKill = 12\n\n## Bounty price amount for bounty to start\n# Setting type: String\n# Default value: 500\nbountyAnnounceValueReward = 500\n\n## Bounty price amount for bounty map icon to start\n# Setting type: String\n# Default value: 1000\nbountyMapValueReward = 1000\n```\n\n## https://vrisingmods.com/discord\n\nCrimson Sanctuary Duos PvP:\nhttps://discord.gg/eTrRngjXVW\n\n\n# Changelog\n- 1.0.0\n\t- Initial release"
+}

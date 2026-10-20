@@ -1,0 +1,37 @@
+{
+  "format": 1,
+  "package_sha256": "66f2656ca17a6d84613641591f4ad77747dd5ba89d2622a43f86a77ff5d9edd1",
+  "size": 100087,
+  "manifest": {
+    "name": "ChatWheel",
+    "version_number": "1.0.2",
+    "website_url": "https://github.com/novanova321/ChatWheel",
+    "description": "Transforms the emote wheel into a fully functional chat wheel",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "deca-VampireCommandFramework-0.11.0"
+    ]
+  },
+  "description": "Transforms the emote wheel into a fully functional chat wheel",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.733.2/",
+      "sha256": "eabfb53d80bed427ddbd1ecf8af4dcd6e82e152809d44ab3218d0a09984f491c"
+    },
+    {
+      "id": "deca-VampireCommandFramework-0.11.0",
+      "from": "index",
+      "package": "https://thunderstore.io/package/download/deca/VampireCommandFramework/0.11.0/",
+      "sha256": "06a3d1bf244f3d37e82b62e5b1304d32ddd06985b3ed8616e5c27e3df5ae01ff"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "b2c439005b1c33653f56187fdb92cd15c2919f8d5a5fd10ababb814e8e06cd38"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# ChatWheel for V Rising\n\nChatWheel is a server-side modification for V Rising that transforms the emote wheel into a fully functional chat wheel.\n\nIt supports chat commands and dynamic placeholders that provide precise information such as cooldowns, debuff timers, and player locations in real time. By reducing language barriers and improving clarity of communication, ChatWheel enables teams to coordinate more effectively and perform at a higher competitive level.\n\nFeel free to contact me on Discord (nova_nova) if you have any questions or need assistance with the mod.\n\nWatch video here: https://www.youtube.com/watch?v=SIQk_3QC4V8\n\n## Player Commands\n\n- `.cw bind (scope) (message)`\n  - will bind a message to the emote chosen after executing this command\n  - scope can be `local` or `clan`\n  - message supports commands and placeholders\n  - Example: _.cw bind clan \"[$location] 1\"_\n  - Example: _.cw bind local \".stash\"_\n  - Example: _.cw bind local \".pull rosepot 10\"_\n\n- `.cw unbind`\n  - will unbind the message on the emote chosen after executing this command\n\n- `.cw list`\n  - will list all the bound messages\n\n- `.cw enable`\n  - will enable the ChatWheel for the player if it's disabled\n\n- `.cw disable`\n  - will disable the ChatWheel for the player to allow use of the original emotes without clearing or unbinding chatwheels\n\n## Message Placeholders\n\n- `$location`\n  - Replaced by the player's current location derived from the chunk name. Admins are allowed to rename the chunk to whatever they wish to. Castle owner's name will be added if the player is inside a claimed territory.\n  - Example: _.cw bind clan \"im at $location\"_\n  - Example: _.cw bind clan \"[$location] 1\"_\n- `$combatTimer`\n  - Replaced by the player's PvP Combat debuff timer.\n  - Example: _.cw bind clan \"I need $combatTimer to drop combat and fully heal\"_\n  - Example: _.cw bind clan \"$combatTimer fh\"_\n- `$baneTimer` and `$deathTimer`\n  - Replaced by the player's Vampire's Bane debuff timer and expected death timer.\n  - Example: _.cw bind clan \"chill for $baneTimer or I'm dead for $deathTimer\"_\n- `$cdUlt`\n  - Replaced by the player's cooldown for the ultimate.\n  - Example: _.cw bind clan \"ULT in $cdUlt\"_\n\n## Admin Commands\n\n- `.cw rc (name)`\n  - Renames the current chunk you are in.\n  - Example: _.cw rc \"Admin Hangout Spot\"_\n\n[V Rising Modding Discord](https://vrisingmods.com/discord) | [V Rising Modding Wiki](https://wiki.vrisingmods.com)\n\n## Installation\n\n1. Install BepInEx, which is required for modding VRising. Follow the instructions provided at [BepInEx Installation Guide](https://wiki.vrisingmods.com/user/bepinex_install.html) to set it up correctly in your VRising game directory.\n\n2. Download the ChatWheel mod along with its dependency (VCF). Ensure you select the correct versions that are compatible with your game.\n\n3. After downloading, locate the .dll files for ChatWheel and its dependency. Move or copy these .dll files into the `BepInEx\\Plugins` directory within your VRising installation folder.\n   - **Single Player Note:**\n     - If you are playing in single player mode, you will need to install [ServerLaunchFix](https://thunderstore.io/c/v-rising/p/Mythic/ServerLaunchFix/). This is a server-side mod that is essential for making the commands work properly on the client side. Make sure to download and place it in the same `BepInEx\\Plugins` directory.\n\n4. Launch the Game: Start VRising. If everything has been set up correctly, ChatWheel should now be active in the game. Test by typing `.cw list`.\n\n## Credits\n\n- [Odjit](https://github.com/Odjit) for KindredCommands. This mod was originally built upon it!\n\n## License\n\nThis project is licensed under the AGPL-3.0 license.\n"
+}

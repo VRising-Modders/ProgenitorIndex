@@ -1,0 +1,44 @@
+{
+  "format": 1,
+  "package_sha256": "a9c8ea53f3069c086503554711bbc2586e35fe7e1eef067d6c686b78b3391025",
+  "size": 950556,
+  "manifest": {
+    "name": "TideOfWar",
+    "version_number": "0.1.1",
+    "website_url": "https://github.com/adayoegi/TideOfWar",
+    "description": "A MOD for VRising to have war-like battle.",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "deca-VampireCommandFramework-0.10.4",
+      "skytech6-VAMP-1.3.0"
+    ]
+  },
+  "description": "A MOD for VRising to have war-like battle.",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.733.2/",
+      "sha256": "eabfb53d80bed427ddbd1ecf8af4dcd6e82e152809d44ab3218d0a09984f491c"
+    },
+    {
+      "id": "deca-VampireCommandFramework-0.10.4",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/deca/VampireCommandFramework/0.10.4/",
+      "sha256": "e554e964242db0b1cfef5824129aa6794c8a7138c9321b617d633f9aaffac19b"
+    },
+    {
+      "id": "skytech6-VAMP-1.3.0",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/skytech6/VAMP/1.3.0/",
+      "sha256": "bedb3931f8234f61a84b5a6d840d70f9798d42932b240058cf6ac87454140d2f"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "b25e2556839e5ff9f0dd1cb7376500f0dba1d900c37c5591b893bb2b373ed305"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# Tide Of War (Beta)\nA MOD for VRising to have war-like battle\n\n## WARNING!!\nThis is my first VRising MOD.\nI am not familiar with C# nor Unity.\nI make the MOD mainly for my own fun on my local server.\nHighly suggest to backup your save before you start to use the MOD.\n\n## Features\n- Setup 5 battlefields as in the image.\n- Human force and vampire force fight each other.\n- Any party can be disabled so player can fight against the other on his own.\n- Each battlefield can be setup individually.\n- All mobs spawned by this MOD will be killed after 2 minutes (VBloods are 5 minutes).\n- All mobs have aggro range 300, and will chase you around in such range.\n\nSuggest to use [EventScheduler](https://thunderstore.io/c/v-rising/p/cheesasaurus/EventScheduler/) to have soliders automatically join the war\n\n![Battlefields](./battlefields.jpeg)\n\n## Install\n**Dependency: [BepInEx](https://thunderstore.io/c/v-rising/p/BepInEx/BepInExPack_V_Rising/), [VampireCommandFramework](https://thunderstore.io/c/v-rising/p/deca/VampireCommandFramework/) and [VAMP](https://thunderstore.io/c/v-rising/p/skytech6/VAMP/)**<br>\nPut `TideOfWar.dll` to `BepInEx/plugins` and you are good to go\n\n## Commands\n- All commands require admin\n- All commands are with format `<command> <battlefield> [args if any]`.\n\nFor example,<br>\n`.warstart all` starts war at all battlefields.<br>\n`.warsupply dmm` adds supply force only in battlefield between Dunley farmland and Mortium<br>\n- `<battlefield>` can be\n  - `all` to apply command on all battlefields\n  - `dunleymortiummiddle` or `dmm` for battlefield between Dunley farmland and Mortium (location 1)\n  - `draculacourtyardsouthwest` or `dcsw` for battlefield at south west gate of Dracula courtyard (location 2)\n  - `draculacourtyardnorthwest` or `dcnw` for battlefield at north west gate of Dracula courtyard (location 3)\n  - `draculacourtyardnorth` or `dcn` for battlefield at north gate of Dracula courtyard (location 4)\n  - `draculagardenwest` or `dgw` for battlefield at west gate of Dracula garden (location 5)\n\n**Major Commands**\n- `.warstart`\n  - Generate forces to start a war at specified battlefield. The quantity is much more than `.warsupply`\n- `.warsupply` or `wars`\n  - Generate forces to have more soliders join specified battlefied. There is chance that VBlood may join the war\n  - Recommand to set this command in [EventScheduler](https://thunderstore.io/c/v-rising/p/cheesasaurus/EventScheduler/) . I personally set `.warsupply all` with 30 seconds frequency\n\n**Configurations**\n- `.warstop`\n  - Stop both side of force to spawn at specified battlefield.\n- `.warresume` or `.warre`\n  - Resume force to spawn at specified battlefield. Please note that only forces that are enabled will spawn (i.e. not disabled by `.warhuman` or `.warvampire`)\n- `.warhuman` or `.warh`\n  - Enable/disable human force to spawn at specified battlefield.\n- `.warvampire` or `.warv`\n  - Enable/disable human force to spawn at specified battlefield.\n- `..warmute` or `.warm`\n  - Mute/Unmute message of `.warsupply`. By default the message is muted\n \n## Future Plans and Feature Details\nDue to my limited knowledge in C# and VRising libraries, current status is an early draft with some workarounds<br>\nBelow are my plans but I have no idea how to make them happen for now<br>\n1. Set patrol route for mobs\n- If this is achieved, there is no need to set 300 aggro range. Currently all mobs are set 300 aggro range to make sure they fight each other. A side effect is that they will also fight nearby native mobs on the map in such range\n2. Calculate spawn and death count\n- If this is achieved, there is no need to set 2/5 minute lifetime for mobs, and the battle would be more fun. The lifetime is set to avoid explosive amount of mobs over time (when EventScheduler is used). VBlood spawn can also be arranged better (ex: 1 VBlood only join 1 battlefield at a time)\n\n## License\nGPL due to VAMP used as dependency\n\n"
+}

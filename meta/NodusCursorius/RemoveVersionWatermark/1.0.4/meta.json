@@ -1,0 +1,30 @@
+{
+  "format": 1,
+  "package_sha256": "e1f9893757e34061d5d679d1410b3676d86d41c50d404e6e7d23ea76b0d9db9c",
+  "size": 179989,
+  "manifest": {
+    "name": "RemoveVersionWatermark",
+    "version_number": "1.0.4",
+    "website_url": "https://github.com/NodusCursorius/VRising-RemoveVersionWatermark",
+    "description": "Removes version watermark",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.733.2"
+    ]
+  },
+  "description": "Removes version watermark",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.733.2/",
+      "sha256": "eabfb53d80bed427ddbd1ecf8af4dcd6e82e152809d44ab3218d0a09984f491c"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "1a57ac1dca7aa477c6770c3be41416e43e77c7cfdf70b8035382937ea354f521"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# VRising-RemoveVersionWatermark\nRemoves version watermark\n\nIcon artwork from:  [Yachting Girl, 1880](https://www.nga.gov/collection/art-object-page.164932.html)\n"
+}

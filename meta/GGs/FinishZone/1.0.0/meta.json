@@ -1,0 +1,37 @@
+{
+  "format": 1,
+  "package_sha256": "6904c39b8f4e20c2f4e333fd060f611692933a3bda6f3966a27289fffb0f282e",
+  "size": 149789,
+  "manifest": {
+    "name": "FinishZone",
+    "version_number": "1.0.0",
+    "website_url": "https://github.com/delta663/FinishZone",
+    "description": "FinishZone is a server-side V Rising mod for creating customizable finish zones for events such as races, mazes, or puzzles.",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "deca-VampireCommandFramework-0.10.4"
+    ]
+  },
+  "description": "FinishZone is a server-side V Rising mod for creating customizable finish zones for events such as races, mazes, or puzzles.",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.733.2/",
+      "sha256": "eabfb53d80bed427ddbd1ecf8af4dcd6e82e152809d44ab3218d0a09984f491c"
+    },
+    {
+      "id": "deca-VampireCommandFramework-0.10.4",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/deca/VampireCommandFramework/0.10.4/",
+      "sha256": "e554e964242db0b1cfef5824129aa6794c8a7138c9321b617d633f9aaffac19b"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "6e4521a55d9f26f016622d32f3b1c14bf66ff8360698fa579af11ed49d618772"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# FinishZone\n\nFinishZone is a **server-side** V Rising mod that allows administrators to create finish zones for events such as races, mazes, or puzzles, and includes commands for manually giving reward sets to players.\n\n## Features\n- Create finish zones using simple in-game chat commands.\n- Broadcast global completion messages.\n- Grant rewards only on a player’s **first completion** of each zone.\n- Apply a cooldown to prevent the same player from repeatedly triggering the same zone too quickly.\n- Finish zones track players only. Admin-authenticated users are excluded and will not trigger zones.\n- Log all completions to a CSV file for history tracking.\n- Display recorded winners using an in-game command.\n- Reload zone data from file without restarting the server.\n- Includes commands for manually giving reward sets to players.\n\n## Requirements\n1. [BepInEx 1.733.2](https://thunderstore.io/c/v-rising/p/BepInEx/BepInExPack_V_Rising/)\n2. [VampireCommandFramework 0.10.4](https://thunderstore.io/c/v-rising/p/deca/VampireCommandFramework/)\n\n## Installation\n1. Install the required dependencies.\n2. Place `FinishZone.dll` into your server's BepInEx plugins folder.\n3. Start the server once to generate the config files.\n4. Create your finish zone with `.finish add <id> <radius>`\n5. Edit `finishzones.json` if you want to customize rewards, messages, or vertical settings.\n6. Use `.finish reload` or restart the server after making file changes.\n\n## How It Works\n- FinishZone continuously checks player positions against all enabled finish zones.\n- The checking frequency is controlled by `LoopIntervalSeconds` in `finishzones.json`. Use `0.2–1.0` for precision-based activities and `1.0–2.0` for less precision-sensitive activities.\n- When a player enters a finish zone, the server broadcasts a completion message.\n- Rewards are granted only the **first time** a player completes a finish zone.\n- A cooldown prevents repeated triggering in a short period.\n- Every completion is recorded in `finish_log.csv`.\n- **`AdminAuth` users do not trigger finish zones. Please use `AdminDeAuth` before testing.**\n\n## Commands\n\n### Player Commands\n- `.finishers` or `.winners`\n  - Show the recorded finishers from finish_log.csv\n\n### Admin Commands\n- `.finish add <id> <radius>`\n  - Create a new finish zone at your current position.\n  - Shortcut: *.finish a <id> <radius>*\n  - Example: *.finish add Maze 5*\n\n- `.finish update <id> <radius>`\n  - Update the position and radius of an existing finish zone at your current position.\n  - Shortcut: *.finish u <id> <radius>*\n  - Example: *.finish update Maze 8*\n\n- `.finish remove <id>`\n  - Remove a finish zone.\n  - Shortcut: *.finish rm <id>*\n  - Example: *.finish remove maze*\n\n- `.finish reload`\n  - Reloads all finish zones from finishzones.json\n  - Shortcut: *.finish rl*\n\n- `.finish list`\n  - Displays all finish zones, status, and mod settings.  \n  - Shortcut: *.finish l*\n\n- `.finish on <id>`\n  - Enable a specific finish zone.\n  - Example: *.finish on maze*\n\n- `.finish off <id>`\n  - Disable a specific finish zone.\n  - Example: *.finish off maze*\n  \n- `.finish enable`\n  - Enables the FinishZone mod globally.\n\n- `.finish disable`\n  - Disables the FinishZone mod globally.\n\n- `.rewards add <setname> <prefabguid> <amount>`\n  - Add an item to a reward set.\n  - Shortcut: *.rewards a <setname> <prefabguid> <amount>*\n  - Example: *.rewards add Potion 429052660 10*\n\n- `.rewards remove <setname>`\n  - Remove a reward set.\n  - Shortcut: *.rewards rm <setname>*\n  - Example: *.rewards remove potion*\n  \n- `.rewards give <setname> [player]`\n  - Give a reward set to a player. If no player is provided, the reward set is given to yourself.\n  - Shortcut: *.rewards g <setname> [player]*\n  - Example: *.rewards give potion Del*\n\n- `.rewards reload`\n  - Reload rewards.json from disk.\n  - Shortcut: *.rewards rl*\n\n- `.rewards list`\n  - Show all reward sets and their items.\n  - Shortcut: *.rewards l*\n\n## Config Files\nAfter the first server start, the following files will be created:\n- `BepInEx/config/FinishZone/finishzones.json`\n- `BepInEx/config/FinishZone/finish_log.csv`\n- `BepInEx/config/FinishZone/rewards.json`\n- `BepInEx/config/FinishZone/rewards_log.csv`\n\n### finishzones.json\nExample:\n\n```json\n{\n  \"ModEnabled\": true,\n  \"LoopIntervalSeconds\": 1,\n  \"Zones\": {\n    \"The Maze\": {\n      \"Position\": [\n        -424.5694,\n        9.700005,\n        -312.78476\n      ],\n      \"Radius\": 5,\n      \"VerticalLimit\": 1,\n      \"Message\": \"Find the way to the top of the castle! Type .tp 1 to join\",\n      \"RewardPrefab\": 576389135,\n      \"RewardName\": \"Greater Stygian Shards\",\n      \"RewardAmount\": 1000,\n      \"ZoneEnabled\": true\n    }\n  }\n}\n```\n\n### rewards.json\nExample:\n\n```json\n{\n  \"Winner\": [\n    {\n      \"Item\": -1461326411,\n      \"Amount\": 20\n    },\n    {\n      \"Item\": -1021407417,\n      \"Amount\": 20\n    }\n  ],\n  \"Potion\": [\n    {\n      \"Item\": 429052660,\n      \"Amount\": 10\n    },\n    {\n      \"Item\": 800879747,\n      \"Amount\": 10\n    }\n  ]\n}\n```\n\n## Credits\n- **odjit** and **zfolmt** for the original code and assistance with this mod.\n- **V Rising modding community**\n\n## License\nThis project is licensed under the AGPL-3.0 license.\n\n## Notes\n> - This mod was first made for my own server and originally ran through KindredCommands. It has now been separated into a standalone mod so that everyone can use it.\n> - If you have any problems or run into bugs, please report them to me in the [V Rising Modding Community](https://discord.com/invite/QG2FmueAG9)\n> **Del** (delta_663)"
+}

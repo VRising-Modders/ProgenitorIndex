@@ -1,0 +1,37 @@
+{
+  "format": 1,
+  "package_sha256": "12173523ee2af6e351ba478d2aebc2ee7180b7a964855e02f188c4699c137778",
+  "size": 73890,
+  "manifest": {
+    "name": "DropTeleportBound",
+    "version_number": "1.0.0",
+    "website_url": "https://github.com/ministerfrolo/VRising_Mods/tree/master/DropTeleportBoundMod",
+    "description": "Allows you to drop all items that can't be teleported or only items that can be teleported",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.668.5",
+      "deca-Bloodstone-0.1.4"
+    ]
+  },
+  "description": "Allows you to drop all items that can't be teleported or only items that can be teleported",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.668.5",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.668.5/",
+      "sha256": "784c7a7f64ba0f1d4e9778c6558a061ab83dbacc6e0bb8ae0e3ab86698578113"
+    },
+    {
+      "id": "deca-Bloodstone-0.1.4",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/deca/Bloodstone/0.1.4/",
+      "sha256": "e57607799d1550191b274237ead53a2e6f0fb8ea5cbeb67cb24a9f1572e8432a"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "2cb26c772d86bd7652daee792c4ec467bd73f952cb5c4a0ca85e2de6b0c9d425"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# DropNonTeleportables\nA VRising mod that allows you to drop all items in all your inventories that can't go through waygates. \n\n### Installation\n- Client-side mod. No need for server install.\n- Only tested using Thunderstore mod and R2ModMan local import.\n\n\n### Configuration\nNone necessary\n\n### Contributors \n- MinisterFrolo: `Frolo` on Discord\n\n(Shout out to iZastic and the QuickStash mod for serving as a template while I explored how to do this........even if my mod turned out completely different)\n\n### Updates Needed\n- Tooltip\n    - Copying the smart merge button didn't copy the tooltip\n\n### Known Issues\n\n### Changelog\n`1.0.0`\n- First release on Thunderstore\n- Keybinding changed to button in inventory\n\n`0.0.1`\n- Initial mod upload"
+}

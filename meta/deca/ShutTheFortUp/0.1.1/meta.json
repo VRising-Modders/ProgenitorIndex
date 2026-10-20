@@ -1,0 +1,44 @@
+{
+  "format": 1,
+  "package_sha256": "7bad5cdeb788267e7309bf4091e6953d4be6a7f9e91ad9e5f35a5bb8e8f5b553",
+  "size": 52823,
+  "manifest": {
+    "name": "ShutTheFortUp",
+    "version_number": "0.1.1",
+    "website_url": "https://github.com/decaprime/ShutTheFortUp",
+    "description": "Opens or closes all your doors and/or windows with a single command.",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.0.0",
+      "molenzwiebel-Wetstone-1.1.0",
+      "deca-VampireCommandFramework-0.4.12"
+    ]
+  },
+  "description": "Opens or closes all your doors and/or windows with a single command.",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.0.0",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.0.0/",
+      "sha256": "27fd91f2951701faf324b9dcd34cf771a7f4534e1d3a679949b9a0ae67472054"
+    },
+    {
+      "id": "molenzwiebel-Wetstone-1.1.0",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/molenzwiebel/Wetstone/1.1.0/",
+      "sha256": "60d4cf20da7d8be01cb71447e5cf2165532ed0f3d19bd6788d9fc4403a257133"
+    },
+    {
+      "id": "deca-VampireCommandFramework-0.4.12",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/deca/VampireCommandFramework/0.4.12/",
+      "sha256": "ad9c225a22cd8cb1a2cc7041ffcbe32f6d5665deae5b290576a890e4dbf3360b"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "39fb1aa6e41825eb7e7f8d205a0182e3a902c202cba3279220180ef01f93dd0b"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# 🔓 Shut The Fort Up\n\nThis mod adds two commands `.close-all` and `.open-all`. Optionally you can specify the type like `.close-all doors` or `.open-all windows`. This idea was [suggested by Paridli](https://ideas.vrisingmods.com/posts/32/a-single-button-to-instantly-close-all-doors-windows-in-your-castle) on our ideas website https://ideas.vrisingmods.com and I thought it was a great candidate for a simple mod.\n\n## Installation\nThis mod requires [VampireCommandFramework](https://github.com/decaprime/VampireCommandFramework) and [Wetstone](https://github.com/molenzwiebel/Wetstone) to function. You can download release versions from https://v-rising.thunderstore.io.\n\nPut all plugins in the `BepInEx/plugins` folder.\n\n## Demo Video (only viewable on github)\nhttps://user-images.githubusercontent.com/62450933/190878389-a1ee24b4-ae08-48c3-9c8d-d3b05f4183d0.mp4"
+}

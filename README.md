@@ -17,7 +17,7 @@ New to Progenitor? Install it from its [GitHub page](https://github.com/VRising-
 ### How Progenitor uses the Index
 
 1. Progenitor downloads the list (`index.json`) and its signature from GitHub Pages.
-2. It checks the signature against the Index key built into Progenitor. A list with a bad signature is ignored, and Progenitor keeps the last good one.
+2. It checks the signature against the Index key built into Progenitor. A list with a bad signature is ignored, and Progenitor keeps the last good one. The signature uses the same format as Progenitor's signed mod manifests: ECDSA P-256 with SHA-256.
 3. The installer shows each listed mod with its icon, description and README, read from the mod's own package when it was reviewed.
 4. When you install a mod, Progenitor resolves its dependencies from the Index and Thunderstore, downloads each package, checks every fingerprint, and only then unpacks them.
 
@@ -64,6 +64,7 @@ The full rules, the entry format and the review process are in [CONTRIBUTING.md]
 | Path | What it is |
 |---|---|
 | `entries/` | One small JSON file per listed mod version |
+| `meta/` | What the index shows for each version (manifest fields, README, changelog, icon, dependency fingerprints), read from the package when its entry was checked |
 | `revoked.json` | Versions taken down, with a reason and severity |
 | `thunderstore-lock.json` | Fingerprints of the Thunderstore packages that listed mods depend on |
 | `schema/` | JSON Schemas for entry files and `progenitor.json` |

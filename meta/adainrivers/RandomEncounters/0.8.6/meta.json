@@ -1,0 +1,37 @@
+{
+  "format": 1,
+  "package_sha256": "5923f1e6810507767e482f9a33e70e72fb15c1f89e132afbc635e3738b2df28f",
+  "size": 105326,
+  "manifest": {
+    "name": "RandomEncounters",
+    "version_number": "0.8.6",
+    "website_url": "https://github.com/adainrivers/randomencounters",
+    "description": "This server side mod spawns a random NPC near a random online player at random intervals, and the player wins a random item reward if the NPC is killed within the given time limit.",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.0.0",
+      "molenzwiebel-Wetstone-1.1.0"
+    ]
+  },
+  "description": "This server side mod spawns a random NPC near a random online player at random intervals, and the player wins a random item reward if the NPC is killed within the given time limit.",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.0.0",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.0.0/",
+      "sha256": "27fd91f2951701faf324b9dcd34cf771a7f4534e1d3a679949b9a0ae67472054"
+    },
+    {
+      "id": "molenzwiebel-Wetstone-1.1.0",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/molenzwiebel/Wetstone/1.1.0/",
+      "sha256": "60d4cf20da7d8be01cb71447e5cf2165532ed0f3d19bd6788d9fc4403a257133"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "b6e4c99cffe1f210e35e21425eddf6df8f1cacaed362d4b37eb8107f11099c00"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# Random Encounters mod for V Rising\n\nSee [V Rising Database](https://gaming.tools/v-rising) for detailed information about V Rising items, NPCs and more.\n\nThis server side mod spawns a random NPC near a random online player at random intervals, and the player wins a random item reward if the NPC is killed within the given time limit.\n\nIt can be configured using the configuration files which are created on first run.\n\n## Change Log\n\n### 0.8.6\n\n- Excluded some NPCs which are summoned by other NPCs.\n\n### 0.8.5\n\n- Removed the additional dependency to GT_VRising_GameData. It is now an embedded library.\n\n### 0.8.4\n\n- NPCs should no longer spawn in object anymore (Well, much less frequently anyway).\n\n### 0.8.3\n\n- Fixed an issue with InCombat detection.\n- Mod now depends on https://v-rising.thunderstore.io/package/adainrivers/GT_VRising_GameData/\n\n### 0.8.2\n\n- Logging improvements.\n\n### 0.8.1\n\n- Fixed an issue which was causing spawned NPC not being detected.\n\n### 0.8.0\n\n- Fixed an issue which was causing the server crash.\n- You can now specify the quantities for each item in `Items.cfg`. Unobtainable items are disabled by default.\n- Increased performance for spawn detection.\n\n### 0.7.1\n\n- Fixed an issue which was causing the same player being picked every time.\n\n## Source Code\n\nSource code of this mod can be found at:\nhttps://github.com/adainrivers/randomencounters\n\n## Installation\n\nRandom Encounters mod requires Wetstone plugin installed. The latest version of Wetstone can be downloaded from https://v-rising.thunderstore.io/package/molenzwiebel/Wetstone/\n\n**Since version 0.7.0, the hot reloading feature of Wetstone does NOT work for RandomEncounters. Instead, please use the `!re reload` feature after you make an configuration change.**\n\n## Chat Commands\n\nAll chat commands use the default prefix of `!randomencounter` or `!re`. They are only accessible by server admins.\n\n### Commands\n\n`!re start` or just `!re`: Starts an encounter for a random online user.\n\n`!re me`: Starts an encounter for the admin who sends the command.\n\n`!re reload`: Reloads the configuration without restarting the server.\n\n`!re {playerName}`: Starts an encounter for the given player, for example `!re Adain`.\n\n`!re disable`: Disables the random encounter timer.\n\n`!re enabled`: Enables the random encounter timer.\n\n## Configuration files and options:\n\n### Main.cfg\n```\n[Main]\n\n## Determines whether the random encounter timer is enabled or not.\n# Setting type: Boolean\n# Default value: true\nEnabled = true\n\n## When enabled, players who are in a castle are excluded from encounters\n# Setting type: Boolean\n# Default value: true\nSkipPlayersInCastle = true\n\n## When enabled, players who are in combat are excluded from the random encounters.\n# Setting type: Boolean\n# Default value: false\nSkipPlayersInCombat = false\n\n## Minimum seconds before a new encounter is initiated. This value is divided by the online users count.\n# Setting type: Int32\n# Default value: 1200\nEncounterTimerMin = 1200\n\n## Maximum seconds before a new encounter is initiated. This value is divided by the online users count.\n# Setting type: Int32\n# Default value: 2400\nEncounterTimerMax = 2400\n\n## Maximum seconds until the player can kill the NPC for a reward.\n# Setting type: Int32\n# Default value: 120\nEncounterLength = 120\n\n## The lower value for the NPC level - Player level difference. For example, if player level is 50, and this setting is 20, then the lowest level of the spawned NPC would be 30.\n# Setting type: Int32\n# Default value: 99\nEncounterMinLevelDifference = 99\n\n## The upper value for the NPC level - Player level difference.  For example, if player level is 50, and this setting is 20, then the highest level of the spawned NPC would be 70.\n# Setting type: Int32\n# Default value: 0\nEncounterMaxLevelDifference = 0\n\n## System message template for the encounter.\n# Setting type: String\n# Default value: You have encountered a <color=#daa520>{0}</color>. You have <color=#daa520>{1}</color> seconds to kill it for a chance of a random reward.\nEncounterMessageTemplate = You have encountered a <color=#daa520>{0}</color>. You have <color=#daa520>{1}</color> seconds to kill it for a chance of a random reward.\n\n## System message template for the reward.\n# Setting type: String\n# Default value: Congratulations. Your reward: <color={0}>{1}</color>.\nRewardMessageTemplate = Congratulations. Your reward: <color={0}>{1}</color>.\n\n## System message template for the reward announcement.\n# Setting type: String\n# Default value: {0} earned an encounter reward: <color={1}>{2}</color>.\nRewardAnnouncementMessageTemplate = {0} earned an encounter reward: <color={1}>{2}</color>.\n\n## If enabled, all online admins are notified about encounters and rewards.\n# Setting type: Boolean\n# Default value: true\nNotifyAdminsAboutEncountersAndRewards = true\n\n## When enabled, all online players are notified about any player's rewards.\n# Setting type: Boolean\n# Default value: false\nNotifyAllPlayersAboutRewards = false\n\n## Minimum spawn distance for the spawned unit.\n# Setting type: Int32\n# Default value: 2\nMinSpawnDistance = 2\n\n## Maximum spawn distance for the spawned unit.\n# Setting type: Int32\n# Default value: 4\nMaxSpawnDistance = 4\n\n\n```\n\n### Items.cfg\n\nThe list of all the items from the game. Individual items can be enabled or disabled. Only enabled items are considered for the random reward. \n\n*NEW in 0.8.0:* You can now specify the quantities for each item. Unobtainable items are disabled by default.\n\n### NPCs.cfg\n\nThe list of all the NPCs from the game. Individual NPCs can be enabled or disabled. Only enabled NPCs are considered for the random encounter.\n\n"
+}

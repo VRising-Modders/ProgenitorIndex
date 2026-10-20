@@ -1,0 +1,30 @@
+{
+  "format": 1,
+  "package_sha256": "512069b2d98dc535895370e8b11df9d372b37e0f4e7ea73714477bb705531175",
+  "size": 38025,
+  "manifest": {
+    "name": "ScarletTeleportGUI",
+    "version_number": "1.2.8",
+    "website_url": "https://github.com/HussienElSawy/VRising-ScarletTeleportGUI",
+    "description": "A comprehensive UI mod for managing teleportation in VRising. Provides an intuitive interface for viewing and interacting with teleportation points.",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.733.2"
+    ]
+  },
+  "description": "A comprehensive UI mod for managing teleportation in VRising. Provides an intuitive interface for viewing and interacting with teleportation points.",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.733.2/",
+      "sha256": "eabfb53d80bed427ddbd1ecf8af4dcd6e82e152809d44ab3218d0a09984f491c"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "42414b78ba52905ed0209ca976a358aed15a42625daba7e33634ee04f34413b3"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# ScarletTeleportGUI\n\nScarletTeleportGUI is a client-side V Rising mod that adds an in-game STP panel.\n\nIt follows the same client bootstrap and chat interception pattern as FamBook, uses `.stp ltp` to fetch teleport data, and provides Player teleport actions in the same panel.\n\n## Current Behavior\n\n- Adds an `STP` button to the HUD.\n- Opens a custom panel with `Private`, `Public`, `Waypoints`, and `Player` tabs.\n- Sends `.stp ltp` when the panel opens.\n- Intercepts `System` chat messages while the panel is open and the teleport list is pending.\n- Parses teleport output into public/private/player/waypoint collections and hides consumed lines from chat.\n- Player tab supports:\n\t- `.stp tpr [name]` via `Teleport`\n\t- `.stp tpa [name]` via `Accept`\n\n\n\n## Build\n\n```powershell\ndotnet restore\ndotnet build -c Release\n```\n\nOutput DLL:\n\n- `bin/Release/net6.0/ScarletTeleportGUI.dll`"
+}

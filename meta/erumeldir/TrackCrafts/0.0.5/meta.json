@@ -1,0 +1,37 @@
+{
+  "format": 1,
+  "package_sha256": "07695f5821065cb6875d067d9be119d74a637ea284eb21970bf9e7369e671114",
+  "size": 80923,
+  "manifest": {
+    "name": "TrackCrafts",
+    "version_number": "0.0.5",
+    "website_url": "https://github.com/armanckeser/TrackCrafts",
+    "description": "Adds the ability to pin multiple crafting recipes",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.0.0",
+      "molenzwiebel-Wetstone-1.1.0"
+    ]
+  },
+  "description": "Adds the ability to pin multiple crafting recipes",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.0.0",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.0.0/",
+      "sha256": "27fd91f2951701faf324b9dcd34cf771a7f4534e1d3a679949b9a0ae67472054"
+    },
+    {
+      "id": "molenzwiebel-Wetstone-1.1.0",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/molenzwiebel/Wetstone/1.1.0/",
+      "sha256": "60d4cf20da7d8be01cb71447e5cf2165532ed0f3d19bd6788d9fc4403a257133"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "c123c5cc58a5fd140b8ba289a67b9205b2a2dd2ac9d3a4f7fc29cbb16623f33a"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "#### V Rising - Client Plugin\n\n# Track Crafts\n![Example](assets/example1.png)\n### Description\n\nMiddle Click on a recipe to track it. Press F1 to clear all. Press F2 to show/hide all.\nNote: Currently not auto updating\n\n### Features\n⚙️ Hot reloading with [Wetstone API](https://v-rising.thunderstore.io/package/molenzwiebel/Wetstone/)\n\n### Installation\n- Install [BepInExPack V Rising](https://v-rising.thunderstore.io/package/BepInEx/BepInExPack_V_Rising/)\n- Install [Wetstone API](https://v-rising.thunderstore.io/package/molenzwiebel/Wetstone/)\n- Extract ``TrackCrafts.dll`` folder into _(VRising folder)/BepInEx/plugins_ or _(VRising folder)/BepInEx/WetstonePlugins_\n\n### Limitations\nThis is my first plugin, as well as my first time touching any game engine. If you know how to, I would love someone to teach me or create a PR for\n- Ability to close the pin by clicking on it rather than a KeyBind\n- Auto update cost details as you add items to your inventory\n\n\n### Changelog\n`0.0.1` First release\n\n`0.0.2` Update Readme\n\n`0.0.3` Fix bug where middle clicking on non recipes would pin recipe\n\n`0.0.4` You can now track many recipes and delete them individually\n- Size of the recipes is now smaller\n- Added a button to delete recipes individually\n- You can now set a keybind to show/hide the pinned recipes\n\n`0.0.5` Forgot to add readme to release\n\n### Credits\narwen - README\n\nElmegaard - build script\n"
+}

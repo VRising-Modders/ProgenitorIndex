@@ -1,0 +1,38 @@
+{
+  "format": 1,
+  "package_sha256": "05f481108569830428b3bd1e57332280b445f30885d8f048d7735355160504bf",
+  "size": 199514,
+  "manifest": {
+    "name": "ScarletRCON",
+    "version_number": "1.2.9",
+    "website_url": "https://github.com/markvaaz/ScarletRCON",
+    "description": "Enhance server administration with powerful, ready-to-use RCON commands that go far beyond the default capabilities. Are you a Modder? Easily build and register your own custom RCON commands without making ScarletRCON a direct dependency.",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "ScarletMods-ScarletCore-1.3.11"
+    ]
+  },
+  "description": "Enhance server administration with powerful, ready-to-use RCON commands that go far beyond the default capabilities. Are you a Modder? Easily build and register your own custom RCON commands without making ScarletRCON a direct dependency.",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.733.2/",
+      "sha256": "eabfb53d80bed427ddbd1ecf8af4dcd6e82e152809d44ab3218d0a09984f491c"
+    },
+    {
+      "id": "ScarletMods-ScarletCore-1.3.11",
+      "from": "index",
+      "package": "https://thunderstore.io/package/download/ScarletMods/ScarletCore/1.3.11/",
+      "sha256": "1a879411b8258f9c28b8d6804720563e825fa1788eca87f7b89bab081ca6569f"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "750c5ccaf35e6f97dec1c36f73eb4da7dd44d6fe917dbaa1441917efffff2fed"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# ScarletRCON\n\n**ScarletRCON** is a flexible and powerful RCON command framework mod for V Rising that enhances server management by providing a rich set of built-in commands beyond the default RCON capabilities. It serves as a standalone RCON command handler that also offers an easy-to-use API for modders to dynamically create and register custom commands, enabling seamless integration across multiple mods\n\n---\n\n## Support & Donations\n\n<a href=\"https://www.patreon.com/bePatron?u=30093731\" data-patreon-widget-type=\"become-patron-button\"><img height='36' style='border:0px;height:36px;' src='https://i.imgur.com/o12xEqi.png' alt='Become a Patron' /></a>  <a href='https://ko-fi.com/F2F21EWEM7' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi6.png?v=6' alt='Buy Me a Coffee at ko-fi.com' /></a>\n\n---\n\n## What is RCON?\n\n**RCON** (Remote Console) is a protocol used by server administrators to remotely execute commands and manage game servers in real time. For V Rising, RCON allows you to control your server, perform administrative actions, and automate tasks without needing direct access to the server’s hardware.\n\nScarletRCON builds on the standard RCON functionality by offering a more advanced command framework. It simplifies server management, supports custom commands from other mods, and enables powerful automation and integration—all through a unified RCON interface.\n\n## Scarlet RCON Client\n\nIf you need a client to interact with ScarletRCON, check out the [ScarletRCON Client](https://thunderstore.io/c/v-rising/p/ScarletMods/ScarletRCON/wiki/3511-scarlet-rcon-client-optional/). This open-source tool provides a convenient way to send RCON commands to your V Rising server.\n\nHave ideas or feedback? [Leave your suggestion on GitHub](https://github.com/markvaaz/ScarletRCON).\n\n---\n\n## New Features\n\n- Added support for asynchronous commands in CommandHandler.\n- Added save command.\n- Added support for defining RCON commands without requiring ScarletRCON as a direct dependency.\n- Added command categories for better organization.\n\n## Features\n\n* Provides a simple API to register RCON commands.\n* Supports multiple overloads and parameter parsing.\n* Handles command invocation safely with detailed error messages.\n* Ships with a solid set of built-in default commands covering common server administration tasks.\n* Allows other mods to register commands under their own namespace automatically based on assembly name.\n\n## For more information, please visit the [ScarletRCON Wiki on Thunderstore](https://thunderstore.io/c/v-rising/p/ScarletMods/ScarletRCON/wiki/).\n\n## Installation\n\n### Requirements\n\nThis mod requires the following dependencies:\n\n* **[BepInEx](https://wiki.vrisingmods.com/user/bepinex_install.html)**\n* **[ScarletCore](https://thunderstore.io/c/v-rising/p/ScarletMods/ScarletCore/)**\n\nMake sure BepInEx is installed and loaded **before** installing ScarletRCON.\n\n### Manual Installation\n\n1. Download the latest release of **ScarletRCON**.\n\n2. Extract the contents into your `BepInEx/plugins` folder:\n\n   `<V Rising Server Directory>/BepInEx/plugins/`\n\n   Your folder should now include:\n\n   `BepInEx/plugins/ScarletRCON.dll`\n\n3. Ensure **ScarletCore** and is also installed in the `plugins` folder.\n4. Start or restart your server.\n\n## Credits\n- @helskog for comming up with the idea for the reveal map command.\n- @sirsaia for the teleport stuff.\n\n## Join the [modding community on Discord](https://vrisingmods.com/discord).",
+  "changelog": "## Update 1.2.8\n\n- Changed the `listplayers` command to include only online players in the output.\n- Added `listallplayers` command to list all players with their online status.\n\n## Update 1.2.6 & 1.2.7\n\n- Added `shutdown` command to safely shut down the server via RCON.\n- Fixed the `serverstats` command to correctly display the count of online players.\n\n## Update 1.2.5\n\n- Fixed InventoryService reference to use the new ScarletCore version.\n\n## Update 1.2.4\n\n- Fixed async command detection.\n\n## Update 1.2.2\n\n- Remove manual `isAsync` parameter from `RconCommandAttribute` \n\n## Update 1.2.1\n\n- Fix RegisterExternalCommandsBatch ambiguity with automatic async detection\n\n## Update 1.2.0\n\n- Added support for asynchronous commands in CommandHandler.\n- Updated RconCommandAttribute to include IsAsync property.\n- Modified RconCommandDefinition to store async command information.\n- Improved error messages for player-related commands to clarify online status.\n- Updated command descriptions for clarity and consistency.\n- Refactored command registration and execution logic for better maintainability.\n\n## Update 1.1.7\n\n- Update ConnectedSince property to use DateTime in local time and improve socket retrieval in RconInitializePatch\n\n## Update 1.1.6\n\n- Removed `Destroy_TravelBuffSystem.OnUpdate` patch, as it was causing lag. 4"
+}

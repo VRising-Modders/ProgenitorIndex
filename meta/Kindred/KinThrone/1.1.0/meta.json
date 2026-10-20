@@ -1,0 +1,31 @@
+{
+  "format": 1,
+  "package_sha256": "ed808cb2a196ac6e5e3df3adc80f3fa8a2d4f81eb7598356482636fa4d35fac6",
+  "size": 102481,
+  "manifest": {
+    "name": "KinThrone",
+    "version_number": "1.1.0",
+    "website_url": "https://github.com/mfoltz/KinThrone",
+    "description": "Harness the true power of the shadow realm!",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.733.2"
+    ]
+  },
+  "description": "Harness the true power of the shadow realm!",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.733.2/",
+      "sha256": "eabfb53d80bed427ddbd1ecf8af4dcd6e82e152809d44ab3218d0a09984f491c"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "07e0c977eefe8185ce9fe490946911bd093b7ecd8e7672d4834511a67c793c39"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# KinThrone for V Rising\nInteracting with the Throne of Darkness applies the original three relic tower buffs (Talzur, Behemoth, and Solarus) to the player. No configuration required.\n\n---\nThanks to the V Rising modding and server communities for ideas and requests!\n\nThis was a collaborative effort from Odjit (Dj) and Zfolmt [(Mitch)](https://www.patreon.com/join/4865914). Feel free to reach out to either of us if you have questions or need help with the mod!\n\n[V Rising Modding Discord](https://vrisingmods.com/discord) | [How to Install Mods on BepInEx](https://wiki.vrisingmods.com/user/Mod_Install.html)\n\nThis mod is licensed under the AGPL-3.0 license.",
+  "changelog": "`1.1.0`\n- Minor revamp since previous feature was rolled into vanilla after the 1.1 update (now bestows original 3 relic tower buffs instead of sending servants from the Throne of Darkness since that is now vanilla functionality)\n\n`1.0.0`\n- Initial release\n"
+}

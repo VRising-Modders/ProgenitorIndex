@@ -1,0 +1,30 @@
+{
+  "format": 1,
+  "package_sha256": "e209ad129a9a9b77c5c5c4811fa0e1ff21966e7998436b515ea7fa6673d5d520",
+  "size": 32829,
+  "manifest": {
+    "name": "FamBook",
+    "version_number": "4.0.0",
+    "website_url": "https://github.com/HussienElSawy/VRising-FamBook",
+    "description": "A comprehensive UI mod for managing familiars in VRising. Provides an intuitive interface for viewing and interacting with familiars, including VBlood scanning and binding.",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.733.2"
+    ]
+  },
+  "description": "A comprehensive UI mod for managing familiars in VRising. Provides an intuitive interface for viewing and interacting with familiars, including VBlood scanning and binding.",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.733.2/",
+      "sha256": "eabfb53d80bed427ddbd1ecf8af4dcd6e82e152809d44ab3218d0a09984f491c"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "0e7487ba6365f43d76c198b868184e62b03b9acd5a15c16e1822a3597ef621c0"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# FamBook\n\nFamBook is a client-side V Rising mod that adds an in-game familiar browser panel.\n\nIt sends familiar commands, intercepts the server System chat responses, parses familiar data, and renders a paged UI so you can browse and bind familiars without chat spam.\n\n## What It Does\n\n- Adds a FamBook button to the HUD.\n- Opens a custom panel that shows up to 10 familiars per page.\n- Navigates familiar boxes/pages with previous and next controls.\n- Requests familiar data by sending:\n  - `.fam cb boxN`\n  - `.fam l`\n- Intercepts and parses familiar list messages from System chat.\n- Supports bind actions from the panel (`.fam b N`) and auto-retry with unbind when needed.\n- Hides intercepted familiar listing messages from normal chat output.\n- show owned/not owned vbloods from the vblood filter\n- can bind any vblood by simply pressing it"
+}

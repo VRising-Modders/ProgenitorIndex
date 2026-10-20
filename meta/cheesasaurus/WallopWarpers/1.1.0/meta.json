@@ -1,0 +1,38 @@
+{
+  "format": 1,
+  "package_sha256": "77af894fe239c514aed93b98339fe4d948d670c6d5f45145cd421e3da060dd03",
+  "size": 133733,
+  "manifest": {
+    "name": "WallopWarpers",
+    "version_number": "1.1.0",
+    "website_url": "https://github.com/cheesasaurus/ProfuselyViolentProgression",
+    "description": "Prevent waygate use during PvP combat. Better protection after teleporting. Configurable.",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "cheesasaurus-HookDOTS_API-1.0.0"
+    ]
+  },
+  "description": "Prevent waygate use during PvP combat. Better protection after teleporting. Configurable.",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.733.2/",
+      "sha256": "eabfb53d80bed427ddbd1ecf8af4dcd6e82e152809d44ab3218d0a09984f491c"
+    },
+    {
+      "id": "cheesasaurus-HookDOTS_API-1.0.0",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/cheesasaurus/HookDOTS_API/1.0.0/",
+      "sha256": "e8384aeab17575eb6d581eff41e326df48b38bd6598b7339ebf9f30ac2829e0f"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "34b44141b7aacf7d684ef9f1211674b718ccb77670950179073dc96a218eb30a"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# WallopWarpers\n\nPrevents waygate use during PvP combat.\n\nProvides better protection after teleporting to a waygate, to mitigate camping.\n- Longer lasting \"Phasing\" protection buff.\n- Allows using the waygate while Phasing.\n\nAll configurable.\n\n\n## Installation\n\n- Install [BepInEx](https://v-rising.thunderstore.io/package/BepInEx/BepInExPack_V_Rising/).\n- Install [HookDOTS](https://thunderstore.io/c/v-rising/p/cheesasaurus/HookDOTS_API/).\n- Extract `WallopWarpers.dll` into _`(VRising folder)/BepInEx/plugins`_.\n\n### Configuration\n\nThe following configuration settings are available in `BepInEx/config/WallopWarpers.cfg`.\n\n- `PvPCombat_AllowWaygateUse` [default `false`]: Whether or not to allow waygate use during PvP combat.\n- `SpawnProtectionSeconds` [default `12`]: How long the protection buff lasts, after teleporting in.\n- `SpawnProtection_AllowWaygateUse` [default `true`]: Whether or not to allow waygate use during protection.\n\nConfiguration changes are automatically applied; no need to restart the server every time.\n\n### Support\n\nJoin the [modding community](https://vrisingmods.com/discord).\n\nPost an issue on the [GitHub repository](https://github.com/cheesasaurus/ProfuselyViolentProgression). ",
+  "changelog": "# 1.1.0\n- Minor ux improvements\n\n# 1.0.1\n- Bugfix: potential error when multiptle abilities casted in same tick\n\n# 1.0.0\n- Initial release"
+}

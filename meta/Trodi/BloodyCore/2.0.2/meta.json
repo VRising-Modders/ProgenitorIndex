@@ -1,0 +1,30 @@
+{
+  "format": 1,
+  "package_sha256": "419b99c5f7ca3e5bc8d2aab2d35509b360f020b365abd778f830dd472d4de637",
+  "size": 604954,
+  "manifest": {
+    "name": "BloodyCore",
+    "version_number": "2.0.2",
+    "website_url": "https://github.com/oscarpedrero/BloodyCore",
+    "description": "Bloody.Core a help library for mod development. It must be installed if any mod uses it.",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.733.2"
+    ]
+  },
+  "description": "Bloody.Core a help library for mod development. It must be installed if any mod uses it.",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.733.2/",
+      "sha256": "eabfb53d80bed427ddbd1ecf8af4dcd6e82e152809d44ab3218d0a09984f491c"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "facf17d418c555777a56bf071068ec7904e4a3c7f57c9711fbd07ecdddc3e798"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# UPDATED TO 1.1 WP\n\n## [BepInEx 1.733.2 (RC2)](https://github.com/decaprime/VRising-Modding/releases/tag/1.733.2)\n\n# BloodyCore\n\nBloody.Core a help library for mod development. It must be installed if any mod uses it.\n\n# Sponsor this project\n\n[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/K3K8ENRQY)\n\n# Requirements\n\n1. [BepInEx 1.733.2 (RC2)](https://github.com/decaprime/VRising-Modding/releases/tag/1.733.2)\n\n# Installation\nInstall BepInEx.\nExtract Bloody.Core.dll into (VRising folder)/BepInEx/plugins.\n\n<details>\n<summary>Changelog</summary>\n\n`2.0.0`\n- Updated to 1.1 VRising\n\n`1.2.3`\n- Add Event OnDamage\n\n`1.2.2`\n- Patch loading system changed because it caused incompatibilities\n\n`1.2.1`\n- Fixed errors with Item models\n\n`1.2.0`\n- versioning of the API and the rest of the functionalities to v1 \n- Refactoring to be used as a framework.\n\n`1.0.0`\n- First version of Core\n</details>\n\n## Installation\n\nInstall the NuGet package `Bloody.Core`\n\nhttps://www.nuget.org/packages/Bloody.Core/\n\nSee the sample project here: \n\nhttps://github.com/oscarpedrero/BloodyCore/tree/master/BloodyCoreTest\n\n# Support\n\nPing Trodi for support [V Rising Mod Community](https://discord.gg/vrisingmods)\n\n# Credits\n\n[V Rising Mod Community](https://discord.gg/vrisingmods) is the best community of mods for V Rising.\n"
+}

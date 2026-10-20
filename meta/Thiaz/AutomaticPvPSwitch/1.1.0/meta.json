@@ -1,0 +1,45 @@
+{
+  "format": 1,
+  "package_sha256": "3eef185f357cef4cb7eda267bf299f7bfa7c33cf269c2feb23d849b998bb1bda",
+  "size": 70992,
+  "manifest": {
+    "name": "AutomaticPvPSwitch",
+    "version_number": "1.1.0",
+    "website_url": "https://github.com/Tolky/AutomaticPvPSwitch",
+    "description": "Automatically switches player ability builds when entering PvP combat.",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "deca-VampireCommandFramework-0.11.0",
+      "cheesasaurus-HookDOTS_API-1.1.1"
+    ]
+  },
+  "description": "Automatically switches player ability builds when entering PvP combat.",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.733.2/",
+      "sha256": "eabfb53d80bed427ddbd1ecf8af4dcd6e82e152809d44ab3218d0a09984f491c"
+    },
+    {
+      "id": "deca-VampireCommandFramework-0.11.0",
+      "from": "index",
+      "package": "https://thunderstore.io/package/download/deca/VampireCommandFramework/0.11.0/",
+      "sha256": "06a3d1bf244f3d37e82b62e5b1304d32ddd06985b3ed8616e5c27e3df5ae01ff"
+    },
+    {
+      "id": "cheesasaurus-HookDOTS_API-1.1.1",
+      "from": "index",
+      "package": "https://thunderstore.io/package/download/cheesasaurus/HookDOTS_API/1.1.1/",
+      "sha256": "929bc1cdc0ecc1cd2916143dfedeec109247c6f24261449160dc18852fa9d101"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "81d5928f6c2b4ae93aba6acdb8f2bd1871a421b9710661cf84a764036b6b470b"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# AutomaticPvPSwitch\n\nServer mod for V Rising. Automatically switches player ability builds when entering PvP combat.\n\n## How it works\n\nPlayers save separate PvP and PvE ability builds. When a player enters PvP combat (detected via `Buff_InCombat_PvPVampire`), their abilities are automatically swapped to their saved PvP build. Players can manually switch back to PvE with `.pve` when Vampire PvP Combat debuff expires (Also has a 10s cooldown between manual switches).\n\nAbility swaps use the `VBloodAbilityUtilities.TryApplyVBloodAbility` - this updates the ability bar, \"spellbook\" UI, network sync, and preserves cooldowns.\n\nThe switch back to PvE is **not automatic** - players must use `.pve` manually when they're ready. This avoids unwanted swaps mid-fight if the PvP buff briefly drops.\n\n## Saved slots\n\n- Spell 1 (bar slot 5)\n- Spell 2 (bar slot 6)\n- Ultimate (bar slot 7)\n- Travel/Veil (bar slot 2)\n\n## Commands\n\n### Player commands\n\n| Command | Description |\n|---|---|\n| `.pvp save` | Save current abilities as PvP build |\n| `.pve save` | Save current abilities as PvE build |\n| `.pvp` | Switch to PvP build (blocked during PvP debuff, 10s cooldown) |\n| `.pve` | Switch to PvE build (blocked during PvP debuff, 10s cooldown) |\n| `.pvp enable` | Enable auto-switch for yourself (default) |\n| `.pvp disable` | Disable auto-switch for yourself |\n\n### Admin commands\n\n| Command | Description |\n|---|---|\n| `.pvpswitch` | Show global status |\n| `.pvpswitch enable` | Enable the automatic switch to the PvP build, globally |\n| `.pvpswitch disable` | Disable the automatic switch to the PvP build, globally (manual `.pvp`/`.pve` still work) |\n| `.pvpswitch reset` | Clear all saved builds for all players (use after a wipe) |\n| `.pvpswitch resetplayer <name>` | Clear a specific player's builds and remove their VBlood abilities |\n\n## Saved configs\n\n- Player builds: `BepInEx/config/AutomaticPvPSwitch/builds.json`\n- Global toggle: `BepInEx/config/AutomaticPvPSwitch/global_enabled` - if the file is absent, the automatic switch is enabled; a file containing `1` also means enabled; a file containing `0` means no automatic PvP switch.\n\n## Performance\n\n- Event-driven: a HookDOTS prefix on `BuffSystem_Spawn_Server` reacts only to buffs spawned that tick, resolving the carrier via `EntityOwner.Owner`. No per-tick polling of players.\n- Zero cost when no player has a PvP build saved (early-out).\n- Zero allocation on ticks where no buff spawns.\n- The only heavy work (applying a build) runs on the combat-entry event, not every tick.\n\n## Dependencies & credits\n\n- [BepInEx](https://github.com/BepInEx/BepInEx) (required)\n- [HookDOTS](https://github.com/cheesasaurus/HookDOTS) by cheesasaurus (required)\n- [VampireCommandFramework](https://github.com/decaprime/VampireCommandFramework) by deca (required)\n- [KindredCommands](https://github.com/odjit/KindredCommands) by Odjit (not required)\n\n## License\n\n[AGPL-3.0](LICENSE).\n",
+  "changelog": "# Changelog\n\n## 1.1.0\n\nFirst public release.\n\n- Automatic switch to a saved PvP build when entering PvP combat, detected from the `Buff_InCombat_PvPVampire` debuff.\n- Manual `.pvp` / `.pve` build saving and switching, with a 10s cooldown between manual switches.\n- Per-player auto-switch toggle (`.pvp enable` / `.pvp disable`) and a server-wide admin toggle (`.pvpswitch`).\n- Admin commands to reset all builds or a single player's builds.\n- Forgotten school abilities (including Veils) are skipped instead of being re-equipped.\n"
+}

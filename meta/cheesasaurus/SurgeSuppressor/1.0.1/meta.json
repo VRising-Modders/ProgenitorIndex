@@ -1,0 +1,38 @@
+{
+  "format": 1,
+  "package_sha256": "9e90cb0e576ab2924bf34b1ab350269c68e32301195364c96793872a1602fe04",
+  "size": 138094,
+  "manifest": {
+    "name": "SurgeSuppressor",
+    "version_number": "1.0.1",
+    "website_url": "https://github.com/cheesasaurus/ProfuselyViolentProgression",
+    "description": "Throttles static shock triggers.",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "cheesasaurus-HookDOTS_API-1.0.0"
+    ]
+  },
+  "description": "Throttles static shock triggers.",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.733.2/",
+      "sha256": "eabfb53d80bed427ddbd1ecf8af4dcd6e82e152809d44ab3218d0a09984f491c"
+    },
+    {
+      "id": "cheesasaurus-HookDOTS_API-1.0.0",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/cheesasaurus/HookDOTS_API/1.0.0/",
+      "sha256": "e8384aeab17575eb6d581eff41e326df48b38bd6598b7339ebf9f30ac2829e0f"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "f6015c78f3e52f30ac5a922bff049552f0243ff14676c3ba5aea0556ffe729d9"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# SurgeSuppressor\n\nLimits how frequently a target can be shocked by static.\n\n![static shock definition](https://github.com/cheesasaurus/ProfuselyViolentProgression/raw/main/BepInExPlugins/SurgeSuppressor/images/static-shock-definition.png)\n\n\n### Installation\n\n- Install [BepInEx](https://v-rising.thunderstore.io/package/BepInEx/BepInExPack_V_Rising/).\n- Install [HookDOTS](https://thunderstore.io/c/v-rising/p/cheesasaurus/HookDOTS_API/).\n- Extract _SurgeSuppressor.dll_ into _`(VRising folder)/BepInEx/plugins`_.\n\n### Configuration\n\nThe following configuration settings are available in `BepInEx/config/SurgeSuppressor.cfg`.\n\n- `OnlyProtectPlayers` [default `true`]: If true, only players will be protected. If false, both mobs and players will be protected.\n- `ThrottleIntervalMilliseconds` [default `250`]: How long after a static shock, until a protected target can be shocked again.\n\n### Support\n\nJoin the [modding community](https://vrisingmods.com/discord).\n\nPost an issue on the [GitHub repository](https://github.com/cheesasaurus/ProfuselyViolentProgression). ",
+  "changelog": "# 1.0.1\n- Bugfix: Error on startup when loading plugin without bloodpebble\n\n# 1.0.0\n- Initial release"
+}

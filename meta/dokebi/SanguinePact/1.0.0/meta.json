@@ -1,0 +1,37 @@
+{
+  "format": 1,
+  "package_sha256": "00cb1edfbfe30d4dd9ed9cc80586359914fdcbfb4f68a29ec3007224a4226f23",
+  "size": 580967,
+  "manifest": {
+    "name": "SanguinePact",
+    "version_number": "1.0.0",
+    "website_url": "https://github.com/dokebi21/SanguinePact",
+    "description": "Trade defense for offense.",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.691.3",
+      "deca-VampireCommandFramework-0.9.0"
+    ]
+  },
+  "description": "Trade defense for offense.",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.691.3",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.691.3/",
+      "sha256": "04290fad8e4e619451c4f5eff3957778d3ab6a0da89bb9ba321822c9e88cf926"
+    },
+    {
+      "id": "deca-VampireCommandFramework-0.9.0",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/deca/VampireCommandFramework/0.9.0/",
+      "sha256": "d3ce9095d9772f979feb4ec792f022d213f0cdf56dc27c82de26a0f9db7cfc9f"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "661409c4e09f91d94ef7ecec3cf07ffc02b2b0efbf60359287adbe9518ef38f6"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# SanguinePact for V Rising\n\nSanguinePact is a server mod for V Rising. Trade defense for offense.\n\nYou can reach out to me on the V Rising Mod Community Discord (dokebi) for issues, questions, or suggestions.\n\n## Commands\n| COMMAND | SHORTHAND             | DESCRIPTION |\n|---------|-----------------------|-------------|\n| `.sanguinepact toggle` | `.sgp t`              | Toggle Sanguine Pact on or off. |\n| `.sanguinepact toggleplayer (PlayerName)` | `.sgp p (PlayerName)` | Toggle Sanguine Pact on or off for player. |\n| `.sanguinepact list` | `.sgp l`              | List players in Sanguine Pact. |\n\n## Configuration\n\nOnce the mod installed, a configuration file will be created in the \\BepInEx\\config server folder where you can customize the damage and resist multipliers.\n\n**dokebi21.SanguinePact.cfg**\n\n| SECTION          | KEY        | DESCRIPTION                              | DEFAULT |\n|------------------|------------|------------------------------------------|---------|\n| DamageMultiplier | `multiplier` | Damage multiplier. 2 means deal 2x damage. | `2`       |\n| ResistMultiplier | `multiplier` | Resist multiplier. 4 means take 4x damage. | `4`       |\n\n## Notes\n\n- Sanguine Pact cannot be toggled while in-combat.\n\n## Future Plans\n\n- Allow owners to configure messages.\n\n## Credits\n\nThe V Rising Mod Community has been a great help in developing this mod. Thank you for collaborating with me on Discord.\n\nThis mod shares a lot of code from existing mods from the community, especially from the following mods.\n\n- [Bloodcraft](https://github.com/mfoltz/Bloodcraft) by [mfoltz (zfolmt)](https://github.com/mfoltz)\n- [KindredCommands](https://github.com/Odjit/KindredCommands) by [odjit](https://github.com/Odjit)\n- [BloodyNotify](https://github.com/oscarpedrero/BloodyNotify) by [oscarpedrero (Trodi)](https://github.com/oscarpedrero)\n"
+}

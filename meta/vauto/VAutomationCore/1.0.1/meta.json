@@ -1,0 +1,30 @@
+{
+  "format": 1,
+  "package_sha256": "d1889687414bd5543e8227adfd8e960d60cfafd30f0b35d85c08b6ace3f57d01",
+  "size": 142591,
+  "manifest": {
+    "name": "VAutomationCore",
+    "version_number": "1.0.1",
+    "website_url": "https://github.com/Coyoteq1/VAutomationCore",
+    "description": "Core library for Vauto mods providing shared utilities, ECS helpers, and configuration management Automations flow and hotreload.",
+    "dependencies": [
+      "deca-VampireCommandFramework-0.10.4"
+    ]
+  },
+  "description": "Core library for Vauto mods providing shared utilities, ECS helpers, and configuration management Automations flow and hotreload.",
+  "dependencies": [
+    {
+      "id": "deca-VampireCommandFramework-0.10.4",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/deca/VampireCommandFramework/0.10.4/",
+      "sha256": "e554e964242db0b1cfef5824129aa6794c8a7138c9321b617d633f9aaffac19b"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "9214f10ca4f17bf9a7827ed51692e456692575f9628468f442920196161cede0"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# Docs Index\n\nStart here for framework and lifecycle documentation.\n\n## NuGet\n\n- Package page: `https://www.nuget.org/packages/VAutomationCore/1.0.0`\n- Install:\n  - `<PackageReference Include=\"VAutomationCore\" Version=\"1.0.0\" />`\n- Release/publish process: `docs/wiki/NuGet-Release.md`\n\n## Core usage\n\n- `docs/Core-System-Usage.md`\n\n## Lifecycle\n\n- `docs/Lifecycle-Snapshot-Usage.md`\n- `docs/Lifecycle-Config-Reference.md`\n\n## Commands\n\n- `docs/Command-Cheat-Sheet.md`\n\n## API references\n\n- `docs/api/Server-API.md`\n- `docs/api/Player-API.md`\n- `docs/api/Command-API.md`\n- `docs/api/Castle-API.md`\n- `docs/api/Jobs-and-Flows-API.md`\n- `docs/api/Teleport-and-Actions-API.md`\n- `docs/api/Templates-and-ECS-Jobs-API.md`\n- `docs/api/Mount-Chunk-Template-Notes.md`\n\n## Project map\n\n- `docs/File-Folder-Map.md`\n\n## Release wiki\n\n- `docs/wiki/NuGet-Release.md`\n"
+}

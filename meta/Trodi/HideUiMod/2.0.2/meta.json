@@ -1,0 +1,37 @@
+{
+  "format": 1,
+  "package_sha256": "72b81f0b1760ed0109b04b691228c8c3f3511bc83771e5e090bc7e4d5e0a5468",
+  "size": 26376,
+  "manifest": {
+    "name": "HideUiMod",
+    "version_number": "2.0.2",
+    "website_url": "https://github.com/oscarpedrero/HideUiMod",
+    "description": "A client mod to hide the game ui.",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.668.5",
+      "deca-Bloodstone-0.1.4"
+    ]
+  },
+  "description": "A client mod to hide the game ui.",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.668.5",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.668.5/",
+      "sha256": "784c7a7f64ba0f1d4e9778c6558a061ab83dbacc6e0bb8ae0e3ab86698578113"
+    },
+    {
+      "id": "deca-Bloodstone-0.1.4",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/deca/Bloodstone/0.1.4/",
+      "sha256": "e57607799d1550191b274237ead53a2e6f0fb8ea5cbeb67cb24a9f1572e8432a"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "8b41e7c2ae8017b06893606f3cfa7a9cb055a8c42e839f1cbcec5d7fb900b630"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# HideUIMod - Mod client for V Rising ( Gloomrot update )\n\nA client mod to hide the game ui:\n\n## Configuration\n\nOnce the mod installed, a configuration file will be created in the \\BepInEx\\config client folder where you can activate or desactivate any of the mod functions.\n\n**HideUiMod.cfg**\n\n```\n## Settings file was created by plugin HideUiMod v1.0.0\n## Plugin GUID: HideUiMod\n\n[UIHide]\n\n## Turn hide minimap on or off\n# Setting type: Boolean\n# Default value: true\nMiniMap = true\n\n## Turn hide bottom bar on or off\n# Setting type: Boolean\n# Default value: true\nBottomBar = true\n\n## Turn hide right menu on or off\n# Setting type: Boolean\n# Default value: true\nRightMenu = true\n\n## Turn hide clock on or off\n# Setting type: Boolean\n# Default value: true\nClock = true\n\n## Turn hide chat window on or off\n# Setting type: Boolean\n# Default value: true\nChatWindow = true\n\n## Enable to hide all UI including players/enemies name and health\n# Setting type: Boolean\n# Default value: false\nAllUI = false\n```\n\n\n|SECTION|PARAM| DESCRIPTION                                                     | DEFAULT\n|----------------|-------------------------------|-----------------------------------------------------------------|-----------------------------|\n|UIHide|`MiniMap `            | Turn hide minimap on or off             | true\n|UIHide|`BottomBar `            | Turn hide bottom bar on or off             | true\n|UIHide|`RightMenu `            | Turn hide clock on or off             | true\n|UIHide|`Clock `            | Turn hide minimap on or off             | true\n|UIHide|`ChatWindow `            | Turn hide minimap on or off             | true\n|UIHide|`AllUI `            | Enable to hide all UI including players/enemies name and health            | false"
+}
