@@ -22,7 +22,7 @@
 
 ## Checklist
 
-- [ ] The package follows the Thunderstore layout: `manifest.json`, 256x256 `icon.png`, `README.md`, description of 250 characters or fewer.
+- [ ] The package follows the package format: `manifest.json`, 256x256 `icon.png`, `README.md`, description of 250 characters or fewer.
 - [ ] The release is published and the entry's `package` URL is its zip asset; `sha256` and `commit` are filled in.
 - [ ] `meta/<Owner>/<Name>/<version>/` is generated with `node tools/validate.mjs --write-meta <entry>` and committed.
 - [ ] `node tools/validate.mjs <entry>` passes locally.
