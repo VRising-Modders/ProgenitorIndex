@@ -1,0 +1,9 @@
+{
+  "source": "github-release",
+  "repo": "https://github.com/aontas/XPRising",
+  "commit": "87328b40f46456fe5a53cd05519afe51105b8a20",
+  "package": "https://github.com/aontas/XPRising/releases/download/v0.5.2/XPRising-XPShared-0.5.2.zip",
+  "sha256": "9cd1cf2e518bb706070202ea0504ba1d0be18bac6e95df567899d77e7b7fc6a2",
+  "imported": true,
+  "confirmed": false
+}

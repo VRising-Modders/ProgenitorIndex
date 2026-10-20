@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vrising-modders.github.io/ProgenitorIndex/schema/entry.schema.json",
+  "title": "Progenitor Index entry",
+  "description": "One mod version, stored at entries/<Owner>/<Name>/<version>.json. It says where the package is and which exact file it must be.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["source", "repo", "package", "sha256", "imported", "confirmed"],
+  "properties": {
+    "source": {
+      "description": "Where the package file is downloaded from.",
+      "enum": ["github-release", "thunderstore"]
+    },
+    "repo": {
+      "description": "The mod's GitHub repository, as https://github.com/<owner>/<repo>.",
+      "type": "string",
+      "pattern": "^https://github\\.com/[A-Za-z0-9](?:[A-Za-z0-9-]{0,38})/[A-Za-z0-9._-]{1,100}$"
+    },
+    "commit": {
+      "description": "The full 40-character source commit the package was built from. Required unless the entry was imported.",
+      "type": "string",
+      "pattern": "^[0-9a-f]{40}$"
+    },
+    "package": {
+      "description": "The package download URL: a release asset of the repo, or the Thunderstore download URL of this exact version.",
+      "type": "string",
+      "pattern": "^https://"
+    },
+    "sha256": {
+      "description": "SHA-256 of the package file, lowercase hex.",
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "imported": {
+      "description": "True when the entry was imported from Thunderstore rather than submitted by the author.",
+      "type": "boolean"
+    },
+    "confirmed": {
+      "description": "True when the mod's author confirmed the listing. Always true for author submissions.",
+      "type": "boolean"
+    }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "imported": { "const": false } } },
+      "then": {
+        "required": ["commit"],
+        "properties": { "confirmed": { "const": true }, "source": { "const": "github-release" } }
+      }
+    }
+  ]
+}

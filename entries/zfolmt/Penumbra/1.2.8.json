@@ -1,0 +1,8 @@
+{
+  "source": "thunderstore",
+  "repo": "https://github.com/mfoltz/Penumbra",
+  "package": "https://thunderstore.io/package/download/zfolmt/Penumbra/1.2.8/",
+  "sha256": "b62dbf2d8986c904ccf63e55f3bc49fd66a46916b00c188c9935fef414739c44",
+  "imported": true,
+  "confirmed": false
+}

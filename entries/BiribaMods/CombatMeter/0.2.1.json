@@ -1,0 +1,9 @@
+{
+  "source": "github-release",
+  "repo": "https://github.com/lucas98sf/CombatMeter",
+  "commit": "12c11ac50c33e95cc47e16baeab4ed42fc2d93a8",
+  "package": "https://github.com/lucas98sf/CombatMeter/releases/download/v0.2.1/CombatMeter-Thunderstore-0.2.1.zip",
+  "sha256": "f23bd5b505302f9406ea2991afd30492835123de7b27efa3c20c32743c3d282d",
+  "imported": true,
+  "confirmed": false
+}

@@ -1,0 +1,8 @@
+{
+  "source": "thunderstore",
+  "repo": "https://github.com/mfoltz/Eclipse",
+  "package": "https://thunderstore.io/package/download/zfolmt/Eclipse/1.3.14/",
+  "sha256": "ef9106ae0366e35a71d4dbc10d2e22848ea7e3de70a520cc40494b95598983d2",
+  "imported": true,
+  "confirmed": false
+}

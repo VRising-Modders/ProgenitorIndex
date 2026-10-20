@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vrising-modders.github.io/ProgenitorIndex/schema/progenitor.schema.json",
+  "title": "progenitor.json",
+  "description": "Optional Progenitor details at the root of a mod package. Kept apart from manifest.json so the same zip still uploads to Thunderstore unchanged. Fields not listed here are allowed and ignored, so new ones can be added later.",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "sides": {
+      "description": "Where the mod runs. When missing, Progenitor works it out from the package.",
+      "enum": ["client", "server", "both"]
+    },
+    "progenitor": {
+      "description": "The Progenitor version range the mod needs, for example \">=2026.10.162\". When missing, it comes from a Progenitor entry in the manifest dependencies, otherwise any version.",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200,
+      "pattern": "^\\s*(\\*|(?:(?:>=|<=|>|<|=|\\^|~)?\\s*\\d+(?:\\.\\d+){0,3})(?:\\s*,?\\s*(?:>=|<=|>|<|=|\\^|~)?\\s*\\d+(?:\\.\\d+){0,3})*)\\s*$"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "source": "github-release",
+  "repo": "https://github.com/helskog/Crossveil",
+  "commit": "f10e06426ee97c465f2ecfe723535e6c802a2e31",
+  "package": "https://github.com/helskog/Crossveil/releases/download/v0.1.4/helskog-Crossveil-0.1.4.zip",
+  "sha256": "22773f431a10104da7251d8340c7fedb61bfbaa9b7284d0b7cb168b71cc7e440",
+  "imported": true,
+  "confirmed": false
+}

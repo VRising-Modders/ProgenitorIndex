@@ -1,0 +1,9 @@
+{
+  "source": "github-release",
+  "repo": "https://github.com/jokeruarwentto/HideInterface",
+  "commit": "bea4e34f3e3262f1fc05812bc4e292299f35006e",
+  "package": "https://github.com/jokeruarwentto/HideInterface/releases/download/1.2.0/me.arwent.HideInterface-RELEASE-1.2.0.zip",
+  "sha256": "921148a6b13e7c5d0ea509ae4aecda4d21a07f1e224786ba0ee2edb28066a36e",
+  "imported": true,
+  "confirmed": false
+}

@@ -1,0 +1,9 @@
+{
+  "source": "github-release",
+  "repo": "https://github.com/Elmegaard/QuickStash",
+  "commit": "5a59f00c8ce6d438730b12233580383421de683f",
+  "package": "https://github.com/Elmegaard/QuickStash/releases/download/1.2.3/quick_stash_1.2.3.zip",
+  "sha256": "0f1943470389e9157074781b1ea3c3327371242fce879b695562627761adcacd",
+  "imported": true,
+  "confirmed": false
+}

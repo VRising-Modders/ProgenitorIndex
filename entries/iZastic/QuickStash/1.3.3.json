@@ -1,0 +1,9 @@
+{
+  "source": "github-release",
+  "repo": "https://github.com/iZastic/QuickStash",
+  "commit": "3b7f567aa075780dd5809d0365934f6ad63189fb",
+  "package": "https://github.com/iZastic/QuickStash/releases/download/QuickStash-v1.3.3/QuickStash.zip",
+  "sha256": "b4d417bebfd4c7b0a4099ceda449ff9546c5f879c1749ae6c18dfcc6027d6ff8",
+  "imported": true,
+  "confirmed": false
+}

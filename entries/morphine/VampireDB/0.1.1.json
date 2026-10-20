@@ -1,0 +1,8 @@
+{
+  "source": "thunderstore",
+  "repo": "https://github.com/phlebotomist/VampireDB",
+  "package": "https://thunderstore.io/package/download/morphine/VampireDB/0.1.1/",
+  "sha256": "2635470f12e11063a2db7f5a23eb59997122c134c844fa52e31699d2f694ac35",
+  "imported": true,
+  "confirmed": false
+}

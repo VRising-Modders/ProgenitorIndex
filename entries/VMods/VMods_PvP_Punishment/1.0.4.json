@@ -1,0 +1,9 @@
+{
+  "source": "github-release",
+  "repo": "https://github.com/WhiteFang5/VMods",
+  "commit": "fcdb9cfe03d4682bdc6e68d5f93d78580f2cd237",
+  "package": "https://github.com/WhiteFang5/VMods/releases/download/PvPPunishment-v1.0.4/PvPPunishment-v1.0.4.zip",
+  "sha256": "c214b69b1c3381a45081c2b5a9ecd81edad032afe6605a19ccfa05c203f013e4",
+  "imported": true,
+  "confirmed": false
+}

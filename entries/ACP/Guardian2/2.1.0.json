@@ -1,0 +1,9 @@
+{
+  "source": "github-release",
+  "repo": "https://github.com/jokeruarwentto/Guardian2",
+  "commit": "64b28e29b20290ac5b988ecc135c86e3c5f7b2d1",
+  "package": "https://github.com/jokeruarwentto/Guardian2/releases/download/2.1.0/me.arwent.Guardian2-RELEASE-2.1.0.zip",
+  "sha256": "36d25621ea4511b08039c6fc8edfec1480ebb409df459a87ad444ac12ebc3ce4",
+  "imported": true,
+  "confirmed": false
+}

@@ -1,0 +1,9 @@
+{
+  "source": "github-release",
+  "repo": "https://github.com/helskog/PrisonerExchange",
+  "commit": "bc692ce44faa1580ba0c49d19aa3fa00a3c4bdc0",
+  "package": "https://github.com/helskog/PrisonerExchange/releases/download/v1.0.6/helskog-PrisonerExchange-1.0.6.zip",
+  "sha256": "2427b2ebe94369f794b17d82dd9a18a6cbdb9cd0fe88ac71623041e4b5b37595",
+  "imported": true,
+  "confirmed": false
+}

@@ -1,0 +1,9 @@
+{
+  "source": "github-release",
+  "repo": "https://github.com/skythebro/V-Comforts",
+  "commit": "8cba8354f83d7b5124ffcd5d10ec1e760e4b69fa",
+  "package": "https://github.com/skythebro/V-Comforts/releases/download/0.1.0/skies-VComforts.zip",
+  "sha256": "1767c2d96fb23d3e04d02267071907aeac0abbfc4555c9a6b0bba7616b041704",
+  "imported": true,
+  "confirmed": false
+}

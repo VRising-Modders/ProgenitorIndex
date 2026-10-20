@@ -1,0 +1,13 @@
+# Signing keys: never commit them.
+keys/
+*.pem
+*.key
+
+# Downloaded packages and other caches.
+.cache/
+*.zip
+
+# Build output (built and signed by the publish workflow).
+site/
+
+node_modules/

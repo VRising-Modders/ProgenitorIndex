@@ -1,0 +1,9 @@
+{
+  "source": "github-release",
+  "repo": "https://github.com/aontas/XPRising",
+  "commit": "87328b40f46456fe5a53cd05519afe51105b8a20",
+  "package": "https://github.com/aontas/XPRising/releases/download/v0.5.2/XPRising-ClientUI-0.5.2.zip",
+  "sha256": "76248a41b4b475e3ec11fe9ace999d1cfb9661b7c323da6f7875341a46c88b32",
+  "imported": true,
+  "confirmed": false
+}

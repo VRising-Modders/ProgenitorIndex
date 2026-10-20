@@ -1,0 +1,8 @@
+{
+  "source": "thunderstore",
+  "repo": "https://github.com/decaprime/VampireCommandFramework",
+  "package": "https://thunderstore.io/package/download/deca/VampireCommandFramework/0.11.0/",
+  "sha256": "06a3d1bf244f3d37e82b62e5b1304d32ddd06985b3ed8616e5c27e3df5ae01ff",
+  "imported": true,
+  "confirmed": false
+}

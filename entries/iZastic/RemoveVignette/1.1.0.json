@@ -1,0 +1,9 @@
+{
+  "source": "github-release",
+  "repo": "https://github.com/iZastic/vrising-removevignette",
+  "commit": "248da0ccdfa764b237658a17b6ce44e3217335c7",
+  "package": "https://github.com/iZastic/vrising-removevignette/releases/download/RemoveVignette-v1.1.0/RemoveVignette.zip",
+  "sha256": "50ec6527ac0607c0118e21dc12d41bb8c5db2e67d1f88e53ee167a681fff2e56",
+  "imported": true,
+  "confirmed": false
+}

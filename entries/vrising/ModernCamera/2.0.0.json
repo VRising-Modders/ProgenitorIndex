@@ -1,0 +1,9 @@
+{
+  "source": "github-release",
+  "repo": "https://github.com/v-rising/ModernCamera",
+  "commit": "08320e3d2dd6cfe612791d39fa53066b65443b61",
+  "package": "https://github.com/v-rising/ModernCamera/releases/download/v2.0.0/package.zip",
+  "sha256": "e2a851beba70ab7bf0bf325e967c866ac56d92803ad0884defcd6f31f595e2e6",
+  "imported": true,
+  "confirmed": false
+}

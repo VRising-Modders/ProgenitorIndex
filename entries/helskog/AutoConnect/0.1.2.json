@@ -1,0 +1,9 @@
+{
+  "source": "github-release",
+  "repo": "https://github.com/helskog/AutoConnect",
+  "commit": "17fa4a5be14753c477cf9bad0a40fb73056811f1",
+  "package": "https://github.com/helskog/AutoConnect/releases/download/v0.1.2/helskog-AutoConnect-0.1.2.zip",
+  "sha256": "ea875e5bdea91eb20320a1e400518f6f7ef1e320f9540320c2a0fc60ec2f07d7",
+  "imported": true,
+  "confirmed": false
+}

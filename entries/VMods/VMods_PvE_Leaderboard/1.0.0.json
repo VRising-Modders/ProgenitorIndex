@@ -1,0 +1,9 @@
+{
+  "source": "github-release",
+  "repo": "https://github.com/WhiteFang5/VMods",
+  "commit": "d34cc8133873382dca60c674f1acf1462531f03c",
+  "package": "https://github.com/WhiteFang5/VMods/releases/download/PvELeaderboard-v1.0.0/PvELeaderboard-v1.0.0.zip",
+  "sha256": "a5961fa223f93540bbdf430148a5b5aa9815654af57dbb95f6c7ea75ed4138c5",
+  "imported": true,
+  "confirmed": false
+}

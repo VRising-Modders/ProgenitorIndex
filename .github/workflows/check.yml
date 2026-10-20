@@ -1,0 +1,71 @@
+name: Check entries
+
+on:
+  pull_request:
+    paths:
+      - "entries/**"
+      - "revoked.json"
+      - "thunderstore-lock.json"
+      - "schema/**"
+      - "tools/**"
+
+permissions:
+  contents: read
+  pull-requests: write
+
+concurrency:
+  group: check-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      # The checks run with the tools from the base branch, so a pull request cannot change
+      # how it is checked. The pull request itself is checked out only as data.
+      - name: Check out the base branch tools
+        uses: actions/checkout@v5
+        with:
+          ref: ${{ github.event.pull_request.base.sha }}
+          path: trusted
+          persist-credentials: false
+
+      - name: Check out the pull request
+        uses: actions/checkout@v5
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          path: pr
+          fetch-depth: 0
+          persist-credentials: false
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+
+      - name: Validate changed entries
+        id: validate
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          INDEX_CACHE_DIR: ${{ runner.temp }}/index-cache
+        run: |
+          set +e
+          node trusted/tools/validate.mjs --root pr --changed-since "$BASE_SHA" --no-cache --summary summary.md
+          echo "status=$?" >> "$GITHUB_OUTPUT"
+          if ! git -C pr diff --quiet "$BASE_SHA...HEAD" -- tools schema .github; then
+            printf '\n> This pull request changes `tools/`, `schema/` or `.github/`. Those changes take effect only after merge and need a maintainer review.\n' >> summary.md
+          fi
+          cat summary.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Post the summary on the pull request
+        # Pull requests from forks get a read-only token; the job summary above still has the results.
+        if: always() && github.event.pull_request.head.repo.full_name == github.repository
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR: ${{ github.event.pull_request.number }}
+        run: gh pr comment "$PR" --repo "$GITHUB_REPOSITORY" --body-file summary.md --edit-last --create-if-none || gh pr comment "$PR" --repo "$GITHUB_REPOSITORY" --body-file summary.md
+
+      - name: Fail when a hard check failed
+        if: steps.validate.outputs.status != '0'
+        run: exit 1

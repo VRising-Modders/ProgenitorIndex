@@ -1,0 +1,9 @@
+{
+  "source": "github-release",
+  "repo": "https://github.com/WhiteFang5/VMods",
+  "commit": "fcdb9cfe03d4682bdc6e68d5f93d78580f2cd237",
+  "package": "https://github.com/WhiteFang5/VMods/releases/download/GenericChatCommands-v1.0.1/GenericChatCommands-v1.0.1.zip",
+  "sha256": "feb607233fe5d6d2ed4f866c4263029c39790a7e3674bc04392dffb669a0d125",
+  "imported": true,
+  "confirmed": false
+}

@@ -1,0 +1,9 @@
+{
+  "source": "github-release",
+  "repo": "https://github.com/WhiteFang5/VMods",
+  "commit": "c2f15134b52e672556d316076073073d21320470",
+  "package": "https://github.com/WhiteFang5/VMods/releases/download/SiegeGolemTweaker-v1.0.0/SiegeGolemTweaker-v1.0.0.zip",
+  "sha256": "06f8f3f1bae7c74d8e607f414c006aa4cbd76c5a57c17d834fcc10e136faae96",
+  "imported": true,
+  "confirmed": false
+}

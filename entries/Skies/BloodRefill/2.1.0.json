@@ -1,0 +1,9 @@
+{
+  "source": "github-release",
+  "repo": "https://github.com/skythebro/VMods",
+  "commit": "843995b8a6c499ef60d80dba129863b4920e5467",
+  "package": "https://github.com/skythebro/VMods/releases/download/BR2.1.0/skythebro-Vmods.BloodRefill.zip",
+  "sha256": "9b61f84fb3de21b282e32d79fd3b112e3f4665960151beecb18044576c5c1b2e",
+  "imported": true,
+  "confirmed": false
+}

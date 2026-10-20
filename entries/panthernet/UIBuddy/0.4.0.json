@@ -1,0 +1,9 @@
+{
+  "source": "github-release",
+  "repo": "https://github.com/panthernet/VRisingUIBuddy",
+  "commit": "98a9c26282d500575bf9cb5917769a409635fd3c",
+  "package": "https://github.com/panthernet/VRisingUIBuddy/releases/download/0.4.0/UIBuddy_0.4.0.zip",
+  "sha256": "6ca0d2940057005db50048795840e37f6fc431c8f3c7a472e981698ec0a858fb",
+  "imported": true,
+  "confirmed": false
+}

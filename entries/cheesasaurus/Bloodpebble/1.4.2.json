@@ -1,0 +1,9 @@
+{
+  "source": "github-release",
+  "repo": "https://github.com/cheesasaurus/Bloodpebble",
+  "commit": "27fb295f18f328b7f2818cb38d33ad3c840a1574",
+  "package": "https://github.com/cheesasaurus/Bloodpebble/releases/download/v1.4.2/thunderstore.Bloodpebble.1.4.2.zip",
+  "sha256": "c75cd742a7e492d53f812b382a9de09982cb7b86c779191ae8fc6004fe664033",
+  "imported": true,
+  "confirmed": false
+}

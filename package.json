@@ -1,0 +1,16 @@
+{
+  "name": "progenitor-index",
+  "private": true,
+  "description": "Tooling for the Progenitor Index, a signed and reviewed listing of V Rising mods.",
+  "license": "MIT",
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "validate": "node tools/validate.mjs",
+    "build": "node tools/build-index.mjs",
+    "sign": "node tools/sign.mjs",
+    "verify": "node tools/verify.mjs",
+    "keygen": "node tools/keygen.mjs",
+    "import": "node tools/import-thunderstore.mjs"
+  }
+}

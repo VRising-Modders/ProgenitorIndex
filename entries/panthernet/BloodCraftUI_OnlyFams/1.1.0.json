@@ -1,0 +1,9 @@
+{
+  "source": "github-release",
+  "repo": "https://github.com/panthernet/BloodCraftUI",
+  "commit": "ea2c65ef3438456010e5a3860c9b7514eea2e240",
+  "package": "https://github.com/panthernet/BloodCraftUI/releases/download/1.1.0/BloodCraftUI.OnlyFams_1.1.0.zip",
+  "sha256": "297c3f4fb60e09b5d3b74bd4d94949575e1c3e58c34dbfdfdd76d179edee012c",
+  "imported": true,
+  "confirmed": false
+}

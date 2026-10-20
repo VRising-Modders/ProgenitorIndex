@@ -1,0 +1,9 @@
+{
+  "source": "github-release",
+  "repo": "https://github.com/helskog/PleadIgnorance",
+  "commit": "6be3198cb6bdb9d9edbd8b979adfc71416eeb396",
+  "package": "https://github.com/helskog/PleadIgnorance/releases/download/v0.1.0/helskog-PleadIgnorance-0.1.0.zip",
+  "sha256": "03a3825e5723e60346fb9e0e15e6d603337fbdf440689f4e3ce6dd9b807f5711",
+  "imported": true,
+  "confirmed": false
+}

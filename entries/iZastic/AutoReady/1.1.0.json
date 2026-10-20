@@ -1,0 +1,9 @@
+{
+  "source": "github-release",
+  "repo": "https://github.com/iZastic/vrising-autoready",
+  "commit": "2596cad4d188743c868c9936d2e67c0fbd1cf7e4",
+  "package": "https://github.com/iZastic/vrising-autoready/releases/download/AutoReady-v1.1.0/AutoReady.zip",
+  "sha256": "d68365a1cc54c9c68d01371bcb3b87dacde3ac12f581e53a75fd205aadfec87e",
+  "imported": true,
+  "confirmed": false
+}

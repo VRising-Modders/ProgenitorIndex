@@ -1,0 +1,9 @@
+{
+  "source": "github-release",
+  "repo": "https://github.com/Vapok/BepInExConfigManager",
+  "commit": "3d07447a527f7fa5418c4d8f7eda6ab9620f27c7",
+  "package": "https://github.com/Vapok/BepInExConfigManager/releases/download/v1.0.0/Vapok-BepInExConfigManager-1.0.0.zip",
+  "sha256": "cf38532d9f038a95af1d8c797034dde21e4c97969eabf3cf95fdfa37fafb23ba",
+  "imported": true,
+  "confirmed": false
+}

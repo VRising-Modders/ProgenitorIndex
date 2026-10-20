@@ -1,0 +1,9 @@
+{
+  "source": "github-release",
+  "repo": "https://github.com/WhiteFang5/VMods",
+  "commit": "fcdb9cfe03d4682bdc6e68d5f93d78580f2cd237",
+  "package": "https://github.com/WhiteFang5/VMods/releases/download/PvPLeaderboard-v1.0.2/PvPLeaderboard-v1.0.2.zip",
+  "sha256": "fae41a8a7d447b0fd061c0fe9cabd16f1bd99b04cc99403ff8c3bc945c907e08",
+  "imported": true,
+  "confirmed": false
+}

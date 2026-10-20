@@ -1,0 +1,9 @@
+{
+  "source": "github-release",
+  "repo": "https://github.com/skythebro/KillMobs",
+  "commit": "1e297c55845ca92b93e2cee1645d240fb6b3afe2",
+  "package": "https://github.com/skythebro/KillMobs/releases/download/1.0/skythebro-Mobkiller.zip",
+  "sha256": "26eaaed0af86948a56176af71f8b3efc6d993aaa763e177a52c8764988177bf8",
+  "imported": true,
+  "confirmed": false
+}

@@ -1,0 +1,9 @@
+{
+  "source": "github-release",
+  "repo": "https://github.com/skythebro/SkanksAIO",
+  "commit": "89cb9a137c5c59826ee56842793795066ba74f3f",
+  "package": "https://github.com/skythebro/SkanksAIO/releases/download/1.6.2/SkanksAIO.zip",
+  "sha256": "6b315b4882fabda4c8ddc8323bbc6b4e418b6a79d9718720e5e897d072378ea4",
+  "imported": true,
+  "confirmed": false
+}

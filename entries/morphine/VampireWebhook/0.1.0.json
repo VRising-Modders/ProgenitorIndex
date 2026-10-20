@@ -1,0 +1,8 @@
+{
+  "source": "thunderstore",
+  "repo": "https://github.com/phlebotomist/VampireWebhook",
+  "package": "https://thunderstore.io/package/download/morphine/VampireWebhook/0.1.0/",
+  "sha256": "225a74f3f33606ddec441b96dcb3d8552f8b6572588e0b5b00b88d6565706698",
+  "imported": true,
+  "confirmed": false
+}
