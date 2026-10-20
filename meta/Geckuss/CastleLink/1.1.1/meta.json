@@ -1,0 +1,37 @@
+{
+  "format": 1,
+  "package_sha256": "86ce4e2174173b98c8803b604c72a86428eccb6eea984fc92f9aac46567872f0",
+  "size": 21106,
+  "manifest": {
+    "name": "CastleLink",
+    "version_number": "1.1.1",
+    "website_url": "https://github.com/Geckuss/VRising-CastleLink",
+    "description": "Share resources across all castles a player owns: right-click a recipe to pull materials from your other castles, plus gather/deposit commands. Deposit skips your hotbar; blood potions keep their blood type/quality; pullcat pulls one stack per item.",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "deca-VampireCommandFramework-0.11.0"
+    ]
+  },
+  "description": "Share resources across all castles a player owns: right-click a recipe to pull materials from your other castles, plus gather/deposit commands. Deposit skips your hotbar; blood potions keep their blood type/quality; pullcat pulls one stack per item.",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.733.2/",
+      "sha256": "eabfb53d80bed427ddbd1ecf8af4dcd6e82e152809d44ab3218d0a09984f491c"
+    },
+    {
+      "id": "deca-VampireCommandFramework-0.11.0",
+      "from": "index",
+      "package": "https://thunderstore.io/package/download/deca/VampireCommandFramework/0.11.0/",
+      "sha256": "06a3d1bf244f3d37e82b62e5b1304d32ddd06985b3ed8616e5c27e3df5ae01ff"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "4dc85a1241fcade100747a8d144640eae27db71666c1602f1d04e22f7e064bb2"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# CastleLink\n\nA server-side [V Rising](https://playvrising.com/) mod that lets a player use the\nresources stored across **all of the castles they own** — not just the one they're\nstanding in.\n\nBecause V Rising computes crafting/building affordability on the **client**, a\nserver mod cannot make a distant castle's resources appear \"available\" out of thin\nair. CastleLink solves this by **physically pulling** the resources you need from\nyour other castles, on demand:\n\n- **Crafting** — right-click a recipe at a crafting station and CastleLink pulls\n  the recipe's missing materials from your other castles into your inventory, so\n  the craft can proceed.\n- **Chat commands** — gather resources between your castles, top up stacks, and\n  deposit items neatly back into their dedicated storage boxes.\n\n> This mod is **server-side only**. Players do not need to install anything.\n\n## Features\n\n- Pull crafting materials from your other castles automatically (right-click a recipe).\n- Gather resources from your other castles straight into the current castle's\n  storage boxes, or into your inventory.\n- Category-based bulk pull (armor, weapons, herbs, materials, and many more).\n- Smart deposit that only stores items which have a dedicated storage box\n  (materials, herbs, alchemy, etc.), leaves gear in your inventory, and moves\n  blood potions as whole item entities so their blood type/quality survives.\n- Only affects castles owned by the **same player**. Raided castles are skipped.\n\n## Commands\n\nAll commands use the [VampireCommandFramework](https://github.com/decaprime/VampireCommandFramework)\nprefix (default `.`).\n\n| Command | Alias | Description |\n|---|---|---|\n| `.clhelp` | `.clh` | List all CastleLink commands and categories. |\n| `.wolt` | `.all` | Top up **this castle's** storage boxes to one full stack of each storable item, pulled from your other castles. |\n| `.pull` | | Top up items you already carry to one full stack (storable items only). |\n| `.pull <guid> <amount>` | | Pull a specific item by PrefabGUID hash. |\n| `.pullcat <category>` | `.pc <category>` | Pull one stack of each item in a category into your inventory (topping up to a full stack; other castles first, then the current one). |\n| `.deposit` | `.dep` | Deposit your inventory's items into this castle's dedicated storage boxes (skips your hotbar; leaves armor/weapons; blood potions keep their blood type/quality). |\n\n### Categories\n\n`armor`, `weapons`, `gear`, `herbs`, `materials`, `jewels`, `consumables`, `fish`,\n`coins`, `gems`, `blood`, `soulshards`, `relics`, `bags`, `saddles`, `stables`,\n`magic`, `lumber`, `stone`, `minerals`, `alchemy`, `tailoring`, `flowers`,\n`everything`.\n\n### Crafting\n\nJust **right-click a recipe** at a crafting station. If your inventory + the station\ndon't have enough, CastleLink pulls the shortfall from your other castles.\n\n## Requirements\n\n- A dedicated V Rising server (this mod does not run on the client).\n- [BepInEx](https://v-rising.thunderstore.io/package/BepInEx/BepInExPack_V_Rising/) (IL2CPP pack for V Rising).\n- [VampireCommandFramework](https://v-rising.thunderstore.io/package/deca/VampireCommandFramework/).\n- The player must **own more than one castle** for sharing to do anything.\n\n## Installation\n\n1. Install the BepInEx pack for V Rising and VampireCommandFramework on your server.\n2. Drop `CastleLink.dll` into `BepInEx/plugins/`.\n3. Start the server.\n\n(Or install via a V Rising mod manager from Thunderstore.)\n\n## Building from source\n\nThis mod targets the **current** V Rising build and uses recent game types that are\nnot yet present in the public `VRising.Unhollowed.Client` NuGet package. You must\ntherefore build against the interop assemblies generated by your own BepInEx install:\n\n1. Run your modded server once so BepInEx generates `BepInEx/interop/`.\n2. Copy the DLLs from `<server>/BepInEx/interop/` into `../server-interop/interop/`\n   (relative to this project), **or** set the `InteropDir` property:\n   ```\n   dotnet build -c Release -p:InteropDir=\"C:\\path\\to\\BepInEx\\interop\"\n   ```\n\n## How it works (short version)\n\n- **Ownership:** a castle heart is mapped to its owner via the territory owner's\n  PlatformId; all hearts with the same owner form the shared pool.\n- **Crafting:** patches `StopCraftingSystem` to read the recipe's\n  `RecipeRequirementBuffer` and transfer the shortfall from other castles' chests.\n- **Storage:** enumerates each castle's chests via the heart's\n  `SharedCastleInventories`, and uses the game's own inventory-restriction rules so\n  items land in their correct storage boxes.\n\n## Credits & attribution\n\nThis mod is an original implementation by **Geckuss**, but the techniques it relies on were learned\nfrom the excellent open-source V Rising logistics mods:\n\n- **[KindredLogistics](https://github.com/Odjit/KindredLogistics)** by Odjit & Zfolmt — the on-demand craft-pull pattern.\n- **[Satisvampory](https://github.com/Greeneye0/Satisvampory)** by Greeneye — clan/cross-castle resource sharing.\n- **[VampireCommandFramework](https://github.com/decaprime/VampireCommandFramework)** and the BepInEx V Rising pack by **deca**.\n- The [V Rising modding community & wiki](https://wiki.vrisingmods.com/).\n\n## License\n\nLicensed under the **GNU Affero General Public License v3.0 or later** (AGPL-3.0-or-later).\nSee [LICENSE](LICENSE).\n"
+}

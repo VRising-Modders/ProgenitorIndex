@@ -1,0 +1,31 @@
+{
+  "format": 1,
+  "package_sha256": "9150c8994e000377b34de3f677be5641b689fa23edc37dccf89492b76d70e2fa",
+  "size": 72452,
+  "manifest": {
+    "name": "PotionPool",
+    "version_number": "1.0.0",
+    "website_url": "https://github.com/Greeneye0/PotionPool",
+    "description": "Client-only: hover a Blood Potion to see its Blood Pool I-V bonus lines, scaled to the potion's type and quality, with unreached tiers grayed out.",
+    "dependencies": [
+      "BepInEx-BepInExPack_V_Rising-1.733.2"
+    ]
+  },
+  "description": "Client-only: hover a Blood Potion to see its Blood Pool I-V bonus lines, scaled to the potion's type and quality, with unreached tiers grayed out.",
+  "dependencies": [
+    {
+      "id": "BepInEx-BepInExPack_V_Rising-1.733.2",
+      "from": "thunderstore",
+      "package": "https://thunderstore.io/package/download/BepInEx/BepInExPack_V_Rising/1.733.2/",
+      "sha256": "eabfb53d80bed427ddbd1ecf8af4dcd6e82e152809d44ab3218d0a09984f491c"
+    }
+  ],
+  "icon": {
+    "file": "icon.png",
+    "sha256": "a780305c0a6a1de983aef0fdcb09b8b757b804262512f586ef4d9dbee4b1feaf"
+  },
+  "sides": null,
+  "progenitor": "*",
+  "readme": "# PotionPool\n\nPotionPool shows the Blood Pool bonus tiers on Blood Potion tooltips in V Rising. Hover a Blood Potion, Bloodwine, or Mixed Blood Potion in your inventory or hotbar and the tooltip lists the I-V bonuses for that blood type, scaled to that potion's quality, exactly as the Blood Pool shows them for the blood you are carrying. It runs **on your game client only** and changes no gameplay rules.\n\n## What you see\n\nUnder the potion's flavor text, PotionPool adds one line per Blood Pool tier:\n\n| Tier | Unlocks at | Example (Rogue 96%) |\n| --- | --- | --- |\n| I | 0% | +15.7% physical critical chance. +8% physical critical power. |\n| II | 30% | +7.8% movement speed. +10% additional speed for 3s on killing blow. |\n| III | 60% | +13.3% veil cooldown rate. 100% physical critical chance after using a Veil. |\n| IV | 90% | 50% chance on critical strike to expose armor, +15% damage taken for 4s. |\n| V | 100% | All bonuses above increased by +20%, including the blood effect cap. |\n\n- Ranged bonuses are scaled to the potion's quality the same way the Blood Pool scales them.\n- Tiers the potion does not reach are grayed out, so you can see what a higher quality would give.\n- Mixed Blood Potions list the tiers for the primary blood type. The infused blood keeps its own vanilla panel.\n- Works for Creature, Worker, Brute, Rogue, Warrior, Scholar, Mutant, Draculin, Corrupted, and Blood of the Immortal. Frailed potions have no bonuses and are left alone.\n\nPotionPool reads the blood type and quality from the tooltip the game already shows. It never touches the potion itself, the Blood Pool, or the server.\n\n## Install\n\nRequires V Rising 1.1 and [BepInExPack V Rising 1.733.2](https://thunderstore.io/c/v-rising/p/BepInEx/BepInExPack_V_Rising/).\n\n1. Close V Rising.\n2. Copy `PotionPool.dll` into your game's `BepInEx\\plugins` folder, replacing the previous copy when updating. r2modman and Thunderstore Mod Manager can install it for you.\n3. Start the game.\n\nThere is nothing to configure and nothing to install on the server.\n\n## More mods\n\nAll of my V Rising mods are listed on [Nexus Mods](https://www.nexusmods.com/profile/GreeneyeDS/mods?gameId=4527) and on [Thunderstore](https://thunderstore.io/c/v-rising/p/Team_GreenEye/).\n\n## Thanks\n\nThanks to **Lomack** and **Katen** for testing.\n\nSource code and issues: [github.com/Greeneye0/PotionPool](https://github.com/Greeneye0/PotionPool). Licensed under AGPL-3.0.\n\nSee the [changelog](https://github.com/Greeneye0/PotionPool/blob/main/CHANGELOG.md) for release history.\n",
+  "changelog": "# Changelog\n\nSee [README.md](README.md) for current features.\n\n## 1.0.0\n\nFirst public release, under the name **PotionPool**.\n\n- Hovering a Blood Potion, Bloodwine, or Mixed Blood Potion in the inventory or hotbar adds the Blood Pool I-V bonus lines to its tooltip.\n- Ranged bonuses are scaled to the potion's quality; tiers the potion does not reach are grayed out.\n- Mixed potions show the tiers for the primary blood type.\n- Blood type and quality are read from the tooltip text the game already shows; the potion, Blood Pool, and server are never touched.\n- Client only.\n"
+}

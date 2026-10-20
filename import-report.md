@@ -12,13 +12,11 @@ Every imported entry is marked `"imported": true, "confirmed": false` until its 
 | Active | 257 |
 | Active, latest version links a GitHub repository | 207 |
 | Excluded as not mods | 3 |
-| Left out with --exclude-owner (not named) | 4 |
-| Checked | 200 |
+| Checked | 204 |
 | Skipped | 20 |
-| Left out after import: README names a person this listing must not name (not named) | 1 |
-| **Listed** (latest version only) | **179** |
+| **Listed** (latest version only) | **184** |
 | Package matched a GitHub release asset (source `github-release`) | 29 |
-| No matching release asset (source `thunderstore`) | 150 |
+| No matching release asset (source `thunderstore`) | 155 |
 | Thunderstore dependencies locked in `thunderstore-lock.json` | 27 |
 
 ## Excluded as not mods
@@ -122,6 +120,7 @@ Every imported entry is marked `"imported": true, "confirmed": false` until its 
 | `Fryke-Keys` | 1.0.1 | thunderstore |
 | `fumzou-TrackCrafts` | 1.1.1 | thunderstore |
 | `Gator-Gator_Bounty` | 1.0.1 | thunderstore |
+| `Geckuss-CastleLink` | 1.1.1 | thunderstore |
 | `GGs-DailyQuest` | 1.1.0 | thunderstore |
 | `GGs-DropTeleportBound` | 1.0.1 | thunderstore |
 | `GGs-FinishZone` | 1.0.0 | thunderstore |
@@ -202,6 +201,10 @@ Every imported entry is marked `"imported": true, "confirmed": false` until its 
 | `Skies-SpiderKiller` | 1.6.0 | thunderstore |
 | `Skies-VComforts` | 0.1.0 | github-release |
 | `skytech6-CrimsonSQL` | 1.4.5 | thunderstore |
+| `Team_GreenEye-DeathResistance` | 1.0.0 | thunderstore |
+| `Team_GreenEye-HuntsAndRifts` | 1.0.0 | thunderstore |
+| `Team_GreenEye-PotionPool` | 1.0.0 | thunderstore |
+| `Team_GreenEye-Satisvampory` | 1.0.85 | thunderstore |
 | `TheShadowRealm-Beelzebub` | 0.137.7 | github-release |
 | `TheShadowRealm-Faust` | 0.16.5 | thunderstore |
 | `TheShadowRealm-Raphael` | 0.73.0 | thunderstore |
