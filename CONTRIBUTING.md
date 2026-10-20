@@ -213,11 +213,38 @@ A takedown is a pull request that adds the version to [`revoked.json`](revoked.j
 
 `version` may be `"*"` for every version.
 
+| Field | Required | Meaning |
+|---|---|---|
+| `owner`, `name`, `version` | Yes | The listed mod version (`version` may be `"*"`) |
+| `reason` | Yes | Shown to players |
+| `severity` | Yes | See below |
+| `date` | Yes | `YYYY-MM-DD` |
+| `source` | No | `thunderstore` or `index`: which listing the takedown applies to |
+| `repo` | No | `https://github.com/<owner>/<repo>`: only that repository's entry is taken down |
+
+**When a name is in both places.** A Thunderstore mod and a native Index entry can share the same owner and name. A takedown of the Thunderstore mod then needs `"source": "thunderstore"`, so the Index entry is not taken down with it:
+
+```json
+{
+  "owner": "ExampleAuthor",
+  "name": "PopupTotals",
+  "version": "*",
+  "source": "thunderstore",
+  "reason": "The Thunderstore copy bundles a different, unreviewed DLL.",
+  "severity": "hidden",
+  "date": "2026-10-20"
+}
+```
+
+`repo` narrows a takedown further, to the entry whose `repo` is that repository. Use it when one owner and name could match entries from more than one repository.
+
+`node tools/validate.mjs` checks every takedown: the required fields, `version`, `severity`, `date`, and `source` and `repo` when present.
+
 | Severity | What Progenitor does |
 |---|---|
 | `hidden` | No longer offered for new installs; existing installs keep working |
 | `warning` | Installed copies show a notice with the reason |
-| `disable` | Installed copies stop loading at the next start, with a notice explaining why |
+| `disable` | Installed copies stop loading at the next start, with a notice explaining why. A plain BepInEx plugin can't be stopped this way; its notice asks the player to uninstall it |
 
 A version whose author deleted its release needs no takedown; it simply stops installing. To report a problem with a listed mod, open an issue with the entry path and what you found.
 
