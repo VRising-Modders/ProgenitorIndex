@@ -11,6 +11,8 @@ export const USER_AGENT = 'ProgenitorIndex-tools/1.0 (+https://github.com/VRisin
 export const LOCK_FILE = 'thunderstore-lock.json';
 export const REVOKED_FILE = 'revoked.json';
 export const SEVERITIES = ['hidden', 'warning', 'disable'];
+/** revoked.json "source": a Thunderstore listing, or a native Index entry. */
+export const REVOKED_SOURCES = ['thunderstore', 'index'];
 
 export const sha256 = (buf) => createHash('sha256').update(buf).digest('hex');
 export const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -181,6 +183,12 @@ export function checkRevoked(list) {
     if (r.version !== undefined && r.version !== '*' && !VERSION_RE.test(r.version)) errors.push(`${at}: "version" must be major.minor.patch or "*"`);
     if (r.severity !== undefined && !SEVERITIES.includes(r.severity)) errors.push(`${at}: "severity" must be one of ${SEVERITIES.join(', ')}`);
     if (r.date !== undefined && !/^\d{4}-\d{2}-\d{2}$/.test(r.date)) errors.push(`${at}: "date" must be YYYY-MM-DD`);
+    // Optional narrowing: which listing the takedown applies to, and which repository's entry.
+    if (r.source !== undefined && !REVOKED_SOURCES.includes(r.source)) errors.push(`${at}: "source" must be one of ${REVOKED_SOURCES.join(', ')}`);
+    if (r.repo !== undefined) {
+      const repo = parseGitHubRepo(r.repo);
+      if (!repo || repo.url !== r.repo) errors.push(`${at}: "repo" must be https://github.com/<owner>/<repo>, nothing after the repository name`);
+    }
   });
   return errors;
 }
