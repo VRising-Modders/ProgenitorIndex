@@ -45,7 +45,8 @@ export function deriveMeta(entry, pkg, size, deps) {
     dependencies: deps,
     icon: { file: 'icon.png', sha256: sha256(pkg.icon) },
     // "sides": null means the package gave none and Progenitor works it out as it does for Thunderstore mods.
-    sides: pj.sides ?? null,
+    // Progenitor's own tools write "side" (publish-check -WriteProgenitorJson); both spellings mean the same.
+    sides: pj.sides ?? pj.side ?? null,
     progenitor: pj.progenitor ?? (progenitorDep ? `>=${progenitorDep.version}` : '*'),
     ...(pkg.progenitor ? { progenitor_json: pkg.progenitor } : {}),
     readme: readme.text ?? '',

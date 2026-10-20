@@ -10,6 +10,10 @@
       "description": "Where the mod runs. When missing, Progenitor works it out from the package.",
       "enum": ["client", "server", "both"]
     },
+    "side": {
+      "description": "Same as sides; the spelling Progenitor's publish-check writes. sides wins when both are present.",
+      "enum": ["client", "server", "both"]
+    },
     "progenitor": {
       "description": "The Progenitor version range the mod needs, for example \">=2026.10.162\". When missing, it comes from a Progenitor entry in the manifest dependencies, otherwise any version.",
       "type": "string",
