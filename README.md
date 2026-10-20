@@ -40,7 +40,7 @@ A mod built on Progenitor is published here, not on Thunderstore. Players instal
 
 1. Build the package in Thunderstore's package format: `manifest.json`, a 256x256 `icon.png`, `README.md`, the plugin DLL and its `progenitor.json`. Progenitor's [publishing guide](https://github.com/VRising-Modders/Progenitor/blob/main/docs/publishing.md) covers the package, the README's "Requires Progenitor" block and its checker.
 2. Publish a GitHub release in your mod's repository with that zip attached.
-3. Fork this repository, add one file, `entries/<YourGitHubAccount>/<ModName>/<version>.json`, and generate its meta with `node tools/validate.mjs --write-meta`.
+3. Fork this repository, add one file, `entries/<YourGitHubAccount>/<ModName>/<version>.json`, and generate its meta with `node tools/validate.mjs --update-lock --write-meta entries/<YourGitHubAccount>/<ModName>/<version>.json`.
 4. Open a pull request. The checks run automatically; a maintainer reviews it, usually within a week.
 
 Step by step: [Publishing a mod version](CONTRIBUTING.md#publishing-a-mod-version). The full rules, the entry format and the review process are in [CONTRIBUTING.md](CONTRIBUTING.md).

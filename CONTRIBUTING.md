@@ -11,11 +11,10 @@ The short path for a mod built on Progenitor. Each step links to its rules below
 1. **Build the package.** Follow Progenitor's [publishing guide](https://github.com/VRising-Modders/Progenitor/blob/main/docs/publishing.md): the [package files](#package-rules), the README's "Requires Progenitor" block, and a `progenitor.json` generated from the built DLL. Run its `tools/publish-check.ps1` until nothing fails. Don't list Progenitor in `dependencies`: it is not a package here or on Thunderstore.
 2. **Create a GitHub release** in your mod's repository, from the commit you built, with the zip attached. Note the release asset's download URL, the commit's full hash (`git rev-parse HEAD`) and the zip's SHA-256 (`sha256sum <file>.zip`, or `Get-FileHash <file>.zip` in PowerShell, lowercased).
 3. **Add the entry.** Fork this repository and add `entries/<YourGitHubAccount>/<Name>/<version>.json` with `source` `github-release`, `repo`, `commit`, `package`, `sha256`, `imported` `false` and `confirmed` `true` ([Entry files](#entry-files)).
-4. **Generate the meta** from your package, and add any Thunderstore dependency missing from the lock:
+4. **Generate the meta** from your package, adding any Thunderstore dependency missing from the lock in the same run:
 
    ```
-   node tools/validate.mjs --write-meta entries/<YourGitHubAccount>/<Name>/<version>.json
-   node tools/validate.mjs --update-lock entries/<YourGitHubAccount>/<Name>/<version>.json
+   node tools/validate.mjs --update-lock --write-meta entries/<YourGitHubAccount>/<Name>/<version>.json
    ```
 
 5. **Check it** the way the pull request will (Node.js 22, nothing else to install):
@@ -24,7 +23,7 @@ The short path for a mod built on Progenitor. Each step links to its rules below
    node tools/validate.mjs entries/<YourGitHubAccount>/<Name>/<version>.json
    ```
 
-6. **Open a pull request** with the entry, its `meta/` folder and any lock change, filling in the [pull request template](.github/PULL_REQUEST_TEMPLATE.md). After review and merge, Progenitor's Install Mods offers the version.
+6. **Open a pull request** with the entry, its `meta/` folder and any lock change, filling in the [pull request template](.github/PULL_REQUEST_TEMPLATE.md). After review and merge, Progenitor's Install Mods offers the version (from the Progenitor release that adds Index support; earlier releases install from Thunderstore only).
 
 ## Package rules
 
@@ -73,9 +72,9 @@ Kept apart from `manifest.json`, so the manifest stays in Thunderstore's package
 | Field | Meaning | Default when missing |
 |---|---|---|
 | `sides` | Where the mod runs: `client`, `server` or `both` | Progenitor works it out from the package, as it does for Thunderstore mods |
-| `progenitor` | The Progenitor version range the mod needs | Taken from a `*-Progenitor-<version>` dependency (as `>=<version>`), otherwise any version |
+| `progenitor` | The Progenitor version range the mod needs, for example `>=2026.10.162` | Any version: set `progenitor` in `progenitor.json` (Progenitor's generator writes it). Only imported entries may take it from an old `*-Progenitor-<version>` dependency |
 
-Other fields are allowed and ignored, so new ones can be added later. The `progenitor.json` that Progenitor's `tools/publish-check.ps1` generates (`id`, `version`, `side`, `hotLoadable`, `sha256`, `compatibility`) is accepted as it is; Progenitor reads those fields itself when it installs the mod.
+Other fields are allowed and ignored, so new ones can be added later. The `progenitor.json` that Progenitor's `tools/publish-check.ps1` generates (`id`, `version`, `side`, `hotLoadable`, `sha256`, `progenitor`, `compatibility`) is accepted as it is; Progenitor reads its own fields when it installs the mod.
 
 ### Contents
 
