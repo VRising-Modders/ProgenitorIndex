@@ -28,4 +28,4 @@ writeFileSync(join(dir, 'index-signing-key.pub.pem'), publicKey.export({ format:
 console.log(`Wrote the keypair to ${dir}`);
 console.log(`Public key (base64 SPKI DER): ${spkiBase64(publicKey)}`);
 console.log(`Fingerprint: ${fingerprint(publicKey)}`);
-console.log('Store the private key PEM as the INDEX_SIGNING_KEY repository secret, then delete or lock away the local copy.');
+console.log('Store the private key PEM as the INDEX_SIGNING_KEY secret of the index-signing environment, then delete or lock away the local copy.');

@@ -18,6 +18,9 @@ New to Progenitor? Install it from its [GitHub page](https://github.com/VRising-
 
 1. Progenitor downloads the list (`index.json`) and its signature from GitHub Pages.
 2. It checks the signature against the Index key built into Progenitor. A list with a bad signature is ignored, and Progenitor keeps the last good one. The signature uses the same format as Progenitor's signed mod manifests: ECDSA P-256 with SHA-256.
+
+   The Index public key (base64 SPKI DER, fingerprint `eee964f144cb8d67`) is also in [`index-signing-key.pub.txt`](index-signing-key.pub.txt). Check a downloaded list yourself with `node tools/verify.mjs --pub index-signing-key.pub.txt --file index.json`.
+
 3. The installer shows each listed mod with its icon, description and README, read from the mod's own package when it was reviewed.
 4. When you install a mod, Progenitor resolves its dependencies from the Index and Thunderstore, downloads each package, checks every fingerprint, and only then unpacks them.
 

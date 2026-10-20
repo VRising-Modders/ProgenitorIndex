@@ -15,6 +15,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    # The signing key is an environment secret; the environment only allows main.
+    environment: index-signing
     timeout-minutes: 60
     steps:
       - uses: actions/checkout@v5
