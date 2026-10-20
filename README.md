@@ -1,10 +1,10 @@
 # Progenitor Index
 
-A signed, reviewed list of V Rising mods that [Progenitor](https://github.com/VRising-Modders/Progenitor) can install from.
+The home of mods built on [Progenitor](https://github.com/VRising-Modders/Progenitor): a signed, reviewed list of V Rising mods that Progenitor installs from its **Mods** menu.
 
 The Index **lists** mods; it does not host their files. Each entry says where a mod version's package is (the author's GitHub release, or Thunderstore) and records the exact file's SHA-256 fingerprint. Progenitor downloads the package from there and installs it only if the fingerprint matches.
 
-The Index is an **alternative** listing. The recommended home for a mod built on Progenitor is still [Thunderstore](https://thunderstore.io/c/v-rising/), with instructions telling players to install Progenitor from GitHub (see [For mod authors](#for-mod-authors)). The Index is for mods that can't or don't want to be on Thunderstore, and it lets Progenitor install everything from one signed, reviewed list.
+Authors of mods built on Progenitor publish here: a GitHub release with the package, and a pull request that adds its entry (see [For mod authors](#for-mod-authors)). Thunderstore does not host Progenitor or the mods built on it; it remains the place for BepInEx and for mods that don't use Progenitor. The Index also lists many of those Thunderstore mods ([imported entries](#imported-entries)), so Progenitor can install everything from one signed, reviewed list.
 
 ## For players
 
@@ -36,31 +36,14 @@ Authors of imported mods: see [Confirming or removing an imported entry](CONTRIB
 
 ## For mod authors
 
-### Recommended: publish on Thunderstore
+A mod built on Progenitor is published here, not on Thunderstore. Players install it from **Install Mods** in Progenitor's Mods menu, and Progenitor hot loads it when the mod supports that.
 
-Publish your mod on Thunderstore as usual, and tell players to install Progenitor from GitHub. Progenitor itself is not on Thunderstore (Thunderstore does not host mod managers), so a Thunderstore manifest can't list it as a dependency; the README is where players learn they need it.
-
-Copy this into your mod's README:
-
-```markdown
-## Requires Progenitor
-
-This mod is built on [Progenitor](https://github.com/VRising-Modders/Progenitor), a V Rising
-mod framework. Install Progenitor first by following its
-[install guide](https://github.com/VRising-Modders/Progenitor#install-players), then install
-this mod with your mod manager or from the **Mods** menu on the title screen.
-```
-
-### Listing here instead, or as well
-
-Use the Index if your mod can't or doesn't want to be on Thunderstore, or to have Progenitor offer it from the reviewed list. You can do both: the same zip works for Thunderstore and for the Index.
-
-1. Build your mod as a Thunderstore-layout package: `manifest.json`, a 256x256 `icon.png`, `README.md`, and your files under `BepInEx/`. Optionally add `CHANGELOG.md` and `progenitor.json`.
-2. Publish a GitHub Release in your mod's repository with that zip attached.
-3. Fork this repository and add one file, `entries/<YourGitHubAccount>/<ModName>/<version>.json`.
+1. Build the package in Thunderstore's package format: `manifest.json`, a 256x256 `icon.png`, `README.md`, the plugin DLL and its `progenitor.json`. Progenitor's [publishing guide](https://github.com/VRising-Modders/Progenitor/blob/main/docs/publishing.md) covers the package, the README's "Requires Progenitor" block and its checker.
+2. Publish a GitHub release in your mod's repository with that zip attached.
+3. Fork this repository, add one file, `entries/<YourGitHubAccount>/<ModName>/<version>.json`, and generate its meta with `node tools/validate.mjs --write-meta`.
 4. Open a pull request. The checks run automatically; a maintainer reviews it, usually within a week.
 
-The full rules, the entry format and the review process are in [CONTRIBUTING.md](CONTRIBUTING.md).
+Step by step: [Publishing a mod version](CONTRIBUTING.md#publishing-a-mod-version). The full rules, the entry format and the review process are in [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## What is in this repository
 
